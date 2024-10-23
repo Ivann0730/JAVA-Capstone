@@ -4,17 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaCapstone.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Main.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="partial">
+      <change afterPath="$PROJECT_DIR$/res/maps/maps.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/boy_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/water.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tile/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaCapstone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaCapstone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ivann James/IdeaProjects/JavaCapstone&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ivann James/IdeaProjects/JavaCapstone/res/tiles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\tiles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\maps" />
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\player" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DannyGermanSimulator.Main" />
@@ -107,11 +127,35 @@
       <workItem from="1729609584259" duration="1746000" />
       <workItem from="1729680806979" duration="428000" />
       <workItem from="1729684639502" duration="1653000" />
-      <workItem from="1729686317486" duration="1517000" />
+      <workItem from="1729686317486" duration="14385000" />
     </task>
+    <task id="LOCAL-00001" summary="partial">
+      <option name="closed" value="true" />
+      <created>1729688105013</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729688105013</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="partial" />
+    <option name="LAST_COMMIT_MESSAGE" value="partial" />
   </component>
 </project>
