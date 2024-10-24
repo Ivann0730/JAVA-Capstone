@@ -20,6 +20,12 @@ public class Player extends Entity {
         this.keyH = keyH;
         this.screenX = gp.screenWidth/2 - (gp.tileSize/2);
         this.screenY = gp.screenHeight/2 - (gp.tileSize/2);
+        solidArea = new Rectangle();
+        //TO FIX values
+        solidArea.x=42;
+        solidArea.y=42;
+        solidArea.width=32;
+        solidArea.height=42;
         setDefaultValues();
         getPlayerImage();
     }
@@ -53,21 +59,44 @@ public class Player extends Entity {
     public void update() {
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
             if (keyH.upPressed) {
-                worldY -= speed;
+//                worldY -= speed;
                 direction = "up";
             }
             if (keyH.downPressed) {
-                worldY += speed;
+//                worldY += speed;
                 direction = "down";
             }
             if (keyH.leftPressed) {
-                worldX -= speed;
+//                worldX -= speed;
                 direction = "left";
             }
             if (keyH.rightPressed) {
-                worldX += speed;
+//                worldX += speed;
                 direction = "right";
             }
+
+            //check tile collison
+            collisionOn = false;
+            gp.colCheck.checkTile(this);
+
+            //if collision is false, player can move
+            if(!collisionOn){
+                switch (direction){
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
+                }
+            }
+
             spriteCounter++;
             if(spriteCounter > 10) {
                 if(spriteNum == 1){
