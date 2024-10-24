@@ -32,8 +32,12 @@ public class Player extends Entity {
     }
     public void getPlayerImage() {
         try { //Diri ibutang nato atoang mga pictures for characters
+            idleleft = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
+            idleright = ImageIO.read(getClass().getResourceAsStream("/player/right1.png"));
+            idledown = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
+            idleup = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
             up1 = ImageIO.read(getClass().getResourceAsStream("/player/front2.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front4.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
             down1 = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
             down2 = ImageIO.read(getClass().getResourceAsStream("/player/back2.png"));  // Fixed typo
             left1 = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
@@ -88,12 +92,18 @@ public class Player extends Entity {
                 } else if (spriteNum == 2) {
                     image = up2;
                 }
+                if(!keyH.upPressed){
+                    image = idleup;
+                }
                 break;
             case "down":
                 if (spriteNum == 1) {
                     image = down1;
                 } else if (spriteNum == 2) {
                     image = down2;
+                }
+                if(!keyH.downPressed){
+                    image = idledown;
                 }
                 break;
             case "left":
@@ -102,12 +112,18 @@ public class Player extends Entity {
                 } else if (spriteNum == 2) {
                     image = left2;
                 }
+                if(!keyH.leftPressed){
+                    image = idleleft;
+                }
                 break;
             case "right":
                 if (spriteNum == 1) {
                     image = right1;
                 } else if (spriteNum == 2) {
                     image = right2;
+                }
+                if(!keyH.rightPressed){
+                    image = idleright;
                 }
                 break;
         }
