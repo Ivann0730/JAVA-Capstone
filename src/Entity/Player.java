@@ -27,19 +27,19 @@ public class Player extends Entity {
     public void setDefaultValues() {
         worldX = gp.tileSize * 23;
         worldY = gp.tileSize * 21;
-        speed = 10;
+        speed = 3;
         direction = "down";
     }
     public void getPlayerImage() {
         try { //Diri ibutang nato atoang mga pictures for characters
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));  // Fixed typo
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/front2.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front4.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/back2.png"));  // Fixed typo
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/left2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/right1.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/right2.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

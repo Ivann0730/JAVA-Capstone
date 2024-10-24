@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Start of making the map - Date:October 23, 2024" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Start of making the map - Date:October 23, 2024">
+      <change afterPath="$PROJECT_DIR$/res/player/Back1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Back2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Back3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Back4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Front1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Front2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Front3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Front4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Left1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Left2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Left3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Left4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Right1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Right2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Right3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/Right4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/maps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/maps.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_down_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_down_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_left_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_left_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_right_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_right_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_up_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/boy_up_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +48,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -48,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ivann James/IdeaProjects/JavaCapstone/res/tiles",
+    "last_opened_file_path": "C:/Users/Ivann James/IdeaProjects/JavaCapstone/res/player",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,11 +89,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\player" />
       <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\maps" />
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\JAYZ" />
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\." />
       <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\player" />
+      <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\maps" />
     </key>
   </component>
   <component name="RunManager">
@@ -106,6 +139,7 @@
       <workItem from="1729680806979" duration="428000" />
       <workItem from="1729684639502" duration="1653000" />
       <workItem from="1729686317486" duration="14463000" />
+      <workItem from="1729740084123" duration="7053000" />
     </task>
     <task id="LOCAL-00001" summary="partial">
       <option name="closed" value="true" />
@@ -123,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729702904448</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Start of making the map - Date:October 23, 2024">
+      <option name="closed" value="true" />
+      <created>1729740241370</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729740241370</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
