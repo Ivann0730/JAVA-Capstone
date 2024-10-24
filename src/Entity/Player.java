@@ -81,19 +81,19 @@ public class Player extends Entity {
 
             //if collision is false, player can move
             if(!collisionOn){
-                switch (direction){
-                    case "up":
+                if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
+                    if (keyH.upPressed) {
                         worldY -= speed;
-                        break;
-                    case "down":
+                    }
+                    if (keyH.downPressed) {
                         worldY += speed;
-                        break;
-                    case "left":
+                    }
+                    if (keyH.leftPressed) {
                         worldX -= speed;
-                        break;
-                    case "right":
+                    }
+                    if (keyH.rightPressed) {
                         worldX += speed;
-                        break;
+                    }
                 }
             }
 
