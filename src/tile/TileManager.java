@@ -19,7 +19,7 @@ public class TileManager {
         tile = new Tile[10]; // Assuming 10 types of tiles
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow]; // Map for tile numbers
         getTileImage(); // Load tile images
-        loadMap("/maps/maps.txt"); // Load map from file
+        loadMap("/maps/map01.txt"); // Load map from file
     }
 
     // Method to load tile images
@@ -29,10 +29,10 @@ public class TileManager {
             tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass.png"));
 
             tile[1] = new Tile();
-            tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
+            tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
 
             tile[2] = new Tile();
-            tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
+            tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
 
             tile[3] = new Tile();
             tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.png"));
@@ -45,31 +45,44 @@ public class TileManager {
 
     // Load map data from text file
     public void loadMap(String filePath) {
+
         try {
-            // Import and read the map matrix
+
+            // import and read the map matrix
             InputStream is = getClass().getResourceAsStream(filePath);
             BufferedReader br = new BufferedReader(new InputStreamReader(Objects.requireNonNull(is)));
 
+            int col = 0;
             int row = 0;
 
-            // Read one row line of the map matrix data
-            while (row < gp.maxWorldRow) {
-                String line = br.readLine();
-                // Split the line into solo digits
-                String[] numbers = line.split(" ");
+            // read one row line of the map matrix data
+            while (col < gp.maxWorldCol && row < gp.maxWorldRow) {
 
-                for (int col = 0; col < gp.maxWorldCol; col++) {
-                    // Parse String to int
+                String line = br.readLine();
+
+                while (col < gp.maxWorldCol) {
+
+                    // split the line of data matrix into solo digits
+                    String[] numbers = line.split(" ");
+
+                    // parse String to int
                     int num = Integer.parseInt(numbers[col]);
 
-                    // Assign the number to mapTileNum
                     mapTileNum[col][row] = num;
+                    col++;
                 }
-                row++;
+
+                if (col == gp.maxWorldCol) {
+                    col = 0;
+                    row++;
+                }
             }
             br.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        }
+        catch (Exception e) {
+
+
         }
     }
 
@@ -103,3 +116,4 @@ public class TileManager {
         }
     }
 }
+
