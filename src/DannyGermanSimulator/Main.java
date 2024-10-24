@@ -28,7 +28,7 @@ public class Main {
         // Make the window visible and request focus on the GamePanel for key events
         window.setVisible(true);
         gamePanel.requestFocus();  // Ensure focus is gained after window is visible
-
+        gamePanel.setGameObjects();
         // Start the game thread
         gamePanel.startGameThread();
     }

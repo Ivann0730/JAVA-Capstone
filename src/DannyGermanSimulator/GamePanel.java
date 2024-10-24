@@ -3,6 +3,7 @@ package DannyGermanSimulator;
 import javax.swing.*;
 import java.awt.*;
 import Entity.Player;
+import object.SuperObject;
 import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
@@ -29,7 +30,11 @@ public class GamePanel extends JPanel implements Runnable {
     Thread gameThread;
     public CollisionChecker colCheck = new CollisionChecker(this);
     // Player
+    public AssetSetter aSetter = new AssetSetter(this);
     public Player player = new Player(this, keyH);
+    public SuperObject obj[] = new SuperObject[10]; // 10 being 10 slots for objects (can have many objects but for now 10)
+    //more objects can slow down the game
+
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -38,6 +43,10 @@ public class GamePanel extends JPanel implements Runnable {
         this.addKeyListener(keyH);
         this.setFocusable(true);
     }
+    public void setGameObjects(){
+        aSetter.setObject();
+    }
+
 
     public void startGameThread() {
         gameThread = new Thread(this);
@@ -81,6 +90,14 @@ public class GamePanel extends JPanel implements Runnable {
 
         // Draw tiles
         tileM.draw(g2);
+
+        // Draw Object
+        // to check if an object is inside the array
+        for(int i = 0; i < obj.length; i++){
+            if(obj[i] != null){
+                obj[i].draw(g2, this);
+            }
+        }
 
         // Draw player
         player.draw(g2);
