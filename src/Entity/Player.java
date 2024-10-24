@@ -20,6 +20,12 @@ public class Player extends Entity {
         this.keyH = keyH;
         this.screenX = gp.screenWidth/2 - (gp.tileSize/2);
         this.screenY = gp.screenHeight/2 - (gp.tileSize/2);
+        solidArea = new Rectangle();
+        //TO FIX values
+        solidArea.x=42;
+        solidArea.y=42;
+        solidArea.width=32;
+        solidArea.height=42;
         setDefaultValues();
         getPlayerImage();
     }
@@ -32,8 +38,12 @@ public class Player extends Entity {
     }
     public void getPlayerImage() {
         try { //Diri ibutang nato atoang mga pictures for characters
+            idleleft = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
+            idleright = ImageIO.read(getClass().getResourceAsStream("/player/right1.png"));
+            idledown = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
+            idleup = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
             up1 = ImageIO.read(getClass().getResourceAsStream("/player/front2.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front4.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
             down1 = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
             down2 = ImageIO.read(getClass().getResourceAsStream("/player/back2.png"));  // Fixed typo
             left1 = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
@@ -49,21 +59,44 @@ public class Player extends Entity {
     public void update() {
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
             if (keyH.upPressed) {
-                worldY -= speed;
+//                worldY -= speed;
                 direction = "up";
             }
             if (keyH.downPressed) {
-                worldY += speed;
+//                worldY += speed;
                 direction = "down";
             }
             if (keyH.leftPressed) {
-                worldX -= speed;
+//                worldX -= speed;
                 direction = "left";
             }
             if (keyH.rightPressed) {
-                worldX += speed;
+//                worldX += speed;
                 direction = "right";
             }
+
+            //check tile collison
+            collisionOn = false;
+            gp.colCheck.checkTile(this);
+
+            //if collision is false, player can move
+            if(!collisionOn){
+                switch (direction){
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
+                }
+            }
+
             spriteCounter++;
             if(spriteCounter > 10) {
                 if(spriteNum == 1){
@@ -88,12 +121,20 @@ public class Player extends Entity {
                 } else if (spriteNum == 2) {
                     image = up2;
                 }
+                if(!keyH.upPressed){
+                    image = idleup;
+                    spriteCounter = 9;
+                }
                 break;
             case "down":
                 if (spriteNum == 1) {
                     image = down1;
                 } else if (spriteNum == 2) {
                     image = down2;
+                }
+                if(!keyH.downPressed){
+                    image = idledown;
+                    spriteCounter = 9;
                 }
                 break;
             case "left":
@@ -102,12 +143,20 @@ public class Player extends Entity {
                 } else if (spriteNum == 2) {
                     image = left2;
                 }
+                if(!keyH.leftPressed){
+                    image = idleleft;
+                    spriteCounter = 9;
+                }
                 break;
             case "right":
                 if (spriteNum == 1) {
                     image = right1;
                 } else if (spriteNum == 2) {
                     image = right2;
+                }
+                if(!keyH.rightPressed){
+                    image = idleright;
+                    spriteCounter = 9;
                 }
                 break;
         }
