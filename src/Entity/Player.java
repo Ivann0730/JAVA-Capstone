@@ -94,6 +94,7 @@ public class Player extends Entity {
                 }
                 if(!keyH.upPressed){
                     image = idleup;
+                    spriteCounter = 9;
                 }
                 break;
             case "down":
@@ -104,6 +105,7 @@ public class Player extends Entity {
                 }
                 if(!keyH.downPressed){
                     image = idledown;
+                    spriteCounter = 9;
                 }
                 break;
             case "left":
@@ -114,6 +116,7 @@ public class Player extends Entity {
                 }
                 if(!keyH.leftPressed){
                     image = idleleft;
+                    spriteCounter = 9;
                 }
                 break;
             case "right":
@@ -124,6 +127,7 @@ public class Player extends Entity {
                 }
                 if(!keyH.rightPressed){
                     image = idleright;
+                    spriteCounter = 9;
                 }
                 break;
         }
