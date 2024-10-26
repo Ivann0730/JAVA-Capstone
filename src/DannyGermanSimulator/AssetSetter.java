@@ -1,7 +1,9 @@
 package DannyGermanSimulator;
 
 import object.OBJ_Coin;
+import object.OBJ_Heart;
 import object.OBJ_Key;
+import object.OBJ_Boots;
 
 public class AssetSetter {
     GamePanel gp;
@@ -33,5 +35,18 @@ public class AssetSetter {
         gp.obj[5] = new OBJ_Coin();
         gp.obj[5].worldX = 38 * gp.tileSize;
         gp.obj[5].worldY = 12 * gp.tileSize;
+
+        gp.obj[6] = new OBJ_Boots();
+        gp.obj[6].worldX = 39 * gp.tileSize;
+        gp.obj[6].worldY = 13 * gp.tileSize;
+
+        gp.obj[7] = new OBJ_Heart();
+        gp.obj[7].worldX = 39 * gp.tileSize;
+        gp.obj[7].worldY = 12 * gp.tileSize;
+
+        gp.obj[8] = new OBJ_Heart();
+        gp.obj[8].worldX = 37 * gp.tileSize;
+        gp.obj[8].worldY = 20 * gp.tileSize;
+
     }
 }

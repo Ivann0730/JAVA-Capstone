@@ -17,6 +17,9 @@ public class Player extends Entity {
     public final int screenY;
     int coins = 0;
     int mana = 0;
+    int hp = 0;
+    int tempSpeed = 10;
+    int tempSpriteSpeedMultiplier = 9;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp; // Initialize GamePanel
@@ -42,6 +45,9 @@ public class Player extends Entity {
         worldY = gp.tileSize * 21;
         speed = 10;
         direction = "down";
+        coins = 0;
+        mana = 0;
+        hp = 3;
     }
     public void getPlayerImage() {
         try { //Diri ibutang nato atoang mga pictures for characters
@@ -157,8 +163,8 @@ public class Player extends Entity {
             spriteSpeedMultiplier = 4;
         }
         else{
-            speed = 10;
-            spriteSpeedMultiplier = 9;
+            speed = tempSpeed;
+            spriteSpeedMultiplier = tempSpriteSpeedMultiplier;
         }
     }
 
@@ -168,6 +174,7 @@ public class Player extends Entity {
 
             switch(objectName){
                 case "Coin":
+                    gp.playSE(0);
                     coins++;
                     gp.obj[i] = null;
                     System.out.println("Coins " + coins);
@@ -176,6 +183,17 @@ public class Player extends Entity {
                     mana+=10;
                     gp.obj[i] = null;
                     System.out.println("Mana " + mana);
+                    break;
+                case "Boots":
+                    tempSpeed+=1;
+                    tempSpriteSpeedMultiplier -= 1;
+                    gp.obj[i] = null;
+                    System.out.println("Speed " + tempSpeed);
+                    break;
+                case "Heart":
+                    hp+=1;
+                    gp.obj[i] = null;
+                    System.out.println("Hp " + hp);
                     break;
             }
         }

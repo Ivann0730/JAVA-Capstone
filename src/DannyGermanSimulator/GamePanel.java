@@ -24,9 +24,11 @@ public class GamePanel extends JPanel implements Runnable {
 
     // FPS
     int FPS = 60;
-
+    //SYSTEM
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
+    Sound sound = new Sound();
+
     Thread gameThread;
     public CollisionChecker colCheck = new CollisionChecker(this);
     // Player
@@ -45,6 +47,8 @@ public class GamePanel extends JPanel implements Runnable {
     }
     public void setGameObjects(){
         aSetter.setObject();
+
+        playMusic(1);
     }
 
 
@@ -103,5 +107,19 @@ public class GamePanel extends JPanel implements Runnable {
         player.draw(g2);
 
         g2.dispose();
+    }
+
+    public void playMusic(int i){
+        sound.setFile(i);
+        sound.play();
+        sound.loop();
+    }
+    public void stopMusic(){
+        sound.stop();
+    }
+    //SE =  sound effect
+    public void playSE(int i){
+        sound.setFile(i);
+        sound.play();
     }
 }
