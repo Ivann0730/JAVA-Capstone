@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)">
-      <change afterPath="$PROJECT_DIR$/res/objects/boots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/heart_full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/LTTheme.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/coin.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)">
+      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729935946399</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)">
+      <option name="closed" value="true" />
+      <created>1729946281820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729946281820</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,14 +199,16 @@
     <MESSAGE value="Collision Implemented - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
+    <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
+    <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Entity/Player.java</url>
-          <line>52</line>
+          <line>51</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

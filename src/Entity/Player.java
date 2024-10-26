@@ -15,9 +15,9 @@ public class Player extends Entity {
 
     public final int screenX;
     public final int screenY;
-    int coins = 0;
+    public int coins = 0;
     int mana = 0;
-    int hp = 0;
+    public int hp = 0;
     int tempSpeed = 10;
     int tempSpriteSpeedMultiplier = 9;
 
@@ -28,10 +28,9 @@ public class Player extends Entity {
         this.screenY = gp.screenHeight/2 - (gp.tileSize/2);
         solidArea = new Rectangle();
 
-        //TO FIX values
-        solidArea.x=24;
+        //TO FIX Optimize
+        solidArea.x=32;
         solidArea.y=48;
-        //to fix for coins
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
         solidArea.width=48;
@@ -71,6 +70,7 @@ public class Player extends Entity {
 //            right2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right2.png"));
 //            right3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right3.png"));
 //            right4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right4.png"));
+
             idleleft = ImageIO.read(getClass().getResourceAsStream("/player/Left1.png"));
             idleright = ImageIO.read(getClass().getResourceAsStream("/player/Right1.png"));
             idledown = ImageIO.read(getClass().getResourceAsStream("/player/Back1.png"));
@@ -177,24 +177,27 @@ public class Player extends Entity {
                     gp.playSE(0);
                     coins++;
                     gp.obj[i] = null;
-                    System.out.println("Coins " + coins);
+                    gp.ui.showMessage("You got a Coin! x " + coins);
                     break;
                 case "Mana":
                     mana+=10;
                     gp.obj[i] = null;
-                    System.out.println("Mana " + mana);
+                    gp.ui.showMessage("Mana has increased! Mana = " + mana);
                     break;
                 case "Boots":
                     tempSpeed+=1;
                     tempSpriteSpeedMultiplier -= 1;
                     gp.obj[i] = null;
-                    System.out.println("Speed " + tempSpeed);
+                    gp.ui.showMessage("Speed has Improved! Speed = " + tempSpeed);
                     break;
                 case "Heart":
                     hp+=1;
                     gp.obj[i] = null;
-                    System.out.println("Hp " + hp);
+                    gp.ui.showMessage("HP has increased! HP = " + hp);
                     break;
+                //add case for game finished or player dies
+                    //sound effect for dead player
+                    //stop music
             }
         }
     }
@@ -243,6 +246,9 @@ public class Player extends Entity {
         }
 
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        //to see collision box or hit box
+        g2.setColor(Color.red);
+        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
     }
 
 }
