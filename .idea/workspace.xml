@@ -4,68 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Objects Implemented (but not yet interactable) - Date:October 24, 2024">
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/022.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/026.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/027.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/028.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/029.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/030.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/031.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/032.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/033.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/034.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/035.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/036.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/037.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles_Ren/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/testmap.txt" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="New Map Update (Object not implemented)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,12 +35,12 @@
     &quot;assignee&quot;: &quot;Ivann0730&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ivann0730/JAVA-Capstone.git&quot;,
-    &quot;accountId&quot;: &quot;82218363-1347-4652-947f-094d7dc30d30&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ivann0730/JAVA-Capstone",
+    "accountId": "da8b10d6-8d47-4816-a8df-c8eb9da47b9a"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -106,22 +53,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JAVA2/JAVA-Capstone/res/Tiles_Ren",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA2/JAVA-Capstone/res/Tiles_Ren&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA2\JAVA-Capstone\res\Tiles_Ren" />
@@ -153,14 +100,6 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -215,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729770452886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Objects Implemented (but not yet interactable) - Date:October 24, 2024">
+      <option name="closed" value="true" />
+      <created>1729782495355</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729782495356</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,5 +185,16 @@
     <MESSAGE value="Collision Implemented - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
     <option name="LAST_COMMIT_MESSAGE" value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Entity/Player.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.sql.SQLOutput;
 
 public class Player extends Entity {
     GamePanel gp;
@@ -14,6 +15,8 @@ public class Player extends Entity {
 
     public final int screenX;
     public final int screenY;
+    int coins = 0;
+    int mana = 0;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp; // Initialize GamePanel
@@ -21,11 +24,15 @@ public class Player extends Entity {
         this.screenX = gp.screenWidth/2 - (gp.tileSize/2);
         this.screenY = gp.screenHeight/2 - (gp.tileSize/2);
         solidArea = new Rectangle();
+
         //TO FIX values
-        solidArea.x=42;
-        solidArea.y=42;
-        solidArea.width=32;
-        solidArea.height=42;
+        solidArea.x=24;
+        solidArea.y=48;
+        //to fix for coins
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
+        solidArea.width=48;
+        solidArea.height=48;
         setDefaultValues();
         getPlayerImage();
     }
@@ -38,26 +45,46 @@ public class Player extends Entity {
     }
     public void getPlayerImage() {
         try { //Diri ibutang nato atoang mga pictures for characters
-            idleleft = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
-            idleright = ImageIO.read(getClass().getResourceAsStream("/player/right1.png"));
-            idledown = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
-            idleup = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/front2.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
-            up3 = ImageIO.read(getClass().getResourceAsStream("/player/front4.png"));
-            up4 = ImageIO.read(getClass().getResourceAsStream("/player/front3.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/back1.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/back2.png"));  // Fixed typo
-            down3 = ImageIO.read(getClass().getResourceAsStream("/player/back3.png"));
-            down4 = ImageIO.read(getClass().getResourceAsStream("/player/back4.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/left1.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/left2.png"));
-            left3 = ImageIO.read(getClass().getResourceAsStream("/player/left3.png"));
-            left4 = ImageIO.read(getClass().getResourceAsStream("/player/left4.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/right1.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/right2.png"));
-            right3 = ImageIO.read(getClass().getResourceAsStream("/player/right3.png"));
-            right4 = ImageIO.read(getClass().getResourceAsStream("/player/right4.png"));
+//            idleleft = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left1.png"));
+//            idleright = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right1.png"));
+//            idledown = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back1.png"));
+//            idleup = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front1.png"));
+//            up1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front1.png"));
+//            up2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front3.png"));
+//            up3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front2.png"));
+//            up4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front4.png"));
+//            down1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back1.png"));
+//            down2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back2.png"));  // Fixed typo
+//            down3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back3.png"));
+//            down4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back4.png"));
+//            left1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left1.png"));
+//            left2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left2.png"));
+//            left3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left3.png"));
+//            left4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left4.png"));
+//            right1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right1.png"));
+//            right2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right2.png"));
+//            right3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right3.png"));
+//            right4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right4.png"));
+            idleleft = ImageIO.read(getClass().getResourceAsStream("/player/Left1.png"));
+            idleright = ImageIO.read(getClass().getResourceAsStream("/player/Right1.png"));
+            idledown = ImageIO.read(getClass().getResourceAsStream("/player/Back1.png"));
+            idleup = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/Front2.png"));
+            up3 = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
+            up4 = ImageIO.read(getClass().getResourceAsStream("/player/Front4.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/Back1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/Back2.png"));  // Fixed typo
+            down3 = ImageIO.read(getClass().getResourceAsStream("/player/Back3.png"));
+            down4 = ImageIO.read(getClass().getResourceAsStream("/player/Back4.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/Left1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/Left2.png"));
+            left3 = ImageIO.read(getClass().getResourceAsStream("/player/Left3.png"));
+            left4 = ImageIO.read(getClass().getResourceAsStream("/player/Left4.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/Right1.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/Right2.png"));
+            right3 = ImageIO.read(getClass().getResourceAsStream("/player/Right3.png"));
+            right4 = ImageIO.read(getClass().getResourceAsStream("/player/Right4.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -82,6 +109,11 @@ public class Player extends Entity {
             //check tile collision
             collisionOn = false;
             gp.colCheck.checkTile(this);
+
+            //check object collision
+            int objIndex = gp.colCheck.checkObject(this, true);
+            pickUpObject(objIndex);
+
 
             //if collision is false, player can move
             if(!collisionOn){
@@ -127,6 +159,25 @@ public class Player extends Entity {
         else{
             speed = 10;
             spriteSpeedMultiplier = 9;
+        }
+    }
+
+    public void pickUpObject(int i){
+        if (i != 999){
+            String objectName = gp.obj[i].name;
+
+            switch(objectName){
+                case "Coin":
+                    coins++;
+                    gp.obj[i] = null;
+                    System.out.println("Coins " + coins);
+                    break;
+                case "Mana":
+                    mana+=10;
+                    gp.obj[i] = null;
+                    System.out.println("Mana " + mana);
+                    break;
+            }
         }
     }
 

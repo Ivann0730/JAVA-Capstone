@@ -11,5 +11,6 @@ public class OBJ_Coin extends SuperObject{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        collision = true;
     }
 }

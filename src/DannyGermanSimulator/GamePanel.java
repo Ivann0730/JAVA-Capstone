@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements Runnable {
     // Screen settings (dynamic scaling based on screen resolution)
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     public final int maxScreenCol = 16;
-    public final int maxScreenRow = 12;
+    public final int maxScreenRow = 16;
     public final int screenWidth = (int) screenSize.getWidth();
     public final int screenHeight = (int) screenSize.getHeight();
     public final int tileSize = screenWidth / maxScreenCol; // Dynamically set the tile size based on the screen width
