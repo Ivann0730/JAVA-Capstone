@@ -2,6 +2,7 @@ package Entity;
 
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.KeyHandler;
+import DannyGermanSimulator.UtilityTool;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -29,7 +30,7 @@ public class Player extends Entity {
         solidArea = new Rectangle();
 
         //TO FIX Optimize
-        solidArea.x=32;
+        solidArea.x=34;
         solidArea.y=48;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
@@ -49,52 +50,61 @@ public class Player extends Entity {
         hp = 3;
     }
     public void getPlayerImage() {
-        try { //Diri ibutang nato atoang mga pictures for characters
-//            idleleft = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left1.png"));
-//            idleright = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right1.png"));
-//            idledown = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back1.png"));
-//            idleup = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front1.png"));
-//            up1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front1.png"));
-//            up2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front3.png"));
-//            up3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front2.png"));
-//            up4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Front4.png"));
-//            down1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back1.png"));
-//            down2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back2.png"));  // Fixed typo
-//            down3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back3.png"));
-//            down4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Back4.png"));
-//            left1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left1.png"));
-//            left2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left2.png"));
-//            left3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left3.png"));
-//            left4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Left4.png"));
-//            right1 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right1.png"));
-//            right2 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right2.png"));
-//            right3 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right3.png"));
-//            right4 = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/Right4.png"));
+    //Diri ibutang nato atoang mga pictures for characters
+//        idleleft = setUp("Left1");
+//        idleright = setUp("Right1");
+//        idledown = setUp("Back1");
+//        idleup = setUp("Front1");
+//        up1 = setUp("Front1");
+//        up2 = setUp("Front2");
+//        up3 = setUp("Front3");
+//        up4 = setUp("Front4");
+//        down1 = setUp("Back1");
+//        down2 = setUp("Back2");
+//        down3 = setUp("Back3");
+//        down4 = setUp("Back4");
+//        left1 = setUp("Left1");
+//        left2 = setUp("Left2");
+//        left3 = setUp("Left3");
+//        left4 = setUp("Left4");
+//        right1 = setUp("Right1");
+//        right2 = setUp("Right2");
+//        right3 = setUp("Right3");
+//        right4 = setUp("Right4");
+//
+        idleleft = setUp("Left1");
+        idleright = setUp("Right1");
+        idledown = setUp("Back1");
+        idleup = setUp("Front3");
+        up1 = setUp("Front3");
+        up2 = setUp("Front2");
+        up3 = setUp("Front3");
+        up4 = setUp("Front4");
+        down1 = setUp("Back1");
+        down2 = setUp("Back2");
+        down3 = setUp("Back3");
+        down4 = setUp("Back4");
+        left1 = setUp("Left1");
+        left2 = setUp("Left2");
+        left3 = setUp("Left3");
+        left4 = setUp("Left4");
+        right1 = setUp("Right1");
+        right2 = setUp("Right2");
+        right3 = setUp("Right3");
+        right4 = setUp("Right4");
+    }
 
-            idleleft = ImageIO.read(getClass().getResourceAsStream("/player/Left1.png"));
-            idleright = ImageIO.read(getClass().getResourceAsStream("/player/Right1.png"));
-            idledown = ImageIO.read(getClass().getResourceAsStream("/player/Back1.png"));
-            idleup = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/Front2.png"));
-            up3 = ImageIO.read(getClass().getResourceAsStream("/player/Front3.png"));
-            up4 = ImageIO.read(getClass().getResourceAsStream("/player/Front4.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/Back1.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/Back2.png"));  // Fixed typo
-            down3 = ImageIO.read(getClass().getResourceAsStream("/player/Back3.png"));
-            down4 = ImageIO.read(getClass().getResourceAsStream("/player/Back4.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/Left1.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/Left2.png"));
-            left3 = ImageIO.read(getClass().getResourceAsStream("/player/Left3.png"));
-            left4 = ImageIO.read(getClass().getResourceAsStream("/player/Left4.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/Right1.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/Right2.png"));
-            right3 = ImageIO.read(getClass().getResourceAsStream("/player/Right3.png"));
-            right4 = ImageIO.read(getClass().getResourceAsStream("/player/Right4.png"));
-
-        } catch (IOException e) {
+    public BufferedImage setUp(String imageName){
+        UtilityTool uTool = new UtilityTool();
+        BufferedImage image = null;
+        try{
+//            image = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/"+ imageName + ".png"));
+            image = ImageIO.read(getClass().getResourceAsStream("/player/"+ imageName + ".png"));
+            image = uTool.scaleImage(image, gp.tileSize, gp.tileSize);
+        } catch(IOException e){
             e.printStackTrace();
         }
+        return image;
     }
 
     public void update() {
@@ -245,10 +255,11 @@ public class Player extends Entity {
                 break;
         }
 
-        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, screenX, screenY,null);
+
         //to see collision box or hit box
-        g2.setColor(Color.red);
-        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
+//        g2.setColor(Color.red);
+//        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
     }
 
 }

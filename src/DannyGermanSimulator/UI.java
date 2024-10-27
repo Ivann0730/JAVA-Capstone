@@ -20,7 +20,7 @@ public class UI {
     public UI(GamePanel gp){
         this.gp = gp;
         arial_40 = new Font("Arial", Font.PLAIN, 40);
-        OBJ_Heart hp = new OBJ_Heart();
+        OBJ_Heart hp = new OBJ_Heart(gp);
         hpImage = hp.image;
     }
     public void showMessage(String text){

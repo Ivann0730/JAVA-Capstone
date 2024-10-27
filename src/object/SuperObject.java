@@ -1,6 +1,7 @@
 package object;
 
 import DannyGermanSimulator.GamePanel;
+import DannyGermanSimulator.UtilityTool;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,9 +11,10 @@ public class SuperObject {
     public String name;
     public boolean collision = false;
     public int worldX, worldY;
-    public Rectangle solidArea = new Rectangle(48, 48, 48, 48);
-    public int solidAreaDefaultX = 0;
+    public Rectangle solidArea = new Rectangle(0, 0, 48, 48);
+    public int solidAreaDefaultX;
     public int solidAreaDefaultY = 0;
+    UtilityTool uTool = new UtilityTool();
 
     public void draw(Graphics2D g2, GamePanel gp){
 

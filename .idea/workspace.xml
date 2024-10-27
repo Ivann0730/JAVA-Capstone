@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)">
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)">
+      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UtilityTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +40,12 @@
     &quot;assignee&quot;: &quot;Ivann0730&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ivann0730/JAVA-Capstone",
-    "accountId": "da8b10d6-8d47-4816-a8df-c8eb9da47b9a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ivann0730/JAVA-Capstone&quot;,
+    &quot;accountId&quot;: &quot;da8b10d6-8d47-4816-a8df-c8eb9da47b9a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -176,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729946281820</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)">
+      <option name="closed" value="true" />
+      <created>1729951164710</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729951164710</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,17 +217,7 @@
     <MESSAGE value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Entity/Player.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)" />
   </component>
 </project>
