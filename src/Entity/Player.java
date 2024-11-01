@@ -11,19 +11,14 @@ import java.io.IOException;
 import java.sql.SQLOutput;
 
 public class Player extends Entity {
-    GamePanel gp;
     KeyHandler keyH;
-
     public final int screenX;
     public final int screenY;
-    public int coins = 0;
-    int mana = 0;
-    public int hp = 0;
     int tempSpeed = 10;
     int tempSpriteSpeedMultiplier = 9;
 
     public Player(GamePanel gp, KeyHandler keyH) {
-        this.gp = gp; // Initialize GamePanel
+        super(gp);
         this.keyH = keyH;
         this.screenX = gp.screenWidth/2 - (gp.tileSize/2);
         this.screenY = gp.screenHeight/2 - (gp.tileSize/2);
@@ -45,9 +40,6 @@ public class Player extends Entity {
         worldY = gp.tileSize * 21;
         speed = 10;
         direction = "down";
-        coins = 0;
-        mana = 0;
-        hp = 3;
     }
     public void getPlayerImage() {
     //Diri ibutang nato atoang mga pictures for characters
@@ -72,39 +64,26 @@ public class Player extends Entity {
 //        right3 = setUp("Right3");
 //        right4 = setUp("Right4");
 //
-        idleleft = setUp("Left1");
-        idleright = setUp("Right1");
-        idledown = setUp("Back1");
-        idleup = setUp("Front3");
-        up1 = setUp("Front3");
-        up2 = setUp("Front2");
-        up3 = setUp("Front3");
-        up4 = setUp("Front4");
-        down1 = setUp("Back1");
-        down2 = setUp("Back2");
-        down3 = setUp("Back3");
-        down4 = setUp("Back4");
-        left1 = setUp("Left1");
-        left2 = setUp("Left2");
-        left3 = setUp("Left3");
-        left4 = setUp("Left4");
-        right1 = setUp("Right1");
-        right2 = setUp("Right2");
-        right3 = setUp("Right3");
-        right4 = setUp("Right4");
-    }
-
-    public BufferedImage setUp(String imageName){
-        UtilityTool uTool = new UtilityTool();
-        BufferedImage image = null;
-        try{
-//            image = ImageIO.read(getClass().getResourceAsStream("/maxLevelArmor/"+ imageName + ".png"));
-            image = ImageIO.read(getClass().getResourceAsStream("/player/"+ imageName + ".png"));
-            image = uTool.scaleImage(image, gp.tileSize, gp.tileSize);
-        } catch(IOException e){
-            e.printStackTrace();
-        }
-        return image;
+        idleleft = setUp("/player/Left1");
+        idleright = setUp("/player/Right1");
+        idledown = setUp("/player/Back1");
+        idleup = setUp("/player/Front3");
+        up1 = setUp("/player/Front3");
+        up2 = setUp("/player/Front2");
+        up3 = setUp("/player/Front3");
+        up4 = setUp("/player/Front4");
+        down1 = setUp("/player/Back1");
+        down2 = setUp("/player/Back2");
+        down3 = setUp("/player/Back3");
+        down4 = setUp("/player/Back4");
+        left1 = setUp("/player/Left1");
+        left2 = setUp("/player/Left2");
+        left3 = setUp("/player/Left3");
+        left4 = setUp("/player/Left4");
+        right1 = setUp("/player/Right1");
+        right2 = setUp("/player/Right2");
+        right3 = setUp("/player/Right3");
+        right4 = setUp("/player/Right4");
     }
 
     public void update() {
@@ -129,6 +108,10 @@ public class Player extends Entity {
             //check object collision
             int objIndex = gp.colCheck.checkObject(this, true);
             pickUpObject(objIndex);
+
+            //Check NPC collision
+            int npcIndex = gp.colCheck.checkEntity(this, gp.npc);
+            interactNPC(npcIndex);
 
 
             //if collision is false, player can move
@@ -180,37 +163,16 @@ public class Player extends Entity {
 
     public void pickUpObject(int i){
         if (i != 999){
-            String objectName = gp.obj[i].name;
 
-            switch(objectName){
-                case "Coin":
-                    gp.playSE(0);
-                    coins++;
-                    gp.obj[i] = null;
-                    gp.ui.showMessage("You got a Coin! x " + coins);
-                    break;
-                case "Mana":
-                    mana+=10;
-                    gp.obj[i] = null;
-                    gp.ui.showMessage("Mana has increased! Mana = " + mana);
-                    break;
-                case "Boots":
-                    tempSpeed+=1;
-                    tempSpriteSpeedMultiplier -= 1;
-                    gp.obj[i] = null;
-                    gp.ui.showMessage("Speed has Improved! Speed = " + tempSpeed);
-                    break;
-                case "Heart":
-                    hp+=1;
-                    gp.obj[i] = null;
-                    gp.ui.showMessage("HP has increased! HP = " + hp);
-                    break;
-                //add case for game finished or player dies
-                    //sound effect for dead player
-                    //stop music
-            }
         }
     }
+
+    public void interactNPC(int index){
+        if(index!=999){
+            System.out.println("You are hitting an npc");
+        }
+    }
+
 
     public void draw(Graphics2D g2) {
         BufferedImage image = null;
@@ -258,8 +220,8 @@ public class Player extends Entity {
         g2.drawImage(image, screenX, screenY,null);
 
         //to see collision box or hit box
-//        g2.setColor(Color.red);
-//        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
+        g2.setColor(Color.red);
+        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
     }
 
 }
