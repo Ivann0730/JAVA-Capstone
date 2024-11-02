@@ -2,6 +2,7 @@ package DannyGermanSimulator;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.SQLOutput;
 
 public class KeyHandler implements KeyListener{
     GamePanel gp;
@@ -21,7 +22,72 @@ public class KeyHandler implements KeyListener{
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
-
+        //TITLE STATE
+        if(gp.gameState == gp.titleState){
+            if(gp.ui.titleScreenState == 0){
+                if(code == KeyEvent.VK_W){
+                    gp.ui.commandNum--;
+                    if(gp.ui.commandNum < 0){
+                        gp.ui.commandNum = 2;
+                    }
+                }
+                if(code == KeyEvent.VK_S){
+                    gp.ui.commandNum++;
+                    if(gp.ui.commandNum > 2){
+                        gp.ui.commandNum = 0;
+                    }
+                }
+                if(code == KeyEvent.VK_ENTER){
+                    //NEW GAME
+                    if(gp.ui.commandNum == 0){
+                        gp.ui.titleScreenState = 1;
+                    }
+                    //LOAD GAME
+                    if(gp.ui.commandNum == 1){
+                        //add later
+                    }
+                    //QUIT
+                    if(gp.ui.commandNum == 2){
+                        System.exit(0);
+                    }
+                }
+            }
+            //For Class Selection
+            else if(gp.ui.titleScreenState == 1){
+                if(code == KeyEvent.VK_W){
+                    gp.ui.commandNum--;
+                    if(gp.ui.commandNum < 0){
+                        gp.ui.commandNum = 3;
+                    }
+                }
+                if(code == KeyEvent.VK_S){
+                    gp.ui.commandNum++;
+                    if(gp.ui.commandNum > 3){
+                        gp.ui.commandNum = 0;
+                    }
+                }
+                if(code == KeyEvent.VK_ENTER){
+                    if(gp.ui.commandNum == 0){
+                        System.out.println("Warrior");
+                        gp.gameState = gp.playState;
+                        gp.playMusic(1);
+                    }
+                    if(gp.ui.commandNum == 1){
+                        System.out.println("Mage");
+                        gp.gameState = gp.playState;
+                        gp.playMusic(1);
+                    }
+                    if(gp.ui.commandNum == 2){
+                        System.out.println("Tank");
+                        gp.gameState = gp.playState;
+                        gp.playMusic(1);
+                    }
+                    if(gp.ui.commandNum == 3){
+                        gp.ui.titleScreenState = 0;
+                    }
+                }
+            }
+        }
         //PLAY STATE
         if(gp.gameState == gp.playState){
             if(code == KeyEvent.VK_W){

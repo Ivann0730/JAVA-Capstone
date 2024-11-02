@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added NPC class&#10;-new radish npc (has simple AI implemented to randomize walk direction)&#10;-hit box values need to be fixed&#10;-cleaned up code a little bit">
-      <change afterPath="$PROJECT_DIR$/res/Font/OldSchoolAdventures-42j9.ttf" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_radish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_radish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730461511053</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values">
+      <option name="closed" value="true" />
+      <created>1730547117525</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730547117525</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +236,8 @@
     <MESSAGE value="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)" />
     <MESSAGE value="Improved Rendering Performance&#10;-press T to show draw time&#10;(before optimization draw time was 600000 - 800000 or 0.006 - 0.008 seconds, after optimization it is now 0.001 average)&#10;-cleaned up code a little bit&#10;-added utility class for scaling image for better performance" />
     <MESSAGE value="Added NPC class&#10;-new radish npc (has simple AI implemented to randomize walk direction)&#10;-hit box values need to be fixed&#10;-cleaned up code a little bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added NPC class&#10;-new radish npc (has simple AI implemented to randomize walk direction)&#10;-hit box values need to be fixed&#10;-cleaned up code a little bit" />
+    <MESSAGE value="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
