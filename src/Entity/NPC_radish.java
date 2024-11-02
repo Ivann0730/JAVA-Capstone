@@ -12,6 +12,7 @@ public class NPC_radish extends Entity{
         speed = 3;
 
         getImage();
+        setDialogue();
     }
     public void setAction(){
         actionLockCounter++;
@@ -34,7 +35,15 @@ public class NPC_radish extends Entity{
             actionLockCounter = 0;
         }
     }
-    // can only use two sprite idk why
+    public void setDialogue(){
+
+        dialogues[0] = "Small but my GYATT is unbeatable!";
+        dialogues[1] = "Yoooo, check out my GYATT!";
+        dialogues[2] = "I know I know, im GYATTIFULL";
+        dialogues[3] = "BOMBOGYATTT";
+    }
+
+    // can only use two sprite IDK why
     public void getImage() {
         idleleft = setUp("/NPC/radish/running radish-5.png");
         idleright = setUp("/NPC/radish/running radish-11.png");
@@ -56,5 +65,8 @@ public class NPC_radish extends Entity{
         right2 = setUp("/NPC/radish/running radish-12.png");
         right3 = setUp("/NPC/radish/running radish-12.png");
         right4 = setUp("/NPC/radish/running radish-11.png");
+    }
+    public void speak(){
+        super.speak();
     }
 }
