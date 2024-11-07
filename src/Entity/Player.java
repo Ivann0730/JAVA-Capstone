@@ -40,6 +40,10 @@ public class Player extends Entity {
         worldY = gp.tileSize * 21;
         speed = 10;
         direction = "down";
+
+        //PLAYER STATUS
+        maxLife = 6;
+        life = maxLife;
     }
     public void getPlayerImage() {
     //Diri ibutang nato atoang mga pictures for characters

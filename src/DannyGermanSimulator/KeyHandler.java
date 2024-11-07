@@ -111,6 +111,9 @@ public class KeyHandler implements KeyListener{
             if(code == KeyEvent.VK_ENTER){
                 enterPressed=true;
             }
+            if(code == KeyEvent.VK_ESCAPE){
+                gp.gameState = gp.pauseState;
+            }
             //toggle debug
             if(code == KeyEvent.VK_T){
                 if(!checkDrawTime){
@@ -125,6 +128,12 @@ public class KeyHandler implements KeyListener{
         else if(gp.gameState == gp.pauseState){
             if(code == KeyEvent.VK_P){
                 gp.gameState = gp.playState;
+            }
+            if(code == KeyEvent.VK_ESCAPE){
+                gp.gameState = gp.playState;
+            }
+            if(code == KeyEvent.VK_ENTER){
+                System.exit(0);
             }
         }
         //DIALOGUE STATE
