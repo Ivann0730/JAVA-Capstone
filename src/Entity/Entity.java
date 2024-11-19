@@ -114,7 +114,7 @@ public class Entity {
             worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
             worldY - gp.tileSize < gp.player.worldY + gp.player.screenY) {
             switch (direction) {
-                //sprites 3-4 arent used idk why yet, so only 1 and 2 sprites are used
+                //sprites 3-4 aren't used I don't know why yet, so only 1 and 2 sprites are used
                 case "up":
                     if(spriteNum == 1){
                         image = up1;
