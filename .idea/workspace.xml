@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Title Screen&#10;-classes can be replaced with difficulty choices like ease, medium, or hard&#10;-choosing a class will do nothing atm&#10;-choosing load game will do nothing atm&#10;-still need to fix hit box values">
-      <change afterPath="$PROJECT_DIR$/res/objects/heart_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/heart_half.png" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values">
+      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/LA6_Tolentino&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/LA6_Tolentino",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA2\JAVA-Capstone\res\Font" />
@@ -221,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730559603267</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values">
+      <option name="closed" value="true" />
+      <created>1730994100820</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730994100820</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +260,8 @@
     <MESSAGE value="Added NPC class&#10;-new radish npc (has simple AI implemented to randomize walk direction)&#10;-hit box values need to be fixed&#10;-cleaned up code a little bit" />
     <MESSAGE value="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values" />
     <MESSAGE value="Added Title Screen&#10;-classes can be replaced with difficulty choices like ease, medium, or hard&#10;-choosing a class will do nothing atm&#10;-choosing load game will do nothing atm&#10;-still need to fix hit box values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Title Screen&#10;-classes can be replaced with difficulty choices like ease, medium, or hard&#10;-choosing a class will do nothing atm&#10;-choosing load game will do nothing atm&#10;-still need to fix hit box values" />
+    <MESSAGE value="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
