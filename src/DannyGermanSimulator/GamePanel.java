@@ -2,10 +2,12 @@ package DannyGermanSimulator;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import Entity.Entity;
 import Entity.Player;
-import object.SuperObject;
 import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
@@ -40,8 +42,9 @@ public class GamePanel extends JPanel implements Runnable {
     // Player, Entity, Objects
     public AssetSetter aSetter = new AssetSetter(this);
     public Player player = new Player(this, keyH);
-    public SuperObject obj[] = new SuperObject[10]; // 10 being 10 slots for objects (can have many objects but for now 10)5
+    public Entity obj[] = new Entity[10]; // 10 being 10 slots for objects (can have many objects but for now 10)5
     public Entity npc[] = new Entity[10];
+    ArrayList<Entity> entityList = new ArrayList<>();
     //more objects can slow down the game
 
     //GAME STATE
@@ -134,24 +137,38 @@ public class GamePanel extends JPanel implements Runnable {
             // Draw tiles
             tileM.draw(g2);
 
-            // Draw Object
-            // to check if an object is inside the array
-            for(int i = 0; i < obj.length; i++){
-                if(obj[i] != null){
-                    obj[i].draw(g2, this);
-                }
-            }
-
+            //ADD ENTITIES
+            entityList.add(player);
             //NPC
             for(int i = 0; i < npc.length; i++){
-                if(npc[i] != null){
-                    npc[i].draw(g2);
+                if(npc[i] != null) {
+                    entityList.add(npc[i]);
+                }
+            }
+            //OBJECT
+            for(int i = 0; i < obj.length; i++){
+                if(obj[i] != null) {
+                    entityList.add(obj[i]);
                 }
             }
 
-            // Draw player
-            player.draw(g2);
+            //SORT
+            Collections.sort(entityList, new Comparator<Entity>() {
+                @Override
+                public int compare(Entity e1, Entity e2) {
 
+                    return Integer.compare(e1.worldY, e2.worldY);
+                }
+            });
+
+            //DRAW ENTITY
+            for(int i = 0; i < entityList.size(); i++){
+                entityList.get(i).draw(g2);
+            }
+            //EMPTY ENTITY LIST
+            for(int i = 0; i < entityList.size(); i++){
+                entityList.remove(i);
+            }
             //UI
             ui.draw(g2);
         }

@@ -19,7 +19,7 @@ public class Entity {
     public BufferedImage down1, down2, down3, down4;
     public BufferedImage left1, left2, left3, left4;
     public BufferedImage right1, right2, right3, right4;
-    public String direction;
+    public String direction = "down";
 
     public int spriteCounter = 0;
     public int spriteNum = 1;
@@ -32,6 +32,9 @@ public class Entity {
 
     String dialogues[] = new String[20];
     int dialogueIndex = 0;
+    public BufferedImage image, image2, image3;
+    public String name;
+    public boolean collision = false;
 
     //Character Status
     public int maxLife;

@@ -1,6 +1,7 @@
 package DannyGermanSimulator;
 
 import Entity.NPC_radish;
+import object.OBJ_Key;
 
 public class AssetSetter {
     GamePanel gp;
@@ -9,9 +10,9 @@ public class AssetSetter {
         this.gp = gp;
     }
     public void setObject(){
-//        gp.obj[0] = new OBJ_Key(gp);
-//        gp.obj[0].worldX = 36 * gp.tileSize;
-//        gp.obj[0].worldY = 5 * gp.tileSize;
+        gp.obj[0] = new OBJ_Key(gp);
+        gp.obj[0].worldX = gp.tileSize * 26;
+        gp.obj[0].worldY = gp.tileSize * 36;
     }
     public void setNPC(){
         gp.npc[0] = new NPC_radish(gp);

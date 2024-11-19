@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values">
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added EVENTS&#10;-Press F for Heal near the water &#10;-still need to fix hit box values">
+      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventRect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730994100820</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added EVENTS&#10;-Press F for Heal near the water &#10;-still need to fix hit box values">
+      <option name="closed" value="true" />
+      <created>1731977828270</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731977828270</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +274,8 @@
     <MESSAGE value="Added Dialogue&#10;-to talk with npc, collide with npc and press ENTER key&#10;-Added font&#10;-still need to fix hit box values" />
     <MESSAGE value="Added Title Screen&#10;-classes can be replaced with difficulty choices like ease, medium, or hard&#10;-choosing a class will do nothing atm&#10;-choosing load game will do nothing atm&#10;-still need to fix hit box values" />
     <MESSAGE value="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added HUD Life for player&#10;-added new key handler for ESCAPE key now used to pause, and when in paused state press ENTER for easy game exit&#10;-still need to fix hit box values" />
+    <MESSAGE value="Added EVENTS&#10;-Press F for Heal near the water &#10;-still need to fix hit box values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added EVENTS&#10;-Press F for Heal near the water &#10;-still need to fix hit box values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

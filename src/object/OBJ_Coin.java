@@ -1,20 +1,13 @@
 package object;
 
 import DannyGermanSimulator.GamePanel;
+import Entity.Entity;
 
-import javax.imageio.ImageIO;
-import java.io.IOException;
-
-public class OBJ_Coin extends SuperObject{
-    GamePanel gp;
+public class OBJ_Coin extends Entity {
     public OBJ_Coin(GamePanel gp){
+        super(gp);
+
         name = "Coin";
-        try{
-            image = ImageIO.read(getClass().getResourceAsStream("/objects/coin_bronze.png"));
-            uTool.scaleImage(image, gp.tileSize, gp.tileSize);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        collision = true;
+        down1 = setUp("/objects/coin_bronze.png");
     }
 }
