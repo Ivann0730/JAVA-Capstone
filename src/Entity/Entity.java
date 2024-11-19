@@ -30,6 +30,8 @@ public class Entity {
     public boolean collisionOn = false;
     public int actionLockCounter=0;
 
+    public boolean invincible = false;
+    public int invincibleCounter = 0;
     String dialogues[] = new String[20];
     int dialogueIndex = 0;
     public BufferedImage image, image2, image3;
@@ -39,6 +41,8 @@ public class Entity {
     //Character Status
     public int maxLife;
     public int life;
+
+    public int type; //0 = player, 1 = npc, 2 = monster
 
     public Entity(GamePanel gp){
         this.gp = gp;
@@ -72,7 +76,17 @@ public class Entity {
         collisionOn = false;
         gp.colCheck.checkTile(this);
         gp.colCheck.checkObject(this,false);
-        gp.colCheck.checkPlayer(this);
+        gp.colCheck.checkEntity(this, gp.npc);
+        gp.colCheck.checkEntity(this, gp.monster);
+        boolean contactPlayer = gp.colCheck.checkPlayer(this);
+
+        if(this.type == 2 && contactPlayer){
+            if(!gp.player.invincible){
+                //we give damage
+                gp.player.life -= 1;
+                gp.player.invincible = true;
+            }
+        }
         if(!collisionOn){
             switch (direction){
                 case "up":

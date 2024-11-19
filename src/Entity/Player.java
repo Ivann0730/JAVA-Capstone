@@ -68,26 +68,26 @@ public class Player extends Entity {
 //        right3 = setUp("Right3");
 //        right4 = setUp("Right4");
 //
-        idleleft = setUp("/player/Left1");
-        idleright = setUp("/player/Right1");
-        idledown = setUp("/player/Back1");
-        idleup = setUp("/player/Front3");
-        up1 = setUp("/player/Front3");
-        up2 = setUp("/player/Front2");
-        up3 = setUp("/player/Front3");
-        up4 = setUp("/player/Front4");
-        down1 = setUp("/player/Back1");
-        down2 = setUp("/player/Back2");
-        down3 = setUp("/player/Back3");
-        down4 = setUp("/player/Back4");
-        left1 = setUp("/player/Left1");
-        left2 = setUp("/player/Left2");
-        left3 = setUp("/player/Left3");
-        left4 = setUp("/player/Left4");
-        right1 = setUp("/player/Right1");
-        right2 = setUp("/player/Right2");
-        right3 = setUp("/player/Right3");
-        right4 = setUp("/player/Right4");
+        idleleft = setUp("/maxLevelArmor/Left1");
+        idleright = setUp("/maxLevelArmor/Right1");
+        idledown = setUp("/maxLevelArmor/Back1");
+        idleup = setUp("/maxLevelArmor/Front1");
+        up1 = setUp("/maxLevelArmor/Front2");
+        up2 = setUp("/maxLevelArmor/Front3");
+        up3 = setUp("/maxLevelArmor/Front2");
+        up4 = setUp("/maxLevelArmor/Front4");
+        down1 = setUp("/maxLevelArmor/Back1");
+        down2 = setUp("/maxLevelArmor/Back2");
+        down3 = setUp("/maxLevelArmor/Back3");
+        down4 = setUp("/maxLevelArmor/Back4");
+        left1 = setUp("/maxLevelArmor/Left1");
+        left2 = setUp("/maxLevelArmor/Left2");
+        left3 = setUp("/maxLevelArmor/Left3");
+        left4 = setUp("/maxLevelArmor/Left4");
+        right1 = setUp("/maxLevelArmor/Right1");
+        right2 = setUp("/maxLevelArmor/Right2");
+        right3 = setUp("/maxLevelArmor/Right3");
+        right4 = setUp("/maxLevelArmor/Right4");
     }
 
     public void update() {
@@ -116,6 +116,10 @@ public class Player extends Entity {
             //Check NPC collision
             int npcIndex = gp.colCheck.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
+
+            //Check Monster Collision
+            int monsterIndex = gp.colCheck.checkEntity(this, gp.monster);
+            contactMonster(monsterIndex);
 
             //Check Event
             gp.eHandler.checkEvent();
@@ -167,10 +171,18 @@ public class Player extends Entity {
             speed = tempSpeed;
             spriteSpeedMultiplier = tempSpriteSpeedMultiplier;
         }
+
+        if(invincible){
+            invincibleCounter++;
+            if(invincibleCounter > 60){
+                invincible = false;
+                invincibleCounter = 0;
+            }
+        }
     }
 
-    public void pickUpObject(int i){
-        if (i != 999){
+    public void pickUpObject(int index){
+        if (index != 999){
 
         }
     }
@@ -180,6 +192,15 @@ public class Player extends Entity {
             if(gp.keyH.enterPressed == true){
                 gp.gameState = gp.dialogueState;
                 gp.npc[index].speak();
+            }
+        }
+    }
+
+    public void contactMonster(int index){
+        if (index != 999){
+            if(!invincible){
+                life-=1;
+                invincible = true;
             }
         }
     }
@@ -228,11 +249,24 @@ public class Player extends Entity {
                 break;
         }
 
+        //for immunity effect
+        if(invincible){
+            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.3F));
+        }
+
         g2.drawImage(image, screenX, screenY,null);
+
+        //reset
+        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1F));
 
         //to see collision box or hit box
         g2.setColor(Color.red);
         g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
+
+        //debug
+//        g2.setFont(new Font("Arial", Font.PLAIN, 26));
+//        g2.setColor(Color.white);
+//        g2.drawString("Invincible:"+invincibleCounter,10, 400);
     }
 
 }
