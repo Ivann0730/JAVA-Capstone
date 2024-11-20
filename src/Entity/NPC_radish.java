@@ -45,26 +45,26 @@ public class NPC_radish extends Entity{
 
     // can only use two sprite IDK why
     public void getImage() {
-        idleleft = setUp("/NPC/radish/running radish-5.png");
-        idleright = setUp("/NPC/radish/running radish-11.png");
-        idledown = setUp("/NPC/radish/running radish-2.png");
-        idleup = setUp("/NPC/radish/running radish-8.png");
-        up1 = setUp("/NPC/radish/running radish-7.png");
-        up2 = setUp("/NPC/radish/running radish-9.png");
-        up3 = setUp("/NPC/radish/running radish-9.png");
-        up4 = setUp("/NPC/radish/running radish-8.png");
-        down1 = setUp("/NPC/radish/running radish-1.png");
-        down2 = setUp("/NPC/radish/running radish-3.png");
-        down3 = setUp("/NPC/radish/running radish-3.png");
-        down4 = setUp("/NPC/radish/running radish-2.png");
-        left1 = setUp("/NPC/radish/running radish-4.png");
-        left2 = setUp("/NPC/radish/running radish-6.png");
-        left3 = setUp("/NPC/radish/running radish-6.png");
-        left4 = setUp("/NPC/radish/running radish-5.png");
-        right1 = setUp("/NPC/radish/running radish-10.png");
-        right2 = setUp("/NPC/radish/running radish-12.png");
-        right3 = setUp("/NPC/radish/running radish-12.png");
-        right4 = setUp("/NPC/radish/running radish-11.png");
+        idleleft = setUp("/NPC/radish/running radish-5.png",gp.tileSize,gp.tileSize);
+        idleright = setUp("/NPC/radish/running radish-11.png",gp.tileSize,gp.tileSize);
+        idledown = setUp("/NPC/radish/running radish-2.png",gp.tileSize,gp.tileSize);
+        idleup = setUp("/NPC/radish/running radish-8.png",gp.tileSize,gp.tileSize);
+        up1 = setUp("/NPC/radish/running radish-7.png",gp.tileSize,gp.tileSize);
+        up2 = setUp("/NPC/radish/running radish-9.png",gp.tileSize,gp.tileSize);
+        up3 = setUp("/NPC/radish/running radish-9.png",gp.tileSize,gp.tileSize);
+        up4 = setUp("/NPC/radish/running radish-8.png",gp.tileSize,gp.tileSize);
+        down1 = setUp("/NPC/radish/running radish-1.png",gp.tileSize,gp.tileSize);
+        down2 = setUp("/NPC/radish/running radish-3.png",gp.tileSize,gp.tileSize);
+        down3 = setUp("/NPC/radish/running radish-3.png",gp.tileSize,gp.tileSize);
+        down4 = setUp("/NPC/radish/running radish-2.png",gp.tileSize,gp.tileSize);
+        left1 = setUp("/NPC/radish/running radish-4.png",gp.tileSize,gp.tileSize);
+        left2 = setUp("/NPC/radish/running radish-6.png",gp.tileSize,gp.tileSize);
+        left3 = setUp("/NPC/radish/running radish-6.png",gp.tileSize,gp.tileSize);
+        left4 = setUp("/NPC/radish/running radish-5.png",gp.tileSize,gp.tileSize);
+        right1 = setUp("/NPC/radish/running radish-10.png",gp.tileSize,gp.tileSize);
+        right2 = setUp("/NPC/radish/running radish-12.png",gp.tileSize,gp.tileSize);
+        right3 = setUp("/NPC/radish/running radish-12.png",gp.tileSize,gp.tileSize);
+        right4 = setUp("/NPC/radish/running radish-11.png",gp.tileSize,gp.tileSize);
     }
     public void speak(){
         super.speak();

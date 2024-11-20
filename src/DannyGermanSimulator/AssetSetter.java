@@ -16,14 +16,22 @@ public class AssetSetter {
 //        gp.obj[0].worldY = gp.tileSize * 36;
     }
     public void setNPC(){
-//        gp.npc[0] = new NPC_radish(gp);
-//        gp.npc[0].worldX = gp.tileSize * 20;
-//        gp.npc[0].worldY = gp.tileSize * 20;
+        gp.npc[0] = new NPC_radish(gp);
+        gp.npc[0].worldX = gp.tileSize * 20;
+        gp.npc[0].worldY = gp.tileSize * 20;
     }
     public void setMonster(){
         gp.monster[0] = new MON_Bat(gp);
         gp.monster[0].worldX = gp.tileSize * 36;
         gp.monster[0].worldY = gp.tileSize * 13;
+
+        gp.monster[1] = new MON_Bat(gp);
+        gp.monster[1].worldX = gp.tileSize * 39;
+        gp.monster[1].worldY = gp.tileSize * 12;
+
+        gp.monster[2] = new MON_Bat(gp);
+        gp.monster[2].worldX = gp.tileSize * 27;
+        gp.monster[2].worldY = gp.tileSize * 13;
     }
 
 }

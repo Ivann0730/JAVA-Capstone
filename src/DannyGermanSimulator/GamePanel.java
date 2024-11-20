@@ -69,7 +69,6 @@ public class GamePanel extends JPanel implements Runnable {
         aSetter.setObject();
         aSetter.setNPC();
         aSetter.setMonster();
-//        playMusic(1);
         gameState = titleState;
     }
 
@@ -178,10 +177,10 @@ public class GamePanel extends JPanel implements Runnable {
             for(int i = 0; i < entityList.size(); i++){
                 entityList.get(i).draw(g2);
             }
+
             //EMPTY ENTITY LIST
-            for(int i = 0; i < entityList.size(); i++){
-                entityList.remove(i);
-            }
+            entityList.clear();
+
             //UI
             ui.draw(g2);
         }

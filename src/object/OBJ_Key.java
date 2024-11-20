@@ -8,7 +8,7 @@ public class OBJ_Key extends Entity {
         super(gp);
 
         name = "Mana";
-        down1 = setUp("/objects/manacrystal_full");
+        down1 = setUp("/objects/manacrystal_full",gp.tileSize,gp.tileSize);
         collision = true;
 
         solidArea.x = 36;

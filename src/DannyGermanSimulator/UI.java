@@ -114,7 +114,7 @@ public class UI {
             //IMAGE
             x = gp.screenWidth/2 - (gp.tileSize*2)/2;
             y += gp.tileSize;
-            g2.drawImage(gp.player.idledown, x, y, gp.tileSize*2, gp.tileSize*2, null);
+            g2.drawImage(gp.player.idle, x, y, gp.tileSize*2, gp.tileSize*2, null);
             //MENU
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 38F));
 
@@ -190,9 +190,9 @@ public class UI {
     public void drawDialogueScreen(){
         //WINDOW
         int x = gp.tileSize * 2;
-        int y = gp.tileSize / 2;
+        int y = (int) (gp.tileSize * 1.5);
         int width = gp.screenWidth - (gp.tileSize * 4);
-        int height = gp.tileSize * 4;
+        int height = gp.tileSize * 2;
         drawSubWindow(x,y,width,height);
 
         g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 40F));

@@ -8,6 +8,6 @@ public class OBJ_Boots extends Entity {
         super(gp);
 
         name = "Boots";
-        down1 = setUp("/objects/boots.png");
+        down1 = setUp("/objects/boots.png",gp.tileSize,gp.tileSize);
     }
 }

@@ -2,7 +2,6 @@ package monster;
 
 import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
-
 import java.util.Random;
 
 public class MON_Bat extends Entity {
@@ -27,14 +26,14 @@ public class MON_Bat extends Entity {
     }
 
     public void getImage(){
-        up1 = setUp("/monster/New Piskel-1.png (1)");
-        up2 = setUp("/monster/New Piskel-2.png (1)");
-        down1 = setUp("/monster/New Piskel-1.png (1)");
-        down2 = setUp("/monster/New Piskel-2.png (1)");
-        left1 = setUp("/monster/New Piskel-1.png (1)");
-        left2 = setUp("/monster/New Piskel-2.png (1)");
-        right1 = setUp("/monster/New Piskel-1.png (1)");
-        right2 = setUp("/monster/New Piskel-2.png (1)");
+        up1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
+        up2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
+        down1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
+        down2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
+        left1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
+        left2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
+        right1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
+        right2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
     }
 
     public void setAction(){

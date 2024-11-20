@@ -8,6 +8,6 @@ public class OBJ_Coin extends Entity {
         super(gp);
 
         name = "Coin";
-        down1 = setUp("/objects/coin_bronze.png");
+        down1 = setUp("/objects/coin_bronze.png",gp.tileSize,gp.tileSize);
     }
 }
