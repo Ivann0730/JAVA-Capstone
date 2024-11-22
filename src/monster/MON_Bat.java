@@ -57,4 +57,11 @@ public class MON_Bat extends Entity {
             actionLockCounter = 0;
         }
     }
+
+    public void damageReaction() {
+
+        //RUNS AWAY FOR NOW (PASSIVE BEHAVIOR)
+        actionLockCounter = 0;
+        direction = gp.player.direction;
+    }
 }

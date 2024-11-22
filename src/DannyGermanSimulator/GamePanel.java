@@ -56,8 +56,6 @@ public class GamePanel extends JPanel implements Runnable {
     public final int dialogueState = 3;
 
 
-
-
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
@@ -71,13 +69,10 @@ public class GamePanel extends JPanel implements Runnable {
         aSetter.setMonster();
         gameState = titleState;
     }
-
-
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
     }
-
     @Override
     public void run() {
         double drawInterval = 1000000000 / FPS;
@@ -103,7 +98,6 @@ public class GamePanel extends JPanel implements Runnable {
             }
         }
     }
-
     public void update() {
         if(gameState == playState){
             player.update();
@@ -114,7 +108,12 @@ public class GamePanel extends JPanel implements Runnable {
             }
             for(int i = 0; i < monster.length; i++){
                 if(monster[i] != null){
-                    monster[i].update();
+                    if(monster[i].alive && !monster[i].dying){
+                        monster[i].update();
+                    }
+                    if(!monster[i].alive){
+                        monster[i] = null;
+                    }
                 }
             }
         }
@@ -122,7 +121,6 @@ public class GamePanel extends JPanel implements Runnable {
             //nothing yet
         }
     }
-
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
@@ -198,7 +196,6 @@ public class GamePanel extends JPanel implements Runnable {
 
         g2.dispose();
     }
-
     public void playMusic(int i){
         music.setFile(i);
         music.play();

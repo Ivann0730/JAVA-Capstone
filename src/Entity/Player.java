@@ -33,8 +33,8 @@ public class Player extends Entity {
         solidArea.height=48;
 
         //change value for longer attack range
-        attackArea.width = 128;
-        attackArea.height = 128;
+        attackArea.width = 64;
+        attackArea.height = 48;
 
         setDefaultValues();
         getPlayerImage();
@@ -75,7 +75,6 @@ public class Player extends Entity {
         right3 = setUp("/maxLevelArmor/Right3",gp.tileSize,gp.tileSize);
         right4 = setUp("/maxLevelArmor/Right4",gp.tileSize,gp.tileSize);
     }
-
     public void getPlayerAttackImage(){
         attackUp1 = setUp("/player/atkb1",gp.tileSize*2,gp.tileSize*2);
         attackUp2 = setUp("/player/atkb2",gp.tileSize*2,gp.tileSize*2);
@@ -86,7 +85,6 @@ public class Player extends Entity {
         attackRight1 = setUp("/player/atkr1",gp.tileSize*2,gp.tileSize*2);
         attackRight2 = setUp("/player/atkr2",gp.tileSize*2,gp.tileSize*2);
     }
-
     public void update() {
 
         if(attacking){
@@ -180,7 +178,6 @@ public class Player extends Entity {
             }
         }
     }
-
     public void attacking(){
 
         spriteCounter++;
@@ -222,13 +219,11 @@ public class Player extends Entity {
             attacking = false;
         }
     }
-
     public void pickUpObject(int index){
         if (index != 999){
 
         }
     }
-
     public void interactNPC(int index){
 
         if (gp.keyH.enterPressed) {
@@ -237,34 +232,34 @@ public class Player extends Entity {
                 gp.npc[index].speak();
             }
             else {
+                gp.playSE(7);
                 attacking = true;
             }
         }
     }
-
     public void contactMonster(int index){
         if (index != 999){
             if(!invincible){
+                gp.playSE(6);
                 life-=1;
                 invincible = true;
             }
         }
     }
-
     public void damageMonster(int index){
         if(index != 999) {
             if(!gp.monster[index].invincible){
-
+                gp.playSE(5);
                 gp.monster[index].life -= 1;
                 gp.monster[index].invincible = true;
-
+                gp.monster[index].damageReaction();
                 if(gp.monster[index].life <= 0){
-                    gp.monster[index] = null;
+                    gp.monster[index].dying = true;
+
                 }
             }
         }
     }
-
     public void draw(Graphics2D g2) {
         BufferedImage image = null;
 
@@ -374,5 +369,4 @@ public class Player extends Entity {
         g2.setStroke(new BasicStroke(1));
         g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);
     }
-
 }
