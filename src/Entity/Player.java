@@ -3,6 +3,8 @@ package Entity;
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.KeyHandler;
 import DannyGermanSimulator.UtilityTool;
+import object.OBJ_Shield_Wood;
+import object.OBJ_Sword_Normal;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -16,6 +18,7 @@ public class Player extends Entity {
     public final int screenY;
     int tempSpeed = 10;
     int tempSpriteSpeedMultiplier = 9;
+    public boolean attackCanceled = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
@@ -48,8 +51,26 @@ public class Player extends Entity {
         direction = "down";
 
         //PLAYER STATUS
+        level = 1;
         maxLife = 6;
         life = maxLife;
+        //more damage
+        strength = 1;
+        //more defence
+        dexterity = 1;
+        exp = 0;
+        nextLevelExp = 5;
+        coins = 0;
+        currentWeapon = new OBJ_Sword_Normal(gp);
+        currentShield = new OBJ_Shield_Wood(gp);
+        attack = getAttack();
+        defence = getDefence();
+    }
+    public int getAttack(){
+        return attack = strength * currentWeapon.attackValue;
+    }
+    public int getDefence(){
+        return defence = dexterity * currentShield.defenseValue;
     }
     public void getPlayerImage() {
     //Diri ibutang nato atoang mga pictures for characters
@@ -140,6 +161,15 @@ public class Player extends Entity {
                     }
                 }
             }
+
+            if(keyH.enterPressed &&  !attackCanceled){
+                gp.playSE(7);
+                attacking = true;
+                spriteCounter = 0;
+            }
+
+            attackCanceled = false;
+
             gp.keyH.enterPressed = false;
 
             spriteCounter++;
@@ -228,12 +258,9 @@ public class Player extends Entity {
 
         if (gp.keyH.enterPressed) {
             if(index!=999){
+                attackCanceled = true;
                 gp.gameState = gp.dialogueState;
                 gp.npc[index].speak();
-            }
-            else {
-                gp.playSE(7);
-                attacking = true;
             }
         }
     }

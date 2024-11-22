@@ -50,6 +50,11 @@ public class Entity {
     public String name;
     public int maxLife;
     public int life;
+    public int level, strength, dexterity, attack, defence, exp, nextLevelExp, coins;
+    public Entity currentWeapon, currentShield;
+
+    //ITEM ATTRIBUTES
+    public int attackValue, defenseValue;
 
     public int type; //0 = player, 1 = npc, 2 = monster
 

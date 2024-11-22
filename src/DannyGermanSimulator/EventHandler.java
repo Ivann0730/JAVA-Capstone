@@ -77,6 +77,7 @@ public class EventHandler {
 
     public void damagePit(int col, int row, int gameState){
         gp.gameState = gameState;
+        gp.playSE(6);
         gp.ui.currentDialogue = "You have fallen into a Pit";
         gp.player.life-=1;
 //        eventRect[col][row].eventDone = true;
@@ -93,6 +94,7 @@ public class EventHandler {
     }
     public void teleport(int gameState){
         gp.gameState = gameState;
+        gp.player.attackCanceled = true;
         gp.ui.currentDialogue = "Teleport";
         gp.player.worldX = gp.tileSize*27;
         gp.player.worldY = gp.tileSize*36;
