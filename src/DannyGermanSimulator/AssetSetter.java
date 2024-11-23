@@ -21,17 +21,26 @@ public class AssetSetter {
         gp.npc[0].worldY = gp.tileSize * 20;
     }
     public void setMonster(){
-        gp.monster[0] = new MON_Bat(gp);
-        gp.monster[0].worldX = gp.tileSize * 36;
-        gp.monster[0].worldY = gp.tileSize * 13;
-
-        gp.monster[1] = new MON_Bat(gp);
-        gp.monster[1].worldX = gp.tileSize * 39;
-        gp.monster[1].worldY = gp.tileSize * 12;
-
-        gp.monster[2] = new MON_Bat(gp);
-        gp.monster[2].worldX = gp.tileSize * 27;
-        gp.monster[2].worldY = gp.tileSize * 13;
+        int i = 0;
+        gp.monster[i] = new MON_Bat(gp);
+        gp.monster[i].worldX = gp.tileSize * 36;
+        gp.monster[i].worldY = gp.tileSize * 13;
+        i++;
+        gp.monster[i] = new MON_Bat(gp);
+        gp.monster[i].worldX = gp.tileSize * 39;
+        gp.monster[i].worldY = gp.tileSize * 12;
+        i++;
+        gp.monster[i] = new MON_Bat(gp);
+        gp.monster[i].worldX = gp.tileSize * 27;
+        gp.monster[i].worldY = gp.tileSize * 13;
+        i++;
+        gp.monster[i] = new MON_Bat(gp);
+        gp.monster[i].worldX = gp.tileSize * 35;
+        gp.monster[i].worldY = gp.tileSize * 12;
+        i++;
+        gp.monster[i] = new MON_Bat(gp);
+        gp.monster[i].worldX = gp.tileSize * 28;
+        gp.monster[i].worldY = gp.tileSize * 15;
+        i++;
     }
-
 }

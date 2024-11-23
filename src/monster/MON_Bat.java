@@ -14,6 +14,9 @@ public class MON_Bat extends Entity {
         speed = 3;
         maxLife = 4;
         life = maxLife;
+        attack  = 5;
+        defence = 0;
+        exp = 2;
 
         solidArea.x = 34;
         solidArea.y = 48;
@@ -24,7 +27,6 @@ public class MON_Bat extends Entity {
 
         getImage();
     }
-
     public void getImage(){
         up1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
         up2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
@@ -35,7 +37,6 @@ public class MON_Bat extends Entity {
         right1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
         right2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
     }
-
     public void setAction(){
         actionLockCounter++;
         if(actionLockCounter == 120){
@@ -57,7 +58,6 @@ public class MON_Bat extends Entity {
             actionLockCounter = 0;
         }
     }
-
     public void damageReaction() {
 
         //RUNS AWAY FOR NOW (PASSIVE BEHAVIOR)

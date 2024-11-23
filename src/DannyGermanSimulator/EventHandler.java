@@ -34,7 +34,6 @@ public class EventHandler {
         }
 
     }
-
     public void checkEvent() {
         //check player character is more than 1 tile away from the last event
         int xDistance = Math.abs(gp.player.worldX - previousEventX);
@@ -50,7 +49,6 @@ public class EventHandler {
             if(hit(23,15,"any")) teleport(gp.dialogueState);
         }
     }
-
     public boolean hit(int col, int row, String reqDirection){
         boolean hit = false;
         gp.player.solidArea.x = gp.player.worldX + gp.player.solidArea.x;
@@ -74,7 +72,6 @@ public class EventHandler {
 
         return hit;
     }
-
     public void damagePit(int col, int row, int gameState){
         gp.gameState = gameState;
         gp.playSE(6);
@@ -83,12 +80,12 @@ public class EventHandler {
 //        eventRect[col][row].eventDone = true;
         canTouchEvent = false;
     }
-
     public void healingPool(int col, int row, int gameState){
         if(gp.keyH.fPressed){
             gp.gameState = gameState;
             gp.ui.currentDialogue = "You drank holy water, life restored";
             gp.player.life = gp.player.maxLife;
+            gp.aSetter.setMonster();
         }
         gp.keyH.fPressed = false;
     }
