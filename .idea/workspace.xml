@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
-      <change afterPath="$PROJECT_DIR$/res/sound/cursor.wav" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Inventory&#10;-Press P to access inventory&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <change afterPath="$PROJECT_DIR$/res/objects/axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/objects/potion_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/objects/shield_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Axe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Blue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Mana.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +89,8 @@
       <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA2\JAVA-Capstone\res\sound" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\objects" />
+      <recent name="D:\JAVA2\JAVA-Capstone\res\sound" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\player" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\Monster" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\NPC\radish" />
@@ -309,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732335582626</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added Inventory&#10;-Press P to access inventory&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <option name="closed" value="true" />
+      <created>1732357507154</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732357507154</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +359,8 @@
     <MESSAGE value="Added Monster Health Bar &amp; Death Animation&#10;-added swing sword sound effect, and others&#10;-added passive AI for bat monster&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Character Status UI&#10;-Press P to access character UI&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <MESSAGE value="Added Inventory&#10;-Press P to access inventory&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Inventory&#10;-Press P to access inventory&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

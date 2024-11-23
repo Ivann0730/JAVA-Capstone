@@ -2,7 +2,10 @@ package DannyGermanSimulator;
 
 import Entity.NPC_radish;
 import monster.MON_Bat;
-import object.OBJ_Key;
+import object.OBJ_Axe;
+import object.OBJ_Mana;
+import object.OBJ_Potion_Red;
+import object.OBJ_Shield_Blue;
 
 public class AssetSetter {
     GamePanel gp;
@@ -11,14 +14,46 @@ public class AssetSetter {
         this.gp = gp;
     }
     public void setObject(){
-//        gp.obj[0] = new OBJ_Key(gp);
-//        gp.obj[0].worldX = gp.tileSize * 26;
-//        gp.obj[0].worldY = gp.tileSize * 36;
+        int i = 0;
+        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i].worldX = gp.tileSize * 26;
+        gp.obj[i].worldY = gp.tileSize * 36;
+        i++;
+        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i].worldX = gp.tileSize * 7;
+        gp.obj[i].worldY = gp.tileSize * 28;
+        i++;
+        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i].worldX = gp.tileSize * 7;
+        gp.obj[i].worldY = gp.tileSize * 41;
+        i++;
+        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i].worldX = gp.tileSize * 39;
+        gp.obj[i].worldY = gp.tileSize * 5;
+        i++;
+        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i].worldX = gp.tileSize * 40;
+        gp.obj[i].worldY = gp.tileSize * 16;
+        i++;
+        gp.obj[i] = new OBJ_Axe(gp);
+        gp.obj[i].worldX = gp.tileSize * 33;
+        gp.obj[i].worldY = gp.tileSize * 35;
+        i++;
+        gp.obj[i] = new OBJ_Shield_Blue(gp);
+        gp.obj[i].worldX = gp.tileSize * 36;
+        gp.obj[i].worldY = gp.tileSize * 13;
+        i++;
+        gp.obj[i] = new OBJ_Potion_Red(gp);
+        gp.obj[i].worldX = gp.tileSize * 35;
+        gp.obj[i].worldY = gp.tileSize * 13;
+
     }
     public void setNPC(){
-        gp.npc[0] = new NPC_radish(gp);
-        gp.npc[0].worldX = gp.tileSize * 20;
-        gp.npc[0].worldY = gp.tileSize * 20;
+        int i = 0;
+        gp.npc[i] = new NPC_radish(gp);
+        gp.npc[i].worldX = gp.tileSize * 20;
+        gp.npc[i].worldY = gp.tileSize * 20;
+        i++;
     }
     public void setMonster(){
         int i = 0;

@@ -9,7 +9,7 @@ public class MON_Bat extends Entity {
     public MON_Bat(GamePanel gp) {
         super(gp);
 
-        type = 2;
+        type = type_monster;
         name = "Eye Bat";
         speed = 3;
         maxLife = 4;

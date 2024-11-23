@@ -39,10 +39,6 @@ public class Player extends Entity {
         solidArea.width=48;
         solidArea.height=48;
 
-        //change value for longer attack range
-        attackArea.width = 64;
-        attackArea.height = 48;
-
         setDefaultValues();
         getPlayerImage();
         getPlayerAttackImage();
@@ -73,15 +69,11 @@ public class Player extends Entity {
     }
     public void setItems(){
 
-        inventory.add(currentWeapon);;
+        inventory.add(currentWeapon);
         inventory.add(currentShield);
-        inventory.add(new OBJ_Boots(gp));
-        inventory.add(new OBJ_Boots(gp));
-        inventory.add(new OBJ_Boots(gp));
-        inventory.add(new OBJ_Boots(gp));
-
     }
     public int getAttack(){
+        attackArea =currentWeapon.attackArea;
         return attack = strength * currentWeapon.attackValue;
     }
     public int getDefence(){
@@ -112,14 +104,27 @@ public class Player extends Entity {
         right4 = setUp("/maxLevelArmor/Right4",gp.tileSize,gp.tileSize);
     }
     public void getPlayerAttackImage(){
-        attackUp1 = setUp("/player/atkb1",gp.tileSize*2,gp.tileSize*2);
-        attackUp2 = setUp("/player/atkb2",gp.tileSize*2,gp.tileSize*2);
-        attackDown1 = setUp("/player/atk1",gp.tileSize*2,gp.tileSize*2);
-        attackDown2 = setUp("/player/atk2",gp.tileSize*2,gp.tileSize*2);
-        attackLeft1 = setUp("/player/atkl1",gp.tileSize*2,gp.tileSize*2);
-        attackLeft2 = setUp("/player/atkl2",gp.tileSize*2,gp.tileSize*2);
-        attackRight1 = setUp("/player/atkr1",gp.tileSize*2,gp.tileSize*2);
-        attackRight2 = setUp("/player/atkr2",gp.tileSize*2,gp.tileSize*2);
+        if(currentWeapon.type == type_sword){
+            attackUp1 = setUp("/player/atkb1",gp.tileSize*2,gp.tileSize*2);
+            attackUp2 = setUp("/player/atkb2",gp.tileSize*2,gp.tileSize*2);
+            attackDown1 = setUp("/player/atk1",gp.tileSize*2,gp.tileSize*2);
+            attackDown2 = setUp("/player/atk2",gp.tileSize*2,gp.tileSize*2);
+            attackLeft1 = setUp("/player/atkl1",gp.tileSize*2,gp.tileSize*2);
+            attackLeft2 = setUp("/player/atkl2",gp.tileSize*2,gp.tileSize*2);
+            attackRight1 = setUp("/player/atkr1",gp.tileSize*2,gp.tileSize*2);
+            attackRight2 = setUp("/player/atkr2",gp.tileSize*2,gp.tileSize*2);
+        }
+        if(currentWeapon.type == type_axe){
+            attackUp1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackUp2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackDown1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackDown2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackLeft1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackLeft2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackRight1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackRight2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+        }
+
     }
     public void update() {
 
@@ -266,7 +271,16 @@ public class Player extends Entity {
     }
     public void pickUpObject(int index){
         if (index != 999){
-
+            String text;
+            if(inventory.size() != maxInventorySize){
+                inventory.add(gp.obj[index]);
+                gp.playSE(0);
+                text = "Got a " + gp.obj[index].name + "!";
+            } else {
+                text = "Inventory Full";
+            }
+            gp.ui.addMessage(text);
+            gp.obj[index] = null;
         }
     }
     public void interactNPC(int index){
@@ -307,7 +321,7 @@ public class Player extends Entity {
                 if(gp.monster[index].life <= 0){
                     gp.monster[index].dying = true;
                     gp.ui.addMessage("Killed an " + gp.monster[index].name + "!");
-                    gp.ui.addMessage("Gained +" + gp.monster[index].exp);
+                    gp.ui.addMessage("Gained +" + gp.monster[index].exp + " exp");
                     exp += gp.monster[index].exp;
                     checkLevelUp();
                 }
@@ -317,7 +331,7 @@ public class Player extends Entity {
     public void checkLevelUp(){
         if(exp >= nextLevelExp) {
             level++;
-            nextLevelExp = nextLevelExp * 3;
+            nextLevelExp = (int) (nextLevelExp * 1.5);
             maxLife += 2;
             strength++;
             dexterity++;
@@ -326,7 +340,26 @@ public class Player extends Entity {
             gp.playSE(4);
             gp.gameState = gp.dialogueState;
             gp.ui.currentDialogue = "You are now level " + level + " now!\n";
+        }
+    }
+    public void selectItem(){
 
+        int itemIndex = gp.ui.getItemIndexOnSlot();
+        if(itemIndex < inventory.size()){
+            Entity selectedItem = inventory.get(itemIndex);
+            if(selectedItem.type == type_sword || selectedItem.type == type_axe){
+                currentWeapon = selectedItem;
+                attack = getAttack();
+                getPlayerAttackImage();
+            }
+            if(selectedItem.type == type_shield){
+                currentShield = selectedItem;
+                defence = getDefence();
+            }
+            if(selectedItem.type == type_consumable){
+                selectedItem.use(this);
+                inventory.remove(itemIndex);
+            }
         }
     }
     public void draw(Graphics2D g2) {
