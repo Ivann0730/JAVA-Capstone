@@ -5,7 +5,6 @@ import DannyGermanSimulator.UtilityTool;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +23,6 @@ public class TileManager {
         getTileImage(); // Load tile images
         loadMap("/maps/testmap.txt"); // Load map from file
     }
-
     // Method to load tile images
     public void getTileImage() {
             setUp(0,"000" , false);
@@ -85,7 +83,6 @@ public class TileManager {
             setUp(55,"21" , false);
             setUp(56,"22" , false);
     }
-
     public void setUp(int index, String imageName, boolean collision){
 
         UtilityTool uTool = new UtilityTool();
@@ -98,7 +95,6 @@ public class TileManager {
             e.printStackTrace();
         }
     }
-
     // Load map data from text file
     public void loadMap(String filePath) {
 
@@ -141,7 +137,6 @@ public class TileManager {
 
         }
     }
-
     // Draw method to render the map
     public void draw(Graphics2D g2) {
         int worldCol = 0;

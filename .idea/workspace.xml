@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Character Status UI&#10;-Press P to access character UI&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
-      <change afterPath="$PROJECT_DIR$/res/sound/levelup.wav" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <change afterPath="$PROJECT_DIR$/res/sound/cursor.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732319938899</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <option name="closed" value="true" />
+      <created>1732335582626</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732335582626</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +346,8 @@
     <MESSAGE value="Added Attack animation and attack damage&#10;-heil sprite for load screen display&#10;-when monster is damaged, becomes immune for 1 second and then can be damaged again after&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Monster Health Bar &amp; Death Animation&#10;-added swing sword sound effect, and others&#10;-added passive AI for bat monster&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Character Status UI&#10;-Press P to access character UI&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Character Status UI&#10;-Press P to access character UI&#10;-need to fix hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <MESSAGE value="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Scrolling Message, Leveling Up, Damage Calculation&#10;-Press P to access character UI&#10;- when healing using the healing pool, the monsters respawn&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

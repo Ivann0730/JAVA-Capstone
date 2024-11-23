@@ -55,6 +55,7 @@ public class Entity {
 
     //ITEM ATTRIBUTES
     public int attackValue, defenseValue;
+    public String description = "";
 
     public int type; //0 = player, 1 = npc, 2 = monster
 

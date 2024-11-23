@@ -3,6 +3,7 @@ package Entity;
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.KeyHandler;
 import DannyGermanSimulator.UtilityTool;
+import object.OBJ_Boots;
 import object.OBJ_Shield_Wood;
 import object.OBJ_Sword_Normal;
 
@@ -11,6 +12,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Player extends Entity {
     KeyHandler keyH;
@@ -19,6 +21,8 @@ public class Player extends Entity {
     int tempSpeed = 10;
     int tempSpriteSpeedMultiplier = 9;
     public boolean attackCanceled = false;
+    public ArrayList<Entity> inventory = new ArrayList<>();
+    public final int maxInventorySize = 20;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
@@ -42,6 +46,7 @@ public class Player extends Entity {
         setDefaultValues();
         getPlayerImage();
         getPlayerAttackImage();
+        setItems();
     }
 
     public void setDefaultValues() {
@@ -65,6 +70,16 @@ public class Player extends Entity {
         currentShield = new OBJ_Shield_Wood(gp);
         attack = getAttack();
         defence = getDefence();
+    }
+    public void setItems(){
+
+        inventory.add(currentWeapon);;
+        inventory.add(currentShield);
+        inventory.add(new OBJ_Boots(gp));
+        inventory.add(new OBJ_Boots(gp));
+        inventory.add(new OBJ_Boots(gp));
+        inventory.add(new OBJ_Boots(gp));
+
     }
     public int getAttack(){
         return attack = strength * currentWeapon.attackValue;

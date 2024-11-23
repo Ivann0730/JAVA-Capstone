@@ -8,17 +8,15 @@ public class KeyHandler implements KeyListener{
     GamePanel gp;
     public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, fPressed = false, enterPressed=false;
     public boolean isMountPressed = false;
-    boolean checkDrawTime = false;
+    boolean showDebugText = false;
 
     public KeyHandler(GamePanel gp){
         this.gp = gp;
     }
-
     @Override
     public void keyTyped(KeyEvent e) {
 
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
@@ -138,11 +136,14 @@ public class KeyHandler implements KeyListener{
         }
         //toggle debug
         if(code == KeyEvent.VK_T){
-            if(!checkDrawTime){
-                checkDrawTime = true;
-            } else if(checkDrawTime){
-                checkDrawTime = false;
+            if(!showDebugText){
+                showDebugText = true;
+            } else if(showDebugText){
+                showDebugText = false;
             }
+        }
+        if(code == KeyEvent.VK_M){
+            gp.tileM.loadMap("/maps/testmap.txt");
         }
     }
     public void pauseState(int code){
@@ -164,6 +165,30 @@ public class KeyHandler implements KeyListener{
     public void characterState(int code){
         if(code == KeyEvent.VK_ESCAPE || code == KeyEvent.VK_P){
             gp.gameState = gp.playState;
+        }
+        if(code == KeyEvent.VK_W){
+            if(gp.ui.slotRow != 0){
+                gp.ui.slotRow--;
+                gp.playSE(1);
+            }
+        }
+        if(code == KeyEvent.VK_A){
+            if(gp.ui.slotCol != 0){
+                gp.ui.slotCol--;
+                gp.playSE(1);
+            }
+        }
+        if(code == KeyEvent.VK_S){
+            if(gp.ui.slotRow != 3){
+                gp.ui.slotRow++;
+                gp.playSE(1);
+            }
+        }
+        if(code == KeyEvent.VK_D){
+            if(gp.ui.slotCol != 4){
+                gp.ui.slotCol++;
+                gp.playSE(1);
+            }
         }
     }
     @Override
