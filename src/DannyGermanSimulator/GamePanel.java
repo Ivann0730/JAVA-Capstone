@@ -45,6 +45,7 @@ public class GamePanel extends JPanel implements Runnable {
     public Entity obj[] = new Entity[10]; // 10 being 10 slots for objects (can have many objects but for now 10)5
     public Entity npc[] = new Entity[10];
     public Entity monster[] = new Entity[10];
+    public ArrayList<Entity> projectileList = new ArrayList<>();
     ArrayList<Entity> entityList = new ArrayList<>();
     //more objects can slow down the game
 
@@ -102,11 +103,13 @@ public class GamePanel extends JPanel implements Runnable {
     public void update() {
         if(gameState == playState){
             player.update();
+            //NPC
             for(int i = 0; i < npc.length; i++){
                 if(npc[i] != null){
                     npc[i].update();
                 }
             }
+            //MONSTER
             for(int i = 0; i < monster.length; i++){
                 if(monster[i] != null){
                     if(monster[i].alive && !monster[i].dying){
@@ -114,6 +117,17 @@ public class GamePanel extends JPanel implements Runnable {
                     }
                     if(!monster[i].alive){
                         monster[i] = null;
+                    }
+                }
+            }
+            //PROJECTILE
+            for(int i = 0; i < projectileList.size(); i++){
+                if(projectileList.get(i) != null){
+                    if(projectileList.get(i).alive){
+                        projectileList.get(i).update();
+                    }
+                    if(!projectileList.get(i).alive){
+                        projectileList.remove(i);
                     }
                 }
             }
@@ -160,6 +174,12 @@ public class GamePanel extends JPanel implements Runnable {
             for(int i = 0; i < monster.length; i++){
                 if(monster[i] != null) {
                     entityList.add(monster[i]);
+                }
+            }
+            //PROJECTILE
+            for(int i = 0; i < projectileList.size(); i++){
+                if(projectileList.get(i) != null) {
+                    entityList.add(projectileList.get(i));
                 }
             }
 

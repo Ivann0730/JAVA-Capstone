@@ -2,16 +2,11 @@ package Entity;
 
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.KeyHandler;
-import DannyGermanSimulator.UtilityTool;
-import object.OBJ_Boots;
+import object.OBJ_Fireball;
 import object.OBJ_Shield_Wood;
 import object.OBJ_Sword_Normal;
-
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Player extends Entity {
@@ -64,6 +59,7 @@ public class Player extends Entity {
         coins = 0;
         currentWeapon = new OBJ_Sword_Normal(gp);
         currentShield = new OBJ_Shield_Wood(gp);
+        projectile = new OBJ_Fireball(gp);
         attack = getAttack();
         defence = getDefence();
     }
@@ -115,14 +111,14 @@ public class Player extends Entity {
             attackRight2 = setUp("/player/atkr2",gp.tileSize*2,gp.tileSize*2);
         }
         if(currentWeapon.type == type_axe){
-            attackUp1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackUp2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackDown1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackDown2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackLeft1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackLeft2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackRight1 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
-            attackRight2 = setUp("/player/heil",gp.tileSize*2,gp.tileSize*2);
+            attackUp1 = setUp("/player/AXE/AatkB",gp.tileSize*2,gp.tileSize*2);
+            attackUp2 = setUp("/player/AXE/AatkB",gp.tileSize*2,gp.tileSize*2);
+            attackDown1 = setUp("/player/AXE/AatkF",gp.tileSize*2,gp.tileSize*2);
+            attackDown2 = setUp("/player/AXE/AatkF",gp.tileSize*2,gp.tileSize*2);
+            attackLeft1 = setUp("/player/AXE/AatkL",gp.tileSize*2,gp.tileSize*2);
+            attackLeft2 = setUp("/player/AXE/AatkL",gp.tileSize*2,gp.tileSize*2);
+            attackRight1 = setUp("/player/AXE/AatkR",gp.tileSize*2,gp.tileSize*2);
+            attackRight2 = setUp("/player/AXE/AatkR",gp.tileSize*2,gp.tileSize*2);
         }
 
     }
@@ -211,6 +207,18 @@ public class Player extends Entity {
                 spriteCounter = 0;
             }
         }
+
+        //projectile
+        if(gp.keyH.shotKeyPressed && !projectile.alive && shotAvailableCounter == 30){
+            //SET DEFAULT COORDINATES, DIRECTION
+            projectile.set(worldX+48,worldY+48,direction,true,this);
+
+            //ADD TO THE LIST
+            gp.projectileList.add(projectile);
+            shotAvailableCounter = 0;
+            gp.playSE(2);
+        }
+
         if(keyH.mountPressed){
             speed = 15;
             spriteSpeedMultiplier = 4;
@@ -226,6 +234,10 @@ public class Player extends Entity {
                 invincible = false;
                 invincibleCounter = 0;
             }
+        }
+
+        if(shotAvailableCounter < 30){
+            shotAvailableCounter++;
         }
     }
     public void attacking(){
@@ -256,7 +268,7 @@ public class Player extends Entity {
             solidArea.height = attackArea.height;
             //check monster collision
             int monsterIndex = gp.colCheck.checkEntity(this, gp.monster);
-            damageMonster(monsterIndex);
+            damageMonster(monsterIndex, attack);
             //restore position
             worldX = currentWorldX;
             worldY = currentWorldY;
@@ -295,7 +307,7 @@ public class Player extends Entity {
     }
     public void contactMonster(int index){
         if (index != 999){
-            if(!invincible){
+            if(!invincible && !gp.monster[index].dying){
                 gp.playSE(6);
                 int damage = gp.monster[index].attack - defence;
                 if(damage < 0){
@@ -306,7 +318,7 @@ public class Player extends Entity {
             }
         }
     }
-    public void damageMonster(int index){
+    public void damageMonster(int index, int attack){
         if(index != 999) {
             if(!gp.monster[index].invincible){
                 gp.playSE(5);
@@ -316,6 +328,7 @@ public class Player extends Entity {
                 }
                 gp.monster[index].life -= damage;
                 gp.ui.addMessage(damage + " Damage!");
+
                 gp.monster[index].invincible = true;
                 gp.monster[index].damageReaction();
                 if(gp.monster[index].life <= 0){
@@ -467,7 +480,7 @@ public class Player extends Entity {
             case "left": tempScreenX = screenX - attackArea.width; break;
             case "right": tempScreenX = screenX + gp.tileSize; break;
         }
-        g2.setColor(Color.red);
+        g2.setColor(Color.blue);
         g2.setStroke(new BasicStroke(1));
         g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);
     }

@@ -6,7 +6,7 @@ import java.sql.SQLOutput;
 
 public class KeyHandler implements KeyListener{
     GamePanel gp;
-    public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, fPressed = false, enterPressed=false;
+    public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, fPressed = false, enterPressed=false, shotKeyPressed;
     public boolean isMountPressed = false;
     boolean showDebugText = false;
 
@@ -134,6 +134,9 @@ public class KeyHandler implements KeyListener{
         if(code == KeyEvent.VK_ESCAPE){
             gp.gameState = gp.pauseState;
         }
+        if(code == KeyEvent.VK_F){
+           shotKeyPressed = true;
+        }
         //toggle debug
         if(code == KeyEvent.VK_T){
             if(!showDebugText){
@@ -208,6 +211,9 @@ public class KeyHandler implements KeyListener{
         }
         if(code == KeyEvent.VK_D){
             rightPressed = false;
+        }
+        if(code == KeyEvent.VK_F){
+            shotKeyPressed = false;
         }
     }
 }

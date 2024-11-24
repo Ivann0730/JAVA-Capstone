@@ -42,20 +42,25 @@ public class Entity {
     public int spriteSpeedMultiplier = 9;
     public int actionLockCounter=0;
     public int invincibleCounter = 0;
+    public int shotAvailableCounter = 0;
     int dyingCounter = 0;
     int hpBarCounter = 0;
 
     //CHARACTER ATTRIBUTES
     public int speed;
     public String name;
+    public int maxMana;
+    public int mana;
     public int maxLife;
     public int life;
     public int level, strength, dexterity, attack, defence, exp, nextLevelExp, coins;
     public Entity currentWeapon, currentShield;
+    public Projectile projectile;
 
     //ITEM ATTRIBUTES
     public int attackValue, defenseValue;
     public String description = "";
+    public int useCost;
 
     //TYPE
     public int type; //0 = player, 1 = npc, 2 = monster
@@ -109,7 +114,7 @@ public class Entity {
         if(this.type == type_monster && contactPlayer){
             if(!gp.player.invincible){
                 //we give damage
-                gp.playSE(7);
+                gp.playSE(6);
 
                 int damage = attack - gp.player.defence;
                 if(damage < 0) {
@@ -231,7 +236,7 @@ public class Entity {
             changeAlpha(g2,1F);
 
             //to see collision hit box
-            g2.setColor(Color.red);
+            g2.setColor(Color.green);
             g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
         }
     }
@@ -250,7 +255,6 @@ public class Entity {
         if(dyingCounter > i*6 && dyingCounter <= i*7) changeAlpha(g2,0F);
         if(dyingCounter > i*7 && dyingCounter <= i*8) changeAlpha(g2,1F);
         if(dyingCounter > i*8){
-            dying = false;
             alive = false;
         }
     }
