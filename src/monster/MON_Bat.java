@@ -2,6 +2,8 @@ package monster;
 
 import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
+import object.OBJ_Fireball;
+
 import java.util.Random;
 
 public class MON_Bat extends Entity {
@@ -17,6 +19,7 @@ public class MON_Bat extends Entity {
         attack  = 5;
         defence = 0;
         exp = 2;
+        projectile = new OBJ_Fireball(gp);
 
         solidArea.x = 34;
         solidArea.y = 48;
@@ -56,6 +59,12 @@ public class MON_Bat extends Entity {
                 direction = "right";
             }
             actionLockCounter = 0;
+        }
+        int i = new Random().nextInt(100)+1;
+        if(i > 99 && !projectile.alive && shotAvailableCounter == 30){
+            projectile.set(worldX,worldY,direction,true,this);
+            gp.projectileList.add(projectile);
+            shotAvailableCounter = 0;
         }
     }
     public void damageReaction() {

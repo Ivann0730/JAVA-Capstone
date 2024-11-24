@@ -1,7 +1,10 @@
 package object;
 
 import DannyGermanSimulator.GamePanel;
+import Entity.Entity;
 import Entity.Projectile;
+
+import javax.xml.stream.events.EntityReference;
 
 public class OBJ_Fireball extends Projectile {
     GamePanel gp;
@@ -28,5 +31,11 @@ public class OBJ_Fireball extends Projectile {
         right2 = setUp("/projectile/fireball_right_2",gp.tileSize,gp.tileSize);
         left1 = setUp("/projectile/fireball_left_1",gp.tileSize,gp.tileSize);
         left2 = setUp("/projectile/fireball_left_2",gp.tileSize,gp.tileSize);
+    }
+    public boolean haveResource(Entity user){
+        return user.mana >= useCost;
+    }
+    public void subtractResource(Entity user){
+        user.mana -= useCost;
     }
 }

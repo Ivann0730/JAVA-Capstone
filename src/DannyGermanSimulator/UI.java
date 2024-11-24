@@ -2,6 +2,7 @@ package DannyGermanSimulator;
 
 import Entity.Entity;
 import object.OBJ_Heart;
+import object.OBJ_Mana;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,7 +16,7 @@ public class UI {
     GamePanel gp;
     Graphics2D g2;
     Font oldSchool;
-    BufferedImage heart_full, heart_half, heart_blank;
+    BufferedImage heart_full, heart_half, heart_blank, crystal_full, crystal_blank;
     public boolean messageOn = false;
     ArrayList<String> message = new ArrayList<>();
     ArrayList<Integer> messageCounter = new ArrayList<>();
@@ -41,6 +42,9 @@ public class UI {
         heart_full = heart.image;
         heart_half = heart.image2;
         heart_blank = heart.image3;
+        Entity crystal = new OBJ_Mana(gp);
+        crystal_full = crystal.image;
+        crystal_blank = crystal.image2;
     }
     public void addMessage(String text){
         message.add(text);
@@ -70,8 +74,8 @@ public class UI {
         }
         //DIALOGUE STATE
         if(gp.gameState == gp.dialogueState){
-            drawDialogueScreen();
             drawPlayerLife();
+            drawDialogueScreen();
         }
         //CHARACTER STATE
         if(gp.gameState == gp.characterState){
@@ -103,6 +107,26 @@ public class UI {
             }
             i++;
             x += gp.tileSize;
+        }
+
+        //draw Max Mana
+        x = gp.tileSize/2;
+        y = gp.tileSize+64;
+        i = 0;
+        while(i < gp.player.maxMana){
+            g2.drawImage(crystal_blank, x, y, null);
+            i++;
+            x += gp.tileSize-32;
+        }
+
+        //draw mana
+        x = gp.tileSize/2;
+        y = gp.tileSize+64;
+        i = 0;
+        while(i < gp.player.mana){
+            g2.drawImage(crystal_full, x, y, null);
+            i++;
+            x += gp.tileSize-32;
         }
     }
     public void drawMessage(){
@@ -222,7 +246,7 @@ public class UI {
     public void drawDialogueScreen(){
         //WINDOW
         int x = gp.tileSize * 2;
-        int y = (int) (gp.tileSize * 1.5);
+        int y = gp.tileSize/2;
         int width = gp.screenWidth - (gp.tileSize * 4);
         int height = gp.tileSize * 2;
         drawSubWindow(x,y,width,height);
@@ -252,6 +276,8 @@ public class UI {
         g2.drawString("Level",textX, textY);
         textY += lineHeight;
         g2.drawString("Life",textX,textY);
+        textY += lineHeight;
+        g2.drawString("Mana",textX,textY);
         textY += lineHeight;
         g2.drawString("Strength",textX,textY);
         textY += lineHeight;
@@ -284,6 +310,11 @@ public class UI {
         textY += lineHeight;
 
         value = String.valueOf(gp.player.life + "/" + gp.player.maxLife);
+        textX = getAlignToRightText(value,tailX) - 24;
+        g2.drawString(value,textX,textY);
+        textY += lineHeight;
+
+        value = String.valueOf(gp.player.mana + "/" + gp.player.maxMana);
         textX = getAlignToRightText(value,tailX) - 24;
         g2.drawString(value,textX,textY);
         textY += lineHeight;

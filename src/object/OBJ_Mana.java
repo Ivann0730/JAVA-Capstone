@@ -4,11 +4,13 @@ import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
 
 public class OBJ_Mana extends Entity {
+    GamePanel gp;
     public OBJ_Mana(GamePanel gp){
         super(gp);
 
         name = "Mana Crystal";
-        down1 = setUp("/objects/manacrystal_full",gp.tileSize,gp.tileSize);
+        image = setUp("/objects/manacrystal_full",gp.tileSize,gp.tileSize);
+        image2 = setUp("/objects/manacrystal_blank",gp.tileSize,gp.tileSize);
         collision = true;
         description = "[" + name + "]\nA mystic crystal filled\nwith codechum essence.";
 

@@ -50,6 +50,8 @@ public class Player extends Entity {
         level = 1;
         maxLife = 6;
         life = maxLife;
+        maxMana = 4;
+        mana = maxMana;
         //more damage
         strength = 1;
         //more defence
@@ -209,9 +211,12 @@ public class Player extends Entity {
         }
 
         //projectile
-        if(gp.keyH.shotKeyPressed && !projectile.alive && shotAvailableCounter == 30){
+        if(gp.keyH.shotKeyPressed && !projectile.alive && shotAvailableCounter == 30 && projectile.haveResource(this)){
             //SET DEFAULT COORDINATES, DIRECTION
-            projectile.set(worldX+48,worldY+48,direction,true,this);
+            projectile.set(worldX+36,worldY+48,direction,true,this);
+
+            //SUBTRACT MANA COST
+            projectile.subtractResource(this);
 
             //ADD TO THE LIST
             gp.projectileList.add(projectile);

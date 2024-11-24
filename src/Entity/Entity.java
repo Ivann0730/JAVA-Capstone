@@ -112,18 +112,7 @@ public class Entity {
         boolean contactPlayer = gp.colCheck.checkPlayer(this);
 
         if(this.type == type_monster && contactPlayer){
-            if(!gp.player.invincible){
-                //we give damage
-                gp.playSE(6);
-
-                int damage = attack - gp.player.defence;
-                if(damage < 0) {
-                    damage = 0;
-                }
-
-                gp.player.life -= damage;
-                gp.player.invincible = true;
-            }
+            damagePlayer(attack);
         }
         if(!collisionOn){
             switch (direction){
@@ -156,6 +145,23 @@ public class Entity {
                 invincible = false;
                 invincibleCounter = 0;
             }
+        }
+        if(shotAvailableCounter < 30){
+            shotAvailableCounter++;
+        }
+    }
+    public void damagePlayer(int attack){
+        if(!gp.player.invincible){
+            //we give damage
+            gp.playSE(6);
+
+            int damage = attack - gp.player.defence;
+            if(damage < 0) {
+                damage = 0;
+            }
+
+            gp.player.life -= damage;
+            gp.player.invincible = true;
         }
     }
     public void use(Entity entity){
