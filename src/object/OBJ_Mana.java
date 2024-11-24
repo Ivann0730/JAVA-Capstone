@@ -7,19 +7,20 @@ public class OBJ_Mana extends Entity {
     GamePanel gp;
     public OBJ_Mana(GamePanel gp){
         super(gp);
+        this.gp = gp;
 
+        type = type_pickupOnly;
+        value = 1;
         name = "Mana Crystal";
+        down1 = setUp("/objects/manacrystal_full",gp.tileSize,gp.tileSize);
         image = setUp("/objects/manacrystal_full",gp.tileSize,gp.tileSize);
         image2 = setUp("/objects/manacrystal_blank",gp.tileSize,gp.tileSize);
         collision = true;
         description = "[" + name + "]\nA mystic crystal filled\nwith codechum essence.";
-
-        solidArea.x = 36;
-        solidArea.y = 36;
-        solidArea.width = 48;
-        solidArea.height = 48;
-        solidAreaDefaultX = solidArea.x;
-        solidAreaDefaultY = solidArea.y;
-
+    }
+    public void use(Entity entity){
+        gp.playSE(0);
+        gp.ui.addMessage("Mana +" + value);
+        entity.mana += value;
     }
 }

@@ -58,6 +58,7 @@ public class Entity {
     public Projectile projectile;
 
     //ITEM ATTRIBUTES
+    public int value;
     public int attackValue, defenseValue;
     public String description = "";
     public int useCost;
@@ -71,6 +72,7 @@ public class Entity {
     public final int type_axe = 4;
     public final int type_shield = 5;
     public final int type_consumable = 6;
+    public final int type_pickupOnly = 7;
 
 
     public Entity(GamePanel gp){
@@ -100,6 +102,22 @@ public class Entity {
             case "right":
                 direction = "left";
                 break;
+        }
+    }
+    public void use(Entity entity){
+    }
+    public void checkDrop(){
+
+    }
+    public void dropItem(Entity droppedItem){
+        for(int i = 0; i < gp.obj.length; i++){
+            if(gp.obj[i] == null){
+                gp.obj[i] = droppedItem;
+                //dead monsters coordinates
+                gp.obj[i].worldX = worldX;
+                gp.obj[i].worldY = worldY;
+                break;
+            }
         }
     }
     public void update(){
@@ -163,8 +181,6 @@ public class Entity {
             gp.player.life -= damage;
             gp.player.invincible = true;
         }
-    }
-    public void use(Entity entity){
     }
     public void draw(Graphics2D g2) {
         BufferedImage image = null;
@@ -238,7 +254,7 @@ public class Entity {
             if(dying){
                 dyingAnimation(g2);
             }
-            g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+            g2.drawImage(image, screenX, screenY,null);
             changeAlpha(g2,1F);
 
             //to see collision hit box

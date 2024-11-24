@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Projectiles&#10;-Press F to shoot projectile&#10;-added new fireball, still need to implement mana&#10;&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
-      <change afterPath="$PROJECT_DIR$/res/objects/manacrystal_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/projectile/rock_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Rock.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Monster Projectiles and Mana&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <change afterPath="$PROJECT_DIR$/res/objects/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Mana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Mana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732428089291</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added Monster Projectiles and Mana&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
+      <option name="closed" value="true" />
+      <created>1732439380498</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732439380498</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +384,8 @@
     <MESSAGE value="Added Inventory&#10;-Press P to access inventory&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Equipables &amp; Usable Items&#10;-Press P to access inventory and enter key to switch or use items&#10;-added new axe weapon, has more damage than sword but less range (using heil sprite for now)&#10;-WASD keys to move inventory cursor&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Projectiles&#10;-Press F to shoot projectile&#10;-added new fireball, still need to implement mana&#10;&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Projectiles&#10;-Press F to shoot projectile&#10;-added new fireball, still need to implement mana&#10;&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <MESSAGE value="Added Monster Projectiles and Mana&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Monster Projectiles and Mana&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

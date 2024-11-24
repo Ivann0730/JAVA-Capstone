@@ -81,14 +81,14 @@ public class EventHandler {
         canTouchEvent = false;
     }
     public void healingPool(int col, int row, int gameState){
-        if(gp.keyH.fPressed){
+        if(gp.keyH.ePressed){
             gp.gameState = gameState;
             gp.ui.currentDialogue = "You drank holy water, life restored";
             gp.player.life = gp.player.maxLife;
             gp.player.mana = gp.player.maxMana;
             gp.aSetter.setMonster();
         }
-        gp.keyH.fPressed = false;
+        gp.keyH.ePressed  = false;
     }
     public void teleport(int gameState){
         gp.gameState = gameState;

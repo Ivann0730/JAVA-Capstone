@@ -2,10 +2,7 @@ package DannyGermanSimulator;
 
 import Entity.NPC_radish;
 import monster.MON_Bat;
-import object.OBJ_Axe;
-import object.OBJ_Mana;
-import object.OBJ_Potion_Red;
-import object.OBJ_Shield_Blue;
+import object.*;
 
 public class AssetSetter {
     GamePanel gp;
@@ -15,23 +12,23 @@ public class AssetSetter {
     }
     public void setObject(){
         int i = 0;
-        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i] = new OBJ_Coin(gp);
         gp.obj[i].worldX = gp.tileSize * 26;
         gp.obj[i].worldY = gp.tileSize * 36;
         i++;
-        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i] = new OBJ_Coin(gp);
         gp.obj[i].worldX = gp.tileSize * 7;
         gp.obj[i].worldY = gp.tileSize * 28;
         i++;
-        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i] = new OBJ_Coin(gp);
         gp.obj[i].worldX = gp.tileSize * 7;
         gp.obj[i].worldY = gp.tileSize * 41;
         i++;
-        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i] = new OBJ_Coin(gp);
         gp.obj[i].worldX = gp.tileSize * 39;
         gp.obj[i].worldY = gp.tileSize * 5;
         i++;
-        gp.obj[i] = new OBJ_Mana(gp);
+        gp.obj[i] = new OBJ_Coin(gp);
         gp.obj[i].worldX = gp.tileSize * 40;
         gp.obj[i].worldY = gp.tileSize * 16;
         i++;
