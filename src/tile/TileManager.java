@@ -18,7 +18,7 @@ public class TileManager {
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
-        tile = new Tile[60]; // Assuming 10 types of tiles
+        tile = new Tile[60]; // Assuming 60 types of tiles
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow]; // Map for tile numbers
         getTileImage(); // Load tile images
         loadMap("/maps/testmap.txt"); // Load map from file

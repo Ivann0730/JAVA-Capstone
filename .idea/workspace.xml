@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Item Drops&#10;-change key to interact to E&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix item drops solid area&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc">
-      <change afterPath="$PROJECT_DIR$/res/sound/cuttree.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles_interactive/drytree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles_interactive/trunk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile_interactive/IT_Trunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile_interactive/InteractiveTile.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Particle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/testmap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/testmap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_radish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_radish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Rock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_interactive/IT_DryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile_interactive/InteractiveTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_interactive/InteractiveTile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732460016948</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling">
+      <option name="closed" value="true" />
+      <created>1732544946720</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732544946720</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="partial" />
     <MESSAGE value="Start of making the map - Date:October 23, 2024" />
     <MESSAGE value="Collision Implemented - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
@@ -396,7 +398,8 @@
     <MESSAGE value="Added Projectiles&#10;-Press F to shoot projectile&#10;-added new fireball, still need to implement mana&#10;&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Monster Projectiles and Mana&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Item Drops&#10;-change key to interact to E&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix item drops solid area&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Item Drops&#10;-change key to interact to E&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix item drops solid area&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
+    <MESSAGE value="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

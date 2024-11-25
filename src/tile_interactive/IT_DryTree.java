@@ -3,6 +3,8 @@ package tile_interactive;
 import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
 
+import java.awt.*;
+
 public class IT_DryTree extends InteractiveTile{
 
     GamePanel gp;
@@ -28,5 +30,21 @@ public class IT_DryTree extends InteractiveTile{
     public InteractiveTile getDestroyForm(){
         InteractiveTile tile = new IT_Trunk(gp, worldX/gp.tileSize,worldY/gp.tileSize);
         return tile;
+    }
+    public Color getParticleColor(){
+        Color color = new Color(65,50,30);
+        return color;
+    }
+    public int getParticleSize(){
+        int size = 12;
+        return size;
+    }
+    public int getParticleSpeed(){
+        int speed = 2;
+        return speed;
+    }
+    public int getParticleMaxLife(){
+        int maxLife = 20;
+        return maxLife;
     }
 }

@@ -2,6 +2,7 @@ package Entity;
 
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.KeyHandler;
+import object.OBJ_Axe;
 import object.OBJ_Fireball;
 import object.OBJ_Shield_Wood;
 import object.OBJ_Sword_Normal;
@@ -59,7 +60,7 @@ public class Player extends Entity {
         exp = 0;
         nextLevelExp = 5;
         coins = 0;
-        currentWeapon = new OBJ_Sword_Normal(gp);
+        currentWeapon = new OBJ_Axe(gp);
         currentShield = new OBJ_Shield_Wood(gp);
         projectile = new OBJ_Fireball(gp);
         attack = getAttack();
@@ -226,11 +227,11 @@ public class Player extends Entity {
             shotAvailableCounter = 0;
             gp.playSE(2);
         }
-
         if(keyH.mountPressed){
             speed = 15;
             spriteSpeedMultiplier = 4;
         }
+
         else{
             speed = tempSpeed;
             spriteSpeedMultiplier = tempSpriteSpeedMultiplier;
@@ -375,6 +376,8 @@ public class Player extends Entity {
             gp.iTile[i].playSE();
             gp.iTile[i].life--;
             gp.iTile[i].invincible = true;
+
+            generateParticle(gp.iTile[i],gp.iTile[i]);
 
             if(gp.iTile[i].life-- == 0){
                 gp.iTile[i] = gp.iTile[i].getDestroyForm();
