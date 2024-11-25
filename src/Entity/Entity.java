@@ -23,7 +23,7 @@ public class Entity {
     // to fix hit box values
     public Rectangle solidArea = new Rectangle(0,0,48,48);
     public Rectangle attackArea = new Rectangle(0,0,0,0);
-    public int solidAreaDefaultX, solidAreaDefaultY;
+    public int solidAreaDefaultX = 34, solidAreaDefaultY = 38;
 
     //STATE
     public int worldX ,worldY;
@@ -127,6 +127,7 @@ public class Entity {
         gp.colCheck.checkObject(this,false);
         gp.colCheck.checkEntity(this, gp.npc);
         gp.colCheck.checkEntity(this, gp.monster);
+        gp.colCheck.checkEntity(this, gp.iTile);
         boolean contactPlayer = gp.colCheck.checkPlayer(this);
 
         if(this.type == type_monster && contactPlayer){

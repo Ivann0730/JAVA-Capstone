@@ -9,6 +9,7 @@ import java.util.Comparator;
 import Entity.Entity;
 import Entity.Player;
 import tile.TileManager;
+import tile_interactive.InteractiveTile;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -45,6 +46,7 @@ public class GamePanel extends JPanel implements Runnable {
     public Entity obj[] = new Entity[20]; // 10 being 10 slots for objects (can have many objects but for now 10)5
     public Entity npc[] = new Entity[10];
     public Entity monster[] = new Entity[10];
+    public InteractiveTile iTile[] = new InteractiveTile[50];
     public ArrayList<Entity> projectileList = new ArrayList<>();
     ArrayList<Entity> entityList = new ArrayList<>();
     //more objects can slow down the game
@@ -69,6 +71,7 @@ public class GamePanel extends JPanel implements Runnable {
         aSetter.setObject();
         aSetter.setNPC();
         aSetter.setMonster();
+        aSetter.setInteractiveTile();
         gameState = titleState;
     }
     public void startGameThread() {
@@ -132,6 +135,11 @@ public class GamePanel extends JPanel implements Runnable {
                     }
                 }
             }
+            for(int i = 0; i < iTile.length; i++){
+                if(iTile[i] != null){
+                    iTile[i].update();
+                }
+            }
         }
         if(gameState == pauseState){
             //nothing yet
@@ -156,6 +164,13 @@ public class GamePanel extends JPanel implements Runnable {
         else {
             // Draw tiles
             tileM.draw(g2);
+
+            //INTERACTIVE TILE
+            for(int i = 0; i < iTile.length; i++){
+                if(iTile[i] != null){
+                    iTile[i].draw(g2);
+                }
+            }
 
             //ADD ENTITIES
             entityList.add(player);

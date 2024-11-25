@@ -11,6 +11,10 @@ public class OBJ_Fireball extends Projectile {
     public OBJ_Fireball(GamePanel gp) {
         super(gp);
         this.gp = gp;
+        this.solidAreaDefaultX = 34;
+        this.solidAreaDefaultY = 48;
+        this.solidArea.width = 48;
+        this.solidArea.height = 48;
 
         name = "Fireball";
         speed = 20;

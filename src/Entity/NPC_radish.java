@@ -8,6 +8,10 @@ public class NPC_radish extends Entity{
 
     public NPC_radish(GamePanel gp) {
         super(gp);
+        this.solidAreaDefaultX = 32;
+        this.solidAreaDefaultY = 48;
+        this.solidArea.width = 60;
+        this.solidArea.height = 64;
         direction = "down";
         speed = 3;
 

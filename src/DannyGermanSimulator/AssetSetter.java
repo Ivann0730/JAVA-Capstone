@@ -3,6 +3,7 @@ package DannyGermanSimulator;
 import Entity.NPC_radish;
 import monster.MON_Bat;
 import object.*;
+import tile_interactive.IT_DryTree;
 
 public class AssetSetter {
     GamePanel gp;
@@ -86,5 +87,22 @@ public class AssetSetter {
         gp.monster[i].worldX = gp.tileSize * 30;
         gp.monster[i].worldY = gp.tileSize * 12;
         i++;
+    }
+    public void setInteractiveTile() {
+
+        int i = 0;
+        gp.iTile[i] = new IT_DryTree(gp,18,17); i++;
+        gp.iTile[i] = new IT_DryTree(gp,19,17); i++;
+        gp.iTile[i] = new IT_DryTree(gp,20,17); i++;
+
+
+        gp.iTile[i] = new IT_DryTree(gp,5,26); i++;
+        gp.iTile[i] = new IT_DryTree(gp,6,26); i++;
+        gp.iTile[i] = new IT_DryTree(gp,7,26); i++;
+        gp.iTile[i] = new IT_DryTree(gp,8,26); i++;
+        gp.iTile[i] = new IT_DryTree(gp,5,29); i++;
+        gp.iTile[i] = new IT_DryTree(gp,6,29); i++;
+        gp.iTile[i] = new IT_DryTree(gp,7,29); i++;
+        gp.iTile[i] = new IT_DryTree(gp,8,29); i++;
     }
 }

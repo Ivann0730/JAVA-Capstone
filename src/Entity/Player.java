@@ -159,6 +159,9 @@ public class Player extends Entity {
             int monsterIndex = gp.colCheck.checkEntity(this, gp.monster);
             contactMonster(monsterIndex);
 
+            //Check Interactive Tile Collision
+            int iTileIndex = gp.colCheck.checkEntity(this,gp.iTile);
+
             //Check Event
             gp.eHandler.checkEvent();
 
@@ -213,7 +216,7 @@ public class Player extends Entity {
         //projectile
         if(gp.keyH.shotKeyPressed && !projectile.alive && shotAvailableCounter == 30 && projectile.haveResource(this)){
             //SET DEFAULT COORDINATES, DIRECTION
-            projectile.set(worldX+36,worldY+48,direction,true,this);
+            projectile.set(worldX,worldY,direction,true,this);
 
             //SUBTRACT MANA COST
             projectile.subtractResource(this);
@@ -281,6 +284,10 @@ public class Player extends Entity {
             //check monster collision
             int monsterIndex = gp.colCheck.checkEntity(this, gp.monster);
             damageMonster(monsterIndex, attack);
+
+            int iTileIndex = gp.colCheck.checkEntity(this, gp.iTile);
+            damageInteractiveTile(iTileIndex);
+
             //restore position
             worldX = currentWorldX;
             worldY = currentWorldY;
@@ -358,6 +365,19 @@ public class Player extends Entity {
                     exp += gp.monster[index].exp;
                     checkLevelUp();
                 }
+            }
+        }
+    }
+    public void damageInteractiveTile(int i){
+
+        if(i != 999 && gp.iTile[i].destructible && gp.iTile[i].isCorrectItem(this) && !gp.iTile[i].invincible){
+
+            gp.iTile[i].playSE();
+            gp.iTile[i].life--;
+            gp.iTile[i].invincible = true;
+
+            if(gp.iTile[i].life-- == 0){
+                gp.iTile[i] = gp.iTile[i].getDestroyForm();
             }
         }
     }
