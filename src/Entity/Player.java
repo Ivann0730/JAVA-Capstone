@@ -14,8 +14,8 @@ public class Player extends Entity {
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
-    int tempSpeed = 10;
-    int tempSpriteSpeedMultiplier = 9;
+    int tempSpeed = 6;
+    int tempSpriteSpeedMultiplier = spriteSpeedMultiplier;
     public boolean attackCanceled = false;
     public ArrayList<Entity> inventory = new ArrayList<>();
     public final int maxInventorySize = 20;
@@ -44,14 +44,14 @@ public class Player extends Entity {
     public void setDefaultValues() {
         worldX = gp.tileSize * 23;
         worldY = gp.tileSize * 21;
-        speed = 10;
+        speed = 6; //also change tempSpeed
         direction = "down";
 
         //PLAYER STATUS
         level = 1;
         maxLife = 6;
         life = maxLife;
-        maxMana = 4;
+        maxMana = 8;
         mana = maxMana;
         //more damage
         strength = 1;
@@ -60,7 +60,7 @@ public class Player extends Entity {
         exp = 0;
         nextLevelExp = 5;
         coins = 0;
-        currentWeapon = new OBJ_Axe(gp);
+        currentWeapon = new OBJ_Sword_Normal(gp);
         currentShield = new OBJ_Shield_Wood(gp);
         projectile = new OBJ_Fireball(gp);
         attack = getAttack();
@@ -230,9 +230,7 @@ public class Player extends Entity {
         if(keyH.mountPressed){
             speed = 15;
             spriteSpeedMultiplier = 4;
-        }
-
-        else{
+        } else{
             speed = tempSpeed;
             spriteSpeedMultiplier = tempSpriteSpeedMultiplier;
         }

@@ -13,7 +13,7 @@ public class OBJ_Potion_Red extends Entity {
         name = "Health Potion";
         value = 5;
         down1 = setUp("/objects/potion_red",gp.tileSize,gp.tileSize);
-        description = "[" + name + "]\nA potion that restores" + value + " health\nusing codechum juice.";
+        description = "[" + name + "]\nA potion that restores " + value + " health\nusing codechum juice.";
     }
     public void use(Entity entity){
         gp.gameState = gp.dialogueState;
