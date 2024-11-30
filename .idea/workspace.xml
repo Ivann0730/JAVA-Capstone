@@ -4,18 +4,125 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Particles&#10;-added some particles flying when you cut a tree or hit a monster with your fireball.&#10;&#10;-need to optimize game and fix screen scaling">
-      <change afterPath="$PROJECT_DIR$/config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Config.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling">
+      <change afterPath="$PROJECT_DIR$/res/Spawn/001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/B.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/B1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/B2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/Rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/Sign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/T9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/b3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/h9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/st6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/t10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/t2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/t4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/tr1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/tr2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/tr3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Spawn/tr4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/Map-Spawn.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/interior01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/stairs.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/testmap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/testmap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +171,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/LA6_Tolentino",
+    "last_opened_file_path": "D:/JAVA2/JAVA-Capstone/res/Spawn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,16 +186,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA2\JAVA-Capstone\res\Spawn" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\Font" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\Tiles_Ren" />
       <recent name="C:\Users\Ivann James\IdeaProjects\JavaCapstone\res\tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA2\JAVA-Capstone\res\maps" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\sound" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\tiles_interactive" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\objects" />
       <recent name="D:\JAVA2\JAVA-Capstone\res\projectile" />
-      <recent name="D:\JAVA2\JAVA-Capstone\res\maps" />
     </key>
   </component>
   <component name="RunManager">
@@ -364,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732550849229</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling">
+      <option name="closed" value="true" />
+      <created>1732808634100</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732808634100</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Collision Implemented - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
@@ -407,7 +522,8 @@
     <MESSAGE value="Added Item Drops&#10;-change key to interact to E&#10;-Press F to shoot projectile&#10;-added new fireball&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to fix item drops solid area&#10;-need to fix fireball solid area&#10;-need to optimize hit box value for sword attack area &#10;-still need to fix hit box values for radish npc" />
     <MESSAGE value="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Particles&#10;-added some particles flying when you cut a tree or hit a monster with your fireball.&#10;&#10;-need to optimize game and fix screen scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Particles&#10;-added some particles flying when you cut a tree or hit a monster with your fireball.&#10;&#10;-need to optimize game and fix screen scaling" />
+    <MESSAGE value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

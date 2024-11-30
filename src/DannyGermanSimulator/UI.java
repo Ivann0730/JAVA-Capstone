@@ -82,8 +82,13 @@ public class UI {
             drawCharacterScreen();
             drawInventory();
         }
+        //OPTION STATE
         if(gp.gameState == gp.optionState){
             drawOptionScreen();
+        }
+        //GAME OVER STATE
+        if(gp.gameState == gp.gameOverState){
+            drawGameOverScreen();
         }
     }
     public void drawPlayerLife(){
@@ -254,7 +259,7 @@ public class UI {
         int x = gp.tileSize * 2;
         int y = gp.tileSize/2;
         int width = gp.screenWidth - (gp.tileSize * 4);
-        int height = gp.tileSize * 2;
+        int height = gp.tileSize * 4;
         drawSubWindow(x,y,width,height);
 
         g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 40F));
@@ -411,6 +416,41 @@ public class UI {
             }
         }
     }
+    public void drawGameOverScreen(){
+        g2.setColor(new Color(0,0,0,150));
+        g2.fillRect(0,0,gp.screenWidth, gp.screenHeight);
+
+        int x;
+        int y;
+        String text;
+        g2.setFont(g2.getFont().deriveFont(Font.BOLD, 110F));
+        text = "You Died";
+        //SHADOW
+        g2.setColor(Color.black);
+        x = getXForCenteredText(text);
+        y = gp.tileSize * 6;
+        g2.drawString(text,x,y);
+        //MAIN
+        g2.setColor(Color.red);
+        g2.drawString(text,x-4, y-4);
+        //RETRY
+        g2.setFont(g2.getFont().deriveFont(50F));
+        text = "Retry";
+        x = getXForCenteredText(text);
+        y += gp.tileSize * 3;
+        g2.drawString(text,x,y);
+        if(commandNum == 0){
+            g2.drawString(">",x-96,y);
+        }
+        //EXIT
+        text = "Quit";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2.drawString(text,x,y);
+        if(commandNum == 1){
+            g2.drawString(">",x-96,y);
+        }
+    }
     public void drawOptionScreen(){
         g2.setColor(Color.white);
         g2.setFont(g2.getFont().deriveFont(32F));
@@ -557,6 +597,7 @@ public class UI {
         textY += gp.tileSize;
         g2.drawString("Move",textX,textY); textY += gp.tileSize;
         g2.drawString("Confirm/Attack",textX,textY); textY += gp.tileSize;
+        g2.drawString("Interact",textX,textY); textY += gp.tileSize;
         g2.drawString("Shoot/Cast",textX,textY); textY += gp.tileSize;
         g2.drawString("Inventory",textX,textY); textY += gp.tileSize;
         g2.drawString("Pause",textX,textY); textY += gp.tileSize;
@@ -566,6 +607,7 @@ public class UI {
         textY = frameY + gp.tileSize*2;
         g2.drawString("WASD",textX,textY); textY += gp.tileSize;
         g2.drawString("ENTER",textX,textY); textY += gp.tileSize;
+        g2.drawString("E",textX,textY); textY += gp.tileSize;
         g2.drawString("F",textX,textY); textY += gp.tileSize;
         g2.drawString("I",textX,textY); textY += gp.tileSize;
         g2.drawString("P",textX,textY); textY += gp.tileSize;

@@ -44,6 +44,10 @@ public class KeyHandler implements KeyListener{
         else if(gp.gameState == gp.optionState){
             optionState(code);
         }
+        //GAME OVER STATE
+        else if(gp.gameState == gp.gameOverState){
+            gameOverState(code);
+        }
     }
     public void titleState(int code){
         if(gp.ui.titleScreenState == 0){
@@ -158,7 +162,11 @@ public class KeyHandler implements KeyListener{
             }
         }
         if(code == KeyEvent.VK_M){
-            gp.tileM.loadMap("/maps/testmap.txt");
+            switch (gp.currentMap){
+                case 0: gp.tileM.loadMap("/maps/testmap.txt",0); break;
+                case 1: gp.tileM.loadMap("/maps/interior01.txt",1); break;
+                case 2: gp.tileM.loadMap("/maps/Map-Spawn.txt.txt",2); break;
+            }
         }
     }
     public void pauseState(int code){
@@ -256,6 +264,32 @@ public class KeyHandler implements KeyListener{
                     gp.SE.volumeScale++;
                     gp.playSE(1);
                 }
+            }
+        }
+    }
+    public void gameOverState(int code){
+        if(code == KeyEvent.VK_W){
+            gp.ui.commandNum--;
+            if(gp.ui.commandNum < 0){
+                gp.ui.commandNum = 1;
+            }
+            gp.playSE(1);
+        }
+        if(code == KeyEvent.VK_S){
+            gp.ui.commandNum++;
+            if(gp.ui.commandNum > 1){
+                gp.ui.commandNum = 0;
+            }
+            gp.playSE(1);
+        }
+        if(code == KeyEvent.VK_ENTER){
+            if(gp.ui.commandNum == 0){
+                gp.gameState = gp.playState;
+                gp.retry();
+                gp.playMusic(3);
+            } else if(gp.ui.commandNum == 1){
+                gp.gameState = gp.titleState;
+                gp.restart();
             }
         }
     }
