@@ -5,123 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling">
-      <change afterPath="$PROJECT_DIR$/res/Spawn/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/022.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/026.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/027.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/028.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/029.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/030.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/031.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/B1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/B2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/Rock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/Sign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/T9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/b3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/h9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/st6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/t10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/t2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/t4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/tr1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/tr2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/tr3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Spawn/tr4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/Map-Spawn.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/interior01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/gameover.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/stairs.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ivann0730/JAVA-Capstone&quot;,
-    &quot;accountId&quot;: &quot;da8b10d6-8d47-4816-a8df-c8eb9da47b9a&quot;
+    &quot;accountId&quot;: &quot;705a8d6c-afc5-4e9e-9e18-62c5a83a2412&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -163,27 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JAVA2/JAVA-Capstone/res/Spawn",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA2/JAVA-Capstone/res/Spawn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA2\JAVA-Capstone\res\Spawn" />
@@ -219,6 +104,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -231,6 +124,10 @@
       <workItem from="1729680806979" duration="428000" />
       <workItem from="1729684639502" duration="1653000" />
       <workItem from="1729686317486" duration="14463000" />
+      <workItem from="1732976036006" duration="79000" />
+      <workItem from="1732986571824" duration="671000" />
+      <workItem from="1733022424350" duration="251000" />
+      <workItem from="1733022688569" duration="8342000" />
     </task>
     <task id="LOCAL-00001" summary="partial">
       <option name="closed" value="true" />

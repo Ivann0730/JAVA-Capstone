@@ -15,18 +15,22 @@ public class TileManager {
     GamePanel gp;
     public Tile[] tile;
     public Tile[] tileSpawn;
+    public Tile[] tileDungeon;
     public int[][][] mapTileNum;
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
         tile = new Tile[60];// Assuming 60 types of tiles
         tileSpawn = new Tile[105];
+        tileDungeon = new Tile[100];
         mapTileNum = new int[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow]; // Map for tile numbers
         getTileImage(); // Load tile images
         getTileImageSpawn();
+        getTileDungeon();
         loadMap("/maps/testmap.txt", 0); // Load map from file
         loadMap("/maps/interior01.txt",1);
         loadMap("/maps/Spawn.txt", 2); //SPAWN
+        loadMap("/maps/Dungeon", 3);
     }
     // Method to load tile images
     public void getTileImage() {
@@ -194,9 +198,107 @@ public class TileManager {
         setUpSpawn(100,"/Spawn/tr3" , true);
         setUpSpawn(101,"/Spawn/tr4" , true);
     }
+
+    public void getTileDungeon() {
+        setUpDungeon(0, "/Tiles_Dungeon/Decor-1", true);
+        setUpDungeon(1, "/Tiles_Dungeon/Decor-2", true);
+        setUpDungeon(2, "/Tiles_Dungeon/Decor-3", true);
+        setUpDungeon(3, "/Tiles_Dungeon/Decor-4", true);
+        setUpDungeon(4, "/Tiles_Dungeon/Decor-5", true);
+        setUpDungeon(5, "/Tiles_Dungeon/Decor-6", true);
+        setUpDungeon(6, "/Tiles_Dungeon/Decor-7", true);
+        setUpDungeon(7, "/Tiles_Dungeon/Floor-1", false);
+        setUpDungeon(8, "/Tiles_Dungeon/Floor-2", false);
+        setUpDungeon(9, "/Tiles_Dungeon/Floor-3", false);
+        setUpDungeon(10, "/Tiles_Dungeon/Floor-4", false);
+        setUpDungeon(11, "/Tiles_Dungeon/FS-1", false);
+        setUpDungeon(12, "/Tiles_Dungeon/FS-2", false);
+        setUpDungeon(13, "/Tiles_Dungeon/FS-3", false);
+        setUpDungeon(14, "/Tiles_Dungeon/FS-4", false);
+        setUpDungeon(15, "/Tiles_Dungeon/FS-5", false);
+        setUpDungeon(16, "/Tiles_Dungeon/Stairs-1", false);
+        setUpDungeon(17, "/Tiles_Dungeon/Stairs-2", false);
+        setUpDungeon(18, "/Tiles_Dungeon/tr-1", false);
+        setUpDungeon(19, "/Tiles_Dungeon/Walls-1", true);
+        setUpDungeon(20, "/Tiles_Dungeon/Walls-10", true);
+        setUpDungeon(21, "/Tiles_Dungeon/Walls-11", true);
+        setUpDungeon(22, "/Tiles_Dungeon/Walls-12.png-1.png", true);
+        setUpDungeon(23, "/Tiles_Dungeon/Walls-12.png-2.png", true);
+        setUpDungeon(24, "/Tiles_Dungeon/Walls-12.png-3.png", true);
+        setUpDungeon(25, "/Tiles_Dungeon/Walls-12.png-4.png", true);
+        setUpDungeon(26, "/Tiles_Dungeon/Walls-12.png-5.png", true);
+        setUpDungeon(27, "/Tiles_Dungeon/Walls-12", true);
+        setUpDungeon(28, "/Tiles_Dungeon/Walls-13", true);
+        setUpDungeon(29, "/Tiles_Dungeon/Walls-14", true);
+        setUpDungeon(30, "/Tiles_Dungeon/Walls-15", true);
+        setUpDungeon(31, "/Tiles_Dungeon/Walls-16", true);
+        setUpDungeon(32, "/Tiles_Dungeon/Walls-17", true);
+        setUpDungeon(33, "/Tiles_Dungeon/Walls-18", true);
+        setUpDungeon(34, "/Tiles_Dungeon/Walls-19", true);
+        setUpDungeon(35, "/Tiles_Dungeon/Walls-2", true);
+        setUpDungeon(36, "/Tiles_Dungeon/Walls-20", true);
+        setUpDungeon(37, "/Tiles_Dungeon/Walls-21", true);
+        setUpDungeon(38, "/Tiles_Dungeon/Walls-22", true);
+        setUpDungeon(39, "/Tiles_Dungeon/Walls-23", true);
+        setUpDungeon(40, "/Tiles_Dungeon/Walls-24", true);
+        setUpDungeon(41, "/Tiles_Dungeon/Walls-25.png", true);
+        setUpDungeon(42, "/Tiles_Dungeon/Walls-26.png", true);
+        setUpDungeon(43, "/Tiles_Dungeon/Walls-27.png", true);
+        setUpDungeon(44, "/Tiles_Dungeon/Walls-28.png", true);
+        setUpDungeon(45, "/Tiles_Dungeon/Walls-29.png", true);
+        setUpDungeon(46, "/Tiles_Dungeon/Walls-5", true);
+        setUpDungeon(47, "/Tiles_Dungeon/Walls-30.png", true);
+        setUpDungeon(48, "/Tiles_Dungeon/Walls-31.png", true);
+        setUpDungeon(49, "/Tiles_Dungeon/Walls-32.png", true);
+        setUpDungeon(50, "/Tiles_Dungeon/Walls-33.png", true);
+        setUpDungeon(51, "/Tiles_Dungeon/Walls-34.png", true);
+        setUpDungeon(52, "/Tiles_Dungeon/Walls-35.png", true);
+        setUpDungeon(53, "/Tiles_Dungeon/Walls-36.png", true);
+        setUpDungeon(54, "/Tiles_Dungeon/Walls-37.png", true);
+        setUpDungeon(55, "/Tiles_Dungeon/Walls-38.png", true);
+        setUpDungeon(56, "/Tiles_Dungeon/Walls-39.png", true);
+        setUpDungeon(57, "/Tiles_Dungeon/Walls-4", true);
+        setUpDungeon(58, "/Tiles_Dungeon/Walls-40.png", true);
+        setUpDungeon(59, "/Tiles_Dungeon/Walls-41.png", true);
+        setUpDungeon(60, "/Tiles_Dungeon/Walls-42.png", true);
+        setUpDungeon(61, "/Tiles_Dungeon/Walls-43.png", true);
+        setUpDungeon(62, "/Tiles_Dungeon/Walls-44.png", true);
+        setUpDungeon(63, "/Tiles_Dungeon/Walls-45.png", true);
+        setUpDungeon(64, "/Tiles_Dungeon/Walls-46.png", true);
+        setUpDungeon(65, "/Tiles_Dungeon/Walls-47.png", true);
+        setUpDungeon(66, "/Tiles_Dungeon/Walls-48.png", true);
+        setUpDungeon(67, "/Tiles_Dungeon/Walls-49.png", true);
+        setUpDungeon(68, "/Tiles_Dungeon/Walls-3", true);
+        setUpDungeon(69, "/Tiles_Dungeon/Walls-50.png", true);
+        setUpDungeon(70, "/Tiles_Dungeon/Walls-51.png", true);
+        setUpDungeon(71, "/Tiles_Dungeon/Walls-52.png", true);
+        setUpDungeon(72, "/Tiles_Dungeon/Walls-53.png", true);
+        setUpDungeon(73, "/Tiles_Dungeon/Walls-54.png", true);
+        setUpDungeon(74, "/Tiles_Dungeon/Walls-55.png", true);
+        setUpDungeon(75, "/Tiles_Dungeon/Walls-58.png", true);
+        setUpDungeon(76, "/Tiles_Dungeon/Walls-59", true);
+        setUpDungeon(77, "/Tiles_Dungeon/Walls-59.png", true);
+        setUpDungeon(78, "/Tiles_Dungeon/Walls-6", true);
+        setUpDungeon(79, "/Tiles_Dungeon/Walls-60", true);
+        setUpDungeon(80, "/Tiles_Dungeon/Walls-60.png", true);
+        setUpDungeon(81, "/Tiles_Dungeon/Walls-61", true);
+        setUpDungeon(82, "/Tiles_Dungeon/Walls-61.png", true);
+        setUpDungeon(83, "/Tiles_Dungeon/Walls-62", true);
+        setUpDungeon(84, "/Tiles_Dungeon/Walls-62.png", true);
+        setUpDungeon(85, "/Tiles_Dungeon/Walls-63.png", true);
+        setUpDungeon(86, "/Tiles_Dungeon/Walls-64.png", true);
+        setUpDungeon(87, "/Tiles_Dungeon/Walls-65.png", true);
+        setUpDungeon(88, "/Tiles_Dungeon/Walls-66.png", true);
+        setUpDungeon(89, "/Tiles_Dungeon/Walls-65.png", true);
+        setUpDungeon(90, "/Tiles_Dungeon/Walls-66.png", true);
+        setUpDungeon(91, "/Tiles_Dungeon/Walls-7", true);
+        setUpDungeon(92, "/Tiles_Dungeon/Walls-8", true);
+        setUpDungeon(93, "/Tiles_Dungeon/Walls-9", true);
+    }
+
     public void setUp(int index, String imageName, boolean collision){
 
-        UtilityTool uTool = new UtilityTool();
+         UtilityTool uTool = new UtilityTool();
         try {
             tile[index] = new Tile();
             tile[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));
@@ -214,6 +316,18 @@ public class TileManager {
             tileSpawn[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));
             tileSpawn[index].image = uTool.scaleImage(tileSpawn[index].image, gp.tileSize, gp.tileSize);
             tileSpawn[index].collision = collision;
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    public void setUpDungeon(int index, String imageName, boolean collision){
+
+        UtilityTool uTool = new UtilityTool();
+        try {
+            tileDungeon[index] = new Tile();
+            tileDungeon[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));
+            tileDungeon[index].image = uTool.scaleImage(tileDungeon[index].image, gp.tileSize, gp.tileSize);
+            tileDungeon[index].collision = collision;
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -278,12 +392,12 @@ public class TileManager {
                     worldY + gp.tileSize > gp.player.worldY - gp.player.screenY &&
                     worldY - gp.tileSize < gp.player.worldY + gp.player.screenY) {
 
-                if(gp.currentMap == 2){
-                    g2.drawImage(tileSpawn[tileNum].image, screenX, screenY, null);
-                } else {
-                    g2.drawImage(tile[tileNum].image, screenX, screenY, null);
-                }
+                switch(gp.currentMap){
 
+                    case 0 ,1: g2.drawImage(tile[tileNum].image, screenX, screenY, null); break;
+                    case 2: g2.drawImage(tileSpawn[tileNum].image, screenX, screenY, null); break;
+                    case 3: g2.drawImage(tileDungeon[tileNum].image, screenX, screenY, null); break;
+                }
             }
             worldCol++;
 
