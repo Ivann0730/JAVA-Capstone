@@ -29,7 +29,7 @@ public class TileManager {
         getTileDungeon();
         loadMap("/maps/testmap.txt", 0); // Load map from file
         loadMap("/maps/interior01.txt",1);
-        loadMap("/maps/Spawn.txt", 2); //SPAWN
+        loadMap("/maps/Spawn", 2); //SPAWN
         loadMap("/maps/Dungeon", 3);
     }
     // Method to load tile images
