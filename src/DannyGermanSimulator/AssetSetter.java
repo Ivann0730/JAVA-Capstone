@@ -1,5 +1,6 @@
 package DannyGermanSimulator;
 
+import Entity.NPC_Merchant;
 import Entity.NPC_radish;
 import monster.MON_Bat;
 import object.*;
@@ -57,7 +58,8 @@ public class AssetSetter {
 
 
         mapNum = 1;
-        gp.npc[mapNum][i] = new NPC_radish(gp);
+        i = 0;
+        gp.npc[mapNum][i] = new NPC_Merchant(gp);
         gp.npc[mapNum][i].worldX = gp.tileSize * 12;
         gp.npc[mapNum][i].worldY = gp.tileSize * 7;
         i++;

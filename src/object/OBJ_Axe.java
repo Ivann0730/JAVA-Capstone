@@ -14,5 +14,6 @@ public class OBJ_Axe extends Entity {
         attackArea.width = 32;
         attackArea.height = 32;
         description = "[" + name + "]\nA wooden Axe.";
+        price = 75;
     }
 }

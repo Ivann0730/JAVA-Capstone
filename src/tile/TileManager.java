@@ -298,7 +298,7 @@ public class TileManager {
 
     public void setUp(int index, String imageName, boolean collision){
 
-         UtilityTool uTool = new UtilityTool();
+        UtilityTool uTool = new UtilityTool();
         try {
             tile[index] = new Tile();
             tile[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));

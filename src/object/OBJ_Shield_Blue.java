@@ -12,5 +12,6 @@ public class OBJ_Shield_Blue extends Entity {
         down1 = setUp("/objects/shield_blue",gp.tileSize,gp.tileSize);
         defenseValue = 2;
         description = "[" + name + "]\nA shield imbued with\ncodechum essence.";
+        price = 250;
     }
 }

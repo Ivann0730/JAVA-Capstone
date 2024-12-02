@@ -16,6 +16,7 @@ public class OBJ_Key extends Entity {
         image2 = setUp("/objects/key",gp.tileSize,gp.tileSize);
         collision = true;
         description = "[" + name + "]\nA key to open a room in GLE 999.";
+        price = 100;
 
         solidArea.x = 36;
         solidArea.y = 36;

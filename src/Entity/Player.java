@@ -15,8 +15,6 @@ public class Player extends Entity {
     int tempSpeed = 6;
     int tempSpriteSpeedMultiplier = spriteSpeedMultiplier;
     public boolean attackCanceled = false;
-    public ArrayList<Entity> inventory = new ArrayList<>();
-    public final int maxInventorySize = 20;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
@@ -40,10 +38,16 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 27;
-        worldY = gp.tileSize * 123;
-//        worldX = gp.tileSize * 12;
-//        worldY = gp.tileSize * 13;
+//        worldX = gp.tileSize * 27;
+//        worldY = gp.tileSize * 123;
+//        worldX = gp.tileSize * 22;
+//        worldY = gp.tileSize * 230;
+
+        worldX = gp.tileSize * 23;
+        worldY = gp.tileSize * 21;
+
+        worldX = gp.tileSize * 12;
+        worldY = gp.tileSize * 12;
         speed = 6; //also change tempSpeed
         direction = "down";
 
@@ -416,7 +420,7 @@ public class Player extends Entity {
     }
     public void selectItem(){
 
-        int itemIndex = gp.ui.getItemIndexOnSlot();
+        int itemIndex = gp.ui.getItemIndexOnSlot(gp.ui.playerSlotCol, gp.ui.playerSlotRow);
         if(itemIndex < inventory.size()){
             Entity selectedItem = inventory.get(itemIndex);
             if(selectedItem.type == type_sword || selectedItem.type == type_axe){
