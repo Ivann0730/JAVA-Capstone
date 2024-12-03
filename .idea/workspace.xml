@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling">
-      <change afterPath="$PROJECT_DIR$/src/Entity/NPC_Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
+      <change afterPath="$PROJECT_DIR$/src/tile/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Axe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Boots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Boots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Shield_Blue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Blue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -384,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732808634100</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
+      <option name="closed" value="true" />
+      <created>1733152747271</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733152747271</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +399,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Objects Implemented (but not yet interactable) - Date:October 24, 2024" />
     <MESSAGE value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
@@ -427,7 +423,8 @@
     <MESSAGE value="Added Breaking Objects &#10;-need axe to cut down tree&#10;-added interactive Tile dry tree and trunk&#10;-Fixed most hit boxes for entities and objects&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Particles&#10;-added some particles flying when you cut a tree or hit a monster with your fireball.&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
+    <MESSAGE value="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

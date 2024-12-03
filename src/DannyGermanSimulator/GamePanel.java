@@ -9,6 +9,7 @@ import java.util.Comparator;
 
 import Entity.Entity;
 import Entity.Player;
+import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
 
@@ -52,6 +53,7 @@ public class GamePanel extends JPanel implements Runnable {
     public UI ui = new UI(this);
     public EventHandler eHandler = new EventHandler(this);
     Config config = new Config(this);
+    Map map = new Map(this);
     Thread gameThread;
 
     // Player, Entity, Objects
@@ -76,6 +78,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int gameOverState = 6;
     public final int transitionState = 7;
     public final int tradeState = 8;
+    public final int mapState = 9;
 
 
     public GamePanel() {
@@ -225,6 +228,10 @@ public class GamePanel extends JPanel implements Runnable {
         if(gameState == titleState){
             ui.draw(g2);
         }
+        //Map Screen
+        else if(gameState == mapState){
+            map.drawFullMapScreen(g2);
+        }
         //OTHERS
         else {
             // Draw tiles
@@ -287,6 +294,9 @@ public class GamePanel extends JPanel implements Runnable {
 
             //EMPTY ENTITY LIST
             entityList.clear();
+
+            //MINIMAP
+            map.drawMiniMap(g2);
 
             //UI
             ui.draw(g2);

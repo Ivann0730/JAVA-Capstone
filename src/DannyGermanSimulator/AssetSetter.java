@@ -63,6 +63,13 @@ public class AssetSetter {
         gp.npc[mapNum][i].worldX = gp.tileSize * 12;
         gp.npc[mapNum][i].worldY = gp.tileSize * 7;
         i++;
+
+        mapNum = 3;
+        i = 0;
+        gp.npc[mapNum][i] = new NPC_Merchant(gp);
+        gp.npc[mapNum][i].worldX = gp.tileSize * 22;
+        gp.npc[mapNum][i].worldY = gp.tileSize * 231;
+        i++;
     }
     public void setMonster(){
         int mapNum = 0;
