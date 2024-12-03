@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class UI {
+
     GamePanel gp;
     Graphics2D g2;
     public Font oldSchool;
