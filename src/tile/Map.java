@@ -95,6 +95,5 @@ public class Map extends TileManager{
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
         }
     }
-
-
+    //bayot
 }
