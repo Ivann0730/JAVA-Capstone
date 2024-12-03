@@ -9,6 +9,7 @@ import java.util.Comparator;
 
 import Entity.Entity;
 import Entity.Player;
+import ai.PathFinder;
 import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
@@ -44,7 +45,7 @@ public class GamePanel extends JPanel implements Runnable {
     Graphics2D g2;
 
     //SYSTEM
-    TileManager tileM = new TileManager(this);
+    public TileManager tileM = new TileManager(this);
     public KeyHandler keyH = new KeyHandler(this);
     Sound music = new Sound(); // music
     Sound SE = new Sound(); //sound effect
@@ -54,6 +55,7 @@ public class GamePanel extends JPanel implements Runnable {
     public EventHandler eHandler = new EventHandler(this);
     Config config = new Config(this);
     Map map = new Map(this);
+    public PathFinder pFinder = new PathFinder(this);
     Thread gameThread;
 
     // Player, Entity, Objects
@@ -339,5 +341,4 @@ public class GamePanel extends JPanel implements Runnable {
         SE.setFile(i);
         SE.play();
     }
-    //bayot
 }

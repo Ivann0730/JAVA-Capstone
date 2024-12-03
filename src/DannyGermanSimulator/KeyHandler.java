@@ -396,5 +396,4 @@ public class KeyHandler implements KeyListener{
             shotKeyPressed = false;
         }
     }
-    //bayot
 }

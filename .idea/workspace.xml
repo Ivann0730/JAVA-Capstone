@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
-      <change afterPath="$PROJECT_DIR$/src/tile/Map.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
+      <change afterPath="$PROJECT_DIR$/res/ai/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ai/PathFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_radish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_radish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +385,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733152747271</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
+      <option name="closed" value="true" />
+      <created>1733227237650</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733227237650</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
+      <option name="closed" value="true" />
+      <created>1733227430287</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733227430287</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +419,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Objects Implemented (mana and coins)&#10;check console for counter (alt tab when object is picked up)&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
     <MESSAGE value="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)" />
@@ -424,7 +443,8 @@
     <MESSAGE value="Added Particles&#10;-added some particles flying when you cut a tree or hit a monster with your fireball.&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
+    <MESSAGE value="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

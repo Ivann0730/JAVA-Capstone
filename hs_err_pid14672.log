@@ -1,0 +1,2491 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9a5283fba, pid=14672, tid=29852
+#
+# JRE version: OpenJDK Runtime Environment (23.0.1+11) (build 23.0.1+11-39)
+# Java VM: OpenJDK 64-Bit Server VM (23.0.1+11-39, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [ntdll.dll+0x33fba]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\lib\idea_rt.jar=55708:C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 DannyGermanSimulator.Main
+
+Host: AMD Ryzen 7 6800H with Radeon Graphics         , 16 cores, 31G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Mon Nov 25 21:37:19 2024 Malay Peninsula Standard Time elapsed time: 21.962953 seconds (0d 0h 0m 21s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000015721566fb0):  JavaThread "AWT-EventQueue-0"        [_thread_in_native, id=29852, stack(0x0000003908100000,0x0000003908200000) (1024K)]
+
+Stack: [0x0000003908100000,0x0000003908200000],  sp=0x00000039081fe310,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x33fba]  (no source info available)
+C  [ntdll.dll+0x21d04]  (no source info available)
+C  [ntdll.dll+0x21af2]  (no source info available)
+C  0x00007ff99030815a  (no source info available)
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.java2d.d3d.D3DSurfaceData.initOps(III)V+0 java.desktop@23.0.1
+j  sun.java2d.d3d.D3DSurfaceData.<init>(Lsun/awt/windows/WComponentPeer;Lsun/java2d/d3d/D3DGraphicsConfig;IILjava/awt/Image;Ljava/awt/image/ColorModel;IILsun/java2d/pipe/hw/ExtendedBufferCapabilities$VSyncType;I)V+212 java.desktop@23.0.1
+j  sun.java2d.d3d.D3DSurfaceData.createData(Lsun/java2d/d3d/D3DGraphicsConfig;IILjava/awt/image/ColorModel;Ljava/awt/Image;I)Lsun/java2d/d3d/D3DSurfaceData;+70 java.desktop@23.0.1
+j  sun.java2d.d3d.D3DVolatileSurfaceManager.initAcceleratedSurface()Lsun/java2d/SurfaceData;+142 java.desktop@23.0.1
+j  sun.java2d.d3d.D3DVolatileSurfaceManager.restoreAcceleratedSurface()V+49 java.desktop@23.0.1
+J 3123 c1 sun.awt.image.VolatileSurfaceManager.validate(Ljava/awt/GraphicsConfiguration;)I java.desktop@23.0.1 (213 bytes) @ 0x00000156bf288524 [0x00000156bf288000+0x0000000000000524]
+J 3144 c1 javax.swing.RepaintManager$PaintManager.paint(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z java.desktop@23.0.1 (201 bytes) @ 0x00000156bf28cdfc [0x00000156bf28c6a0+0x000000000000075c]
+J 3109 c1 javax.swing.RepaintManager.paint(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V java.desktop@23.0.1 (94 bytes) @ 0x00000156bf27b2b4 [0x00000156bf27aea0+0x0000000000000414]
+J 3067 c1 javax.swing.JComponent._paintImmediately(IIII)V java.desktop@23.0.1 (891 bytes) @ 0x00000156bf260594 [0x00000156bf25dde0+0x00000000000027b4]
+J 3065 c1 javax.swing.JComponent.paintImmediately(IIII)V java.desktop@23.0.1 (155 bytes) @ 0x00000156bf25c944 [0x00000156bf25bc00+0x0000000000000d44]
+J 3115 c1 javax.swing.RepaintManager$4.run()Ljava/lang/Void; java.desktop@23.0.1 (277 bytes) @ 0x00000156bf28017c [0x00000156bf27fb00+0x000000000000067c]
+J 3038 c1 javax.swing.RepaintManager.paintDirtyRegions(Ljava/util/Map;)V java.desktop@23.0.1 (196 bytes) @ 0x00000156bf24d41c [0x00000156bf24c240+0x00000000000011dc]
+J 3037 c1 javax.swing.RepaintManager.paintDirtyRegions()V java.desktop@23.0.1 (50 bytes) @ 0x00000156bf24903c [0x00000156bf248dc0+0x000000000000027c]
+J 3036 c1 javax.swing.RepaintManager.prePaintDirtyRegions()V java.desktop@23.0.1 (91 bytes) @ 0x00000156bf2488ac [0x00000156bf2482c0+0x00000000000005ec]
+J 3033 c1 javax.swing.RepaintManager$ProcessingRunnable.run()V java.desktop@23.0.1 (41 bytes) @ 0x00000156bf247edc [0x00000156bf247ce0+0x00000000000001fc]
+J 3029 c1 java.awt.event.InvocationEvent.dispatch()V java.desktop@23.0.1 (69 bytes) @ 0x00000156bf24701c [0x00000156bf246e00+0x000000000000021c]
+J 2966 c1 java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V java.desktop@23.0.1 (139 bytes) @ 0x00000156bf2242dc [0x00000156bf222aa0+0x000000000000183c]
+J 2965 c1 java.awt.EventQueue$4.run()Ljava/lang/Void; java.desktop@23.0.1 (60 bytes) @ 0x00000156bf220fbc [0x00000156bf220e80+0x000000000000013c]
+J 2960 c1 java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V java.desktop@23.0.1 (80 bytes) @ 0x00000156bf221ac4 [0x00000156bf221500+0x00000000000005c4]
+J 2968 c1 java.awt.EventDispatchThread.pumpOneEventForFilters(I)V java.desktop@23.0.1 (106 bytes) @ 0x00000156bf22616c [0x00000156bf225940+0x000000000000082c]
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35 java.desktop@23.0.1
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11 java.desktop@23.0.1
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4 java.desktop@23.0.1
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3 java.desktop@23.0.1
+j  java.awt.EventDispatchThread.run()V+9 java.desktop@23.0.1
+v  ~StubRoutines::call_stub 0x00000156c6280fcd
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), writing address 0x0000000000000024
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x00000157210288e8, RDX=0x00000000fffffffa
+RSP=0x00000039081fe310, RBP=0x00000039081fe3b9, RSI=0x0000000000000000, RDI=0x00000157210288e8
+R8 =0x0000000000000000, R9 =0x0000000000000060, R10=0x0000000000000000, R11=0x000170241e507000
+R12=0x00000157210288f0, R13=0x0000000000000000, R14=0x0000000000000000, R15=0x00000000fffffffa
+RIP=0x00007ff9a5283fba, EFLAGS=0x0000000000010213
+
+
+Register to memory mapping:
+
+RAX=0x0 is null
+RBX=0x0 is null
+RCX=0x00000157210288e8 points into unknown readable memory: 0x0073000000000000 | 00 00 00 00 00 00 73 00
+RDX=0x00000000fffffffa is an unknown value
+RSP=0x00000039081fe310 is pointing into the stack for thread: 0x0000015721566fb0
+RBP=0x00000039081fe3b9 is pointing into the stack for thread: 0x0000015721566fb0
+RSI=0x0 is null
+RDI=0x00000157210288e8 points into unknown readable memory: 0x0073000000000000 | 00 00 00 00 00 00 73 00
+R8 =0x0 is null
+R9 =0x0000000000000060 is an unknown value
+R10=0x0 is null
+R11=0x000170241e507000 is an unknown value
+R12=0x00000157210288f0 points into unknown readable memory: 0x00610077006c0068 | 68 00 6c 00 77 00 61 00
+R13=0x0 is null
+R14=0x0 is null
+R15=0x00000000fffffffa is an unknown value
+
+Top of Stack: (sp=0x00000039081fe310)
+0x00000039081fe310:   ffffffffffffffff 0000000000000000
+0x00000039081fe320:   00000039081fe3c8 00007ff8fbbd06c5
+0x00000039081fe330:   0000015700000005 000001571d23c4f8
+0x00000039081fe340:   0000015721566fb0 00000157217e8fa8
+0x00000039081fe350:   0000000000000300 0000000000000000
+0x00000039081fe360:   000001572a8650a0 0000000629f3b658
+0x00000039081fe370:   00000039081fe5a0 00007ff92e51fad0
+0x00000039081fe380:   0000015721566fb0 000001572a865b50
+0x00000039081fe390:   00000039081fe668 00007ff8fbde4bf1
+0x00000039081fe3a0:   00000039081fe498 0000003905544000
+0x00000039081fe3b0:   000001571d23c4f8 00000039081fe368
+0x00000039081fe3c0:   00000039081fe3a9 0000000800000005
+0x00000039081fe3d0:   00000156dc4a7800 0000000000000000
+0x00000039081fe3e0:   0000a5564338298b 00008e5975685546
+0x00000039081fe3f0:   0000000000000001 0000000000010001
+0x00000039081fe400:   00000157210288e8 00000157210288f0
+0x00000039081fe410:   0000000000000001 00007ff9a5271d04
+0x00000039081fe420:   00000039081fe518 0000000000000000
+0x00000039081fe430:   0000000000000000 0000000000000000
+0x00000039081fe440:   00000156db76e338 00007ff8fc03e0f3
+0x00000039081fe450:   0000015721566fb0 0000015721566fb0
+0x00000039081fe460:   0000000000010001 000001571d68dcc8
+0x00000039081fe470:   0000000000000000 0000000000000000
+0x00000039081fe480:   0000000000000000 00000156db77d490
+0x00000039081fe490:   00000039081fe520 00007ff9a5271af2
+0x00000039081fe4a0:   0000000000000001 00007ff8fbe01100
+0x00000039081fe4b0:   00000157297997a8 0000000000000001
+0x00000039081fe4c0:   0000000000010001 00007ff99030815a
+0x00000039081fe4d0:   00007ff92e5e9838 00007ff92e4d7d00
+0x00000039081fe4e0:   0000015721019760 0000000000000000
+0x00000039081fe4f0:   00000157210288e0 00007ff99032b216
+0x00000039081fe500:   0000000000010001 00007ff92e58b155 
+
+Instructions: (pc=0x00007ff9a5283fba)
+0x00007ff9a5283eba:   49 8b 0e 49 8b d2 e8 eb fe 06 00 8b d8 3d 02 01
+0x00007ff9a5283eca:   00 00 0f 84 6f 86 07 00 81 fb 01 01 00 00 0f 45
+0x00007ff9a5283eda:   f3 8b c6 48 8b 5c 24 30 48 8b 6c 24 38 48 8b 74
+0x00007ff9a5283eea:   24 40 48 8b 7c 24 48 48 83 c4 20 41 5e c3 cc 33
+0x00007ff9a5283efa:   c0 eb e0 cc cc cc cc cc cc cc cc cc cc cc cc cc
+0x00007ff9a5283f0a:   cc cc cc cc cc cc 48 89 5c 24 10 48 89 74 24 18
+0x00007ff9a5283f1a:   48 89 7c 24 20 55 41 54 41 55 41 56 41 57 48 8d
+0x00007ff9a5283f2a:   6c 24 c9 48 81 ec e0 00 00 00 48 8b 05 f5 a5 16
+0x00007ff9a5283f3a:   00 48 33 c4 48 89 45 2f 65 48 8b 04 25 30 00 00
+0x00007ff9a5283f4a:   00 48 8b f9 33 db c6 45 97 00 48 8d 0d 05 c4 14
+0x00007ff9a5283f5a:   00 48 89 45 ef 89 5d 9b 44 8b fa 48 3b f9 0f 84
+0x00007ff9a5283f6a:   c2 02 00 00 38 1d 14 25 15 00 0f 85 31 03 00 00
+0x00007ff9a5283f7a:   39 1d 28 25 15 00 0f 85 f4 02 00 00 38 1d cc 1f
+0x00007ff9a5283f8a:   15 00 4c 8d 35 cd 1f 15 00 4c 0f 45 f3 48 39 5f
+0x00007ff9a5283f9a:   18 0f 84 5f 02 00 00 48 83 3f ff 0f 84 62 02 00
+0x00007ff9a5283faa:   00 48 8b 07 44 8b eb 89 5d 9f 48 83 f8 ff 74 03
+0x00007ff9a5283fba:   ff 40 24 4c 8b 67 18 48 8d 77 10 4c 89 65 e7 48
+0x00007ff9a5283fca:   8b de 48 89 5d a7 e8 cb 70 00 00 85 c0 0f 85 93
+0x00007ff9a5283fda:   85 07 00 48 8b de b9 82 03 fe 7f 48 89 5d a7 80
+0x00007ff9a5283fea:   39 00 0f 85 9a 85 07 00 49 83 fc ff 0f 85 c5 02
+0x00007ff9a5283ffa:   00 00 4c 8d 4d af 49 83 e1 fc 4c 8d 67 08 4c 89
+0x00007ff9a528400a:   4d df 33 f6 4c 89 65 af c7 45 d7 01 00 00 00 48
+0x00007ff9a528401a:   89 75 c7 48 89 75 bf 48 89 75 cf 65 48 8b 0c 25
+0x00007ff9a528402a:   30 00 00 00 48 8b 41 48 48 89 45 b7 49 8b c4 4c
+0x00007ff9a528403a:   8b 69 60 48 c1 e8 05 49 81 c5 a0 03 00 00 83 e0
+0x00007ff9a528404a:   7f 4c 8d 04 c5 00 00 00 00 4d 03 c5 49 8b 08 48
+0x00007ff9a528405a:   8b d9 48 8d 45 af 83 e3 03 48 8b d1 49 0b d9 48
+0x00007ff9a528406a:   83 e2 fc 48 85 d2 48 89 55 bf 48 0f 45 c6 48 89
+0x00007ff9a528407a:   45 cf 48 8b c3 48 83 c8 02 48 85 d2 48 0f 45 d8
+0x00007ff9a528408a:   48 8b c1 f0 49 0f b1 18 0f 85 90 01 00 00 32 d9
+0x00007ff9a528409a:   f6 c3 02 0f 85 c1 00 00 00 41 8b 04 24 41 3b c7
+0x00007ff9a52840aa:   0f 85 2f 01 00 00 66 83 3c 25 6a 03 fe 7f 01 76 
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0xffffffffffffffff is an unknown value
+stack at sp + 1 slots: 0x0 is null
+stack at sp + 2 slots: 0x00000039081fe3c8 is pointing into the stack for thread: 0x0000015721566fb0
+stack at sp + 3 slots: 0x00007ff8fbbd06c5 jvm.dll
+stack at sp + 4 slots: 0x0000015700000005 is an unknown value
+stack at sp + 5 slots: {method} {0x000001571d23c500} 'addRecord' '(Ljava/lang/Object;JJ)V' in 'sun/java2d/Disposer'
+stack at sp + 6 slots: 0x0000015721566fb0 is a thread
+stack at sp + 7 slots: 0x00000157217e8fa8 points into unknown readable memory: 0x8800050054a93300 | 00 33 a9 54 00 05 00 88
+
+Lock stack of current Java thread (top to bottom):
+
+
+Compiled method (c1) 22044 3123   !   3       sun.awt.image.VolatileSurfaceManager::validate (213 bytes)
+ total in heap  [0x00000156bf287e08,0x00000156bf288eb0] = 4264
+ relocation     [0x00000156bf287ee0,0x00000156bf288000] = 288
+ main code      [0x00000156bf288000,0x00000156bf288d70] = 3440
+ stub code      [0x00000156bf288d70,0x00000156bf288e18] = 168
+ metadata       [0x00000156bf288e18,0x00000156bf288eb0] = 152
+ immutable data [0x00000157298114a0,0x0000015729811738] = 664
+ dependencies   [0x00000157298114a0,0x00000157298114d8] = 56
+ nul chk table  [0x00000157298114d8,0x0000015729811500] = 40
+ handler table  [0x0000015729811500,0x0000015729811548] = 72
+ scopes pcs     [0x0000015729811548,0x0000015729811648] = 256
+ scopes data    [0x0000015729811648,0x0000015729811738] = 240
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Instructions begin]
+  0x00000156bf288000: 660f 1f84 | 0000 0000 | 0066 0f1f | 8400 0000 | 0000 448b | 5208 443b 
+
+  0x00000156bf288018: ;   {runtime_call ic_miss_stub}
+  0x00000156bf288018: 5008 0f85 | c064 0407 
+[Verified Entry Point]
+  0x00000156bf288020: 8984 2400 | 80ff ff55 | 4883 ec60 | 4181 7f20 | 0100 0000 
+
+  0x00000156bf288034: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000156bf288034: 7405 e805 | f702 0748 | 8954 2440 
+
+  0x00000156bf288040: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288040: 48be c0ba | bb1d 5701 | 0000 8bbe | cc00 0000 | 83c7 0289 | becc 0000 | 0081 e7fe | 0700 0085 
+  0x00000156bf288060: ff0f 846f | 0a00 000f | be72 10c6 | 4210 0048 
+
+  0x00000156bf288070: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288070: 8bfa 48bb | c0ba bb1d | 5701 0000 
+
+  0x00000156bf28807c: ;   {metadata('sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf28807c: 49ba d890 | 0bdd 5601 | 0000 4c89 | 9320 0100 | 0048 8383 | 2801 0000 | 010f be7a | 1183 e701 
+  0x00000156bf28809c: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf28809c: 85ff 48bf | c0ba bb1d | 5701 0000 | bb48 0100 | 0074 05bb | 5801 0000 | 488b 041f | 488d 4001 
+  0x00000156bf2880bc: 4889 041f | 0f84 d705 | 0000 488b 
+
+  0x00000156bf2880c8: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2880c8: fa48 bbc0 | babb 1d57 
+
+  0x00000156bf2880d0: ;   {metadata('sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf2880d0: 0100 0049 | bad8 900b | dd56 0100 | 004c 8993 | 7001 0000 | 4883 8378 | 0100 0001 
+
+  0x00000156bf2880ec: ;   {metadata(method data for {method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf2880ec: 48bf 58c0 | bb1d 5701 | 0000 8b9f | cc00 0000 | 83c3 0289 | 9fcc 0000 | 0081 e3fe | ff1f 0085 
+  0x00000156bf28810c: db0f 84e4 | 0900 004d 
+
+  0x00000156bf288114: ;   {metadata(method data for {method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288114: 85c0 48bf | 58c0 bb1d | 5701 0000 | bb18 0100 | 0074 05bb | 2801 0000 | 488b 041f | 488d 4001 
+  0x00000156bf288134: 4889 041f | 0f84 6200 | 0000 8b7a | 1448 c1e7 | 0348 3b07 
+
+  0x00000156bf288148: ;   {metadata(method data for {method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288148: 488b df48 | b858 c0bb | 1d57 0100 
+
+  0x00000156bf288154: ;   {metadata('sun/awt/image/SunVolatileImage')}
+  0x00000156bf288154: 0049 ba78 | a006 dd56 | 0100 004c | 8990 4001 | 0000 4883 | 8048 0100 | 0001 8b7f | 2c48 c1e7 
+  0x00000156bf288174: 034c 3bc7 
+
+  0x00000156bf288178: ;   {metadata(method data for {method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288178: 48bf 58c0 | bb1d 5701 | 0000 bb68 | 0100 0075 | 05bb 7801 | 0000 488b | 041f 488d | 4001 4889 
+  0x00000156bf288198: 041f 0f85 | 1a00 0000 
+
+  0x00000156bf2881a0: ;   {metadata(method data for {method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf2881a0: 48bf 58c0 | bb1d 5701 | 0000 ff87 | 8801 0000 | bf01 0000 | 00e9 0500 | 0000 bf00 | 0000 0083 
+  0x00000156bf2881c0: e701 85ff 
+
+  0x00000156bf2881c4: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2881c4: 48bf c0ba | bb1d 5701 | 0000 bb98 | 0100 0075 | 05bb a801 | 0000 488b | 041f 488d | 4001 4889 
+  0x00000156bf2881e4: 041f 0f85 | 1a00 0000 
+
+  0x00000156bf2881ec: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2881ec: 48be c0ba | bb1d 5701 | 0000 ff86 | b801 0000 | be02 0000 | 00e9 2407 | 0000 8b7a | 1c48 c1e7 
+  0x00000156bf28820c: 0348 85ff 
+
+  0x00000156bf288210: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288210: 48bb c0ba | bb1d 5701 | 0000 b8d0 | 0100 0075 | 05b8 e001 | 0000 488b | 0c03 488d | 4901 4889 
+  0x00000156bf288230: 0c03 0f85 | ef01 0000 
+
+  0x00000156bf288238: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288238: 488b f248 | bfc0 babb | 1d57 0100 
+
+  0x00000156bf288244: ;   {metadata('sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288244: 0049 bad8 | 900b dd56 | 0100 004c | 8997 f801 | 0000 4883 | 8700 0200 | 0001 488b | f248 8bd6 
+  0x00000156bf288264: ;   {optimized virtual_call}
+  0x00000156bf288264: 6666 90e8 
+
+  0x00000156bf288268: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual initAcceleratedSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@41 (line 184)
+  0x00000156bf288268: 7465 0407 
+
+  0x00000156bf28826c: ;   {other}
+  0x00000156bf28826c: 0f1f 8400 | 6404 0000 | 410f be57 | 3885 d248 | 8b54 2440 | 0f85 9708 | 0000 4c8b | d049 c1ea 
+  0x00000156bf28828c: 0344 8952 | 1c48 8bf2 | 4833 f048 | c1ee 1648 | 83fe 000f | 8597 0800 | 0048 85c0 
+
+  0x00000156bf2882a8: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2882a8: 48be c0ba | bb1d 5701 | 0000 bf20 | 0200 0074 | 05bf 3002 | 0000 488b | 1c3e 488d | 5b01 4889 
+  0x00000156bf2882c8: 1c3e 0f84 | 6100 0000 | 8b72 1c48 | c1e6 0341 | 0fbe 7f38 | 85ff 0f85 | 7008 0000 | 4c8b d649 
+  0x00000156bf2882e8: c1ea 0344 | 8952 2448 | 8bfa 4833 | fe48 c1ef | 1648 83ff | 000f 8570 | 0800 0041 | 0fbe 7738 
+  0x00000156bf288308: 85f6 0f85 | 7b08 0000 | c742 2000 
+
+  0x00000156bf288314: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288314: 0000 0048 | bec0 babb | 1d57 0100 | 00ff 8640 | 0200 00be | 0100 0000 | e9f9 0500 | 0048 8bf2 
+  0x00000156bf288334: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288334: 48bf c0ba | bb1d 5701 | 0000 8b76 | 0849 ba00 | 0000 dc56 | 0100 0049 | 03f2 483b | b760 0200 
+  0x00000156bf288354: 0075 0d48 | 8387 6802 | 0000 01e9 | 6000 0000 | 483b b770 | 0200 0075 | 0d48 8387 | 7802 0000 
+  0x00000156bf288374: 01e9 4a00 | 0000 4883 | bf60 0200 | 0000 7517 | 4889 b760 | 0200 0048 | c787 6802 | 0000 0100 
+  0x00000156bf288394: 0000 e929 | 0000 0048 | 83bf 7002 | 0000 0075 | 1748 89b7 | 7002 0000 | 48c7 8778 | 0200 0001 
+  0x00000156bf2883b4: 0000 00e9 | 0800 0000 | 4883 8758 | 0200 0001 | 488b f248 | 8bd6 0f1f 
+
+  0x00000156bf2883cc: ;   {optimized virtual_call}
+  0x00000156bf2883cc: 4400 00e8 
+
+  0x00000156bf2883d0: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual getBackupSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@74 (line 193)
+  0x00000156bf2883d0: 0c64 0407 
+
+  0x00000156bf2883d4: ;   {other}
+  0x00000156bf2883d4: 0f1f 8400 | cc05 0001 | 410f be57 | 3885 d248 | 8b54 2440 | 0f85 bc07 | 0000 4c8b | d049 c1ea 
+  0x00000156bf2883f4: 0344 8952 | 2448 8bf2 | 4833 f048 | c1ee 1648 | 83fe 000f | 85bc 0700 
+
+  0x00000156bf28840c: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf28840c: 0048 bec0 | babb 1d57 | 0100 00ff | 8688 0200 | 00be 0000 | 0000 e903 | 0500 0048 | 3b07 488b 
+  0x00000156bf28842c: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf28842c: df48 b8c0 | babb 1d57 | 0100 008b | 5b08 49ba | 0000 00dc | 5601 0000 | 4903 da48 | 3b98 a802 
+  0x00000156bf28844c: 0000 750d | 4883 80b0 | 0200 0001 | e960 0000 | 0048 3b98 | b802 0000 | 750d 4883 | 80c0 0200 
+  0x00000156bf28846c: 0001 e94a | 0000 0048 | 83b8 a802 | 0000 0075 | 1748 8998 | a802 0000 | 48c7 80b0 | 0200 0001 
+  0x00000156bf28848c: 0000 00e9 | 2900 0000 | 4883 b8b8 | 0200 0000 | 7517 4889 | 98b8 0200 | 0048 c780 | c002 0000 
+  0x00000156bf2884ac: 0100 0000 | e908 0000 | 0048 8380 | a002 0000 | 010f be7f | 2183 e701 
+
+  0x00000156bf2884c4: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2884c4: 85ff 48bf | c0ba bb1d | 5701 0000 | bbd0 0200 | 0074 05bb | e002 0000 | 488b 041f | 488d 4001 
+  0x00000156bf2884e4: 4889 041f | 0f84 6101 | 0000 488b 
+
+  0x00000156bf2884f0: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2884f0: f248 bfc0 | babb 1d57 
+
+  0x00000156bf2884f8: ;   {metadata('sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf2884f8: 0100 0049 | bad8 900b | dd56 0100 | 004c 8997 | f802 0000 | 4883 8700 | 0300 0001 | 488b f248 
+  0x00000156bf288518: 8bd6 0f1f 
+
+  0x00000156bf28851c: ;   {optimized virtual_call}
+  0x00000156bf28851c: 4400 00e8 
+
+  0x00000156bf288520: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual restoreAcceleratedSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@94 (line 197)
+  0x00000156bf288520: 7108 0000 
+
+  0x00000156bf288524: ;   {other}
+  0x00000156bf288524: 0f1f 8400 | 1c07 0002 | 488b 5424 | 408b 721c | 48c1 e603 | 450f be47 | 3845 85c0 | 0f85 a006 
+  0x00000156bf288544: 0000 4c8b | d649 c1ea | 0344 8952 | 244c 8bc2 | 4c33 c649 | c1e8 1649 | 83f8 000f | 85a1 0600 
+  0x00000156bf288564: 0048 3b06 
+
+  0x00000156bf288568: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288568: 4c8b c648 | bfc0 babb | 1d57 0100 | 0045 8b40 | 0849 ba00 | 0000 dc56 | 0100 004d | 03c2 4c3b 
+  0x00000156bf288588: 8728 0300 | 0075 0d48 | 8387 3003 | 0000 01e9 | 6000 0000 | 4c3b 8738 | 0300 0075 | 0d48 8387 
+  0x00000156bf2885a8: 4003 0000 | 01e9 4a00 | 0000 4883 | bf28 0300 | 0000 7517 | 4c89 8728 | 0300 0048 | c787 3003 
+  0x00000156bf2885c8: 0000 0100 | 0000 e929 | 0000 0048 | 83bf 3803 | 0000 0075 | 174c 8987 | 3803 0000 | 48c7 8740 
+  0x00000156bf2885e8: 0300 0001 | 0000 00e9 | 0800 0000 | 4883 8720 | 0300 0001 | 41b8 0000 | 0000 488b | d648 b830 
+  0x00000156bf288608: 5770 2a57 
+
+  0x00000156bf28860c: ;   {virtual_call}
+  0x00000156bf28860c: 0100 00e8 
+
+  0x00000156bf288610: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual setSurfaceLost {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@110 (line 201)
+  0x00000156bf288610: cc64 0407 
+
+  0x00000156bf288614: ;   {other}
+  0x00000156bf288614: 0f1f 8400 | 0c08 0003 | 410f be57 | 3885 d248 | 8b54 2440 | 0f85 f505 | 0000 c742 | 2000 0000 
+  0x00000156bf288634: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288634: 0048 bec0 | babb 1d57 | 0100 00ff | 8650 0300 | 00be 0100 | 0000 e9db | 0200 0085 
+
+  0x00000156bf288650: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288650: f648 bec0 | babb 1d57 | 0100 00bf | c003 0000 | 7505 bfb0 | 0300 0048 | 8b1c 3e48 | 8d5b 0148 
+  0x00000156bf288670: 891c 3e0f | 850a 0000 | 00be 0000 | 0000 e9a7 
+
+  0x00000156bf288680: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288680: 0200 0048 | bec0 babb | 1d57 0100 | 00ff 86d0 | 0300 00be | 0100 0000 | e98d 0200 | 008b 7a1c 
+  0x00000156bf2886a0: 48c1 e703 
+
+  0x00000156bf2886a4: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2886a4: 4885 ff48 | bfc0 babb | 1d57 0100 | 00bb e803 | 0000 7405 | bbf8 0300 | 0048 8b04 | 1f48 8d40 
+  0x00000156bf2886c4: 0148 8904 | 1f0f 840c | 0100 0048 
+
+  0x00000156bf2886d0: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2886d0: 8bf2 48bf | c0ba bb1d | 5701 0000 | 8b76 0849 | ba00 0000 | dc56 0100 | 0049 03f2 | 483b b710 
+  0x00000156bf2886f0: 0400 0075 | 0d48 8387 | 1804 0000 | 01e9 6000 | 0000 483b | b720 0400 | 0075 0d48 | 8387 2804 
+  0x00000156bf288710: 0000 01e9 | 4a00 0000 | 4883 bf10 | 0400 0000 | 7517 4889 | b710 0400 | 0048 c787 | 1804 0000 
+  0x00000156bf288730: 0100 0000 | e929 0000 | 0048 83bf | 2004 0000 | 0075 1748 | 89b7 2004 | 0000 48c7 | 8728 0400 
+  0x00000156bf288750: 0001 0000 | 00e9 0800 | 0000 4883 | 8708 0400 | 0001 488b | f248 8bd6 | 0f1f 8000 
+
+  0x00000156bf28876c: ;   {optimized virtual_call}
+  0x00000156bf28876c: 0000 00e8 
+
+  0x00000156bf288770: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual getBackupSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@154 (line 222)
+  0x00000156bf288770: 6c60 0407 
+
+  0x00000156bf288774: ;   {other}
+  0x00000156bf288774: 0f1f 8400 | 6c09 0004 | 410f be57 | 3885 d248 | 8b54 2440 | 0f85 b404 | 0000 4c8b | d049 c1ea 
+  0x00000156bf288794: 0344 8952 | 2448 8bf2 | 4833 f048 | c1ee 1648 | 83fe 000f | 85b4 0400 | 0041 0fbe | 4738 85c0 
+  0x00000156bf2887b4: 0f85 bf04 | 0000 c742 | 1c00 0000 
+
+  0x00000156bf2887c0: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2887c0: 0048 b8c0 | babb 1d57 | 0100 00ff | 8038 0400 | 00be 0100 | 0000 e94f | 0100 0085 
+
+  0x00000156bf2887dc: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2887dc: f648 b8c0 | babb 1d57 | 0100 00be | 6004 0000 | 7505 be50 | 0400 0048 | 8b3c 3048 | 8d7f 0148 
+  0x00000156bf2887fc: 893c 300f | 850a 0000 | 00be 0000 | 0000 e91b | 0100 00be | 0100 0000 | e911 0100 | 0048 8b54 
+  0x00000156bf28881c: 2440 498b | 8700 0500 | 004d 33d2 | 4d89 9700 | 0500 004d | 33d2 4d89 | 9708 0500 | 0048 8bf2 
+  0x00000156bf28883c: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf28883c: 48bf c0ba | bb1d 5701 | 0000 8b76 | 0849 ba00 | 0000 dc56 | 0100 0049 | 03f2 483b | b770 0300 
+  0x00000156bf28885c: 0075 0d48 | 8387 7803 | 0000 01e9 | 6000 0000 | 483b b780 | 0300 0075 | 0d48 8387 | 8803 0000 
+  0x00000156bf28887c: 01e9 4a00 | 0000 4883 | bf70 0300 | 0000 7517 | 4889 b770 | 0300 0048 | c787 7803 | 0000 0100 
+  0x00000156bf28889c: 0000 e929 | 0000 0048 | 83bf 8003 | 0000 0075 | 1748 89b7 | 8003 0000 | 48c7 8788 | 0300 0001 
+  0x00000156bf2888bc: 0000 00e9 | 0800 0000 | 4883 8768 | 0300 0001 | 488b f248 | 8bd6 0f1f 
+
+  0x00000156bf2888d4: ;   {optimized virtual_call}
+  0x00000156bf2888d4: 4400 00e8 
+
+  0x00000156bf2888d8: ; ImmutableOopMap {[64]=Oop }
+                      ;*invokevirtual getBackupSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@127 (line 211)
+  0x00000156bf2888d8: 045f 0407 
+
+  0x00000156bf2888dc: ;   {other}
+  0x00000156bf2888dc: 0f1f 8400 | d40a 0005 | 410f be57 | 3885 d248 | 8b54 2440 | 0f85 a203 | 0000 4c8b | d049 c1ea 
+  0x00000156bf2888fc: 0344 8952 | 2448 8bf2 | 4833 f048 | c1ee 1648 | 83fe 000f | 85a2 0300 
+
+  0x00000156bf288914: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288914: 0048 bec0 | babb 1d57 | 0100 00ff | 8698 0300 | 00be 0000 | 0000 83fe 
+
+  0x00000156bf28892c: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf28892c: 0248 bfc0 | babb 1d57 | 0100 00bb | 7004 0000 | 7405 bb80 | 0400 0048 | 8b04 1f48 | 8d40 0148 
+  0x00000156bf28894c: 8904 1f0f | 846a 0000 | 008b 7a24 | 48c1 e703 | 8b5a 2848 | c1e3 0348 
+
+  0x00000156bf288964: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288964: 3bfb 48bb | c0ba bb1d | 5701 0000 | b890 0400 | 0074 05b8 | a004 0000 | 488b 0c03 | 488d 4901 
+  0x00000156bf288984: 4889 0c03 | 0f84 3100 | 0000 410f | be77 3885 | f60f 8534 | 0300 004c | 8bd7 49c1 | ea03 4489 
+  0x00000156bf2889a4: 5228 488b | f248 33f7 | 48c1 ee16 | 4883 fe00 | 0f85 3403 | 0000 be01 | 0000 0083 
+
+  0x00000156bf2889c0: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2889c0: fe01 48bf | c0ba bb1d | 5701 0000 | bbb0 0400 | 0075 05bb | c004 0000 | 488b 041f | 488d 4001 
+  0x00000156bf2889e0: 4889 041f | 0f85 d600 | 0000 488b 
+
+  0x00000156bf2889ec: ;   {metadata(method data for {method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf2889ec: fa48 bbc0 | babb 1d57 
+
+  0x00000156bf2889f4: ;   {metadata('sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf2889f4: 0100 0049 | bad8 900b | dd56 0100 | 004c 8993 | d804 0000 | 4883 83e0 | 0400 0001 
+
+  0x00000156bf288a10: ;   {metadata(method data for {method} {0x000001571d6ed6c8} 'initContents' '()V' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288a10: 48bf 78cc | bb1d 5701 | 0000 8b9f | cc00 0000 | 83c3 0289 | 9fcc 0000 | 0081 e3fe | ff1f 0085 
+  0x00000156bf288a30: db0f 84cf | 0200 008b | 7a14 48c1 | e703 483b | 0748 8bdf 
+
+  0x00000156bf288a44: ;   {metadata(method data for {method} {0x000001571d6ed6c8} 'initContents' '()V' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288a44: 48b8 78cc | bb1d 5701 
+
+  0x00000156bf288a4c: ;   {metadata('sun/awt/image/SunVolatileImage')}
+  0x00000156bf288a4c: 0000 49ba | 78a0 06dd | 5601 0000 | 4c89 9020 | 0100 0048 | 8380 2801 | 0000 018b | 7f20 83ff 
+  0x00000156bf288a6c: ;   {metadata(method data for {method} {0x000001571d6ed6c8} 'initContents' '()V' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288a6c: 0348 bf78 | ccbb 1d57 | 0100 00bb | 4801 0000 | 7405 bb58 | 0100 0048 | 8b04 1f48 | 8d40 0148 
+  0x00000156bf288a8c: 8904 1f89 | 7424 480f | 8423 0000 | 0048 8bfa 
+
+  0x00000156bf288a9c: ;   {metadata(method data for {method} {0x000001571d6ed6c8} 'initContents' '()V' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288a9c: 48bb 78cc | bb1d 5701 | 0000 4883 | 8368 0100 
+
+  0x00000156bf288aac: ;   {optimized virtual_call}
+  0x00000156bf288aac: 0001 90e8 
+
+  0x00000156bf288ab0: ; ImmutableOopMap {}
+                      ;*invokespecial initContents {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.java2d.d3d.D3DVolatileSurfaceManager::initContents@12 (line 220)
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@208 (line 242)
+  0x00000156bf288ab0: 2c5d 0407 
+
+  0x00000156bf288ab4: ;   {other}
+  0x00000156bf288ab4: 0f1f 8400 | ac0c 0006 | 8b74 2448 | 488b c648 | 83c4 605d 
+
+  0x00000156bf288ac8: ;   {poll_return}
+  0x00000156bf288ac8: 493b a748 | 0400 000f | 8757 0200 
+
+  0x00000156bf288ad4: ;   {metadata({method} {0x000001571d1ddd38} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/VolatileSurfaceManager')}
+  0x00000156bf288ad4: 00c3 49ba | 30dd 1d1d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf288aec: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf288aec: ffe8 6ef6 
+
+  0x00000156bf288af0: ; ImmutableOopMap {rdx=Oop r8=Oop [64]=Oop }
+                      ;*synchronization entry
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@-1 (line 170)
+  0x00000156bf288af0: 1007 e970 
+
+  0x00000156bf288af4: ;   {metadata({method} {0x000001571d6ed270} 'isConfigValid' '(Ljava/awt/GraphicsConfiguration;)Z' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288af4: f5ff ff49 | ba68 d26e | 1d57 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000156bf288b0c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf288b0c: ffff e84d 
+
+  0x00000156bf288b10: ; ImmutableOopMap {rdx=Oop r8=Oop [64]=Oop }
+                      ;*synchronization entry
+                      ; - sun.java2d.d3d.D3DVolatileSurfaceManager::isConfigValid@-1 (line 128)
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@21 (line 175)
+  0x00000156bf288b10: f610 07e9 | fbf5 ffff 
+
+  0x00000156bf288b18: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf288b18: e843 9210 
+
+  0x00000156bf288b1c: ; ImmutableOopMap {rdx=Oop r8=Oop rdi=Oop [64]=Oop }
+                      ;*invokevirtual getGraphicsConfig {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.java2d.d3d.D3DVolatileSurfaceManager::isConfigValid@9 (line 128)
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@21 (line 175)
+  0x00000156bf288b1c: 078b 721c | 48c1 e603 | 4883 fe00 | 0f84 58f7 | ffff 4889 
+
+  0x00000156bf288b30: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288b30: 3424 e829 | fc10 07e9 | 4af7 ffff | 4883 f800 | 0f84 5ff7 | ffff 4889 
+
+  0x00000156bf288b48: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288b48: 1424 e811 | ff10 07e9 | 51f7 ffff | 8b7a 2448 | c1e7 0348 | 83ff 000f | 847f f7ff | ff48 893c 
+  0x00000156bf288b68: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288b68: 24e8 f2fb | 1007 e971 | f7ff ff48 | 83fe 000f | 8486 f7ff | ff48 8914 
+
+  0x00000156bf288b80: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288b80: 24e8 dafe | 1007 e978 | f7ff ff8b | 7220 48c1 | e603 4883 | fe00 0f84 | 74f7 ffff | 4889 3424 
+  0x00000156bf288ba0: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288ba0: e8bb fb10 | 07e9 66f7 | ffff 8b72 | 2448 c1e6 | 0348 83fe | 000f 8433 | f8ff ff48 
+
+  0x00000156bf288bbc: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288bbc: 8934 24e8 | 9cfb 1007 | e925 f8ff | ff48 83f8 | 000f 843a | f8ff ff48 
+
+  0x00000156bf288bd4: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288bd4: 8914 24e8 | 84fe 1007 | e92c f8ff 
+
+  0x00000156bf288be0: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf288be0: ffe8 7a91 
+
+  0x00000156bf288be4: ; ImmutableOopMap {rdx=Oop rdi=Oop [64]=Oop }
+                      ;*invokevirtual isSurfaceLost {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@87 (line 195)
+  0x00000156bf288be4: 1007 448b | 4224 49c1 | e003 4983 | f800 0f84 | 4ef9 ffff | 4c89 0424 
+
+  0x00000156bf288bfc: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288bfc: e85f fb10 | 07e9 40f9 | ffff 4883 | fe00 0f84 | 55f9 ffff | 4889 1424 
+
+  0x00000156bf288c14: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288c14: e847 fe10 | 07e9 47f9 
+
+  0x00000156bf288c1c: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf288c1c: ffff e83d 
+
+  0x00000156bf288c20: ; ImmutableOopMap {rdx=Oop rsi=Oop [64]=Oop }
+                      ;*invokevirtual setSurfaceLost {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@110 (line 201)
+  0x00000156bf288c20: 9110 078b | 7220 48c1 | e603 4883 | fe00 0f84 | faf9 ffff | 4889 3424 
+
+  0x00000156bf288c38: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288c38: e823 fb10 | 07e9 ecf9 | ffff 8b72 | 2448 c1e6 | 0348 83fe | 000f 843b | fbff ff48 
+
+  0x00000156bf288c54: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288c54: 8934 24e8 | 04fb 1007 | e92d fbff | ff48 83f8 | 000f 8442 | fbff ff48 
+
+  0x00000156bf288c6c: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288c6c: 8914 24e8 | ecfd 1007 | e934 fbff | ff8b 421c | 48c1 e003 | 4883 f800 | 0f84 30fb | ffff 4889 
+  0x00000156bf288c8c: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288c8c: 0424 e8cd | fa10 07e9 | 22fb ffff | 8b72 2448 | c1e6 0348 | 83fe 000f | 844d fcff | ff48 8934 
+  0x00000156bf288cac: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288cac: 24e8 aefa | 1007 e93f | fcff ff48 | 83f8 000f | 8454 fcff | ff48 8914 
+
+  0x00000156bf288cc4: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288cc4: 24e8 96fd | 1007 e946 | fcff ff8b | 7228 48c1 | e603 4883 | fe00 0f84 | bbfc ffff | 4889 3424 
+  0x00000156bf288ce4: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf288ce4: e877 fa10 | 07e9 adfc | ffff 4883 | ff00 0f84 | c2fc ffff | 4889 1424 
+
+  0x00000156bf288cfc: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf288cfc: e85f fd10 | 07e9 b4fc 
+
+  0x00000156bf288d04: ;   {metadata({method} {0x000001571d6ed6c8} 'initContents' '()V' in 'sun/java2d/d3d/D3DVolatileSurfaceManager')}
+  0x00000156bf288d04: ffff 49ba | c0d6 6e1d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf288d1c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf288d1c: ffe8 3ef4 
+
+  0x00000156bf288d20: ; ImmutableOopMap {rdx=Oop [64]=Oop }
+                      ;*synchronization entry
+                      ; - sun.java2d.d3d.D3DVolatileSurfaceManager::initContents@-1 (line 219)
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@208 (line 242)
+  0x00000156bf288d20: 1007 e910 
+
+  0x00000156bf288d24: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf288d24: fdff ffe8 
+
+  0x00000156bf288d28: ; ImmutableOopMap {rdx=Oop rdi=Oop [64]=Oop }
+                      ;*invokevirtual getForcedAccelSurfaceType {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.java2d.d3d.D3DVolatileSurfaceManager::initContents@4 (line 219)
+                      ; - sun.awt.image.VolatileSurfaceManager::validate@208 (line 242)
+  0x00000156bf288d28: 3490 1007 
+
+  0x00000156bf288d2c: ;   {internal_word}
+  0x00000156bf288d2c: 49ba c88a | 28bf 5601 | 0000 4d89 | 9760 0400 
+
+  0x00000156bf288d3c: ;   {runtime_call SafepointBlob}
+  0x00000156bf288d3c: 00e9 9ec6 | 0407 498b | 8700 0500 | 0049 c787 | 0005 0000 | 0000 0000 | 49c7 8708 | 0500 0000 
+  0x00000156bf288d5c: 0000 0048 | 83c4 605d 
+
+  0x00000156bf288d64: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000156bf288d64: e9f7 6e10 | 07f4 f4f4 | f4f4 f4f4 
+[Stub Code]
+  0x00000156bf288d70: ;   {no_reloc}
+  0x00000156bf288d70: 0f1f 4400 
+
+  0x00000156bf288d74: ;   {static_stub}
+  0x00000156bf288d74: 0048 bb00 | 0000 0000 
+
+  0x00000156bf288d7c: ;   {runtime_call nmethod}
+  0x00000156bf288d7c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf288d84: ;   {static_stub}
+  0x00000156bf288d84: 9048 bb00 | 0000 0000 
+
+  0x00000156bf288d8c: ;   {runtime_call nmethod}
+  0x00000156bf288d8c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf288d94: ;   {static_stub}
+  0x00000156bf288d94: 9048 bb48 | d46e 1d57 
+
+  0x00000156bf288d9c: ;   {runtime_call I2C/C2I adapters}
+  0x00000156bf288d9c: 0100 00e9 | 0ea4 0407 
+
+  0x00000156bf288da4: ;   {static_stub}
+  0x00000156bf288da4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf288dac: ;   {runtime_call nmethod}
+  0x00000156bf288dac: 0000 00e9 | fbff ffff 
+
+  0x00000156bf288db4: ;   {static_stub}
+  0x00000156bf288db4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf288dbc: ;   {runtime_call nmethod}
+  0x00000156bf288dbc: 0000 00e9 | fbff ffff 
+
+  0x00000156bf288dc4: ;   {static_stub}
+  0x00000156bf288dc4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf288dcc: ;   {runtime_call nmethod}
+  0x00000156bf288dcc: 0000 00e9 | fbff ffff 
+
+  0x00000156bf288dd4: ;   {static_stub}
+  0x00000156bf288dd4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf288ddc: ;   {runtime_call nmethod}
+  0x00000156bf288ddc: 0000 00e9 | fbff ffff 
+[Exception Handler]
+  0x00000156bf288de4: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000156bf288de4: e8f7 b110 
+
+  0x00000156bf288de8: ;   {external_word}
+  0x00000156bf288de8: 0748 b930 | d535 fcf8 | 7f00 0048 
+
+  0x00000156bf288df4: ;   {runtime_call}
+  0x00000156bf288df4: 83e4 f048 | b870 4afc | fbf8 7f00 | 00ff d0f4 
+[Deopt Handler Code]
+  0x00000156bf288e04: ;   {section_word}
+  0x00000156bf288e04: 49ba 048e | 28bf 5601 | 0000 4152 
+
+  0x00000156bf288e10: ;   {runtime_call DeoptimizationBlob}
+  0x00000156bf288e10: e96b b804 | 07f4 f4f4 
+[/MachCode]
+
+
+Compiled method (c1) 22062 3144       3       javax.swing.RepaintManager$PaintManager::paint (201 bytes)
+ total in heap  [0x00000156bf28c408,0x00000156bf28dc98] = 6288
+ relocation     [0x00000156bf28c4e0,0x00000156bf28c690] = 432
+ main code      [0x00000156bf28c6a0,0x00000156bf28db00] = 5216
+ stub code      [0x00000156bf28db00,0x00000156bf28dbf8] = 248
+ metadata       [0x00000156bf28dbf8,0x00000156bf28dc98] = 160
+ immutable data [0x000001572a6eaff0,0x000001572a6eb6b8] = 1736
+ dependencies   [0x000001572a6eaff0,0x000001572a6eb028] = 56
+ nul chk table  [0x000001572a6eb028,0x000001572a6eb0a0] = 120
+ scopes pcs     [0x000001572a6eb0a0,0x000001572a6eb340] = 672
+ scopes data    [0x000001572a6eb340,0x000001572a6eb6b8] = 888
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Instructions begin]
+  0x00000156bf28c6a0: 660f 1f84 | 0000 0000 | 0066 0f1f | 8400 0000 | 0000 448b | 5208 443b 
+
+  0x00000156bf28c6b8: ;   {runtime_call ic_miss_stub}
+  0x00000156bf28c6b8: 5008 0f85 | 201e 0407 
+[Verified Entry Point]
+  0x00000156bf28c6c0: 8984 2400 | 80ff ff55 | 4881 ece0 | 0000 0090 | 4181 7f20 | 0100 0000 
+
+  0x00000156bf28c6d8: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000156bf28c6d8: 7405 e861 | b002 0748 | 8994 2488 | 0000 004c | 8984 2490 | 0000 004c | 894c 2478 | 4889 bc24 
+  0x00000156bf28c6f8: 9800 0000 | 89b4 2480 | 0000 0089 | 8c24 8400 
+
+  0x00000156bf28c708: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c708: 0000 48bb | c87e bb1d | 5701 0000 | 8b83 cc00 | 0000 83c0 | 0289 83cc | 0000 0025 | fe07 0000 
+  0x00000156bf28c728: 85c0 0f84 | df11 0000 | 8b84 24f8 | 0000 008b | 9c24 f000 | 0000 4c8b | db41 ffc3 | 4489 5c24 
+  0x00000156bf28c748: 744c 8be8 | 41ff c544 | 896c 2470 | 448b 7210 | 49c1 e603 
+
+  0x00000156bf28c75c: ; implicit exception: dispatches to 0x00000156bf28d930
+  0x00000156bf28c75c: 493b 064d 
+
+  0x00000156bf28c760: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c760: 8bee 49bb | c87e bb1d | 5701 0000 | 4983 8328 | 0100 0001 
+
+  0x00000156bf28c774: ;   {metadata(method data for {method} {0x000001571d3a0d78} 'useVolatileDoubleBuffer' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf28c774: 49b9 b091 | bb1d 5701 | 0000 458b | 99cc 0000 | 0041 83c3 | 0245 8999 | cc00 0000 | 4181 e3fe 
+  0x00000156bf28c794: ff1f 0045 | 85db 0f84 | 9511 0000 
+
+  0x00000156bf28c7a0: ;   {oop(a 'java/lang/Class'{0x000000060c34df40} = 'javax/swing/RepaintManager')}
+  0x00000156bf28c7a0: 49b9 40df | 340c 0600 | 0000 450f | be89 8d00 | 0000 4183 | e101 4585 
+
+  0x00000156bf28c7b8: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c7b8: c949 b9c8 | 7ebb 1d57 | 0100 0041 | bb58 0100 | 0075 0641 | bb48 0100 | 004f 8b2c | 194d 8d6d 
+  0x00000156bf28c7d8: 014f 892c | 190f 850b | 0000 0041 | bb00 0000 | 00e9 520d | 0000 448b | 6c24 7044 | 8b5c 2474 
+  0x00000156bf28c7f8: 4c8b 4c24 | 7849 8bf6 
+
+  0x00000156bf28c800: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c800: 48bb c87e | bb1d 5701 | 0000 4883 | 8378 0100 | 0001 4d8b | c14d 8bcb | 498b fd49 
+
+  0x00000156bf28c81c: ;   {optimized virtual_call}
+  0x00000156bf28c81c: 8bd6 90e8 
+
+  0x00000156bf28c820: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getVolatileOffscreenBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@35 (line 1556)
+  0x00000156bf28c820: 5c80 ffff 
+
+  0x00000156bf28c824: ;   {other}
+  0x00000156bf28c824: 0f1f 8400 | 1c04 0000 | 488b 9424 | 8800 0000 
+
+  0x00000156bf28c834: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c834: 49b8 c87e | bb1d 5701 | 0000 4983 | 8098 0100 
+
+  0x00000156bf28c844: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c844: 0001 49b8 | 10b7 bb1d | 5701 0000 | 418b 90cc | 0000 0083 | c202 4189 | 90cc 0000 | 0081 e2fe 
+  0x00000156bf28c864: ff1f 0085 | d20f 84e7 | 1000 0048 
+
+  0x00000156bf28c870: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c870: 85c0 49b8 | 10b7 bb1d | 5701 0000 | ba18 0100 | 0074 05ba | 2801 0000 | 498b 3410 | 488d 7601 
+  0x00000156bf28c890: 4989 3410 | 0f84 e401 | 0000 483b | 004c 8bc0 
+
+  0x00000156bf28c8a0: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c8a0: 48ba 10b7 | bb1d 5701 | 0000 458b | 4008 49ba | 0000 00dc | 5601 0000 | 4d03 c24c | 3b82 4001 
+  0x00000156bf28c8c0: 0000 750d | 4883 8248 | 0100 0001 | e960 0000 | 004c 3b82 | 5001 0000 | 750d 4883 | 8258 0100 
+  0x00000156bf28c8e0: 0001 e94a | 0000 0048 | 83ba 4001 | 0000 0075 | 174c 8982 | 4001 0000 | 48c7 8248 | 0100 0001 
+  0x00000156bf28c900: 0000 00e9 | 2900 0000 | 4883 ba50 | 0100 0000 | 7517 4c89 | 8250 0100 | 0048 c782 | 5801 0000 
+  0x00000156bf28c920: 0100 0000 | e908 0000 | 0048 8382 | 3801 0000 
+
+  0x00000156bf28c930: ;   {oop(nullptr)}
+  0x00000156bf28c930: 0149 b800 | 0000 0000 | 0000 0048 | 8bd0 4889 | 8424 a000 | 0000 0f1f | 8000 0000 | 0048 b830 
+  0x00000156bf28c950: 70b6 2957 
+
+  0x00000156bf28c954: ;   {virtual_call}
+  0x00000156bf28c954: 0100 00e8 
+
+  0x00000156bf28c958: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [160]=Oop }
+                      ;*invokevirtual getWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@6 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@38 (line 1555)
+  0x00000156bf28c958: 56bd f4ff 
+
+  0x00000156bf28c95c: ;   {other}
+  0x00000156bf28c95c: 0f1f 8400 | 5405 0001 
+
+  0x00000156bf28c964: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c964: 85c0 49b8 | 10b7 bb1d | 5701 0000 | ba68 0100 | 007e 05ba | 7801 0000 | 498b 3410 | 488d 7601 
+  0x00000156bf28c984: 4989 3410 | 0f8e f000 | 0000 488b | 8424 a000 
+
+  0x00000156bf28c994: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28c994: 0000 49b8 | 10b7 bb1d | 5701 0000 | 8b40 0849 | ba00 0000 | dc56 0100 | 0049 03c2 | 493b 8090 
+  0x00000156bf28c9b4: 0100 0075 | 0d49 8380 | 9801 0000 | 01e9 6000 | 0000 493b | 80a0 0100 | 0075 0d49 | 8380 a801 
+  0x00000156bf28c9d4: 0000 01e9 | 4a00 0000 | 4983 b890 | 0100 0000 | 7517 4989 | 8090 0100 | 0049 c780 | 9801 0000 
+  0x00000156bf28c9f4: 0100 0000 | e929 0000 | 0049 83b8 | a001 0000 | 0075 1749 | 8980 a001 | 0000 49c7 | 80a8 0100 
+  0x00000156bf28ca14: 0001 0000 | 00e9 0800 | 0000 4983 | 8088 0100 
+
+  0x00000156bf28ca24: ;   {oop(nullptr)}
+  0x00000156bf28ca24: 0001 49b8 | 0000 0000 | 0000 0000 | 488b 9424 | a000 0000 | 0f1f 4400 | 0048 b858 | 70b6 2957 
+  0x00000156bf28ca44: ;   {virtual_call}
+  0x00000156bf28ca44: 0100 00e8 
+
+  0x00000156bf28ca48: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [160]=Oop }
+                      ;*invokevirtual getHeight {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@14 (line 1752)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@38 (line 1555)
+  0x00000156bf28ca48: 66b9 f4ff 
+
+  0x00000156bf28ca4c: ;   {other}
+  0x00000156bf28ca4c: 0f1f 8400 | 4406 0002 
+
+  0x00000156bf28ca54: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28ca54: 85c0 49b8 | 10b7 bb1d | 5701 0000 | bac8 0100 | 007f 05ba | b801 0000 | 498b 3410 | 488d 7601 
+  0x00000156bf28ca74: 4989 3410 | 0f8f 0f00 
+
+  0x00000156bf28ca7c: ;   {oop(nullptr)}
+  0x00000156bf28ca7c: 0000 48b8 | 0000 0000 | 0000 0000 | e908 0000 | 0048 8b84 | 24a0 0000 | 0048 85c0 
+
+  0x00000156bf28ca98: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28ca98: 49b8 c87e | bb1d 5701 | 0000 bad8 | 0100 0075 | 05ba c801 | 0000 498b | 3410 488d | 7601 4989 
+  0x00000156bf28cab8: 3410 0f85 | 0b00 0000 | 41bb 0000 | 0000 e975 | 0a00 004c | 8b4c 2478 
+
+  0x00000156bf28cad0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28cad0: 4885 c048 | bec8 7ebb | 1d57 0100 | 0075 0c80 | 8ee1 0100 | 0001 e9af | 0000 008b | 7808 49ba 
+  0x00000156bf28caf0: 0000 00dc | 5601 0000 | 4903 fa48 | 3bbe f001 | 0000 750d | 4883 86f8 | 0100 0001 | e960 0000 
+  0x00000156bf28cb10: 0048 3bbe | 0002 0000 | 750d 4883 | 8608 0200 | 0001 e94a | 0000 0048 | 83be f001 | 0000 0075 
+  0x00000156bf28cb30: 1748 89be | f001 0000 | 48c7 86f8 | 0100 0001 | 0000 00e9 | 2900 0000 | 4883 be00 | 0200 0000 
+  0x00000156bf28cb50: 7517 4889 | be00 0200 | 0048 c786 | 0802 0000 | 0100 0000 | e908 0000 | 0048 8386 | e801 0000 
+  0x00000156bf28cb70: ;   {metadata('java/awt/image/VolatileImage')}
+  0x00000156bf28cb70: 0148 bfc0 | 9d06 dd56 | 0100 008b | 7008 49ba | 0000 00dc | 5601 0000 | 4903 f248 | 3b7e 400f 
+  0x00000156bf28cb90: 85e7 0d00 | 00e9 0000 | 0000 4c8b | c049 3b01 
+
+  0x00000156bf28cba0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28cba0: 498b d148 | bec8 7ebb | 1d57 0100 | 008b 5208 | 49ba 0000 | 00dc 5601 | 0000 4903 | d248 3b96 
+  0x00000156bf28cbc0: 2002 0000 | 750d 4883 | 8628 0200 | 0001 e960 | 0000 0048 | 3b96 3002 | 0000 750d | 4883 8638 
+  0x00000156bf28cbe0: 0200 0001 | e94a 0000 | 0048 83be | 2002 0000 | 0075 1748 | 8996 2002 | 0000 48c7 | 8628 0200 
+  0x00000156bf28cc00: 0001 0000 | 00e9 2900 | 0000 4883 | be30 0200 | 0000 7517 | 4889 9630 | 0200 0048 | c786 3802 
+  0x00000156bf28cc20: 0000 0100 | 0000 e908 | 0000 0048 | 8386 1802 
+
+  0x00000156bf28cc30: ;   {metadata(method data for {method} {0x000001571d06e0f8} 'getGraphicsConfiguration' '()Ljava/awt/GraphicsConfiguration;' in 'java/awt/Component')}
+  0x00000156bf28cc30: 0000 0148 | bab8 1cb8 | 1d57 0100 | 008b b2cc | 0000 0083 | c602 89b2 | cc00 0000 | 81e6 feff 
+  0x00000156bf28cc50: 1f00 85f6 | 0f84 300d | 0000 498b 
+
+  0x00000156bf28cc5c: ;   {metadata(method data for {method} {0x000001571d06e0f8} 'getGraphicsConfiguration' '()Ljava/awt/GraphicsConfiguration;' in 'java/awt/Component')}
+  0x00000156bf28cc5c: d148 beb8 | 1cb8 1d57 | 0100 0048 | 8386 1801 | 0000 0141 | 8b71 6448 | c1e6 0348 | 89b4 24b0 
+  0x00000156bf28cc7c: 0000 00bf | 0000 0000 | bb00 0000 | 000f 1f80 | 0000 0000 | 4c89 8424 | b800 0000 | 85db 899c 
+  0x00000156bf28cc9c: 24a8 0000 
+
+  0x00000156bf28cca0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28cca0: 0048 bbc8 | 7ebb 1d57 | 0100 00be | 4802 0000 | 7505 be58 | 0200 004c | 8b04 334d | 8d40 014c 
+  0x00000156bf28ccc0: 8904 330f | 856d 0800 | 0083 ff02 
+
+  0x00000156bf28cccc: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28cccc: 49b8 c87e | bb1d 5701 | 0000 be68 | 0200 007d | 05be 7802 | 0000 498b | 1c30 488d | 5b01 4989 
+  0x00000156bf28ccec: 1c30 0f8d | 3308 0000 | 89bc 24ac | 0000 004c | 8b84 24b8 | 0000 0048 | 8bb4 24b0 | 0000 0049 
+  0x00000156bf28cd0c: 3b00 4d8b 
+
+  0x00000156bf28cd10: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28cd10: f048 bfc8 | 7ebb 1d57 | 0100 0048 | 8387 9802 
+
+  0x00000156bf28cd20: ;   {metadata(method data for {method} {0x000001571d1d8110} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28cd20: 0000 0148 | bf30 b9bb | 1d57 0100 | 008b 9fcc | 0000 0083 | c302 899f | cc00 0000 | 81e3 feff 
+  0x00000156bf28cd40: 1f00 85db | 0f84 660c | 0000 418b | 7824 48c1 | e703 483b | 0748 8bdf 
+
+  0x00000156bf28cd58: ;   {metadata(method data for {method} {0x000001571d1d8110} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28cd58: 49be 30b9 | bb1d 5701 | 0000 8b5b | 0849 ba00 | 0000 dc56 | 0100 0049 | 03da 493b | 9e20 0100 
+  0x00000156bf28cd78: 0075 0d49 | 8386 2801 | 0000 01e9 | 6000 0000 | 493b 9e30 | 0100 0075 | 0d49 8386 | 3801 0000 
+  0x00000156bf28cd98: 01e9 4a00 | 0000 4983 | be20 0100 | 0000 7517 | 4989 9e20 | 0100 0049 | c786 2801 | 0000 0100 
+  0x00000156bf28cdb8: 0000 e929 | 0000 0049 | 83be 3001 | 0000 0075 | 1749 899e | 3001 0000 | 49c7 8638 | 0100 0001 
+  0x00000156bf28cdd8: 0000 00e9 | 0800 0000 | 4983 8618 | 0100 0001 | 4c89 8424 | b800 0000 | 4c8b c648 
+
+  0x00000156bf28cdf4: ;   {optimized virtual_call}
+  0x00000156bf28cdf4: 8bd7 90e8 
+
+  0x00000156bf28cdf8: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop [184]=Oop }
+                      ;*invokevirtual validate {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.SunVolatileImage::validate@5 (line 264)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@78 (line 1562)
+  0x00000156bf28cdf8: 24b2 ffff 
+
+  0x00000156bf28cdfc: ;   {other}
+  0x00000156bf28cdfc: 0f1f 8400 | f409 0003 
+
+  0x00000156bf28ce04: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28ce04: 83f8 0249 | b8c8 7ebb | 1d57 0100 | 00ba c802 | 0000 7405 | bab8 0200 | 0049 8b34 | 1048 8d76 
+  0x00000156bf28ce24: 0149 8934 | 100f 840d | 0000 004c | 8b84 24b8 | 0000 00e9 | e504 0000 | 488b 9424 | 8800 0000 
+  0x00000156bf28ce44: 448b 4210 | 49c1 e003 
+
+  0x00000156bf28ce4c: ; implicit exception: dispatches to 0x00000156bf28d9d6
+  0x00000156bf28ce4c: 493b 0049 
+
+  0x00000156bf28ce50: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28ce50: 8bf0 48bf | c87e bb1d | 5701 0000 
+
+  0x00000156bf28ce5c: ;   {metadata('javax/swing/RepaintManager')}
+  0x00000156bf28ce5c: 49ba b8cf | 01dd 5601 | 0000 4c89 | 97e0 0200 | 0048 8387 | e802 0000 
+
+  0x00000156bf28ce74: ;   {metadata(method data for {method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28ce74: 0148 be38 | e7bb 1d57 | 0100 008b | becc 0000 | 0083 c702 | 89be cc00 | 0000 81e7 | feff 1f00 
+  0x00000156bf28ce94: 85ff 0f84 | 3f0b 0000 | 418b 7018 | 48c1 e603 
+
+  0x00000156bf28cea4: ; implicit exception: dispatches to 0x00000156bf28d9fc
+  0x00000156bf28cea4: 483b 064c 
+
+  0x00000156bf28cea8: ;   {metadata(method data for {method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28cea8: 8bc6 48bf | 38e7 bb1d | 5701 0000 | 458b 4008 | 49ba 0000 | 00dc 5601 | 0000 4d03 | c24c 3b87 
+  0x00000156bf28cec8: 2001 0000 | 750d 4883 | 8728 0100 | 0001 e960 | 0000 004c | 3b87 3001 | 0000 750d | 4883 8738 
+  0x00000156bf28cee8: 0100 0001 | e94a 0000 | 0048 83bf | 2001 0000 | 0075 174c | 8987 2001 | 0000 48c7 | 8728 0100 
+  0x00000156bf28cf08: 0001 0000 | 00e9 2900 | 0000 4883 | bf30 0100 | 0000 7517 | 4c89 8730 | 0100 0048 | c787 3801 
+  0x00000156bf28cf28: 0000 0100 | 0000 e908 | 0000 0048 | 8387 1801 | 0000 014c | 8b84 24b0 | 0000 0048 | 8bd6 0f1f 
+  0x00000156bf28cf48: 8000 0000 | 0048 b880 | 70b6 2957 
+
+  0x00000156bf28cf54: ;   {virtual_call}
+  0x00000156bf28cf54: 0100 00e8 
+
+  0x00000156bf28cf58: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokeinterface remove {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@5 (line 1283)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+  0x00000156bf28cf58: 841b 0407 
+
+  0x00000156bf28cf5c: ;   {other}
+  0x00000156bf28cf5c: 0f1f 8400 | 540b 0004 
+
+  0x00000156bf28cf64: ;   {metadata(method data for {method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28cf64: 4885 c048 | bf38 e7bb | 1d57 0100 | 0075 0c80 | 8f41 0100 | 0001 e9af | 0000 008b | 5808 49ba 
+  0x00000156bf28cf84: 0000 00dc | 5601 0000 | 4903 da48 | 3b9f 5001 | 0000 750d | 4883 8758 | 0100 0001 | e960 0000 
+  0x00000156bf28cfa4: 0048 3b9f | 6001 0000 | 750d 4883 | 8768 0100 | 0001 e94a | 0000 0048 | 83bf 5001 | 0000 0075 
+  0x00000156bf28cfc4: 1748 899f | 5001 0000 | 48c7 8758 | 0100 0001 | 0000 00e9 | 2900 0000 | 4883 bf60 | 0100 0000 
+  0x00000156bf28cfe4: 7517 4889 | 9f60 0100 | 0048 c787 | 6801 0000 | 0100 0000 | e908 0000 | 0048 8387 | 4801 0000 
+  0x00000156bf28d004: ;   {metadata('java/awt/Image')}
+  0x00000156bf28d004: 0148 bb60 | 9b06 dd56 | 0100 008b | 7808 49ba | 0000 00dc | 5601 0000 | 4903 fa48 | 3b5f 380f 
+  0x00000156bf28d024: 85d8 0900 | 00e9 0000 | 0000 488b | d048 85d2 
+
+  0x00000156bf28d034: ;   {metadata(method data for {method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28d034: 48be 38e7 | bb1d 5701 | 0000 bf78 | 0100 0074 | 05bf 8801 | 0000 488b | 1c3e 488d | 5b01 4889 
+  0x00000156bf28d054: 1c3e 0f84 | a001 0000 
+
+  0x00000156bf28d05c: ; implicit exception: dispatches to 0x00000156bf28da0a
+  0x00000156bf28d05c: 483b 0248 
+
+  0x00000156bf28d060: ;   {metadata(method data for {method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28d060: 8bf2 48bf | 38e7 bb1d | 5701 0000 | 8b76 0849 | ba00 0000 | dc56 0100 | 0049 03f2 | 483b b7a0 
+  0x00000156bf28d080: 0100 0075 | 0d48 8387 | a801 0000 | 01e9 6000 | 0000 483b | b7b0 0100 | 0075 0d48 | 8387 b801 
+  0x00000156bf28d0a0: 0000 01e9 | 4a00 0000 | 4883 bfa0 | 0100 0000 | 7517 4889 | b7a0 0100 | 0048 c787 | a801 0000 
+  0x00000156bf28d0c0: 0100 0000 | e929 0000 | 0048 83bf | b001 0000 | 0075 1748 | 89b7 b001 | 0000 48c7 | 87b8 0100 
+  0x00000156bf28d0e0: 0001 0000 | 00e9 0800 | 0000 4883 | 8798 0100 
+
+  0x00000156bf28d0f0: ;   {metadata(method data for {method} {0x000001571d1d9828} 'flush' '()V' in 'java/awt/Image')}
+  0x00000156bf28d0f0: 0001 48be | c8af bb1d | 5701 0000 | 8bbe cc00 | 0000 83c7 | 0289 becc | 0000 0081 | e7fe ff1f 
+  0x00000156bf28d110: 0085 ff0f | 84f6 0800 | 008b 5210 | 48c1 e203 
+
+  0x00000156bf28d120: ;   {metadata(method data for {method} {0x000001571d1d9828} 'flush' '()V' in 'java/awt/Image')}
+  0x00000156bf28d120: 4885 d248 | bec8 afbb | 1d57 0100 | 00bf 1801 | 0000 7405 | bf28 0100 | 0048 8b1c | 3e48 8d5b 
+  0x00000156bf28d140: 0148 891c | 3e0f 84b1 | 0000 0048 | 3b02 488b 
+
+  0x00000156bf28d150: ;   {metadata(method data for {method} {0x000001571d1d9828} 'flush' '()V' in 'java/awt/Image')}
+  0x00000156bf28d150: f248 bfc8 | afbb 1d57 | 0100 008b | 7608 49ba | 0000 00dc | 5601 0000 | 4903 f248 | 3bb7 4001 
+  0x00000156bf28d170: 0000 750d | 4883 8748 | 0100 0001 | e960 0000 | 0048 3bb7 | 5001 0000 | 750d 4883 | 8758 0100 
+  0x00000156bf28d190: 0001 e94a | 0000 0048 | 83bf 4001 | 0000 0075 | 1748 89b7 | 4001 0000 | 48c7 8748 | 0100 0001 
+  0x00000156bf28d1b0: 0000 00e9 | 2900 0000 | 4883 bf50 | 0100 0000 | 7517 4889 | b750 0100 | 0048 c787 | 5801 0000 
+  0x00000156bf28d1d0: 0100 0000 | e908 0000 | 0048 8387 | 3801 0000 | 010f 1f40 | 0048 b8a8 | 70b6 2957 
+
+  0x00000156bf28d1ec: ;   {virtual_call}
+  0x00000156bf28d1ec: 0100 00e8 
+
+  0x00000156bf28d1f0: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual flush {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.awt.Image::flush@11 (line 266)
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@19 (line 1285)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+  0x00000156bf28d1f0: ec18 0407 
+
+  0x00000156bf28d1f4: ;   {other}
+  0x00000156bf28d1f4: 0f1f 8400 | ec0d 0005 | 488b 9424 | 8800 0000 | 8b72 1048 | c1e6 0348 | 3b06 4c8b 
+
+  0x00000156bf28d210: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d210: c649 b9c8 | 7ebb 1d57 
+
+  0x00000156bf28d218: ;   {metadata('javax/swing/RepaintManager')}
+  0x00000156bf28d218: 0100 0049 | bab8 cf01 | dd56 0100 | 004d 8991 | 1003 0000 | 4983 8118 | 0300 0001 | 4c8b 4424 
+  0x00000156bf28d238: 7844 8b4c | 2474 8b7c | 2470 488b 
+
+  0x00000156bf28d244: ;   {optimized virtual_call}
+  0x00000156bf28d244: d666 90e8 
+
+  0x00000156bf28d248: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual getVolatileOffscreenBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@103 (line 1565)
+  0x00000156bf28d248: 9415 0407 
+
+  0x00000156bf28d24c: ;   {other}
+  0x00000156bf28d24c: 0f1f 8400 | 440e 0006 
+
+  0x00000156bf28d254: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d254: 4885 c048 | bfc8 7ebb | 1d57 0100 | 0075 0c80 | 8f31 0300 | 0001 e9af | 0000 008b | 7008 49ba 
+  0x00000156bf28d274: 0000 00dc | 5601 0000 | 4903 f248 | 3bb7 4003 | 0000 750d | 4883 8748 | 0300 0001 | e960 0000 
+  0x00000156bf28d294: 0048 3bb7 | 5003 0000 | 750d 4883 | 8758 0300 | 0001 e94a | 0000 0048 | 83bf 4003 | 0000 0075 
+  0x00000156bf28d2b4: 1748 89b7 | 4003 0000 | 48c7 8748 | 0300 0001 | 0000 00e9 | 2900 0000 | 4883 bf50 | 0300 0000 
+  0x00000156bf28d2d4: 7517 4889 | b750 0300 | 0048 c787 | 5803 0000 | 0100 0000 | e908 0000 | 0048 8387 | 3803 0000 
+  0x00000156bf28d2f4: ;   {metadata('java/awt/image/VolatileImage')}
+  0x00000156bf28d2f4: 0148 bec0 | 9d06 dd56 | 0100 008b | 7808 49ba | 0000 00dc | 5601 0000 | 4903 fa48 | 3b77 400f 
+  0x00000156bf28d314: 8521 0700 | 00e9 0000 | 0000 4c8b | c08b 8424 | f800 0000 | 8b9c 24f0 | 0000 0048 | 8b94 2488 
+  0x00000156bf28d334: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d334: 0000 0049 | b9c8 7ebb | 1d57 0100 | 0049 8381 | 7803 0000 | 014d 8bd8 | 4c8b 8424 | 9000 0000 
+  0x00000156bf28d354: 4d8b cb48 | 8bbc 2498 | 0000 008b | b424 8000 | 0000 8b8c | 2484 0000 | 0089 1c24 | 8944 2408 
+  0x00000156bf28d374: 488b 9424 | 8800 0000 | 4c89 9c24 | b800 0000 
+
+  0x00000156bf28d384: ;   {optimized virtual_call}
+  0x00000156bf28d384: 6666 90e8 
+
+  0x00000156bf28d388: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop [184]=Oop }
+                      ;*invokevirtual paintDoubleBuffered {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@128 (line 1569)
+  0x00000156bf28d388: f4bf ffff 
+
+  0x00000156bf28d38c: ;   {other}
+  0x00000156bf28d38c: 0f1f 8400 | 840f 0007 | 4c8b 8424 | b800 0000 
+
+  0x00000156bf28d39c: ; implicit exception: dispatches to 0x00000156bf28da43
+  0x00000156bf28d39c: 493b 004d 
+
+  0x00000156bf28d3a0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d3a0: 8bc8 48bf | c87e bb1d | 5701 0000 | 4883 87a8 | 0300 0001 
+
+  0x00000156bf28d3b4: ;   {metadata(method data for {method} {0x000001571d1d81c0} 'contentsLost' '()Z' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28d3b4: 49b9 2802 | bb1d 5701 | 0000 418b | b9cc 0000 | 0083 c702 | 4189 b9cc | 0000 0081 | e7fe ff1f 
+  0x00000156bf28d3d4: 0085 ff0f | 846b 0600 | 0045 8b48 | 2449 c1e1 | 0349 3b01 
+
+  0x00000156bf28d3e8: ;   {metadata(method data for {method} {0x000001571d1d81c0} 'contentsLost' '()Z' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28d3e8: 498b f948 | ba28 02bb | 1d57 0100 | 008b 7f08 | 49ba 0000 | 00dc 5601 | 0000 4903 | fa48 3bba 
+  0x00000156bf28d408: 2001 0000 | 750d 4883 | 8228 0100 | 0001 e960 | 0000 0048 | 3bba 3001 | 0000 750d | 4883 8238 
+  0x00000156bf28d428: 0100 0001 | e94a 0000 | 0048 83ba | 2001 0000 | 0075 1748 | 89ba 2001 | 0000 48c7 | 8228 0100 
+  0x00000156bf28d448: 0001 0000 | 00e9 2900 | 0000 4883 | ba30 0100 | 0000 7517 | 4889 ba30 | 0100 0048 | c782 3801 
+  0x00000156bf28d468: 0000 0100 | 0000 e908 | 0000 0048 | 8382 1801 | 0000 0145 | 0fbe 4910 | 4183 e101 | 4183 e101 
+  0x00000156bf28d488: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d488: 4585 c949 | b9c8 7ebb | 1d57 0100 | 00bf c803 | 0000 7505 | bfd8 0300 | 0049 8b14 | 3948 8d52 
+  0x00000156bf28d4a8: 0149 8914 | 390f 851c 
+
+  0x00000156bf28d4b0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d4b0: 0000 0049 | b9c8 7ebb | 1d57 0100 | 0041 ff81 | e803 0000 | 41b9 0100 | 0000 e906 | 0000 0041 
+  0x00000156bf28d4d0: b900 0000 | 008b bc24 | ac00 0000 
+
+  0x00000156bf28d4dc: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d4dc: ffc7 48ba | c87e bb1d | 5701 0000 | 8bb2 d000 | 0000 83c6 | 0289 b2d0 | 0000 0081 | e6fe 3f00 
+  0x00000156bf28d4fc: 0085 f60f | 8469 0500 | 004d 8b97 
+
+  0x00000156bf28d508: ; ImmutableOopMap {r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) javax.swing.RepaintManager$PaintManager::paint@149 (line 1561)
+  0x00000156bf28d508: 5004 0000 
+
+  0x00000156bf28d50c: ;   {poll}
+  0x00000156bf28d50c: 4185 0248 | bac8 7ebb | 1d57 0100 | 00ff 8200 | 0400 0049 | 8bd9 e969 | f7ff ff8b | 9c24 a800 
+  0x00000156bf28d52c: 0000 4c8b | dbe9 0a00 | 0000 8b9c | 24a8 0000 | 004c 8bdb 
+
+  0x00000156bf28d540: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d540: 4585 db49 | b8c8 7ebb | 1d57 0100 | 0041 b918 | 0400 0075 | 0641 b928 | 0400 004b | 8b3c 0848 
+  0x00000156bf28d560: 8d7f 014b | 893c 080f | 8585 0300 | 0044 899c | 24c0 0000 | 004c 8b4c | 2478 488b | 9424 8800 
+  0x00000156bf28d580: 0000 8b72 | 1048 c1e6 | 0348 3b06 
+
+  0x00000156bf28d58c: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d58c: 4c8b c648 | bfc8 7ebb | 1d57 0100 
+
+  0x00000156bf28d598: ;   {metadata('javax/swing/RepaintManager')}
+  0x00000156bf28d598: 0049 bab8 | cf01 dd56 | 0100 004c | 8997 4004 | 0000 4883 | 8748 0400 | 0001 4d8b | c144 8b8c 
+  0x00000156bf28d5b8: 24f0 0000 | 008b bc24 | f800 0000 
+
+  0x00000156bf28d5c4: ;   {optimized virtual_call}
+  0x00000156bf28d5c4: 488b d6e8 
+
+  0x00000156bf28d5c8: ; ImmutableOopMap {[136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getOffscreenBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@167 (line 1577)
+  0x00000156bf28d5c8: 1412 0407 
+
+  0x00000156bf28d5cc: ;   {other}
+  0x00000156bf28d5cc: 0f1f 8400 | c411 0009 | 488b 9424 | 8800 0000 
+
+  0x00000156bf28d5dc: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d5dc: 49b8 c87e | bb1d 5701 | 0000 4983 | 8068 0400 
+
+  0x00000156bf28d5ec: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d5ec: 0001 49b8 | 10b7 bb1d | 5701 0000 | 418b 90cc | 0000 0083 | c202 4189 | 90cc 0000 | 0081 e2fe 
+  0x00000156bf28d60c: ff1f 0085 | d20f 847d | 0400 0048 
+
+  0x00000156bf28d618: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d618: 85c0 49b8 | 10b7 bb1d | 5701 0000 | ba18 0100 | 0074 05ba | 2801 0000 | 498b 3410 | 488d 7601 
+  0x00000156bf28d638: 4989 3410 | 0f84 e601 | 0000 483b | 004c 8bc0 
+
+  0x00000156bf28d648: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d648: 48ba 10b7 | bb1d 5701 | 0000 458b | 4008 49ba | 0000 00dc | 5601 0000 | 4d03 c24c | 3b82 4001 
+  0x00000156bf28d668: 0000 750d | 4883 8248 | 0100 0001 | e960 0000 | 004c 3b82 | 5001 0000 | 750d 4883 | 8258 0100 
+  0x00000156bf28d688: 0001 e94a | 0000 0048 | 83ba 4001 | 0000 0075 | 174c 8982 | 4001 0000 | 48c7 8248 | 0100 0001 
+  0x00000156bf28d6a8: 0000 00e9 | 2900 0000 | 4883 ba50 | 0100 0000 | 7517 4c89 | 8250 0100 | 0048 c782 | 5801 0000 
+  0x00000156bf28d6c8: 0100 0000 | e908 0000 | 0048 8382 | 3801 0000 
+
+  0x00000156bf28d6d8: ;   {oop(nullptr)}
+  0x00000156bf28d6d8: 0149 b800 | 0000 0000 | 0000 0048 | 8bd0 4889 | 8424 c800 | 0000 0f1f | 8000 0000 | 0048 b8d0 
+  0x00000156bf28d6f8: 70b6 2957 
+
+  0x00000156bf28d6fc: ;   {virtual_call}
+  0x00000156bf28d6fc: 0100 00e8 
+
+  0x00000156bf28d700: ; ImmutableOopMap {[136]=Oop [144]=Oop [152]=Oop [200]=Oop }
+                      ;*invokevirtual getWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@6 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@170 (line 1576)
+  0x00000156bf28d700: dc13 0407 
+
+  0x00000156bf28d704: ;   {other}
+  0x00000156bf28d704: 0f1f 8400 | fc12 000a 
+
+  0x00000156bf28d70c: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d70c: 85c0 49b8 | 10b7 bb1d | 5701 0000 | ba68 0100 | 007e 05ba | 7801 0000 | 498b 3410 | 488d 7601 
+  0x00000156bf28d72c: 4989 3410 | 0f8e f200 | 0000 488b | 8424 c800 
+
+  0x00000156bf28d73c: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d73c: 0000 49b8 | 10b7 bb1d | 5701 0000 | 8b40 0849 | ba00 0000 | dc56 0100 | 0049 03c2 | 493b 8090 
+  0x00000156bf28d75c: 0100 0075 | 0d49 8380 | 9801 0000 | 01e9 6000 | 0000 493b | 80a0 0100 | 0075 0d49 | 8380 a801 
+  0x00000156bf28d77c: 0000 01e9 | 4a00 0000 | 4983 b890 | 0100 0000 | 7517 4989 | 8090 0100 | 0049 c780 | 9801 0000 
+  0x00000156bf28d79c: 0100 0000 | e929 0000 | 0049 83b8 | a001 0000 | 0075 1749 | 8980 a001 | 0000 49c7 | 80a8 0100 
+  0x00000156bf28d7bc: 0001 0000 | 00e9 0800 | 0000 4983 | 8088 0100 
+
+  0x00000156bf28d7cc: ;   {oop(nullptr)}
+  0x00000156bf28d7cc: 0001 49b8 | 0000 0000 | 0000 0000 | 488b 9424 | c800 0000 | 0f1f 4400 | 0048 b8f8 | 70b6 2957 
+  0x00000156bf28d7ec: ;   {virtual_call}
+  0x00000156bf28d7ec: 0100 00e8 
+
+  0x00000156bf28d7f0: ; ImmutableOopMap {[136]=Oop [144]=Oop [152]=Oop [200]=Oop }
+                      ;*invokevirtual getHeight {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@14 (line 1752)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@170 (line 1576)
+  0x00000156bf28d7f0: ec12 0407 
+
+  0x00000156bf28d7f4: ;   {other}
+  0x00000156bf28d7f4: 0f1f 8400 | ec13 000b 
+
+  0x00000156bf28d7fc: ;   {metadata(method data for {method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d7fc: 85c0 49b8 | 10b7 bb1d | 5701 0000 | 41b9 c801 | 0000 7f06 | 41b9 b801 | 0000 4b8b | 3c08 488d 
+  0x00000156bf28d81c: 7f01 4b89 | 3c08 0f8f | 0f00 0000 
+
+  0x00000156bf28d828: ;   {oop(nullptr)}
+  0x00000156bf28d828: 48b8 0000 | 0000 0000 | 0000 e908 | 0000 0048 | 8b84 24c8 | 0000 0048 
+
+  0x00000156bf28d840: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d840: 85c0 49b8 | c87e bb1d | 5701 0000 | 41b9 a804 | 0000 7506 | 41b9 9804 | 0000 4b8b | 3c08 488d 
+  0x00000156bf28d860: 7f01 4b89 | 3c08 0f85 | 0d00 0000 | 448b 9c24 | c000 0000 | e979 0000 | 0044 8b9c | 24f8 0000 
+  0x00000156bf28d880: 008b 9c24 | f000 0000 | 8b8c 2484 | 0000 008b | b424 8000 | 0000 488b | bc24 9800 | 0000 4c8b 
+  0x00000156bf28d8a0: 8424 9000 | 0000 488b | 9424 8800 | 0000 4c8b 
+
+  0x00000156bf28d8b0: ;   {metadata(method data for {method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d8b0: ca49 bdc8 | 7ebb 1d57 
+
+  0x00000156bf28d8b8: ;   {metadata('javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d8b8: 0100 0049 | bae8 5801 | dd56 0100 | 004d 8995 | c004 0000 | 4983 85c8 | 0400 0001 | 4c8b c889 
+  0x00000156bf28d8d8: 1c24 4489 
+
+  0x00000156bf28d8dc: ;   {optimized virtual_call}
+  0x00000156bf28d8dc: 5c24 08e8 
+
+  0x00000156bf28d8e0: ; ImmutableOopMap {}
+                      ;*invokevirtual paintDoubleBuffered {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@192 (line 1579)
+  0x00000156bf28d8e0: fc0e 0407 
+
+  0x00000156bf28d8e4: ;   {other}
+  0x00000156bf28d8e4: 0f1f 8400 | dc14 000c | 41bb 0100 | 0000 4183 | e301 498b | c348 81c4 | e000 0000 
+
+  0x00000156bf28d900: ;   {poll_return}
+  0x00000156bf28d900: 5d49 3ba7 | 4804 0000 | 0f87 ac01 
+
+  0x00000156bf28d90c: ;   {metadata({method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d90c: 0000 c349 | baf8 c03b | 1d57 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000156bf28d924: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d924: ffff e835 
+
+  0x00000156bf28d928: ; ImmutableOopMap {rdx=Oop r8=Oop r9=Oop rdi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager$PaintManager::paint@-1 (line 1549)
+  0x00000156bf28d928: a810 07e9 | 00ee ffff 
+
+  0x00000156bf28d930: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d930: e82b 4410 
+
+  0x00000156bf28d934: ; ImmutableOopMap {rdx=Oop r8=Oop rdi=Oop r14=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual useVolatileDoubleBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@19 (line 1554)
+                      ;   {metadata({method} {0x000001571d3a0d78} 'useVolatileDoubleBuffer' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf28d934: 0749 ba70 | 0d3a 1d57 | 0100 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000156bf28d94c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d94c: e80f a810 
+
+  0x00000156bf28d950: ; ImmutableOopMap {rdx=Oop r8=Oop rdi=Oop r14=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager::useVolatileDoubleBuffer@-1 (line 1294)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@19 (line 1554)
+  0x00000156bf28d950: 07e9 4aee 
+
+  0x00000156bf28d954: ;   {metadata({method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28d954: ffff 49ba | 00d1 3b1d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf28d96c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d96c: ffe8 eea7 
+
+  0x00000156bf28d970: ; ImmutableOopMap {rax=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@-1 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@38 (line 1555)
+  0x00000156bf28d970: 1007 e9f8 
+
+  0x00000156bf28d974: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d974: eeff ffe8 
+
+  0x00000156bf28d978: ; ImmutableOopMap {rax=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@6 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@38 (line 1555)
+  0x00000156bf28d978: e443 1007 | 4889 0424 
+
+  0x00000156bf28d980: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000156bf28d980: e8db 7010 
+
+  0x00000156bf28d984: ; ImmutableOopMap {r9=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@49 (line 1557)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d984: 07e8 d643 
+
+  0x00000156bf28d988: ; ImmutableOopMap {r9=Oop r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getGraphicsConfiguration {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@55 (line 1559)
+                      ;   {metadata({method} {0x000001571d06e0f8} 'getGraphicsConfiguration' '()Ljava/awt/GraphicsConfiguration;' in 'java/awt/Component')}
+  0x00000156bf28d988: 1007 49ba | f0e0 061d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf28d9a0: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d9a0: ffe8 baa7 
+
+  0x00000156bf28d9a4: ; ImmutableOopMap {r9=Oop r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - java.awt.Component::getGraphicsConfiguration@-1 (line 1158)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@55 (line 1559)
+  0x00000156bf28d9a4: 1007 e9af 
+
+  0x00000156bf28d9a8: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d9a8: f2ff ffe8 
+
+  0x00000156bf28d9ac: ; ImmutableOopMap {r8=Oop rsi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual validate {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@78 (line 1562)
+  0x00000156bf28d9ac: b043 1007 
+
+  0x00000156bf28d9b0: ;   {metadata({method} {0x000001571d1d8110} 'validate' '(Ljava/awt/GraphicsConfiguration;)I' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28d9b0: 49ba 0881 | 1d1d 5701 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000156bf28d9c4: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d9c4: ffff ffe8 
+
+  0x00000156bf28d9c8: ; ImmutableOopMap {r8=Oop rsi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*synchronization entry
+                      ; - sun.awt.image.SunVolatileImage::validate@-1 (line 264)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@78 (line 1562)
+  0x00000156bf28d9c8: 94a7 1007 | e979 f3ff 
+
+  0x00000156bf28d9d0: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d9d0: ffe8 8a43 
+
+  0x00000156bf28d9d4: ; ImmutableOopMap {r8=Oop rsi=Oop rdi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual validate {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.SunVolatileImage::validate@5 (line 264)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@78 (line 1562)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d9d4: 1007 e885 
+
+  0x00000156bf28d9d8: ; ImmutableOopMap {rdx=Oop r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual resetVolatileDoubleBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+                      ;   {metadata({method} {0x000001571d3a0cc0} 'resetVolatileDoubleBuffer' '(Ljava/awt/GraphicsConfiguration;)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf28d9d8: 4310 0749 | bab8 0c3a | 1d57 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000156bf28d9f0: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28d9f0: ffff e869 
+
+  0x00000156bf28d9f4: ; ImmutableOopMap {rdx=Oop r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@-1 (line 1283)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+  0x00000156bf28d9f4: a710 07e9 | a0f4 ffff 
+
+  0x00000156bf28d9fc: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28d9fc: e85f 4310 
+
+  0x00000156bf28da00: ; ImmutableOopMap {rdx=Oop rsi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokeinterface remove {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@5 (line 1283)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+  0x00000156bf28da00: 0748 8904 
+
+  0x00000156bf28da04: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000156bf28da04: 24e8 5670 
+
+  0x00000156bf28da08: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@10 (line 1283)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da08: 1007 e851 
+
+  0x00000156bf28da0c: ; ImmutableOopMap {rdx=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual flush {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@19 (line 1285)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+                      ;   {metadata({method} {0x000001571d1d9828} 'flush' '()V' in 'java/awt/Image')}
+  0x00000156bf28da0c: 4310 0749 | ba20 981d | 1d57 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000156bf28da24: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28da24: ffff e835 
+
+  0x00000156bf28da28: ; ImmutableOopMap {rdx=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*synchronization entry
+                      ; - java.awt.Image::flush@-1 (line 265)
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@19 (line 1285)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+  0x00000156bf28da28: a710 07e9 | e9f6 ffff 
+
+  0x00000156bf28da30: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da30: e82b 4310 
+
+  0x00000156bf28da34: ; ImmutableOopMap {rdx=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual flush {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.awt.Image::flush@11 (line 266)
+                      ; - javax.swing.RepaintManager::resetVolatileDoubleBuffer@19 (line 1285)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@91 (line 1564)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da34: 07e8 2643 
+
+  0x00000156bf28da38: ; ImmutableOopMap {rdx=Oop rsi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual getVolatileOffscreenBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@103 (line 1565)
+  0x00000156bf28da38: 1007 4889 
+
+  0x00000156bf28da3c: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000156bf28da3c: 0424 e81d 
+
+  0x00000156bf28da40: ; ImmutableOopMap {[120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@110 (line 1567)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da40: 7010 07e8 
+
+  0x00000156bf28da44: ; ImmutableOopMap {r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual contentsLost {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@133 (line 1571)
+  0x00000156bf28da44: 1843 1007 
+
+  0x00000156bf28da48: ;   {metadata({method} {0x000001571d1d81c0} 'contentsLost' '()Z' in 'sun/awt/image/SunVolatileImage')}
+  0x00000156bf28da48: 49ba b881 | 1d1d 5701 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000156bf28da5c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28da5c: ffff ffe8 
+
+  0x00000156bf28da60: ; ImmutableOopMap {r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*synchronization entry
+                      ; - sun.awt.image.SunVolatileImage::contentsLost@-1 (line 268)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@133 (line 1571)
+  0x00000156bf28da60: fca6 1007 | e974 f9ff 
+
+  0x00000156bf28da68: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da68: ffe8 f242 
+
+  0x00000156bf28da6c: ; ImmutableOopMap {r8=Oop r9=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*invokevirtual contentsLost {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.image.SunVolatileImage::contentsLost@4 (line 268)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@133 (line 1571)
+                      ;   {metadata({method} {0x000001571d3bc100} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)Z' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28da6c: 1007 49ba | f8c0 3b1d | 5701 0000 | 4c89 5424 | 0848 c704 | 2495 0000 
+
+  0x00000156bf28da84: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28da84: 00e8 d6a6 
+
+  0x00000156bf28da88: ; ImmutableOopMap {r8=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop [176]=Oop }
+                      ;*goto {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) javax.swing.RepaintManager$PaintManager::paint@149 (line 1561)
+  0x00000156bf28da88: 1007 e976 
+
+  0x00000156bf28da8c: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28da8c: faff ffe8 
+
+  0x00000156bf28da90: ; ImmutableOopMap {r9=Oop rdx=Oop rsi=Oop [120]=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getOffscreenBuffer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::paint@167 (line 1577)
+  0x00000156bf28da90: cc42 1007 
+
+  0x00000156bf28da94: ;   {metadata({method} {0x000001571d3bd108} 'getValidImage' '(Ljava/awt/Image;)Ljava/awt/Image;' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf28da94: 49ba 00d1 | 3b1d 5701 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000156bf28daa8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf28daa8: ffff ffe8 
+
+  0x00000156bf28daac: ; ImmutableOopMap {rax=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@-1 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@170 (line 1576)
+  0x00000156bf28daac: b0a6 1007 | e962 fbff 
+
+  0x00000156bf28dab4: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf28dab4: ffe8 a642 
+
+  0x00000156bf28dab8: ; ImmutableOopMap {rax=Oop [136]=Oop [144]=Oop [152]=Oop }
+                      ;*invokevirtual getWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager$PaintManager::getValidImage@6 (line 1751)
+                      ; - javax.swing.RepaintManager$PaintManager::paint@170 (line 1576)
+                      ;   {internal_word}
+  0x00000156bf28dab8: 1007 49ba | 01d9 28bf | 5601 0000 | 4d89 9760 
+
+  0x00000156bf28dac8: ;   {runtime_call SafepointBlob}
+  0x00000156bf28dac8: 0400 00e9 | 1079 0407 | 498b 8700 | 0500 0049 | c787 0005 | 0000 0000 | 0000 49c7 | 8708 0500 
+  0x00000156bf28dae8: 0000 0000 | 0048 81c4 | e000 0000 
+
+  0x00000156bf28daf4: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000156bf28daf4: 5de9 6621 | 1007 f4f4 | f4f4 f4f4 
+[Stub Code]
+  0x00000156bf28db00: ;   {no_reloc}
+  0x00000156bf28db00: 0f1f 4400 
+
+  0x00000156bf28db04: ;   {static_stub}
+  0x00000156bf28db04: 0048 bb00 | 0000 0000 
+
+  0x00000156bf28db0c: ;   {runtime_call nmethod}
+  0x00000156bf28db0c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db14: ;   {static_stub}
+  0x00000156bf28db14: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db1c: ;   {runtime_call nmethod}
+  0x00000156bf28db1c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db24: ;   {static_stub}
+  0x00000156bf28db24: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db2c: ;   {runtime_call nmethod}
+  0x00000156bf28db2c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db34: ;   {static_stub}
+  0x00000156bf28db34: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db3c: ;   {runtime_call nmethod}
+  0x00000156bf28db3c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db44: ;   {static_stub}
+  0x00000156bf28db44: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db4c: ;   {runtime_call nmethod}
+  0x00000156bf28db4c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db54: ;   {static_stub}
+  0x00000156bf28db54: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db5c: ;   {runtime_call nmethod}
+  0x00000156bf28db5c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db64: ;   {static_stub}
+  0x00000156bf28db64: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db6c: ;   {runtime_call nmethod}
+  0x00000156bf28db6c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db74: ;   {static_stub}
+  0x00000156bf28db74: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db7c: ;   {runtime_call nmethod}
+  0x00000156bf28db7c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db84: ;   {static_stub}
+  0x00000156bf28db84: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db8c: ;   {runtime_call nmethod}
+  0x00000156bf28db8c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28db94: ;   {static_stub}
+  0x00000156bf28db94: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28db9c: ;   {runtime_call nmethod}
+  0x00000156bf28db9c: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28dba4: ;   {static_stub}
+  0x00000156bf28dba4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28dbac: ;   {runtime_call nmethod}
+  0x00000156bf28dbac: 0000 00e9 | fbff ffff 
+
+  0x00000156bf28dbb4: ;   {static_stub}
+  0x00000156bf28dbb4: 9048 bb00 | 0000 0000 
+
+  0x00000156bf28dbbc: ;   {runtime_call nmethod}
+  0x00000156bf28dbbc: 0000 00e9 | fbff ffff 
+[Exception Handler]
+  0x00000156bf28dbc4: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000156bf28dbc4: e817 6410 
+
+  0x00000156bf28dbc8: ;   {external_word}
+  0x00000156bf28dbc8: 0748 b930 | d535 fcf8 | 7f00 0048 
+
+  0x00000156bf28dbd4: ;   {runtime_call}
+  0x00000156bf28dbd4: 83e4 f048 | b870 4afc | fbf8 7f00 | 00ff d0f4 
+[Deopt Handler Code]
+  0x00000156bf28dbe4: ;   {section_word}
+  0x00000156bf28dbe4: 49ba e4db | 28bf 5601 | 0000 4152 
+
+  0x00000156bf28dbf0: ;   {runtime_call DeoptimizationBlob}
+  0x00000156bf28dbf0: e98b 6a04 | 07f4 f4f4 
+[/MachCode]
+
+
+Compiled method (c1) 22090 3109       3       javax.swing.RepaintManager::paint (94 bytes)
+ total in heap  [0x00000156bf27ad08,0x00000156bf27b730] = 2600
+ relocation     [0x00000156bf27ade0,0x00000156bf27ae90] = 176
+ main code      [0x00000156bf27aea0,0x00000156bf27b648] = 1960
+ stub code      [0x00000156bf27b648,0x00000156bf27b6c0] = 120
+ metadata       [0x00000156bf27b6c0,0x00000156bf27b730] = 112
+ immutable data [0x000001572a912ca0,0x000001572a912ef8] = 600
+ dependencies   [0x000001572a912ca0,0x000001572a912cc0] = 32
+ nul chk table  [0x000001572a912cc0,0x000001572a912ce8] = 40
+ scopes pcs     [0x000001572a912ce8,0x000001572a912de8] = 256
+ scopes data    [0x000001572a912de8,0x000001572a912ef8] = 272
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Instructions begin]
+  0x00000156bf27aea0: 660f 1f84 | 0000 0000 | 0066 0f1f | 8400 0000 | 0000 448b | 5208 443b 
+
+  0x00000156bf27aeb8: ;   {runtime_call ic_miss_stub}
+  0x00000156bf27aeb8: 5008 0f85 | 2036 0507 
+[Verified Entry Point]
+  0x00000156bf27aec0: 8984 2400 | 80ff ff55 | 4881 ecb0 | 0000 0090 | 4181 7f20 | 0100 0000 
+
+  0x00000156bf27aed8: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000156bf27aed8: 7405 e861 | c803 074c | 8944 2470 | 4889 bc24 | 8000 0000 | 89b4 2488 | 0000 0089 | 8c24 8c00 
+  0x00000156bf27aef8: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27aef8: 0000 48bb | 4856 ba1d | 5701 0000 | 8b83 cc00 | 0000 83c0 | 0289 83cc | 0000 0025 | fe07 0000 
+  0x00000156bf27af18: 85c0 0f84 | ca05 0000 | 4c89 4c24 | 7848 8bda 
+
+  0x00000156bf27af28: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27af28: 48b8 4856 | ba1d 5701 | 0000 4883 | 8018 0100 | 0001 488b | da48 8bd3 | 4889 5c24 
+
+  0x00000156bf27af44: ;   {optimized virtual_call}
+  0x00000156bf27af44: 6866 90e8 
+
+  0x00000156bf27af48: ; ImmutableOopMap {[104]=Oop [112]=Oop [120]=Oop [128]=Oop }
+                      ;*invokevirtual getPaintManager {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@1 (line 1326)
+  0x00000156bf27af48: 94ab f6ff 
+
+  0x00000156bf27af4c: ;   {other}
+  0x00000156bf27af4c: 0f1f 8400 | 4402 0000 | 488b d048 | 8b44 2468 
+
+  0x00000156bf27af5c: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27af5c: 48be 4856 | ba1d 5701 | 0000 4883 | 8648 0100 | 0001 488d | b424 9000 | 0000 4c8b | 4424 684c 
+  0x00000156bf27af7c: 8946 0849 | 8b00 418b | bf18 0600 | 0081 ff68 | 0600 000f | 8d76 0500 | 004d 3b44 | 3ff8 0f84 
+  0x00000156bf27af9c: 2500 0000 | a802 0f85 | 6305 0000 | 488b f848 | 83e7 fe48 | 83c8 01f0 | 490f b138 | 0f85 4d05 
+  0x00000156bf27afbc: 0000 418b | bf18 0600 | 004d 8904 | 3f83 c708 | 4189 bf18 | 0600 0049 | ff87 5005 
+
+  0x00000156bf27afd8: ;   {metadata(method data for {method} {0x000001571d3a0e30} 'isPaintingThread' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf27afd8: 0000 48b8 | 700b b91d | 5701 0000 | 8bb0 cc00 | 0000 83c6 | 0289 b0cc | 0000 0081 | e6fe ff1f 
+  0x00000156bf27aff8: 0085 f60f | 841d 0500 
+
+  0x00000156bf27b000: ;   {metadata(method data for {method} {0x000001571d3a0e30} 'isPaintingThread' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b000: 0048 b870 | 0bb9 1d57 | 0100 0048 | 8380 1801 | 0000 0141 | 8b40 4048 | c1e0 0349 | 8bb7 8803 
+  0x00000156bf27b020: 0000 488b | 3648 3bf0 
+
+  0x00000156bf27b028: ;   {metadata(method data for {method} {0x000001571d3a0e30} 'isPaintingThread' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b028: 48b8 700b | b91d 5701 | 0000 be28 | 0100 0075 | 05be 3801 | 0000 488b | 3c30 488d | 7f01 4889 
+  0x00000156bf27b048: 3c30 0f85 | 1a00 0000 
+
+  0x00000156bf27b050: ;   {metadata(method data for {method} {0x000001571d3a0e30} 'isPaintingThread' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b050: 48b8 700b | b91d 5701 | 0000 ff80 | 4801 0000 | b801 0000 | 00e9 0500 | 0000 b800 | 0000 0048 
+  0x00000156bf27b070: 8bf0 83e6 | 0148 8d84 | 2490 0000 | 0048 8b48 | 0841 8bbf | 1806 0000 | 493b 4c3f | f80f 85ac 
+  0x00000156bf27b090: 0400 0041 | 83af 1806 | 0000 0849 | 3b4c 3ff0 | 0f84 2a00 | 0000 488b | 01a8 020f | 8512 0000 
+  0x00000156bf27b0b0: 0048 8bf8 | 4883 cf01 | f048 0fb1 | 390f 840d | 0000 0041 | 8387 1806 | 0000 08e9 | 6f04 0000 
+  0x00000156bf27b0d0: 49ff 8f50 | 0500 0085 
+
+  0x00000156bf27b0d8: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b0d8: f648 be48 | 56ba 1d57 | 0100 00bf | 7801 0000 | 7505 bf88 | 0100 0048 | 8b04 3e48 | 8d40 0148 
+  0x00000156bf27b0f8: 8904 3e0f | 8560 0100 | 0048 3b02 
+
+  0x00000156bf27b104: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b104: 488b f248 | bf48 56ba | 1d57 0100 | 0048 8387 | 9801 0000 | 018b 7208 | 49ba 0000 | 00dc 5601 
+  0x00000156bf27b124: 0000 4903 | f248 8b76 | 7048 8b36 
+
+  0x00000156bf27b130: ;   {oop(a 'java/lang/Class'{0x000000060c2314a8} = 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf27b130: 49ba a814 | 230c 0600 | 0000 493b 
+
+  0x00000156bf27b13c: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b13c: f248 be48 | 56ba 1d57 | 0100 00bf | c801 0000 | 7405 bfd8 | 0100 0048 | 8b04 3e48 | 8d40 0148 
+  0x00000156bf27b15c: 8904 3e0f | 84fc 0000 
+
+  0x00000156bf27b164: ;   {metadata('javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf27b164: 0048 bae8 | 5801 dd56 | 0100 0049 | 8b87 b801 | 0000 488d | 7818 493b | bfc8 0100 | 000f 87d3 
+  0x00000156bf27b184: 0300 0049 | 89bf b801 | 0000 48c7 | 0001 0000 | 0048 8bca | 49ba 0000 | 00dc 5601 | 0000 492b 
+  0x00000156bf27b1a4: ca89 4808 | 4833 c989 | 480c 4833 | c948 8948 | 104c 8bc8 
+
+  0x00000156bf27b1b8: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b1b8: 48bf 4856 | ba1d 5701 | 0000 4883 | 87e8 0100 
+
+  0x00000156bf27b1c8: ;   {metadata(method data for {method} {0x000001571d3bbec0} '<init>' '()V' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf27b1c8: 0001 49b9 | 807d bb1d | 5701 0000 | 418b b9cc | 0000 0083 | c702 4189 | b9cc 0000 | 0081 e7fe 
+  0x00000156bf27b1e8: ff1f 0085 | ff0f 8474 | 0300 004c 
+
+  0x00000156bf27b1f4: ;   {metadata(method data for {method} {0x000001571d3bbec0} '<init>' '()V' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf27b1f4: 8bc8 48bf | 807d bb1d | 5701 0000 | 4883 8718 | 0100 0001 
+
+  0x00000156bf27b208: ;   {metadata(method data for {method} {0x00000156dc49b1d0} '<init>' '()V' in 'java/lang/Object')}
+  0x00000156bf27b208: 49b9 5066 | 001d 5701 | 0000 418b | b9cc 0000 | 0083 c702 | 4189 b9cc | 0000 0081 | e7fe ff1f 
+  0x00000156bf27b228: 0085 ff0f | 8457 0300 | 0045 0fbe | 4f38 4585 | c90f 856a | 0300 004d | 8bd0 49c1 | ea03 4489 
+  0x00000156bf27b248: 5010 4c8b | c84d 33c8 | 49c1 e916 | 4983 f900 | 0f85 6b03 | 0000 488b | d08b 8424 | c800 0000 
+  0x00000156bf27b268: 8b9c 24c0 | 0000 004c | 8b4c 2478 
+
+  0x00000156bf27b274: ; implicit exception: dispatches to 0x00000156bf27b5e1
+  0x00000156bf27b274: 483b 024c 
+
+  0x00000156bf27b278: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b278: 8bc2 48bf | 4856 ba1d | 5701 0000 | 4883 8708 | 0200 0001 | 4c8b 4424 | 7048 8bbc | 2480 0000 
+  0x00000156bf27b298: 008b b424 | 8800 0000 | 8b8c 248c | 0000 0089 | 1c24 8944 
+
+  0x00000156bf27b2ac: ;   {optimized virtual_call}
+  0x00000156bf27b2ac: 2408 90e8 
+
+  0x00000156bf27b2b0: ; ImmutableOopMap {[112]=Oop [128]=Oop }
+                      ;*invokevirtual paint {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@52 (line 1336)
+  0x00000156bf27b2b0: 0c14 0100 
+
+  0x00000156bf27b2b4: ;   {other}
+  0x00000156bf27b2b4: 0f1f 8400 | ac05 0001 
+
+  0x00000156bf27b2bc: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b2bc: 85c0 49b8 | 4856 ba1d | 5701 0000 | 41b9 2802 | 0000 7506 | 41b9 3802 | 0000 4b8b | 3c08 488d 
+  0x00000156bf27b2dc: 7f01 4b89 | 3c08 0f85 | 6401 0000 | 8b84 24c8 | 0000 008b | 9c24 c000 | 0000 8b8c | 248c 0000 
+  0x00000156bf27b2fc: 008b b424 | 8800 0000 | 488b bc24 | 8000 0000 
+
+  0x00000156bf27b30c: ; implicit exception: dispatches to 0x00000156bf27b5e6
+  0x00000156bf27b30c: 483b 074c 
+
+  0x00000156bf27b310: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b310: 8bcf 48ba | 4856 ba1d | 5701 0000 
+
+  0x00000156bf27b31c: ;   {metadata('sun/java2d/SunGraphics2D')}
+  0x00000156bf27b31c: 49ba 0051 | 0edd 5601 | 0000 4c89 | 9250 0200 | 0048 8382 | 5802 0000 | 014c 8bc6 | 4c8b c94c 
+  0x00000156bf27b33c: 8bef 488b | fb48 8bf0 
+
+  0x00000156bf27b344: ;   {optimized virtual_call}
+  0x00000156bf27b344: 498b d5e8 
+
+  0x00000156bf27b348: ; ImmutableOopMap {[112]=Oop [128]=Oop }
+                      ;*invokevirtual setClip {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@67 (line 1338)
+  0x00000156bf27b348: 9434 0507 
+
+  0x00000156bf27b34c: ;   {other}
+  0x00000156bf27b34c: 0f1f 8400 | 4406 0002 | 488b 5424 | 7048 3b02 
+
+  0x00000156bf27b35c: ;   {metadata(method data for {method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b35c: 4c8b c249 | b948 56ba | 1d57 0100 | 0045 8b40 | 0849 ba00 | 0000 dc56 | 0100 004d | 03c2 4d3b 
+  0x00000156bf27b37c: 8180 0200 | 0075 0d49 | 8381 8802 | 0000 01e9 | 6000 0000 | 4d3b 8190 | 0200 0075 | 0d49 8381 
+  0x00000156bf27b39c: 9802 0000 | 01e9 4a00 | 0000 4983 | b980 0200 | 0000 7517 | 4d89 8180 | 0200 0049 | c781 8802 
+  0x00000156bf27b3bc: 0000 0100 | 0000 e929 | 0000 0049 | 83b9 9002 | 0000 0075 | 174d 8981 | 9002 0000 | 49c7 8198 
+  0x00000156bf27b3dc: 0200 0001 | 0000 00e9 | 0800 0000 | 4983 8178 | 0200 0001 | 8b9c 2488 | 0000 0003 | 9c24 c000 
+  0x00000156bf27b3fc: 0000 8b84 | 248c 0000 | 0003 8424 | c800 0000 | 4c8b 8424 | 8000 0000 | 448b 8c24 | 8800 0000 
+  0x00000156bf27b41c: 8bbc 248c | 0000 008b | b424 c000 | 0000 8b8c | 24c8 0000 | 0089 1c24 | 8944 2408 | 0f1f 8000 
+  0x00000156bf27b43c: ;   {optimized virtual_call}
+  0x00000156bf27b43c: 0000 00e8 
+
+  0x00000156bf27b440: ; ImmutableOopMap {}
+                      ;*invokevirtual paintToOffscreen {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@90 (line 1339)
+  0x00000156bf27b440: 9c33 0507 
+
+  0x00000156bf27b444: ;   {other}
+  0x00000156bf27b444: 0f1f 8400 | 3c07 0003 | 4881 c4b0 | 0000 005d 
+
+  0x00000156bf27b454: ;   {poll_return}
+  0x00000156bf27b454: 493b a748 | 0400 000f | 878f 0100 | 00c3 498b | 8700 0500 | 004d 33d2 | 4d89 9700 | 0500 004d 
+  0x00000156bf27b474: 33d2 4d89 | 9708 0500 | 0048 8bf0 | 488d 8424 | 9000 0000 | 488b 5808 | 418b bf18 | 0600 0049 
+  0x00000156bf27b494: 3b5c 3ff8 | 0f85 6801 | 0000 4183 | af18 0600 | 0008 493b | 5c3f f00f | 842a 0000 | 0048 8b03 
+  0x00000156bf27b4b4: a802 0f85 | 1200 0000 | 488b f848 | 83cf 01f0 | 480f b13b | 0f84 0d00 | 0000 4183 | 8718 0600 
+  0x00000156bf27b4d4: 0008 e92b | 0100 0049 | ff8f 5005 | 0000 488b | c6e9 4f01 
+
+  0x00000156bf27b4e8: ;   {metadata({method} {0x000001571d3a0fb0} 'paint' '(Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljava/awt/Graphics;IIII)V' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b4e8: 0000 49ba | a80f 3a1d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf27b500: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf27b500: ffe8 5acc 
+
+  0x00000156bf27b504: ; ImmutableOopMap {rdx=Oop r8=Oop r9=Oop rdi=Oop [112]=Oop [128]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager::paint@-1 (line 1326)
+  0x00000156bf27b504: 1107 e915 | faff ff4c | 8944 2408 | 4889 3424 
+
+  0x00000156bf27b514: ;   {runtime_call monitorenter_nofpu Runtime1 stub}
+  0x00000156bf27b514: e847 a111 
+
+  0x00000156bf27b518: ; ImmutableOopMap {rdx=Oop r8=Oop [112]=Oop [120]=Oop [128]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager::isPaintingThread@-1 (line 1302)
+                      ; - javax.swing.RepaintManager::paint@7 (line 1327)
+  0x00000156bf27b518: 07e9 bcfa 
+
+  0x00000156bf27b51c: ;   {metadata({method} {0x000001571d3a0e30} 'isPaintingThread' '()Z' in 'javax/swing/RepaintManager')}
+  0x00000156bf27b51c: ffff 49ba | 280e 3a1d | 5701 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000156bf27b534: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf27b534: ffe8 26cc 
+
+  0x00000156bf27b538: ; ImmutableOopMap {rdx=Oop r8=Oop [112]=Oop [120]=Oop [128]=Oop [152]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager::isPaintingThread@-1 (line 1302)
+                      ; - javax.swing.RepaintManager::paint@7 (line 1327)
+  0x00000156bf27b538: 1107 e9c2 | faff ff48 | 8d84 2490 | 0000 0048 
+
+  0x00000156bf27b548: ;   {runtime_call monitorexit_nofpu Runtime1 stub}
+  0x00000156bf27b548: 8904 24e8 | 10ac 1107 | e982 fbff 
+
+  0x00000156bf27b554: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf27b554: ffe8 0668 
+
+  0x00000156bf27b558: ; ImmutableOopMap {rdx=Oop r8=Oop [112]=Oop [120]=Oop [128]=Oop }
+                      ;*invokevirtual getClass {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@15 (line 1331)
+  0x00000156bf27b558: 1107 488b 
+
+  0x00000156bf27b55c: ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00000156bf27b55c: d2e8 7e75 
+
+  0x00000156bf27b560: ; ImmutableOopMap {r8=Oop [112]=Oop [120]=Oop [128]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@24 (line 1332)
+  0x00000156bf27b560: 1107 e94e 
+
+  0x00000156bf27b564: ;   {metadata({method} {0x000001571d3bbec0} '<init>' '()V' in 'javax/swing/RepaintManager$PaintManager')}
+  0x00000156bf27b564: fcff ff49 | bab8 be3b | 1d57 0100 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000156bf27b57c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf27b57c: ffff e8dd 
+
+  0x00000156bf27b580: ; ImmutableOopMap {r8=Oop rax=Oop [112]=Oop [120]=Oop [128]=Oop }
+                      ;*synchronization entry
+                      ; - javax.swing.RepaintManager$PaintManager::<init>@-1 (line 1524)
+                      ; - javax.swing.RepaintManager::paint@28 (line 1332)
+  0x00000156bf27b580: cb11 07e9 | 6bfc ffff 
+
+  0x00000156bf27b588: ;   {metadata({method} {0x00000156dc49b1d0} '<init>' '()V' in 'java/lang/Object')}
+  0x00000156bf27b588: 49ba c8b1 | 49dc 5601 | 0000 4c89 | 5424 0848 | c704 24ff 
+
+  0x00000156bf27b59c: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000156bf27b59c: ffff ffe8 
+
+  0x00000156bf27b5a0: ; ImmutableOopMap {r8=Oop rax=Oop [112]=Oop [120]=Oop [128]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.Object::<init>@-1 (line 45)
+                      ; - javax.swing.RepaintManager$PaintManager::<init>@1 (line 1524)
+                      ; - javax.swing.RepaintManager::paint@28 (line 1332)
+  0x00000156bf27b5a0: bccb 1107 | e988 fcff | ff44 8b48 | 1049 c1e1 | 0349 83f9 | 000f 8484 | fcff ff4c 
+
+  0x00000156bf27b5bc: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000156bf27b5bc: 890c 24e8 | 9cd1 1107 | e976 fcff | ff49 83f8 | 000f 848b | fcff ff48 
+
+  0x00000156bf27b5d4: ;   {runtime_call g1_post_barrier_slow}
+  0x00000156bf27b5d4: 8904 24e8 | 84d4 1107 | e97d fcff 
+
+  0x00000156bf27b5e0: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf27b5e0: ffe8 7a67 
+
+  0x00000156bf27b5e4: ; ImmutableOopMap {rdx=Oop r9=Oop [112]=Oop [128]=Oop }
+                      ;*invokevirtual paint {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@52 (line 1336)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf27b5e4: 1107 e875 
+
+  0x00000156bf27b5e8: ; ImmutableOopMap {rdi=Oop [112]=Oop [128]=Oop }
+                      ;*invokevirtual setClip {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@67 (line 1338)
+                      ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000156bf27b5e8: 6711 07e8 
+
+  0x00000156bf27b5ec: ; ImmutableOopMap {rdx=Oop [112]=Oop [128]=Oop }
+                      ;*invokevirtual paintToOffscreen {reexecute=0 rethrow=0 return_oop=0}
+                      ; - javax.swing.RepaintManager::paint@90 (line 1339)
+  0x00000156bf27b5ec: 7067 1107 
+
+  0x00000156bf27b5f0: ;   {internal_word}
+  0x00000156bf27b5f0: 49ba 54b4 | 27bf 5601 | 0000 4d89 | 9760 0400 
+
+  0x00000156bf27b600: ;   {runtime_call SafepointBlob}
+  0x00000156bf27b600: 00e9 da9d | 0507 488d | 8424 9000 | 0000 4889 
+
+  0x00000156bf27b610: ;   {runtime_call monitorexit_nofpu Runtime1 stub}
+  0x00000156bf27b610: 0424 e849 | ab11 07e9 | c6fe ffff | 498b 8700 | 0500 0049 | c787 0005 | 0000 0000 | 0000 49c7 
+  0x00000156bf27b630: 8708 0500 | 0000 0000 | 0048 81c4 | b000 0000 
+
+  0x00000156bf27b640: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000156bf27b640: 5de9 1a46 | 1107 f4f4 
+[Stub Code]
+  0x00000156bf27b648: ;   {no_reloc}
+  0x00000156bf27b648: 0f1f 4400 
+
+  0x00000156bf27b64c: ;   {static_stub}
+  0x00000156bf27b64c: 0048 bbf8 | c03b 1d57 
+
+  0x00000156bf27b654: ;   {runtime_call I2C/C2I adapters}
+  0x00000156bf27b654: 0100 00e9 | fe35 2807 
+
+  0x00000156bf27b65c: ;   {static_stub}
+  0x00000156bf27b65c: 9048 bb00 | 0000 0000 
+
+  0x00000156bf27b664: ;   {runtime_call nmethod}
+  0x00000156bf27b664: 0000 00e9 | fbff ffff 
+
+  0x00000156bf27b66c: ;   {static_stub}
+  0x00000156bf27b66c: 9048 bb00 | 0000 0000 
+
+  0x00000156bf27b674: ;   {runtime_call nmethod}
+  0x00000156bf27b674: 0000 00e9 | fbff ffff 
+
+  0x00000156bf27b67c: ;   {static_stub}
+  0x00000156bf27b67c: 48bb 0000 | 0000 0000 
+
+  0x00000156bf27b684: ;   {runtime_call nmethod}
+  0x00000156bf27b684: 0000 e9fb 
+
+  0x00000156bf27b688: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000156bf27b688: ffff ffe8 | 5089 1107 
+
+  0x00000156bf27b690: ;   {external_word}
+  0x00000156bf27b690: 48b9 30d5 | 35fc f87f | 0000 4883 
+
+  0x00000156bf27b69c: ;   {runtime_call}
+  0x00000156bf27b69c: e4f0 48b8 | 704a fcfb | f87f 0000 
+
+  0x00000156bf27b6a8: ;   {section_word}
+  0x00000156bf27b6a8: ffd0 f449 | baab b627 | bf56 0100 
+
+  0x00000156bf27b6b4: ;   {runtime_call DeoptimizationBlob}
+  0x00000156bf27b6b4: 0041 52e9 | c48f 0507 | f4f4 f4f4 
+[/MachCode]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001572a705520, length=20, elements={
+0x00000156db4944b0, 0x00000156db495270, 0x00000156db496320, 0x00000156db496f80,
+0x00000156db4999f0, 0x00000156db4a2590, 0x00000156db4c9ab0, 0x00000156db4cc6a0,
+0x00000156db5a8f10, 0x00000156db6e8d80, 0x00000156db6e93f0, 0x0000015721006950,
+0x0000015721007440, 0x0000015721566fb0, 0x0000015721567cd0, 0x0000015721565c00,
+0x0000015721566290, 0x0000015721564850, 0x0000015721566920, 0x000001572a12e5b0
+}
+
+Java Threads: ( => current thread )
+  0x00000156db4944b0 JavaThread "Reference Handler"          daemon [_thread_blocked, id=34956, stack(0x0000003906100000,0x0000003906200000) (1024K)]
+  0x00000156db495270 JavaThread "Finalizer"                  daemon [_thread_blocked, id=14704, stack(0x0000003906200000,0x0000003906300000) (1024K)]
+  0x00000156db496320 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=25484, stack(0x0000003906300000,0x0000003906400000) (1024K)]
+  0x00000156db496f80 JavaThread "Attach Listener"            daemon [_thread_blocked, id=10496, stack(0x0000003906400000,0x0000003906500000) (1024K)]
+  0x00000156db4999f0 JavaThread "Service Thread"             daemon [_thread_blocked, id=22392, stack(0x0000003906500000,0x0000003906600000) (1024K)]
+  0x00000156db4a2590 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=32680, stack(0x0000003906600000,0x0000003906700000) (1024K)]
+  0x00000156db4c9ab0 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=3296, stack(0x0000003906700000,0x0000003906800000) (1024K)]
+  0x00000156db4cc6a0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=22936, stack(0x0000003906800000,0x0000003906900000) (1024K)]
+  0x00000156db5a8f10 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=35552, stack(0x0000003906900000,0x0000003906a00000) (1024K)]
+  0x00000156db6e8d80 JavaThread "Monitor Ctrl-Break"         daemon [_thread_in_native, id=32460, stack(0x0000003906c00000,0x0000003906d00000) (1024K)]
+  0x00000156db6e93f0 JavaThread "Notification Thread"        daemon [_thread_blocked, id=21928, stack(0x0000003906d00000,0x0000003906e00000) (1024K)]
+  0x0000015721006950 JavaThread "Java2D Disposer"            daemon [_thread_blocked, id=29636, stack(0x0000003906e00000,0x0000003906f00000) (1024K)]
+  0x0000015721007440 JavaThread "AWT-Shutdown"                      [_thread_blocked, id=4372, stack(0x0000003906f00000,0x0000003907000000) (1024K)]
+=>0x0000015721566fb0 JavaThread "AWT-EventQueue-0"                  [_thread_in_native, id=29852, stack(0x0000003908100000,0x0000003908200000) (1024K)]
+  0x0000015721567cd0 JavaThread "Thread-0"                          [_thread_blocked, id=30216, stack(0x0000003908510000,0x0000003908610000) (1024K)]
+  0x0000015721565c00 JavaThread "DestroyJavaVM"                     [_thread_blocked, id=22056, stack(0x0000003905900000,0x0000003905a00000) (1024K)]
+  0x0000015721566290 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=32312, stack(0x0000003908810000,0x0000003908910000) (1024K)]
+  0x0000015721564850 JavaThread "Direct Clip"                daemon [_thread_blocked, id=2388, stack(0x0000003908c10000,0x0000003908d10000) (1024K)]
+  0x0000015721566920 JavaThread "Direct Clip"                daemon [_thread_blocked, id=36492, stack(0x0000003909010000,0x0000003909110000) (1024K)]
+  0x000001572a12e5b0 JavaThread "SIGINT handler"             daemon [_thread_blocked, id=3396, stack(0x0000003906a00000,0x0000003906b00000) (1024K)]
+Total: 20
+
+Other Threads:
+  0x00000156da8c8c70 VMThread "VM Thread"                           [id=11756, stack(0x0000003906000000,0x0000003906100000) (1024K)]
+  0x00000156da8b5420 WatcherThread "VM Periodic Task Thread"        [id=25152, stack(0x0000003905f00000,0x0000003906000000) (1024K)]
+  0x00000156b679f100 WorkerThread "GC Thread#0"                     [id=15088, stack(0x0000003905a00000,0x0000003905b00000) (1024K)]
+  0x0000015729482b40 WorkerThread "GC Thread#1"                     [id=35020, stack(0x0000003907600000,0x0000003907700000) (1024K)]
+  0x00000157215da730 WorkerThread "GC Thread#2"                     [id=19668, stack(0x0000003907700000,0x0000003907800000) (1024K)]
+  0x0000015729490d30 WorkerThread "GC Thread#3"                     [id=11868, stack(0x0000003907800000,0x0000003907900000) (1024K)]
+  0x00000157297597e0 WorkerThread "GC Thread#4"                     [id=6912, stack(0x0000003907900000,0x0000003907a00000) (1024K)]
+  0x000001572979b730 WorkerThread "GC Thread#5"                     [id=30316, stack(0x0000003907a00000,0x0000003907b00000) (1024K)]
+  0x000001572979b380 WorkerThread "GC Thread#6"                     [id=30516, stack(0x0000003907b00000,0x0000003907c00000) (1024K)]
+  0x000001572979ac20 WorkerThread "GC Thread#7"                     [id=8256, stack(0x0000003907c00000,0x0000003907d00000) (1024K)]
+  0x0000015729799d60 WorkerThread "GC Thread#8"                     [id=25920, stack(0x0000003907d00000,0x0000003907e00000) (1024K)]
+  0x000001572979a110 WorkerThread "GC Thread#9"                     [id=29212, stack(0x0000003907e00000,0x0000003907f00000) (1024K)]
+  0x000001572979afd0 WorkerThread "GC Thread#10"                    [id=14132, stack(0x0000003907f00000,0x0000003908000000) (1024K)]
+  0x000001572979a4c0 WorkerThread "GC Thread#11"                    [id=37508, stack(0x0000003908000000,0x0000003908100000) (1024K)]
+  0x0000015729493bd0 WorkerThread "GC Thread#12"                    [id=13044, stack(0x0000003908300000,0x0000003908400000) (1024K)]
+  0x00000156b67b39d0 ConcurrentGCThread "G1 Main Marker"            [id=12872, stack(0x0000003905b00000,0x0000003905c00000) (1024K)]
+  0x00000156b67b44e0 WorkerThread "G1 Conc#0"                       [id=27008, stack(0x0000003905c00000,0x0000003905d00000) (1024K)]
+  0x00000156da78a250 ConcurrentGCThread "G1 Refine#0"               [id=19436, stack(0x0000003905d00000,0x0000003905e00000) (1024K)]
+  0x00000156da78add0 ConcurrentGCThread "G1 Service"                [id=27052, stack(0x0000003905e00000,0x0000003905f00000) (1024K)]
+Total: 19
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x000000060c000000, size: 8000 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x00000156dc000000-0x00000156dcd70000-0x00000156dcd70000), size 14090240, SharedBaseAddress: 0x00000156dc000000, ArchiveRelocationMode: 1.
+Compressed class space mapped at: 0x00000156dd000000-0x000001571d000000, reserved size: 1073741824
+Narrow klass base: 0x00000156dc000000, Narrow klass shift: 0, Narrow klass range: 0x41000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 32 size 80 Howl #buckets 8 coarsen threshold 7372 Howl Bitmap #cards 1024 size 144 coarsen threshold 921 Card regions per heap region 1 cards per card region 8192
+ CPUs: 16 total, 16 available
+ Memory: 31995M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 4M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 500M
+ Heap Max Capacity: 8000M
+ Pre-touch: Disabled
+ Parallel Workers: 13
+ Concurrent Workers: 3
+ Concurrent Refinement Workers: 13
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 49939K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 9 young (36864K), 2 survivors (8192K)
+ Metaspace       used 12755K, committed 13376K, reserved 1114112K
+  class space    used 1425K, committed 1728K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x000000060c000000, 0x000000060c400000, 0x000000060c400000|100%| O|  |TAMS 0x000000060c000000| PB 0x000000060c000000| Untracked |  0
+|   1|0x000000060c400000, 0x000000060c800000, 0x000000060c800000|100%| O|  |TAMS 0x000000060c400000| PB 0x000000060c400000| Untracked |  0
+|   2|0x000000060c800000, 0x000000060cc00000, 0x000000060cc00000|100%| O|  |TAMS 0x000000060c800000| PB 0x000000060c800000| Untracked |  0
+|   3|0x000000060cc00000, 0x000000060d000000, 0x000000060d000000|100%| O|  |TAMS 0x000000060cc00000| PB 0x000000060cc00000| Untracked |  0
+|   4|0x000000060d000000, 0x000000060d0c4ee0, 0x000000060d400000| 19%| O|  |TAMS 0x000000060d000000| PB 0x000000060d000000| Untracked |  0
+|   5|0x000000060d400000, 0x000000060d400000, 0x000000060d800000|  0%| F|  |TAMS 0x000000060d400000| PB 0x000000060d400000| Untracked |  0
+|   6|0x000000060d800000, 0x000000060d800000, 0x000000060dc00000|  0%| F|  |TAMS 0x000000060d800000| PB 0x000000060d800000| Untracked |  0
+|   7|0x000000060dc00000, 0x000000060dc00000, 0x000000060e000000|  0%| F|  |TAMS 0x000000060dc00000| PB 0x000000060dc00000| Untracked |  0
+|   8|0x000000060e000000, 0x000000060e000000, 0x000000060e400000|  0%| F|  |TAMS 0x000000060e000000| PB 0x000000060e000000| Untracked |  0
+|   9|0x000000060e400000, 0x000000060e400000, 0x000000060e800000|  0%| F|  |TAMS 0x000000060e400000| PB 0x000000060e400000| Untracked |  0
+|  10|0x000000060e800000, 0x000000060e800000, 0x000000060ec00000|  0%| F|  |TAMS 0x000000060e800000| PB 0x000000060e800000| Untracked |  0
+|  11|0x000000060ec00000, 0x000000060ec00000, 0x000000060f000000|  0%| F|  |TAMS 0x000000060ec00000| PB 0x000000060ec00000| Untracked |  0
+|  12|0x000000060f000000, 0x000000060f000000, 0x000000060f400000|  0%| F|  |TAMS 0x000000060f000000| PB 0x000000060f000000| Untracked |  0
+|  13|0x000000060f400000, 0x000000060f400000, 0x000000060f800000|  0%| F|  |TAMS 0x000000060f400000| PB 0x000000060f400000| Untracked |  0
+|  14|0x000000060f800000, 0x000000060f800000, 0x000000060fc00000|  0%| F|  |TAMS 0x000000060f800000| PB 0x000000060f800000| Untracked |  0
+|  15|0x000000060fc00000, 0x000000060fc00000, 0x0000000610000000|  0%| F|  |TAMS 0x000000060fc00000| PB 0x000000060fc00000| Untracked |  0
+|  16|0x0000000610000000, 0x0000000610000000, 0x0000000610400000|  0%| F|  |TAMS 0x0000000610000000| PB 0x0000000610000000| Untracked |  0
+|  17|0x0000000610400000, 0x0000000610400000, 0x0000000610800000|  0%| F|  |TAMS 0x0000000610400000| PB 0x0000000610400000| Untracked |  0
+|  18|0x0000000610800000, 0x0000000610800000, 0x0000000610c00000|  0%| F|  |TAMS 0x0000000610800000| PB 0x0000000610800000| Untracked |  0
+|  19|0x0000000610c00000, 0x0000000610c00000, 0x0000000611000000|  0%| F|  |TAMS 0x0000000610c00000| PB 0x0000000610c00000| Untracked |  0
+|  20|0x0000000611000000, 0x0000000611000000, 0x0000000611400000|  0%| F|  |TAMS 0x0000000611000000| PB 0x0000000611000000| Untracked |  0
+|  21|0x0000000611400000, 0x0000000611400000, 0x0000000611800000|  0%| F|  |TAMS 0x0000000611400000| PB 0x0000000611400000| Untracked |  0
+|  22|0x0000000611800000, 0x0000000611800000, 0x0000000611c00000|  0%| F|  |TAMS 0x0000000611800000| PB 0x0000000611800000| Untracked |  0
+|  23|0x0000000611c00000, 0x0000000611c00000, 0x0000000612000000|  0%| F|  |TAMS 0x0000000611c00000| PB 0x0000000611c00000| Untracked |  0
+|  24|0x0000000612000000, 0x0000000612000000, 0x0000000612400000|  0%| F|  |TAMS 0x0000000612000000| PB 0x0000000612000000| Untracked |  0
+|  25|0x0000000612400000, 0x0000000612400000, 0x0000000612800000|  0%| F|  |TAMS 0x0000000612400000| PB 0x0000000612400000| Untracked |  0
+|  26|0x0000000612800000, 0x0000000612800000, 0x0000000612c00000|  0%| F|  |TAMS 0x0000000612800000| PB 0x0000000612800000| Untracked |  0
+|  27|0x0000000612c00000, 0x0000000612c00000, 0x0000000613000000|  0%| F|  |TAMS 0x0000000612c00000| PB 0x0000000612c00000| Untracked |  0
+|  28|0x0000000613000000, 0x0000000613000000, 0x0000000613400000|  0%| F|  |TAMS 0x0000000613000000| PB 0x0000000613000000| Untracked |  0
+|  29|0x0000000613400000, 0x0000000613400000, 0x0000000613800000|  0%| F|  |TAMS 0x0000000613400000| PB 0x0000000613400000| Untracked |  0
+|  30|0x0000000613800000, 0x0000000613800000, 0x0000000613c00000|  0%| F|  |TAMS 0x0000000613800000| PB 0x0000000613800000| Untracked |  0
+|  31|0x0000000613c00000, 0x0000000613c00000, 0x0000000614000000|  0%| F|  |TAMS 0x0000000613c00000| PB 0x0000000613c00000| Untracked |  0
+|  32|0x0000000614000000, 0x0000000614000000, 0x0000000614400000|  0%| F|  |TAMS 0x0000000614000000| PB 0x0000000614000000| Untracked |  0
+|  33|0x0000000614400000, 0x0000000614400000, 0x0000000614800000|  0%| F|  |TAMS 0x0000000614400000| PB 0x0000000614400000| Untracked |  0
+|  34|0x0000000614800000, 0x0000000614800000, 0x0000000614c00000|  0%| F|  |TAMS 0x0000000614800000| PB 0x0000000614800000| Untracked |  0
+|  35|0x0000000614c00000, 0x0000000614c00000, 0x0000000615000000|  0%| F|  |TAMS 0x0000000614c00000| PB 0x0000000614c00000| Untracked |  0
+|  36|0x0000000615000000, 0x0000000615000000, 0x0000000615400000|  0%| F|  |TAMS 0x0000000615000000| PB 0x0000000615000000| Untracked |  0
+|  37|0x0000000615400000, 0x0000000615400000, 0x0000000615800000|  0%| F|  |TAMS 0x0000000615400000| PB 0x0000000615400000| Untracked |  0
+|  38|0x0000000615800000, 0x0000000615800000, 0x0000000615c00000|  0%| F|  |TAMS 0x0000000615800000| PB 0x0000000615800000| Untracked |  0
+|  39|0x0000000615c00000, 0x0000000615c00000, 0x0000000616000000|  0%| F|  |TAMS 0x0000000615c00000| PB 0x0000000615c00000| Untracked |  0
+|  40|0x0000000616000000, 0x0000000616000000, 0x0000000616400000|  0%| F|  |TAMS 0x0000000616000000| PB 0x0000000616000000| Untracked |  0
+|  41|0x0000000616400000, 0x0000000616400000, 0x0000000616800000|  0%| F|  |TAMS 0x0000000616400000| PB 0x0000000616400000| Untracked |  0
+|  42|0x0000000616800000, 0x0000000616800000, 0x0000000616c00000|  0%| F|  |TAMS 0x0000000616800000| PB 0x0000000616800000| Untracked |  0
+|  43|0x0000000616c00000, 0x0000000616c00000, 0x0000000617000000|  0%| F|  |TAMS 0x0000000616c00000| PB 0x0000000616c00000| Untracked |  0
+|  44|0x0000000617000000, 0x0000000617000000, 0x0000000617400000|  0%| F|  |TAMS 0x0000000617000000| PB 0x0000000617000000| Untracked |  0
+|  45|0x0000000617400000, 0x0000000617400000, 0x0000000617800000|  0%| F|  |TAMS 0x0000000617400000| PB 0x0000000617400000| Untracked |  0
+|  46|0x0000000617800000, 0x0000000617800000, 0x0000000617c00000|  0%| F|  |TAMS 0x0000000617800000| PB 0x0000000617800000| Untracked |  0
+|  47|0x0000000617c00000, 0x0000000617c00000, 0x0000000618000000|  0%| F|  |TAMS 0x0000000617c00000| PB 0x0000000617c00000| Untracked |  0
+|  48|0x0000000618000000, 0x0000000618000000, 0x0000000618400000|  0%| F|  |TAMS 0x0000000618000000| PB 0x0000000618000000| Untracked |  0
+|  49|0x0000000618400000, 0x0000000618400000, 0x0000000618800000|  0%| F|  |TAMS 0x0000000618400000| PB 0x0000000618400000| Untracked |  0
+|  50|0x0000000618800000, 0x0000000618800000, 0x0000000618c00000|  0%| F|  |TAMS 0x0000000618800000| PB 0x0000000618800000| Untracked |  0
+|  51|0x0000000618c00000, 0x0000000618c00000, 0x0000000619000000|  0%| F|  |TAMS 0x0000000618c00000| PB 0x0000000618c00000| Untracked |  0
+|  52|0x0000000619000000, 0x0000000619000000, 0x0000000619400000|  0%| F|  |TAMS 0x0000000619000000| PB 0x0000000619000000| Untracked |  0
+|  53|0x0000000619400000, 0x0000000619400000, 0x0000000619800000|  0%| F|  |TAMS 0x0000000619400000| PB 0x0000000619400000| Untracked |  0
+|  54|0x0000000619800000, 0x0000000619800000, 0x0000000619c00000|  0%| F|  |TAMS 0x0000000619800000| PB 0x0000000619800000| Untracked |  0
+|  55|0x0000000619c00000, 0x0000000619c00000, 0x000000061a000000|  0%| F|  |TAMS 0x0000000619c00000| PB 0x0000000619c00000| Untracked |  0
+|  56|0x000000061a000000, 0x000000061a000000, 0x000000061a400000|  0%| F|  |TAMS 0x000000061a000000| PB 0x000000061a000000| Untracked |  0
+|  57|0x000000061a400000, 0x000000061a400000, 0x000000061a800000|  0%| F|  |TAMS 0x000000061a400000| PB 0x000000061a400000| Untracked |  0
+|  58|0x000000061a800000, 0x000000061a800000, 0x000000061ac00000|  0%| F|  |TAMS 0x000000061a800000| PB 0x000000061a800000| Untracked |  0
+|  59|0x000000061ac00000, 0x000000061ac00000, 0x000000061b000000|  0%| F|  |TAMS 0x000000061ac00000| PB 0x000000061ac00000| Untracked |  0
+|  60|0x000000061b000000, 0x000000061b000000, 0x000000061b400000|  0%| F|  |TAMS 0x000000061b000000| PB 0x000000061b000000| Untracked |  0
+|  61|0x000000061b400000, 0x000000061b400000, 0x000000061b800000|  0%| F|  |TAMS 0x000000061b400000| PB 0x000000061b400000| Untracked |  0
+|  62|0x000000061b800000, 0x000000061b800000, 0x000000061bc00000|  0%| F|  |TAMS 0x000000061b800000| PB 0x000000061b800000| Untracked |  0
+|  63|0x000000061bc00000, 0x000000061bc00000, 0x000000061c000000|  0%| F|  |TAMS 0x000000061bc00000| PB 0x000000061bc00000| Untracked |  0
+|  64|0x000000061c000000, 0x000000061c000000, 0x000000061c400000|  0%| F|  |TAMS 0x000000061c000000| PB 0x000000061c000000| Untracked |  0
+|  65|0x000000061c400000, 0x000000061c400000, 0x000000061c800000|  0%| F|  |TAMS 0x000000061c400000| PB 0x000000061c400000| Untracked |  0
+|  66|0x000000061c800000, 0x000000061c800000, 0x000000061cc00000|  0%| F|  |TAMS 0x000000061c800000| PB 0x000000061c800000| Untracked |  0
+|  67|0x000000061cc00000, 0x000000061cc00000, 0x000000061d000000|  0%| F|  |TAMS 0x000000061cc00000| PB 0x000000061cc00000| Untracked |  0
+|  68|0x000000061d000000, 0x000000061d000000, 0x000000061d400000|  0%| F|  |TAMS 0x000000061d000000| PB 0x000000061d000000| Untracked |  0
+|  69|0x000000061d400000, 0x000000061d400000, 0x000000061d800000|  0%| F|  |TAMS 0x000000061d400000| PB 0x000000061d400000| Untracked |  0
+|  70|0x000000061d800000, 0x000000061d800000, 0x000000061dc00000|  0%| F|  |TAMS 0x000000061d800000| PB 0x000000061d800000| Untracked |  0
+|  71|0x000000061dc00000, 0x000000061dc00000, 0x000000061e000000|  0%| F|  |TAMS 0x000000061dc00000| PB 0x000000061dc00000| Untracked |  0
+|  72|0x000000061e000000, 0x000000061e000000, 0x000000061e400000|  0%| F|  |TAMS 0x000000061e000000| PB 0x000000061e000000| Untracked |  0
+|  73|0x000000061e400000, 0x000000061e400000, 0x000000061e800000|  0%| F|  |TAMS 0x000000061e400000| PB 0x000000061e400000| Untracked |  0
+|  74|0x000000061e800000, 0x000000061e800000, 0x000000061ec00000|  0%| F|  |TAMS 0x000000061e800000| PB 0x000000061e800000| Untracked |  0
+|  75|0x000000061ec00000, 0x000000061ec00000, 0x000000061f000000|  0%| F|  |TAMS 0x000000061ec00000| PB 0x000000061ec00000| Untracked |  0
+|  76|0x000000061f000000, 0x000000061f000000, 0x000000061f400000|  0%| F|  |TAMS 0x000000061f000000| PB 0x000000061f000000| Untracked |  0
+|  77|0x000000061f400000, 0x000000061f400000, 0x000000061f800000|  0%| F|  |TAMS 0x000000061f400000| PB 0x000000061f400000| Untracked |  0
+|  78|0x000000061f800000, 0x000000061f800000, 0x000000061fc00000|  0%| F|  |TAMS 0x000000061f800000| PB 0x000000061f800000| Untracked |  0
+|  79|0x000000061fc00000, 0x000000061fc00000, 0x0000000620000000|  0%| F|  |TAMS 0x000000061fc00000| PB 0x000000061fc00000| Untracked |  0
+|  80|0x0000000620000000, 0x0000000620000000, 0x0000000620400000|  0%| F|  |TAMS 0x0000000620000000| PB 0x0000000620000000| Untracked |  0
+|  81|0x0000000620400000, 0x0000000620400000, 0x0000000620800000|  0%| F|  |TAMS 0x0000000620400000| PB 0x0000000620400000| Untracked |  0
+|  82|0x0000000620800000, 0x0000000620800000, 0x0000000620c00000|  0%| F|  |TAMS 0x0000000620800000| PB 0x0000000620800000| Untracked |  0
+|  83|0x0000000620c00000, 0x0000000620c00000, 0x0000000621000000|  0%| F|  |TAMS 0x0000000620c00000| PB 0x0000000620c00000| Untracked |  0
+|  84|0x0000000621000000, 0x0000000621000000, 0x0000000621400000|  0%| F|  |TAMS 0x0000000621000000| PB 0x0000000621000000| Untracked |  0
+|  85|0x0000000621400000, 0x0000000621400000, 0x0000000621800000|  0%| F|  |TAMS 0x0000000621400000| PB 0x0000000621400000| Untracked |  0
+|  86|0x0000000621800000, 0x0000000621800000, 0x0000000621c00000|  0%| F|  |TAMS 0x0000000621800000| PB 0x0000000621800000| Untracked |  0
+|  87|0x0000000621c00000, 0x0000000621c00000, 0x0000000622000000|  0%| F|  |TAMS 0x0000000621c00000| PB 0x0000000621c00000| Untracked |  0
+|  88|0x0000000622000000, 0x0000000622000000, 0x0000000622400000|  0%| F|  |TAMS 0x0000000622000000| PB 0x0000000622000000| Untracked |  0
+|  89|0x0000000622400000, 0x0000000622400000, 0x0000000622800000|  0%| F|  |TAMS 0x0000000622400000| PB 0x0000000622400000| Untracked |  0
+|  90|0x0000000622800000, 0x0000000622800000, 0x0000000622c00000|  0%| F|  |TAMS 0x0000000622800000| PB 0x0000000622800000| Untracked |  0
+|  91|0x0000000622c00000, 0x0000000622c00000, 0x0000000623000000|  0%| F|  |TAMS 0x0000000622c00000| PB 0x0000000622c00000| Untracked |  0
+|  92|0x0000000623000000, 0x0000000623000000, 0x0000000623400000|  0%| F|  |TAMS 0x0000000623000000| PB 0x0000000623000000| Untracked |  0
+|  93|0x0000000623400000, 0x0000000623400000, 0x0000000623800000|  0%| F|  |TAMS 0x0000000623400000| PB 0x0000000623400000| Untracked |  0
+|  94|0x0000000623800000, 0x0000000623800000, 0x0000000623c00000|  0%| F|  |TAMS 0x0000000623800000| PB 0x0000000623800000| Untracked |  0
+|  95|0x0000000623c00000, 0x0000000623c00000, 0x0000000624000000|  0%| F|  |TAMS 0x0000000623c00000| PB 0x0000000623c00000| Untracked |  0
+|  96|0x0000000624000000, 0x0000000624000000, 0x0000000624400000|  0%| F|  |TAMS 0x0000000624000000| PB 0x0000000624000000| Untracked |  0
+|  97|0x0000000624400000, 0x0000000624400000, 0x0000000624800000|  0%| F|  |TAMS 0x0000000624400000| PB 0x0000000624400000| Untracked |  0
+|  98|0x0000000624800000, 0x0000000624800000, 0x0000000624c00000|  0%| F|  |TAMS 0x0000000624800000| PB 0x0000000624800000| Untracked |  0
+|  99|0x0000000624c00000, 0x0000000624c00000, 0x0000000625000000|  0%| F|  |TAMS 0x0000000624c00000| PB 0x0000000624c00000| Untracked |  0
+| 100|0x0000000625000000, 0x0000000625000000, 0x0000000625400000|  0%| F|  |TAMS 0x0000000625000000| PB 0x0000000625000000| Untracked |  0
+| 101|0x0000000625400000, 0x0000000625400000, 0x0000000625800000|  0%| F|  |TAMS 0x0000000625400000| PB 0x0000000625400000| Untracked |  0
+| 102|0x0000000625800000, 0x0000000625800000, 0x0000000625c00000|  0%| F|  |TAMS 0x0000000625800000| PB 0x0000000625800000| Untracked |  0
+| 103|0x0000000625c00000, 0x0000000625c00000, 0x0000000626000000|  0%| F|  |TAMS 0x0000000625c00000| PB 0x0000000625c00000| Untracked |  0
+| 104|0x0000000626000000, 0x0000000626000000, 0x0000000626400000|  0%| F|  |TAMS 0x0000000626000000| PB 0x0000000626000000| Untracked |  0
+| 105|0x0000000626400000, 0x0000000626400000, 0x0000000626800000|  0%| F|  |TAMS 0x0000000626400000| PB 0x0000000626400000| Untracked |  0
+| 106|0x0000000626800000, 0x0000000626800000, 0x0000000626c00000|  0%| F|  |TAMS 0x0000000626800000| PB 0x0000000626800000| Untracked |  0
+| 107|0x0000000626c00000, 0x0000000626c00000, 0x0000000627000000|  0%| F|  |TAMS 0x0000000626c00000| PB 0x0000000626c00000| Untracked |  0
+| 108|0x0000000627000000, 0x0000000627000000, 0x0000000627400000|  0%| F|  |TAMS 0x0000000627000000| PB 0x0000000627000000| Untracked |  0
+| 109|0x0000000627400000, 0x0000000627400000, 0x0000000627800000|  0%| F|  |TAMS 0x0000000627400000| PB 0x0000000627400000| Untracked |  0
+| 110|0x0000000627800000, 0x0000000627800000, 0x0000000627c00000|  0%| F|  |TAMS 0x0000000627800000| PB 0x0000000627800000| Untracked |  0
+| 111|0x0000000627c00000, 0x0000000627c00000, 0x0000000628000000|  0%| F|  |TAMS 0x0000000627c00000| PB 0x0000000627c00000| Untracked |  0
+| 112|0x0000000628000000, 0x0000000628400000, 0x0000000628400000|100%| S|CS|TAMS 0x0000000628000000| PB 0x0000000628000000| Complete |  0
+| 113|0x0000000628400000, 0x0000000628800000, 0x0000000628800000|100%| S|CS|TAMS 0x0000000628400000| PB 0x0000000628400000| Complete |  0
+| 114|0x0000000628800000, 0x0000000628800000, 0x0000000628c00000|  0%| F|  |TAMS 0x0000000628800000| PB 0x0000000628800000| Untracked |  0
+| 115|0x0000000628c00000, 0x0000000628c00000, 0x0000000629000000|  0%| F|  |TAMS 0x0000000628c00000| PB 0x0000000628c00000| Untracked |  0
+| 116|0x0000000629000000, 0x0000000629000000, 0x0000000629400000|  0%| F|  |TAMS 0x0000000629000000| PB 0x0000000629000000| Untracked |  0
+| 117|0x0000000629400000, 0x0000000629400000, 0x0000000629800000|  0%| F|  |TAMS 0x0000000629400000| PB 0x0000000629400000| Untracked |  0
+| 118|0x0000000629800000, 0x00000006298790b8, 0x0000000629c00000| 11%| E|  |TAMS 0x0000000629800000| PB 0x0000000629800000| Complete |  0
+| 119|0x0000000629c00000, 0x000000062a000000, 0x000000062a000000|100%| E|CS|TAMS 0x0000000629c00000| PB 0x0000000629c00000| Complete |  0
+| 120|0x000000062a000000, 0x000000062a400000, 0x000000062a400000|100%| E|CS|TAMS 0x000000062a000000| PB 0x000000062a000000| Complete |  0
+| 121|0x000000062a400000, 0x000000062a800000, 0x000000062a800000|100%| E|CS|TAMS 0x000000062a400000| PB 0x000000062a400000| Complete |  0
+| 122|0x000000062a800000, 0x000000062ac00000, 0x000000062ac00000|100%| E|CS|TAMS 0x000000062a800000| PB 0x000000062a800000| Complete |  0
+| 123|0x000000062ac00000, 0x000000062b000000, 0x000000062b000000|100%| E|CS|TAMS 0x000000062ac00000| PB 0x000000062ac00000| Complete |  0
+| 124|0x000000062b000000, 0x000000062b400000, 0x000000062b400000|100%| E|CS|TAMS 0x000000062b000000| PB 0x000000062b000000| Complete |  0
+
+Card table byte_map: [0x00000156cf760000,0x00000156d0700000] _byte_map_base: 0x00000156cc700000
+
+Marking Bits: (CMBitMap*) 0x00000156b679f810
+ Bits: [0x00000156d0700000, 0x00000156d8400000)
+
+Polling page: 0x00000156b5ec0000
+
+Metaspace:
+
+Usage:
+  Non-class:     11.06 MB used.
+      Class:      1.39 MB used.
+       Both:     12.46 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,      11.38 MB ( 18%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,       1.69 MB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,      13.06 MB (  1%) committed. 
+
+Chunk freelists:
+   Non-Class:  4.44 MB
+       Class:  14.25 MB
+        Both:  18.69 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 718.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 209.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 900.
+num_chunk_merges: 0.
+num_chunk_splits: 551.
+num_chunks_enlarged: 230.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=119232Kb used=1129Kb max_used=1129Kb free=118102Kb
+ bounds [0x00000156c69c0000, 0x00000156c6c30000, 0x00000156cde30000]
+CodeHeap 'profiled nmethods': size=119104Kb used=4496Kb max_used=4496Kb free=114607Kb
+ bounds [0x00000156bee30000, 0x00000156bf2a0000, 0x00000156c6280000]
+CodeHeap 'non-nmethods': size=7424Kb used=1712Kb max_used=3435Kb free=5711Kb
+ bounds [0x00000156c6280000, 0x00000156c65f0000, 0x00000156c69c0000]
+CodeCache: size=245760Kb, used=7337Kb, max_used=9060Kb, free=238420Kb
+ total_blobs=3979, nmethods=3209, adapters=663, full_count=0
+Compilation: enabled, stopped_count=0, restarted_count=0
+
+Compilation events (20 events):
+Event: 18.863 Thread 0x00000156db4c9ab0 3200       4       java.awt.Component::getGraphics (124 bytes)
+Event: 18.883 Thread 0x00000156db4c9ab0 nmethod 3200 0x00000156c6ad4508 code [0x00000156c6ad4840, 0x00000156c6ad6980]
+Event: 19.830 Thread 0x00000156db4c9ab0 3201   !   4       sun.awt.AWTAutoShutdown::setToolkitBusy (124 bytes)
+Event: 19.832 Thread 0x00000156db4c9ab0 nmethod 3201 0x00000156c6ad6b08 code [0x00000156c6ad6c40, 0x00000156c6ad7280]
+Event: 20.947 Thread 0x00000156db4c9ab0 3202   !   4       DannyGermanSimulator.CollisionChecker::checkTile (661 bytes)
+Event: 20.957 Thread 0x00000156db4c9ab0 nmethod 3202 0x00000156c6ad7308 code [0x00000156c6ad75a0, 0x00000156c6ad8b30]
+Event: 21.164 Thread 0x00000156db4c9ab0 3203       4       DannyGermanSimulator.UI::drawPlayerLife (311 bytes)
+Event: 21.168 Thread 0x00000156db4c9ab0 nmethod 3203 0x00000156c6ad8b88 code [0x00000156c6ad8d20, 0x00000156c6ad9340]
+Event: 21.413 Thread 0x00000156db4c9ab0 3204       4       java.util.HashMap::afterNodeRemoval (1 bytes)
+Event: 21.413 Thread 0x00000156db4c9ab0 nmethod 3204 0x00000156c6ad9388 code [0x00000156c6ad9480, 0x00000156c6ad94f8]
+Event: 21.464 Thread 0x00000156db4c9ab0 3205       4       sun.java2d.pipe.BufferedPaints::setPaint (125 bytes)
+Event: 21.465 Thread 0x00000156db4c9ab0 nmethod 3205 0x00000156c6ad9688 code [0x00000156c6ad97a0, 0x00000156c6ad98e8]
+Event: 21.629 Thread 0x00000156db4c9ab0 3206       4       java.util.Random::next (47 bytes)
+Event: 21.630 Thread 0x00000156db4c9ab0 nmethod 3206 0x00000156c6ad9988 code [0x00000156c6ad9a80, 0x00000156c6ad9b78]
+Event: 21.697 Thread 0x00000156db4c9ab0 3207       4       java.util.concurrent.locks.AbstractQueuedSynchronizer$Node::setStatusRelaxed (12 bytes)
+Event: 21.697 Thread 0x00000156db4c9ab0 nmethod 3207 0x00000156c6ad9c88 code [0x00000156c6ad9d80, 0x00000156c6ad9e00]
+Event: 21.746 Thread 0x00000156db4c9ab0 3208       4       java.awt.geom.AffineTransform::scale (285 bytes)
+Event: 21.747 Thread 0x00000156db4c9ab0 nmethod 3208 0x00000156c6ad9f88 code [0x00000156c6ada0c0, 0x00000156c6ada248]
+Event: 21.934 Thread 0x00000156db4c9ab0 3209       4       sun.java2d.StateTrackableDelegate::markDirty (6 bytes)
+Event: 21.935 Thread 0x00000156db4c9ab0 nmethod 3209 0x00000156c6ada288 code [0x00000156c6ada380, 0x00000156c6ada450]
+
+GC Heap History (6 events):
+Event: 0.530 GC heap before
+{Heap before GC invocations=0 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 24576K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 6 young (24576K), 0 survivors (0K)
+ Metaspace       used 6891K, committed 7104K, reserved 1114112K
+  class space    used 710K, committed 832K, reserved 1048576K
+}
+Event: 0.533 GC heap after
+{Heap after GC invocations=1 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 6340K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 1 young (4096K), 1 survivors (4096K)
+ Metaspace       used 6891K, committed 7104K, reserved 1114112K
+  class space    used 710K, committed 832K, reserved 1048576K
+}
+Event: 0.779 GC heap before
+{Heap before GC invocations=1 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 26820K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 6 young (24576K), 1 survivors (4096K)
+ Metaspace       used 10459K, committed 10816K, reserved 1114112K
+  class space    used 1201K, committed 1344K, reserved 1048576K
+}
+Event: 0.782 GC heap after
+{Heap after GC invocations=2 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 17789K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 1 young (4096K), 1 survivors (4096K)
+ Metaspace       used 10459K, committed 10816K, reserved 1114112K
+  class space    used 1201K, committed 1344K, reserved 1048576K
+}
+Event: 10.897 GC heap before
+{Heap before GC invocations=2 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 58749K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 11 young (45056K), 1 survivors (4096K)
+ Metaspace       used 12736K, committed 13248K, reserved 1114112K
+  class space    used 1422K, committed 1664K, reserved 1048576K
+}
+Event: 10.899 GC heap after
+{Heap after GC invocations=3 (full 0):
+ garbage-first heap   total reserved 8192000K, committed 512000K, used 25363K [0x000000060c000000, 0x0000000800000000)
+  region size 4096K, 2 young (8192K), 2 survivors (8192K)
+ Metaspace       used 12736K, committed 13248K, reserved 1114112K
+  class space    used 1422K, committed 1664K, reserved 1048576K
+}
+
+Dll operation events (16 events):
+Event: 0.006 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\java.dll
+Event: 0.031 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\jsvml.dll
+Event: 0.059 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\zip.dll
+Event: 0.061 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\instrument.dll
+Event: 0.065 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\net.dll
+Event: 0.066 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\nio.dll
+Event: 0.069 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\zip.dll
+Event: 0.075 Loaded shared library C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\bin\breakgen64.dll
+Event: 0.082 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\extnet.dll
+Event: 0.086 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\jimage.dll
+Event: 0.089 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\awt.dll
+Event: 0.526 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\freetype.dll
+Event: 0.526 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\fontmanager.dll
+Event: 0.699 Loaded shared library C:\Windows\System32\ucrtbase.dll
+Event: 0.700 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\syslookup.dll
+Event: 1.818 Loaded shared library C:\Users\admin\.jdks\openjdk-23.0.1\bin\jsound.dll
+
+Deoptimization events (20 events):
+Event: 5.631 Thread 0x0000015721566fb0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000156c6ab2554 relative=0x00000000000005b4
+Event: 5.631 Thread 0x0000015721566fb0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000156c6ab2554 method=Entity.Entity.draw(Ljava/awt/Graphics2D;)V @ 215 c2
+Event: 5.631 Thread 0x0000015721566fb0 DEOPT PACKING pc=0x00000156c6ab2554 sp=0x00000039081fe400
+Event: 5.631 Thread 0x0000015721566fb0 DEOPT UNPACKING pc=0x00000156c62d4402 sp=0x00000039081fe378 mode 2
+Event: 8.231 Thread 0x0000015721566fb0 DEOPT PACKING pc=0x00000156bf1d2d01 sp=0x00000039081fedf0
+Event: 8.231 Thread 0x0000015721566fb0 DEOPT UNPACKING pc=0x00000156c62d4b22 sp=0x00000039081fe280 mode 0
+Event: 9.630 Thread 0x0000015721566fb0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000156c6ab88b4 relative=0x0000000000000854
+Event: 9.630 Thread 0x0000015721566fb0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000156c6ab88b4 method=Entity.Entity.draw(Ljava/awt/Graphics2D;)V @ 319 c2
+Event: 9.630 Thread 0x0000015721566fb0 DEOPT PACKING pc=0x00000156c6ab88b4 sp=0x00000039081fe460
+Event: 9.630 Thread 0x0000015721566fb0 DEOPT UNPACKING pc=0x00000156c62d4402 sp=0x00000039081fe3d8 mode 2
+Event: 11.479 Thread 0x0000015721567cd0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000156c6ac4530 relative=0x0000000000000ff0
+Event: 11.479 Thread 0x0000015721567cd0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000156c6ac4530 method=DannyGermanSimulator.CollisionChecker.checkTile(LEntity/Entity;)V @ 333 c2
+Event: 11.479 Thread 0x0000015721567cd0 DEOPT PACKING pc=0x00000156c6ac4530 sp=0x000000390860f2c0
+Event: 11.479 Thread 0x0000015721567cd0 DEOPT UNPACKING pc=0x00000156c62d4402 sp=0x000000390860f220 mode 2
+Event: 12.097 Thread 0x0000015721566fb0 DEOPT PACKING pc=0x00000156bf1f4606 sp=0x00000039081fe4b0
+Event: 12.097 Thread 0x0000015721566fb0 DEOPT UNPACKING pc=0x00000156c62d4b22 sp=0x00000039081fda28 mode 0
+Event: 13.596 Thread 0x0000015721566fb0 DEOPT PACKING pc=0x00000156bf1fe997 sp=0x00000039081fe370
+Event: 13.596 Thread 0x0000015721566fb0 DEOPT UNPACKING pc=0x00000156c62d4b22 sp=0x00000039081fd810 mode 0
+Event: 13.746 Thread 0x0000015721567cd0 DEOPT PACKING pc=0x00000156bf1f76f1 sp=0x000000390860f370
+Event: 13.746 Thread 0x0000015721567cd0 DEOPT UNPACKING pc=0x00000156c62d4b22 sp=0x000000390860e860 mode 0
+
+Classes loaded (20 events):
+Event: 1.848 Loading class com/sun/media/sound/DirectAudioDevice$DirectDL$Balance
+Event: 1.848 Loading class com/sun/media/sound/DirectAudioDevice$DirectDL$Balance done
+Event: 1.848 Loading class com/sun/media/sound/DirectAudioDevice$DirectDL$Pan
+Event: 1.848 Loading class com/sun/media/sound/DirectAudioDevice$DirectDL$Pan done
+Event: 1.848 Loading class javax/sound/sampled/LineEvent
+Event: 1.848 Loading class javax/sound/sampled/LineEvent done
+Event: 1.848 Loading class javax/sound/sampled/LineEvent$Type
+Event: 1.848 Loading class javax/sound/sampled/LineEvent$Type done
+Event: 1.848 Loading class com/sun/media/sound/EventDispatcher
+Event: 1.848 Loading class com/sun/media/sound/EventDispatcher done
+Event: 2.163 Loading class java/awt/image/BufferedImageOp
+Event: 2.163 Loading class java/awt/image/BufferedImageOp done
+Event: 21.933 Loading class jdk/internal/misc/Signal$1
+Event: 21.933 Loading class jdk/internal/misc/Signal$1 done
+Event: 21.933 Loading class sun/font/SunFontManager$7$1
+Event: 21.933 Loading class sun/font/SunFontManager$7$1 done
+Event: 21.933 Loading class java/util/WeakHashMap$KeyIterator
+Event: 21.934 Loading class java/util/WeakHashMap$HashIterator
+Event: 21.934 Loading class java/util/WeakHashMap$HashIterator done
+Event: 21.934 Loading class java/util/WeakHashMap$KeyIterator done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (20 events):
+Event: 0.810 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3a7e78}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, int, java.lang.Object)'> (0x000000062b3a7e78) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.810 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3abd50}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, int, java.lang.Object)'> (0x000000062b3abd50) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.810 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3af760}: 'int java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, int, java.lang.Object)'> (0x000000062b3af760) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.812 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3c82d0}: 'int java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, int, long)'> (0x000000062b3c82d0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.812 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3cefa0}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, int, long)'> (0x000000062b3cefa0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.812 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3d2590}: 'int java.lang.invoke.Invokers$Holder.exactInvoker(java.lang.Object, java.lang.Object, int, long)'> (0x000000062b3d2590) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.812 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062b3d6118}: 'int java.lang.invoke.DelegatingMethodHandle$Holder.delegate(java.lang.Object, java.lang.Object, int, long)'> (0x000000062b3d6118) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.816 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ac694c0}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, float, java.lang.Object, java.lang.Object, java.lang.Object, int, int, int, int, int, float, float, int, int, java.lang.Object, java.lang.Object)'> (0x000000062ac694c0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.817 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ac797f0}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, int, java.lang.Object)'> (0x000000062ac797f0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.817 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ac7ce20}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, int, java.lang.Object, java.lang.Object)'> (0x000000062ac7ce20) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.818 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ac80958}: 'java.lang.Object java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, long, java.lang.Object)'> (0x000000062ac80958) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.820 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062acb61e0}: 'java.lang.Object java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, long, long, long)'> (0x000000062acb61e0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.821 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062accbe18}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, long, long)'> (0x000000062accbe18) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.823 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ad52890}: 'void java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, java.lang.Object, long, long)'> (0x000000062ad52890) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.824 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ad5e308}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, long)'> (0x000000062ad5e308) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.827 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ad7bc90}: 'void java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, java.lang.Object, long, int)'> (0x000000062ad7bc90) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.828 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ade6528}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object, java.lang.Object, int, java.lang.Object, java.lang.Object)'> (0x000000062ade6528) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.829 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062adfa260}: 'int java.lang.invoke.DelegatingMethodHandle$Holder.reinvoke_L(java.lang.Object, java.lang.Object, java.lang.Object, long)'> (0x000000062adfa260) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 0.830 Thread 0x0000015721566fb0 Exception <a 'java/lang/NoSuchMethodError'{0x000000062ae1b5a0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, long)'> (0x000000062ae1b5a0) 
+thrown [s\open\src\hotspot\share\interpreter\linkResolver.cpp, line 796]
+Event: 4.831 Thread 0x0000015721566fb0 Implicit null exception at 0x00000156c6aa1541 to 0x00000156c6aa2558
+
+VM Operations (20 events):
+Event: 0.547 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.547 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.637 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.637 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.696 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.696 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.697 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.697 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.779 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause)
+Event: 0.782 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause) done
+Event: 0.798 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.798 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.801 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.801 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.809 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.809 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 0.837 Executing VM operation: HandshakeAllThreads (Deoptimize)
+Event: 0.837 Executing VM operation: HandshakeAllThreads (Deoptimize) done
+Event: 10.897 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause)
+Event: 10.899 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause) done
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (20 events):
+Event: 1.596 Thread 0x000001572a1cdc00 Thread exited: 0x000001572a1cdc00
+Event: 1.596 Thread 0x000001572af65410 Thread exited: 0x000001572af65410
+Event: 1.848 Thread 0x0000015721567cd0 Thread added: 0x0000015721566290
+Event: 1.860 Thread 0x0000015721567cd0 Thread added: 0x0000015721564850
+Event: 2.270 Thread 0x00000156db4c9ab0 Thread added: 0x000001572a1aba00
+Event: 2.498 Thread 0x000001572a1aba00 Thread exited: 0x000001572a1aba00
+Event: 4.830 Thread 0x0000015721567cd0 Thread added: 0x0000015721566920
+Event: 5.880 Thread 0x0000015729f65df0 Thread exited: 0x0000015729f65df0
+Event: 7.846 Thread 0x00000156db5dbc60 Thread exited: 0x00000156db5dbc60
+Event: 7.879 Thread 0x00000156db5db3e0 Thread exited: 0x00000156db5db3e0
+Event: 21.933 Thread 0x00000156db496320 Thread added: 0x000001572a12e5b0
+Event: 21.933 Thread 0x000001572a12e5b0 Thread added: 0x000001572a1313a0
+Event: 21.933 Thread 0x000001572a12e5b0 Thread added: 0x000001572a132de0
+Event: 21.933 Thread 0x000001572a12e5b0 Thread added: 0x000001572a134190
+Event: 21.933 Thread 0x000001572a12e5b0 Thread added: 0x000001572a12ec40
+Event: 21.933 Thread 0x000001572a132de0 Thread exited: 0x000001572a132de0
+Event: 21.934 Thread 0x000001572a134190 Thread exited: 0x000001572a134190
+Event: 21.934 Thread 0x0000015721565570 Thread exited: 0x0000015721565570
+Event: 21.934 Thread 0x000001572a1313a0 Thread exited: 0x000001572a1313a0
+Event: 21.950 Thread 0x000001572100b210 Thread exited: 0x000001572100b210
+
+
+Dynamic libraries:
+0x00007ff7b6500000 - 0x00007ff7b650e000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\java.exe
+0x00007ff9a5250000 - 0x00007ff9a5467000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9a3960000 - 0x00007ff9a3a24000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9a2900000 - 0x00007ff9a2cb9000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9a2550000 - 0x00007ff9a2661000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff990590000 - 0x00007ff9905ab000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\VCRUNTIME140.dll
+0x00007ff99dca0000 - 0x00007ff99dcb7000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\jli.dll
+0x00007ff9a30f0000 - 0x00007ff9a329e000 	C:\Windows\System32\USER32.dll
+0x00007ff9a27b0000 - 0x00007ff9a27d6000 	C:\Windows\System32\win32u.dll
+0x00007ff98fd20000 - 0x00007ff98ffb2000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96\COMCTL32.dll
+0x00007ff9a4bd0000 - 0x00007ff9a4bf9000 	C:\Windows\System32\GDI32.dll
+0x00007ff9a3f10000 - 0x00007ff9a3fb7000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9a27e0000 - 0x00007ff9a28fb000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9a2ed0000 - 0x00007ff9a2f6a000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9a30a0000 - 0x00007ff9a30d1000 	C:\Windows\System32\IMM32.DLL
+0x00007ff99dc90000 - 0x00007ff99dc9c000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\vcruntime140_1.dll
+0x00007ff990500000 - 0x00007ff99058e000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\msvcp140.dll
+0x00007ff8fb990000 - 0x00007ff8fc6df000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\server\jvm.dll
+0x00007ff9a3730000 - 0x00007ff9a37e2000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9a2ff0000 - 0x00007ff9a3097000 	C:\Windows\System32\sechost.dll
+0x00007ff9a2cc0000 - 0x00007ff9a2ce8000 	C:\Windows\System32\bcrypt.dll
+0x00007ff9a3d40000 - 0x00007ff9a3e54000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9a37f0000 - 0x00007ff9a3861000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9a13e0000 - 0x00007ff9a142d000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ff99c240000 - 0x00007ff99c274000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff99a0c0000 - 0x00007ff99a0ca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9a13c0000 - 0x00007ff9a13d3000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ff9a1680000 - 0x00007ff9a1698000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff99b2e0000 - 0x00007ff99b2ea000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\jimage.dll
+0x00007ff99f930000 - 0x00007ff99fb62000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff9a3fc0000 - 0x00007ff9a434f000 	C:\Windows\System32\combase.dll
+0x00007ff9a3870000 - 0x00007ff9a3947000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff999c20000 - 0x00007ff999c52000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff9a2670000 - 0x00007ff9a26eb000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9952e0000 - 0x00007ff9952ef000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\instrument.dll
+0x00007ff9904e0000 - 0x00007ff9904fe000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\java.dll
+0x00007ff9a3b90000 - 0x00007ff9a3d35000 	C:\Windows\System32\ole32.dll
+0x00007ff9a4350000 - 0x00007ff9a4bc6000 	C:\Windows\System32\SHELL32.dll
+0x00007ff9a04a0000 - 0x00007ff9a0da3000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ff9a0360000 - 0x00007ff9a049f000 	C:\Windows\SYSTEM32\wintypes.dll
+0x00007ff9a32a0000 - 0x00007ff9a3399000 	C:\Windows\System32\SHCORE.dll
+0x00007ff9a33a0000 - 0x00007ff9a33fe000 	C:\Windows\System32\shlwapi.dll
+0x00007ff9a2480000 - 0x00007ff9a24ab000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ff9887b0000 - 0x00007ff988887000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\jsvml.dll
+0x00007ff9904a0000 - 0x00007ff9904b7000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\zip.dll
+0x00007ff995160000 - 0x00007ff995170000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\net.dll
+0x00007ff9a1b00000 - 0x00007ff9a1b69000 	C:\Windows\system32\mswsock.dll
+0x00007ff9904c0000 - 0x00007ff9904d6000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\nio.dll
+0x00007ff988770000 - 0x00007ff98878a000 	C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\bin\breakgen64.dll
+0x00007ff98f480000 - 0x00007ff98f489000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\extnet.dll
+0x00007ff92e4b0000 - 0x00007ff92e63d000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\awt.dll
+0x00007ff99bf30000 - 0x00007ff99bfc7000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ff99f5c0000 - 0x00007ff99f671000 	C:\Windows\system32\uxtheme.dll
+0x00007ff9a3a30000 - 0x00007ff9a3b90000 	C:\Windows\System32\MSCTF.dll
+0x00007ff99f850000 - 0x00007ff99f87b000 	C:\Windows\system32\DWMAPI.DLL
+0x00007ff962990000 - 0x00007ff962a90000 	C:\Windows\system32\opengl32.dll
+0x00007ff96e2b0000 - 0x00007ff96e2dd000 	C:\Windows\SYSTEM32\GLU32.dll
+0x00007ff99fc80000 - 0x00007ff99fcb7000 	C:\Windows\SYSTEM32\dxcore.dll
+0x00007ff9a22a0000 - 0x00007ff9a22b2000 	C:\Windows\SYSTEM32\msasn1.dll
+0x00007ff999c60000 - 0x00007ff999c92000 	C:\Windows\SYSTEM32\cryptnet.dll
+0x00007ff9a2d60000 - 0x00007ff9a2ec6000 	C:\Windows\System32\CRYPT32.dll
+0x00007ff9a1d50000 - 0x00007ff9a1d5c000 	C:\Windows\SYSTEM32\cryptbase.dll
+0x00007ff9a1e00000 - 0x00007ff9a1e49000 	C:\Windows\SYSTEM32\wldp.dll
+0x00007ff998d00000 - 0x00007ff998e62000 	C:\Windows\SYSTEM32\drvstore.dll
+0x00007ff9a21f0000 - 0x00007ff9a221c000 	C:\Windows\SYSTEM32\devobj.dll
+0x00007ff9a2220000 - 0x00007ff9a226e000 	C:\Windows\SYSTEM32\CFGMGR32.dll
+0x00007ff9a2cf0000 - 0x00007ff9a2d5c000 	C:\Windows\System32\wintrust.dll
+0x00007ff9a3400000 - 0x00007ff9a341f000 	C:\Windows\System32\imagehlp.dll
+0x00007ff9a1d60000 - 0x00007ff9a1d7b000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007ff9a15e0000 - 0x00007ff9a1615000 	C:\Windows\system32\rsaenh.dll
+0x00007ff97adc0000 - 0x00007ff97b090000 	C:\Windows\system32\nvspcap64.dll
+0x00007ff9a1790000 - 0x00007ff9a17c4000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x00007ff9a1b90000 - 0x00007ff9a1bb6000 	C:\Windows\SYSTEM32\gpapi.dll
+0x00007ff983a50000 - 0x00007ff983ba5000 	C:\Windows\System32\DriverStore\FileRepository\nvamsi.inf_amd64_4c94e426d938301b\nvppex.dll
+0x00007ff9a1bf0000 - 0x00007ff9a1c18000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ff9a1080000 - 0x00007ff9a10ad000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ff9a3950000 - 0x00007ff9a3959000 	C:\Windows\System32\NSI.dll
+0x00007ff988680000 - 0x00007ff988707000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\freetype.dll
+0x00007ff987050000 - 0x00007ff987127000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\fontmanager.dll
+0x00007ff982d40000 - 0x00007ff982e85000 	C:\Windows\SYSTEM32\textinputframework.dll
+0x00007ff988740000 - 0x00007ff988749000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\syslookup.dll
+0x00007ff99ba30000 - 0x00007ff99bb63000 	C:\Windows\SYSTEM32\CoreMessaging.dll
+0x00007ff999880000 - 0x00007ff999bed000 	C:\Windows\SYSTEM32\CoreUIComponents.dll
+0x00007ff988660000 - 0x00007ff988672000 	C:\Users\admin\.jdks\openjdk-23.0.1\bin\jsound.dll
+0x00007ff97b7b0000 - 0x00007ff97b852000 	C:\Windows\SYSTEM32\DSOUND.dll
+0x00007ff98a200000 - 0x00007ff98a229000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x00007ff96b620000 - 0x00007ff96b6d1000 	C:\Windows\SYSTEM32\ResampleDmo.DLL
+0x00007ff981980000 - 0x00007ff98198b000 	C:\Windows\SYSTEM32\msdmo.dll
+0x00007ff9a3e60000 - 0x00007ff9a3f10000 	C:\Windows\System32\clbcatq.dll
+0x00007ff996850000 - 0x00007ff9968ee000 	C:\Windows\System32\MMDevApi.dll
+0x00007ff9259a0000 - 0x00007ff9259e6000 	C:\Windows\SYSTEM32\wdmaud.drv
+0x00007ff970e60000 - 0x00007ff970e69000 	C:\Windows\SYSTEM32\ksuser.dll
+0x00007ff99de00000 - 0x00007ff99de0b000 	C:\Windows\SYSTEM32\AVRT.dll
+0x00007ff989320000 - 0x00007ff98950d000 	C:\Windows\SYSTEM32\AUDIOSES.DLL
+0x00007ff96fce0000 - 0x00007ff96fcee000 	C:\Windows\SYSTEM32\msacm32.drv
+0x00007ff95fde0000 - 0x00007ff95fdfe000 	C:\Windows\SYSTEM32\MSACM32.dll
+0x00007ff96e510000 - 0x00007ff96e51b000 	C:\Windows\SYSTEM32\midimap.dll
+0x00007ff9a0020000 - 0x00007ff9a0035000 	C:\Windows\SYSTEM32\resourcepolicyclient.dll
+0x00007ff990630000 - 0x00007ff9907a9000 	C:\Windows\System32\Windows.UI.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\admin\.jdks\openjdk-23.0.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96;C:\Users\admin\.jdks\openjdk-23.0.1\bin\server;C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\bin;C:\Windows\System32\DriverStore\FileRepository\nvamsi.inf_amd64_4c94e426d938301b
+
+VM Arguments:
+jvm_args: -javaagent:C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\lib\idea_rt.jar=55708:C:\Users\admin\AppData\Local\Programs\IntelliJ IDEA Community Edition\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: DannyGermanSimulator.Main
+java_class_path (initial): D:\JAVA2\JAVA-Capstone\out\production\JavaCapstone
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 4194304                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 524288000                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 8388608000                                {product} {ergonomic}
+   size_t MaxNewSize                               = 5033164800                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 4194304                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602176                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122093568                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 121962496                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 8388608000                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\msys64\ucrt64\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\AppData\Local\spicetify;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin\.dotnet\tools;C:\Users\admin\AppData\Local\JetBrains\Toolbox\scripts;
+USERNAME=admin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD
+TMP=C:\Users\admin\AppData\Local\Temp
+TEMP=C:\Users\admin\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 2 days 15:14 hours
+
+CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 25 model 68 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, rdpid, fsrm, f16c, pku, cet_ss
+Processor Information for the first 16 processors :
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+
+Memory: 4k page, system-wide physical 31995M (16943M free)
+TotalPageFile size 36858M (AvailPageFile size 17394M)
+current process WorkingSet (physical memory assigned to process): 162M, peak: 188M
+current process commit charge ("private bytes"): 700M, peak: 733M
+
+vm_info: OpenJDK 64-Bit Server VM (23.0.1+11-39) for windows-amd64 JRE (23.0.1+11-39), built on 2024-09-30T07:20:43Z with MS VC++ 17.6 (VS2022)
+
+END.
