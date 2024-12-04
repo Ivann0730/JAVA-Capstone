@@ -10,7 +10,7 @@ import java.util.Comparator;
 import Entity.Entity;
 import Entity.Player;
 import ai.PathFinder;
-import tile.Map;
+//import tile.Map;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
 
@@ -27,13 +27,13 @@ public class GamePanel extends JPanel implements Runnable {
     public final int screenHeight = tileSize * maxScreenRow;
 
     //World Settings
-    public final int maxWorldCol = 50;
-    public final int maxWorldRow = 50;
+    public final int maxWorldCol = 250;
+    public final int maxWorldRow = 250;
     public final int worldWidth = tileSize * maxWorldCol;
     public final int worldHeight = tileSize * maxWorldRow;
     public boolean fullScreenOn = false;
     public final int maxMap = 10;
-    public int currentMap = 1;
+    public int currentMap = 3;
 
     // FPS
     int FPS = 60;
@@ -54,7 +54,7 @@ public class GamePanel extends JPanel implements Runnable {
     public UI ui = new UI(this);
     public EventHandler eHandler = new EventHandler(this);
     Config config = new Config(this);
-    Map map = new Map(this);
+//    Map map = new Map(this);
     public PathFinder pFinder = new PathFinder(this);
     Thread gameThread;
 
@@ -231,9 +231,9 @@ public class GamePanel extends JPanel implements Runnable {
             ui.draw(g2);
         }
         //Map Screen
-        else if(gameState == mapState){
-            map.drawFullMapScreen(g2);
-        }
+//        else if(gameState == mapState){
+//            map.drawFullMapScreen(g2);
+//        }
         //OTHERS
         else {
             // Draw tiles
@@ -298,7 +298,7 @@ public class GamePanel extends JPanel implements Runnable {
             entityList.clear();
 
             //MINIMAP
-            map.drawMiniMap(g2);
+//            map.drawMiniMap(g2);
 
             //UI
             ui.draw(g2);

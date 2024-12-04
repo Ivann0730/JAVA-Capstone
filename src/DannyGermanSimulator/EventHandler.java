@@ -60,6 +60,16 @@ public class EventHandler {
             else if(hit(0,39,18,"any")) {teleport(1,12,13);}
             else if(hit(1,12,13,"any")) {teleport(0,39,18);}
             else if(hit(1,12,9,"up")) {speak(gp.npc[1][0]);}
+            else if(hit(3,39,157,"any")) {teleport(3,79,121);}
+            else if(hit(3,79,121,"any")) {teleport(3,39,157);}
+            else if(hit(3,127,124,"any")) {teleport(3,48,56);}
+            else if(hit(3,48,56,"any")) {teleport(3,127,124);}
+            else if(hit(3,77,110,"any")) {teleport(3,56,100);}
+            else if(hit(3,56,100,"any")) {teleport(3,77,110);}
+            else if(hit(3,101,44,"any")) {teleport(3,184,76);}
+            else if(hit(3,184,76,"any")) {teleport(3,101,44);}
+            else if(hit(3,184,58,"any")) {teleport(3,149,212);}
+            else if(hit(3,149,212,"any")) {teleport(3,184,58);}
         }
     }
     public boolean hit(int map,int col, int row, String reqDirection){

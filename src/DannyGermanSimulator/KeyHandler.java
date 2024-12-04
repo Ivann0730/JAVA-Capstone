@@ -163,13 +163,13 @@ public class KeyHandler implements KeyListener{
         if(code == KeyEvent.VK_M){
             gp.gameState = gp.mapState;
         }
-        if(code == KeyEvent.VK_N){
-            if(!gp.map.miniMapOn) {
-                gp.map.miniMapOn = true;
-            }else{
-                gp.map.miniMapOn = false;
-            }
-        }
+//        if(code == KeyEvent.VK_N){
+//            if(!gp.map.miniMapOn) {
+//                gp.map.miniMapOn = true;
+//            }else{
+//                gp.map.miniMapOn = false;
+//            }
+//        }
         //toggle debug
         if(code == KeyEvent.VK_T){
             if(!showDebugText){
