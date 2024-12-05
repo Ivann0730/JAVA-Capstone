@@ -115,13 +115,20 @@ public class EventHandler {
         gp.keyH.ePressed  = false;
     }
     public void teleport(int map, int col, int row){
-
         gp.gameState = gp.transitionState;
         tempMap = map;
         tempCol = col;
         tempRow = row;
         canTouchEvent = false;
         gp.playSE(10);
+    }
+    public void teleportExpansion(int map, int col, int row){
+        gp.gameState = gp.transitionStateExpansion;
+        tempMap = map;
+        tempCol = col;
+        tempRow = row;
+        canTouchEvent = false;
+        gp.playSE(12);
     }
     public void speak(Entity entity){
 

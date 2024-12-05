@@ -3,6 +3,7 @@ package DannyGermanSimulator;
 import Entity.NPC_Merchant;
 import Entity.NPC_radish;
 import monster.MON_Bat;
+import monster.MON_Slime;
 import object.*;
 import tile_interactive.IT_DryTree;
 
@@ -47,6 +48,13 @@ public class AssetSetter {
         gp.obj[mapNum][i].worldX = gp.tileSize * 35;
         gp.obj[mapNum][i].worldY = gp.tileSize * 13;
 
+
+        mapNum = 3;
+        i = 0;
+        gp.obj[mapNum][i] = new OBJ_Door(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 39;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 162;
+        i++;
     }
     public void setNPC(){
         int mapNum = 0;
@@ -62,6 +70,17 @@ public class AssetSetter {
         gp.npc[mapNum][i] = new NPC_Merchant(gp);
         gp.npc[mapNum][i].worldX = gp.tileSize * 12;
         gp.npc[mapNum][i].worldY = gp.tileSize * 7;
+        i++;
+
+        mapNum = 2;
+        i = 0;
+        gp.npc[mapNum][i] = new NPC_radish(gp);
+        gp.npc[mapNum][i].worldX = gp.tileSize * 27;
+        gp.npc[mapNum][i].worldY = gp.tileSize * 117;
+        i++;
+        gp.npc[mapNum][i] = new NPC_radish(gp);
+        gp.npc[mapNum][i].worldX = gp.tileSize * 186;
+        gp.npc[mapNum][i].worldY = gp.tileSize * 182;
         i++;
 
         mapNum = 3;
@@ -105,6 +124,76 @@ public class AssetSetter {
         gp.monster[mapNum][i] = new MON_Bat(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize * 30;
         gp.monster[mapNum][i].worldY = gp.tileSize * 12;
+        i++;
+
+        mapNum = 2;
+        i = 0;
+        gp.monster[mapNum][i] = new MON_Bat(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 186;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 189;
+        i++;
+
+        mapNum = 3;
+        i = 0;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 28;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 230;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 50;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 229;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 51;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 229;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 44;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 218;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 61;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 202;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 77;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 209;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 75;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 212;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 71;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 189;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 50;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 188;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 50;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 189;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 50;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 190;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 35;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 171;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 43;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 171;
+        i++;
+        gp.monster[mapNum][i] = new MON_Slime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 39;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 174;
+        i++;
+        gp.monster[mapNum][i] = new MON_Bat(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 39;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 171;
         i++;
     }
     public void setInteractiveTile() {

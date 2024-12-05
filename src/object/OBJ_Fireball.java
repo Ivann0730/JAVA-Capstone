@@ -3,8 +3,6 @@ package object;
 import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
 import Entity.Projectile;
-
-import javax.xml.stream.events.EntityReference;
 import java.awt.*;
 
 public class OBJ_Fireball extends Projectile {

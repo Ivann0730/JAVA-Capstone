@@ -13,7 +13,7 @@ public class NPC_radish extends Entity{
         this.solidArea.width = 60;
         this.solidArea.height = 64;
         direction = "down";
-        speed = 3;
+        speed = 5;
 
         getImage();
         setDialogue();
@@ -21,7 +21,8 @@ public class NPC_radish extends Entity{
     public void setAction(){
         if(onPath){
             //change to follow player
-            int goalCol = 23, goalRow = 15;
+//            int goalCol = 23, goalRow = 15;
+            int goalCol = 39, goalRow = 157;
             //follow player
 //            int goalCol = (gp.player.worldX + gp.player.solidArea.x) / gp.tileSize;
 //            int goalRow = (gp.player.worldY + gp.player.solidArea.y) / gp.tileSize;
@@ -82,6 +83,7 @@ public class NPC_radish extends Entity{
     }
     public void speak(){
         super.speak();
-        onPath = true;
+//        onPath = true;
+        gp.eHandler.teleportExpansion(2,186,190);
     }
 }

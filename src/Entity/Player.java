@@ -15,6 +15,7 @@ public class Player extends Entity {
     int tempSpeed = 6;
     int tempSpriteSpeedMultiplier = spriteSpeedMultiplier;
     public boolean attackCanceled = false;
+    int hasKey=0;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
@@ -38,18 +39,26 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
+        //SPAWN
 //        worldX = gp.tileSize * 27;
 //        worldY = gp.tileSize * 123;
 
+        //DUNGEON
         worldX = gp.tileSize * 22;
         worldY = gp.tileSize * 230;
 
+//        worldX = gp.tileSize * 39;
+//        worldY = gp.tileSize * 165;
+
+        //TEST MAP
 //        worldX = gp.tileSize * 23;
 //        worldY = gp.tileSize * 21;
 
+        //INTERIOR
 //        worldX = gp.tileSize * 12;
 //        worldY = gp.tileSize * 12;
-        speed = 6; //also change tempSpeed
+        defaultSpeed = 6;
+        speed = defaultSpeed; //also change tempSpeed
         direction = "down";
 
         //PLAYER STATUS
@@ -87,7 +96,7 @@ public class Player extends Entity {
         inventory.clear();
         inventory.add(currentWeapon);
         inventory.add(currentShield);
-        inventory.add(new OBJ_Key(gp));
+//        inventory.add(new OBJ_Key(gp));
     }
     public int getAttack(){
         attackArea =currentWeapon.attackArea;
@@ -241,7 +250,13 @@ public class Player extends Entity {
             projectile.subtractResource(this);
 
             //ADD TO THE LIST
-            gp.projectileList.add(projectile);
+            //check vacancy
+            for(int i = 0; i < gp.projectile[1].length; i++){
+                if(gp.projectile[gp.currentMap][i] == null){
+                    gp.projectile[gp.currentMap][i] = projectile;
+                    break;
+                }
+            }
             shotAvailableCounter = 0;
             gp.playSE(2);
         }
@@ -305,10 +320,13 @@ public class Player extends Entity {
             solidArea.height = attackArea.height;
             //check monster collision
             int monsterIndex = gp.colCheck.checkEntity(this, gp.monster);
-            damageMonster(monsterIndex, attack);
+            damageMonster(monsterIndex, attack, currentWeapon.knockBackPower);
 
             int iTileIndex = gp.colCheck.checkEntity(this, gp.iTile);
             damageInteractiveTile(iTileIndex);
+
+            int projectileIndex = gp.colCheck.checkEntity(this,gp.projectile);
+            damageProjectile(projectileIndex);
 
             //restore position
             worldX = currentWorldX;
@@ -324,6 +342,18 @@ public class Player extends Entity {
     }
     public void pickUpObject(int index){
         if (index != 999){
+            String objectName = gp.obj[gp.currentMap][index].name;
+            switch (objectName){
+                case "Key":
+                    hasKey++;
+                    break;
+                case "Door":
+                    if(hasKey > 0){
+                        gp.obj[gp.currentMap][index] = null;
+                        hasKey--;
+                    }
+                    break;
+            }
             //PICKUP ONLY ITEMS
             if(gp.obj[gp.currentMap][index].type == type_pickupOnly){
                 gp.obj[gp.currentMap][index].use(this);
@@ -367,10 +397,13 @@ public class Player extends Entity {
             }
         }
     }
-    public void damageMonster(int index, int attack){
+    public void damageMonster(int index, int attack, int knockBackPower){
         if(index != 999) {
             if(!gp.monster[gp.currentMap][index].invincible){
                 gp.playSE(5);
+                if(knockBackPower > 0){
+                    knockBack(gp.monster[gp.currentMap][index], knockBackPower);
+                }
                 int damage = attack - gp.monster[gp.currentMap][index].defence;
                 if(damage < 0){
                     damage = 0;
@@ -390,6 +423,11 @@ public class Player extends Entity {
             }
         }
     }
+    public void knockBack(Entity entity, int knockBackPower){
+        entity.direction = direction;
+        entity.speed += knockBackPower;
+        entity.knockBack = true;
+    }
     public void damageInteractiveTile(int i){
 
         if(i != 999 && gp.iTile[gp.currentMap][i].destructible && gp.iTile[gp.currentMap][i].isCorrectItem(this) && !gp.iTile[gp.currentMap][i].invincible){
@@ -405,6 +443,13 @@ public class Player extends Entity {
             }
         }
     }
+    public void damageProjectile(int i){
+        if(i != 999){
+            Entity projectile = gp.projectile[gp.currentMap][i];
+            projectile.alive = false;
+            generateParticle(projectile, projectile);
+        }
+    }
     public void checkLevelUp(){
         if(exp >= nextLevelExp) {
             level++;
@@ -416,6 +461,9 @@ public class Player extends Entity {
             defence = getDefence();
             gp.playSE(4);
             gp.gameState = gp.dialogueState;
+            if(level%2 != 0){
+                projectile.attack++;
+            }
             gp.ui.currentDialogue = "You are now level " + level + " now!\n";
         }
     }

@@ -60,11 +60,11 @@ public class GamePanel extends JPanel implements Runnable {
 
     // Player, Entity, Objects
     public Player player = new Player(this, keyH);
-    public Entity obj[][] = new Entity[maxMap][20]; // 10 being 10 slots for objects (can have many objects but for now 10)5
-    public Entity npc[][] = new Entity[maxMap][10];
-    public Entity monster[][] = new Entity[maxMap][10];
+    public Entity obj[][] = new Entity[maxMap][50]; // 10 being 10 slots for objects (can have many objects but for now 10)5
+    public Entity npc[][] = new Entity[maxMap][50];
+    public Entity monster[][] = new Entity[maxMap][50];
     public InteractiveTile iTile[][] = new InteractiveTile[maxMap][50];
-    public ArrayList<Entity> projectileList = new ArrayList<>();
+    public Entity projectile[][] = new Entity[maxMap][20];
     public ArrayList<Entity> particleList = new ArrayList<>();
     ArrayList<Entity> entityList = new ArrayList<>();
     //more objects can slow down the game
@@ -81,6 +81,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int transitionState = 7;
     public final int tradeState = 8;
     public final int mapState = 9;
+    public final int transitionStateExpansion = 10;
 
 
     public GamePanel() {
@@ -188,13 +189,13 @@ public class GamePanel extends JPanel implements Runnable {
                 }
             }
             //PROJECTILE
-            for(int i = 0; i < projectileList.size(); i++){
-                if(projectileList.get(i) != null){
-                    if(projectileList.get(i).alive){
-                        projectileList.get(i).update();
+            for(int i = 0; i < projectile[1].length; i++){
+                if(projectile[currentMap][i] != null){
+                    if(projectile[currentMap][i].alive){
+                        projectile[currentMap][i].update();
                     }
-                    if(!projectileList.get(i).alive){
-                        projectileList.remove(i);
+                    if(!projectile[currentMap][i].alive){
+                        projectile[currentMap][i] = null;
                     }
                 }
             }
@@ -267,9 +268,9 @@ public class GamePanel extends JPanel implements Runnable {
                 }
             }
             //PROJECTILE
-            for(int i = 0; i < projectileList.size(); i++){
-                if(projectileList.get(i) != null) {
-                    entityList.add(projectileList.get(i));
+            for(int i = 0; i < projectile[1].length; i++){
+                if(projectile[currentMap][i] != null) {
+                    entityList.add(projectile[currentMap][i]);
                 }
             }
 

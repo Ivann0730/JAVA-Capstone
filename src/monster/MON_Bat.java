@@ -17,11 +17,11 @@ public class MON_Bat extends Entity {
         type = type_monster;
         name = "Eye Bat";
         speed = 3;
-        maxLife = 4;
+        maxLife = 10;
         life = maxLife;
         attack  = 5;
-        defence = 0;
-        exp = 2;
+        defence = 2;
+        exp = 5;
         projectile = new OBJ_Fireball(gp);
 
         solidArea.x = 34;
@@ -70,7 +70,12 @@ public class MON_Bat extends Entity {
             int i = new Random().nextInt(200)+1;
             if(i > 197 && !projectile.alive && shotAvailableCounter == 30){
                 projectile.set(worldX,worldY,direction,true,this);
-                gp.projectileList.add(projectile);
+                for(int ii = 0; ii < gp.projectile[1].length; ii++){
+                    if(gp.projectile[gp.currentMap][ii] == null){
+                        gp.projectile[gp.currentMap][ii] = projectile;
+                        break;
+                    }
+                }
                 shotAvailableCounter = 0;
             }
         } else {
