@@ -5,36 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Pathfinding (NPC Follows Player/Aggro Monsters)&#10;&#10;-press M for map and N for mini-map&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others">
-      <change afterPath="$PROJECT_DIR$/res/NPC/NOOB MASTER-1.png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/greenslime_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/greenslime_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/expansion.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/track/TitleTheme .wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/monster/MON_Slime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_10_54_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_10_54_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_3_34_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_3_34_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_3_34_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2024_3_34_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/NPC/NOOB MASTER.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/ai/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/ai/PathFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ai/PathFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/Dungeon" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/Dungeon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/Spawn" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/Spawn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_radish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_radish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Axe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Fireball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,12 +36,12 @@
     &quot;assignee&quot;: &quot;Ivann0730&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ivann0730/JAVA-Capstone&quot;,
-    &quot;accountId&quot;: &quot;da8b10d6-8d47-4816-a8df-c8eb9da47b9a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ivann0730/JAVA-Capstone.git",
+    "accountId": "82218363-1347-4652-947f-094d7dc30d30"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -76,27 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JAVA2/JAVA-Capstone/res/sound",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA2/JAVA-Capstone/res/sound&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA2\JAVA-Capstone\res\sound" />
@@ -133,6 +111,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -149,6 +135,7 @@
       <workItem from="1732986571824" duration="671000" />
       <workItem from="1733022424350" duration="251000" />
       <workItem from="1733022688569" duration="10255000" />
+      <workItem from="1733492124270" duration="7507000" />
     </task>
     <task id="LOCAL-00001" summary="partial">
       <option name="closed" value="true" />
@@ -473,6 +460,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

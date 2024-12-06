@@ -40,12 +40,12 @@ public class Player extends Entity {
 
     public void setDefaultValues() {
         //SPAWN
-//        worldX = gp.tileSize * 27;
-//        worldY = gp.tileSize * 123;
+       // worldX = gp.tileSize * 27;
+       // worldY = gp.tileSize * 124;
 
         //DUNGEON
-        worldX = gp.tileSize * 22;
-        worldY = gp.tileSize * 230;
+        //worldX = gp.tileSize * 22;
+        //worldY = gp.tileSize * 230;
 
 //        worldX = gp.tileSize * 39;
 //        worldY = gp.tileSize * 165;
@@ -57,6 +57,10 @@ public class Player extends Entity {
         //INTERIOR
 //        worldX = gp.tileSize * 12;
 //        worldY = gp.tileSize * 12;
+        //Pathway
+        worldX = gp.tileSize * 127;
+        worldY = gp.tileSize * 235;
+
         defaultSpeed = 6;
         speed = defaultSpeed; //also change tempSpeed
         direction = "down";

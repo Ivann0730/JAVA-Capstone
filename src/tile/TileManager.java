@@ -16,6 +16,7 @@ public class TileManager {
     public Tile[] tile;
     public Tile[] tileSpawn;
     public Tile[] tileDungeon;
+    public Tile[] tilePathway;
     public int[][][] mapTileNum;
     boolean drawPath = false;
 
@@ -24,14 +25,18 @@ public class TileManager {
         tile = new Tile[60];// Assuming 60 types of tiles
         tileSpawn = new Tile[105];
         tileDungeon = new Tile[100];
+        tilePathway = new Tile[196];
         mapTileNum = new int[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow]; // Map for tile numbers
         getTileImage(); // Load tile images
         getTileImageSpawn();
         getTileDungeon();
+        getTilePathway();
         loadMap("/maps/testmap.txt", 0); // Load map from file
         loadMap("/maps/interior01.txt",1);
         loadMap("/maps/Spawn", 2); //SPAWN
         loadMap("/maps/Dungeon", 3);
+        loadMap("/maps/Pathway", 4);
+
     }
     // Method to load tile images
     public void getTileImage() {
@@ -297,6 +302,207 @@ public class TileManager {
         setUpDungeon(93, "/Tiles_Dungeon/Walls-9", true);
     }
 
+    public void getTilePathway() {
+        setUpPathway(0, "/Tiles_Pathway/001", false);
+        setUpPathway(1, "/Tiles_Pathway/002", false);
+        setUpPathway(2, "/Tiles_Pathway/003", false);
+        setUpPathway(3, "/Tiles_Pathway/004", false);
+        setUpPathway(4, "/Tiles_Pathway/005", false);
+        setUpPathway(5, "/Tiles_Pathway/006", false);
+        setUpPathway(6, "/Tiles_Pathway/007", false);
+        setUpPathway(7, "/Tiles_Pathway/008", false);
+        setUpPathway(8, "/Tiles_Pathway/009", false);
+        setUpPathway(9, "/Tiles_Pathway/010", false);
+        setUpPathway(10, "/Tiles_Pathway/011", false);
+        setUpPathway(11, "/Tiles_Pathway/012", false);
+        setUpPathway(12, "/Tiles_Pathway/013", false);
+        setUpPathway(13, "/Tiles_Pathway/014", false);
+        setUpPathway(14, "/Tiles_Pathway/015", false);
+        setUpPathway(15, "/Tiles_Pathway/018", false);
+        setUpPathway(16, "/Tiles_Pathway/019", true);
+        setUpPathway(17, "/Tiles_Pathway/02", false);
+        setUpPathway(18, "/Tiles_Pathway/020", true);
+        setUpPathway(19, "/Tiles_Pathway/021", true);
+        setUpPathway(20, "/Tiles_Pathway/022", true);
+        setUpPathway(21, "/Tiles_Pathway/023", true);
+        setUpPathway(22, "/Tiles_Pathway/024", true);
+        setUpPathway(23, "/Tiles_Pathway/025", true);
+        setUpPathway(24, "/Tiles_Pathway/026", true);
+        setUpPathway(25, "/Tiles_Pathway/027", true);
+        setUpPathway(26, "/Tiles_Pathway/028", true);
+        setUpPathway(27, "/Tiles_Pathway/029", true);
+        setUpPathway(28, "/Tiles_Pathway/030", true);
+        setUpPathway(29, "/Tiles_Pathway/031", false);
+        setUpPathway(30, "/Tiles_Pathway/04", false);
+        setUpPathway(31, "/Tiles_Pathway/05", false);
+        setUpPathway(32, "/Tiles_Pathway/09", false);
+        setUpPathway(33, "/Tiles_Pathway/1", false);
+        setUpPathway(34, "/Tiles_Pathway/10", false);
+        setUpPathway(35, "/Tiles_Pathway/14", false);
+        setUpPathway(36, "/Tiles_Pathway/15", false);
+        setUpPathway(37, "/Tiles_Pathway/16", false);
+        setUpPathway(38, "/Tiles_Pathway/17", false);
+        setUpPathway(39, "/Tiles_Pathway/18", false);
+        setUpPathway(40, "/Tiles_Pathway/19", false);
+        setUpPathway(41, "/Tiles_Pathway/20", false);
+        setUpPathway(42, "/Tiles_Pathway/21", false);
+        setUpPathway(43, "/Tiles_Pathway/22", false);
+        setUpPathway(44, "/Tiles_Pathway/B", true);
+        setUpPathway(45, "/Tiles_Pathway/B1", true);
+        setUpPathway(46, "/Tiles_Pathway/B2", true);
+        setUpPathway(47, "/Tiles_Pathway/B3", true);
+        setUpPathway(48, "/Tiles_Pathway/Decor-1", true);
+        setUpPathway(49, "/Tiles_Pathway/Decor-2", true);
+        setUpPathway(50, "/Tiles_Pathway/Decor-3", true);
+        setUpPathway(51, "/Tiles_Pathway/Decor-4", true);
+        setUpPathway(52, "/Tiles_Pathway/Decor-5", true);
+        setUpPathway(53, "/Tiles_Pathway/Decor-6", true);
+        setUpPathway(54, "/Tiles_Pathway/Decor-7", true);
+        setUpPathway(55, "/Tiles_Pathway/Floor-1", false);
+        setUpPathway(56, "/Tiles_Pathway/Floor-2", false);
+        setUpPathway(57, "/Tiles_Pathway/Floor-3", false);
+        setUpPathway(58, "/Tiles_Pathway/Floor-4", false);
+        setUpPathway(59, "/Tiles_Pathway/FS-1", false);
+        setUpPathway(60, "/Tiles_Pathway/FS-2", false);
+        setUpPathway(61, "/Tiles_Pathway/FS-3", false);
+        setUpPathway(62, "/Tiles_Pathway/FS-4", false);
+        setUpPathway(63, "/Tiles_Pathway/FS-5", false);
+        setUpPathway(64, "/Tiles_Pathway/h1", true);
+        setUpPathway(65, "/Tiles_Pathway/h10", true);
+        setUpPathway(66, "/Tiles_Pathway/h11", true);
+        setUpPathway(67, "/Tiles_Pathway/h12", true);
+        setUpPathway(68, "/Tiles_Pathway/h13", true);
+        setUpPathway(69, "/Tiles_Pathway/h14", true);
+        setUpPathway(70, "/Tiles_Pathway/h15", true);
+        setUpPathway(71, "/Tiles_Pathway/h16", true);
+        setUpPathway(72, "/Tiles_Pathway/h17", true);
+        setUpPathway(73, "/Tiles_Pathway/h18", true);
+        setUpPathway(74, "/Tiles_Pathway/h19", true);
+        setUpPathway(75, "/Tiles_Pathway/h2", true);
+        setUpPathway(76, "/Tiles_Pathway/h20", true);
+        setUpPathway(77, "/Tiles_Pathway/h21", true);
+        setUpPathway(78, "/Tiles_Pathway/h22", true);
+        setUpPathway(79, "/Tiles_Pathway/h23", true);
+        setUpPathway(80, "/Tiles_Pathway/h24", true);
+        setUpPathway(81, "/Tiles_Pathway/h25", true);
+        setUpPathway(82, "/Tiles_Pathway/h26", true);
+        setUpPathway(83, "/Tiles_Pathway/h27", true);
+        setUpPathway(84, "/Tiles_Pathway/h28", true);
+        setUpPathway(85, "/Tiles_Pathway/h29", true);
+        setUpPathway(86, "/Tiles_Pathway/h3", true);
+        setUpPathway(87, "/Tiles_Pathway/h30", true);
+        setUpPathway(88, "/Tiles_Pathway/h4", true);
+        setUpPathway(89, "/Tiles_Pathway/h5", true);
+        setUpPathway(90, "/Tiles_Pathway/h6", true);
+        setUpPathway(91, "/Tiles_Pathway/h7", true);
+        setUpPathway(92, "/Tiles_Pathway/h8", true);
+        setUpPathway(93, "/Tiles_Pathway/h9", true);
+        setUpPathway(94, "/Tiles_Pathway/Rock", true);
+        setUpPathway(95, "/Tiles_Pathway/Sign", true);
+        setUpPathway(96, "/Tiles_Pathway/st1", false);
+        setUpPathway(97, "/Tiles_Pathway/st2", true);
+        setUpPathway(98, "/Tiles_Pathway/st3", true);
+        setUpPathway(99, "/Tiles_Pathway/st4", true);
+        setUpPathway(100, "/Tiles_Pathway/st5", true);
+        setUpPathway(101, "/Tiles_Pathway/st6", true);
+        setUpPathway(102, "/Tiles_Pathway/Stairs-1", false);
+        setUpPathway(103, "/Tiles_Pathway/Stairs-2", false);
+        setUpPathway(104, "/Tiles_Pathway/T", true);
+        setUpPathway(105, "/Tiles_Pathway/T1", true);
+        setUpPathway(106, "/Tiles_Pathway/t10", true);
+        setUpPathway(107, "/Tiles_Pathway/T11", true);
+        setUpPathway(108, "/Tiles_Pathway/t2", true);
+        setUpPathway(109, "/Tiles_Pathway/T3", true);
+        setUpPathway(110, "/Tiles_Pathway/T4", true);
+        setUpPathway(111, "/Tiles_Pathway/T5", true);
+        setUpPathway(112, "/Tiles_Pathway/T6", true);
+        setUpPathway(113, "/Tiles_Pathway/T7", true);
+        setUpPathway(114, "/Tiles_Pathway/T8", true);
+        setUpPathway(115, "/Tiles_Pathway/T9", true);
+        setUpPathway(116, "/Tiles_Pathway/tr-1", true);
+        setUpPathway(117, "/Tiles_Pathway/tr1", true);
+        setUpPathway(118, "/Tiles_Pathway/tr2", true);
+        setUpPathway(119, "/Tiles_Pathway/tr3", true);
+        setUpPathway(120, "/Tiles_Pathway/tr4", true);
+        setUpPathway(121, "/Tiles_Pathway/Walls-1", true);
+        setUpPathway(122, "/Tiles_Pathway/Walls-10", true);
+        setUpPathway(123, "/Tiles_Pathway/Walls-11", true);
+        setUpPathway(124, "/Tiles_Pathway/Walls-12", true);
+        setUpPathway(125, "/Tiles_Pathway/Walls-12.png-1.png", true);
+        setUpPathway(126, "/Tiles_Pathway/Walls-12.png-2.png", true);
+        setUpPathway(127, "/Tiles_Pathway/Walls-12.png-3.png", true);
+        setUpPathway(128, "/Tiles_Pathway/Walls-12.png-4.png", true);
+        setUpPathway(129, "/Tiles_Pathway/Walls-12.png-5.png", true);
+        setUpPathway(130, "/Tiles_Pathway/Walls-13", true);
+        setUpPathway(131, "/Tiles_Pathway/Walls-14", true);
+        setUpPathway(132, "/Tiles_Pathway/Walls-15", true);
+        setUpPathway(133, "/Tiles_Pathway/Walls-16", true);
+        setUpPathway(134, "/Tiles_Pathway/Walls-17", true);
+        setUpPathway(135, "/Tiles_Pathway/Walls-18", true);
+        setUpPathway(136, "/Tiles_Pathway/Walls-19", true);
+        setUpPathway(137, "/Tiles_Pathway/Walls-6", true);
+        setUpPathway(138, "/Tiles_Pathway/Walls-20", true);
+        setUpPathway(139, "/Tiles_Pathway/Walls-21", true);
+        setUpPathway(140, "/Tiles_Pathway/Walls-22", true);
+        setUpPathway(141, "/Tiles_Pathway/Walls-23", true);
+        setUpPathway(142, "/Tiles_Pathway/Walls-24", true);
+        setUpPathway(143, "/Tiles_Pathway/Walls-25.png", true);
+        setUpPathway(144, "/Tiles_Pathway/Walls-26.png", true);
+        setUpPathway(145, "/Tiles_Pathway/Walls-27.png", true);
+        setUpPathway(146, "/Tiles_Pathway/Walls-28.png", true);
+        setUpPathway(147, "/Tiles_Pathway/Walls-29.png", true);
+        setUpPathway(148, "/Tiles_Pathway/Walls-3", true);
+        setUpPathway(149, "/Tiles_Pathway/Walls-30.png", true);
+        setUpPathway(150, "/Tiles_Pathway/Walls-31.png", true);
+        setUpPathway(151, "/Tiles_Pathway/Walls-32.png", true);
+        setUpPathway(152, "/Tiles_Pathway/Walls-33.png", true);
+        setUpPathway(153, "/Tiles_Pathway/Walls-34.png", true);
+        setUpPathway(154, "/Tiles_Pathway/Walls-35.png", true);
+        setUpPathway(155, "/Tiles_Pathway/Walls-36.png", true);
+        setUpPathway(156, "/Tiles_Pathway/Walls-37.png", true);
+        setUpPathway(157, "/Tiles_Pathway/Walls-38.png", true);
+        setUpPathway(158, "/Tiles_Pathway/Walls-39.png", true);
+        setUpPathway(159, "/Tiles_Pathway/Walls-2", true);
+        setUpPathway(160, "/Tiles_Pathway/Walls-40.png", true);
+        setUpPathway(161, "/Tiles_Pathway/Walls-41.png", true);
+        setUpPathway(162, "/Tiles_Pathway/Walls-42.png", true);
+        setUpPathway(163, "/Tiles_Pathway/Walls-43.png", true);
+        setUpPathway(164, "/Tiles_Pathway/Walls-44.png", true);
+        setUpPathway(165, "/Tiles_Pathway/Walls-45.png", true);
+        setUpPathway(166, "/Tiles_Pathway/Walls-46.png", true);
+        setUpPathway(167, "/Tiles_Pathway/Walls-47.png", true);
+        setUpPathway(168, "/Tiles_Pathway/Walls-48.png", true);
+        setUpPathway(169, "/Tiles_Pathway/Walls-49.png", true);
+        setUpPathway(170, "/Tiles_Pathway/Walls-3", true);
+        setUpPathway(171, "/Tiles_Pathway/Walls-50.png", true);
+        setUpPathway(172, "/Tiles_Pathway/Walls-51.png", true);
+        setUpPathway(173, "/Tiles_Pathway/Walls-52.png", true);
+        setUpPathway(174, "/Tiles_Pathway/Walls-53.png", true);
+        setUpPathway(175, "/Tiles_Pathway/Walls-54.png", true);
+        setUpPathway(176, "/Tiles_Pathway/Walls-55.png", true);
+        setUpPathway(177, "/Tiles_Pathway/Walls-58.png", true);
+        setUpPathway(178, "/Tiles_Pathway/Walls-59", true);
+        setUpPathway(179, "/Tiles_Pathway/Walls-59.png", true);
+        setUpPathway(180, "/Tiles_Pathway/Walls-4", true);
+        setUpPathway(181, "/Tiles_Pathway/Walls-60", true);
+        setUpPathway(182, "/Tiles_Pathway/Walls-60.png", true);
+        setUpPathway(183, "/Tiles_Pathway/Walls-61", true);
+        setUpPathway(184, "/Tiles_Pathway/Walls-61.png", true);
+        setUpPathway(185, "/Tiles_Pathway/Walls-62", true);
+        setUpPathway(186, "/Tiles_Pathway/Walls-62.png", true);
+        setUpPathway(187, "/Tiles_Pathway/Walls-63.png", true);
+        setUpPathway(188, "/Tiles_Pathway/Walls-64.png", true);
+        setUpPathway(189, "/Tiles_Pathway/Walls-65.png", true);
+        setUpPathway(190, "/Tiles_Pathway/Walls-66.png", true);
+        setUpPathway(191, "/Tiles_Pathway/Walls-67.png", true);
+        setUpPathway(192, "/Tiles_Pathway/Walls-68.png", true);
+        setUpPathway(193, "/Tiles_Pathway/Walls-7", true);
+        setUpPathway(194, "/Tiles_Pathway/Walls-8", true);
+        setUpPathway(195, "/Tiles_Pathway/Walls-9", true);
+
+
+    }
+
     public void setUp(int index, String imageName, boolean collision){
 
         UtilityTool uTool = new UtilityTool();
@@ -329,6 +535,19 @@ public class TileManager {
             tileDungeon[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));
             tileDungeon[index].image = uTool.scaleImage(tileDungeon[index].image, gp.tileSize, gp.tileSize);
             tileDungeon[index].collision = collision;
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void setUpPathway(int index, String imageName, boolean collision){
+
+        UtilityTool uTool = new UtilityTool();
+        try {
+            tilePathway[index] = new Tile();
+            tilePathway[index].image = ImageIO.read(getClass().getResourceAsStream(imageName + ".png"));
+            tilePathway[index].image = uTool.scaleImage(tilePathway[index].image, gp.tileSize, gp.tileSize);
+            tilePathway[index].collision = collision;
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -397,7 +616,9 @@ public class TileManager {
 
                     case 0 ,1: g2.drawImage(tile[tileNum].image, screenX, screenY, null); break;
                     case 2: g2.drawImage(tileSpawn[tileNum].image, screenX, screenY, null); break;
-                    case 3: g2.drawImage(tileDungeon[tileNum].image, screenX, screenY, null); break;
+                    case 3: g2.drawImage(tileDungeon[tileNum].image, screenX, screenY, null);
+                    case 4: g2.drawImage(tilePathway[tileNum].image, screenX, screenY, null); break;
+
                 }
             }
             worldCol++;
