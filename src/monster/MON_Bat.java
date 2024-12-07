@@ -2,21 +2,18 @@ package monster;
 
 import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
-import object.OBJ_Coin;
-import object.OBJ_Fireball;
-import object.OBJ_Heart;
-import object.OBJ_Mana;
+import object.*;
 
 import java.util.Random;
 
 public class MON_Bat extends Entity {
-
     public MON_Bat(GamePanel gp) {
         super(gp);
 
         type = type_monster;
         name = "Eye Bat";
-        speed = 3;
+        defaultSpeed = 3;
+        speed = defaultSpeed;
         maxLife = 10;
         life = maxLife;
         attack  = 5;
@@ -43,61 +40,20 @@ public class MON_Bat extends Entity {
         right1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
         right2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
     }
-    public void update(){
-        super.update();
 
-        int xDistance = Math.abs(worldX - gp.player.worldX);
-        int yDistance = Math.abs(worldY - gp.player.worldY);
-        int tileDistance = (xDistance + yDistance)/gp.tileSize;
-
-        if(!onPath && tileDistance < 5){
-            int i = new Random().nextInt(100)+1;
-            if(i > 50){
-                onPath = true;
-            }
-        }
-        if(onPath && tileDistance > 20){
-            onPath = false;
-        }
-    }
     public void setAction(){
         if(onPath){
-            //follow player
-            int goalCol = (gp.player.worldX + gp.player.solidArea.x) / gp.tileSize;
-            int goalRow = (gp.player.worldY + gp.player.solidArea.y) / gp.tileSize;
-            searchPath(goalCol, goalRow);
-
-            int i = new Random().nextInt(200)+1;
-            if(i > 197 && !projectile.alive && shotAvailableCounter == 30){
-                projectile.set(worldX,worldY,direction,true,this);
-                for(int ii = 0; ii < gp.projectile[1].length; ii++){
-                    if(gp.projectile[gp.currentMap][ii] == null){
-                        gp.projectile[gp.currentMap][ii] = projectile;
-                        break;
-                    }
-                }
-                shotAvailableCounter = 0;
-            }
-        } else {
-            actionLockCounter++;
-            if(actionLockCounter == 120){
-                Random random = new Random();
-                int i = random.nextInt(100)+1;
-
-                if(i <= 25){
-                    direction = "up";
-                }
-                if(i > 25 && i <= 50){
-                    direction = "down";
-                }
-                if(i > 50 && i <= 75){
-                    direction = "left";
-                }
-                if(i > 75){
-                    direction = "right";
-                }
-                actionLockCounter = 0;
-            }
+            //CHECK IF IT STOPS CHASING
+            checkStopChasingOrNot(gp.player, 10, 100);
+            //follow player or search direction to go
+            searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
+            //Check if it shoots a projectile
+            checkShootOrNot(200, 30);
+        } else{
+            //check if starts chasing
+            checkStartChasingOrNot(gp.player,5,100);
+            // get a random direction
+            getRandomDirection();
         }
     }
     public void damageReaction() {
@@ -113,8 +69,11 @@ public class MON_Bat extends Entity {
         int i = new Random().nextInt(100)+1;
 
         //SET THE MONSTER DROP
-        if(i < 50){
-            dropItem(new OBJ_Coin(gp));
+        //SET THE MONSTER DROP
+        if(i < 25){
+            dropItem(new OBJ_Gem(gp));
+        }
+        if(i >= 25 && i < 50){
             dropItem(new OBJ_Coin(gp));
             dropItem(new OBJ_Coin(gp));
         }

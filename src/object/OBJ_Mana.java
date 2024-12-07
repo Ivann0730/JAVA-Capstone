@@ -18,9 +18,10 @@ public class OBJ_Mana extends Entity {
         collision = true;
         description = "[" + name + "]\nA mystic crystal filled\nwith codechum essence.";
     }
-    public void use(Entity entity){
+    public boolean use(Entity entity){
         gp.playSE(0);
         gp.ui.addMessage("Mana +" + value);
         entity.mana += value;
+        return true;
     }
 }

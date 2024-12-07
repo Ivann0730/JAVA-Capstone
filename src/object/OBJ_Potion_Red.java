@@ -15,12 +15,14 @@ public class OBJ_Potion_Red extends Entity {
         down1 = setUp("/objects/potion_red",gp.tileSize,gp.tileSize);
         description = "[" + name + "]\nA potion that restores " + value + " health\nusing codechum juice.";
         price = 25;
+        stackable = true;
     }
-    public void use(Entity entity){
+    public boolean use(Entity entity){
         gp.gameState = gp.dialogueState;
         gp.ui.currentDialogue = "You drank the " + name + "!\n" + "Your life has been restored by " + value + ".";
         entity.life += value;
         gp.playSE(4);
+        return true;
     }
 
 }

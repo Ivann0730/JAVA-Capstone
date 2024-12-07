@@ -15,9 +15,10 @@ public class OBJ_Coin extends Entity {
         down1 = setUp("/objects/coin_bronze",gp.tileSize,gp.tileSize);
         description = "[" + name + "]\nA coin to use in Jude Maranga's \npiso net in CIT-U Universe.";
     }
-    public void use(Entity entity){
+    public boolean use(Entity entity){
         gp.playSE(0);
         gp.ui.addMessage("Coin +" + value);
         gp.player.coins += value;
+        return true;
     }
 }

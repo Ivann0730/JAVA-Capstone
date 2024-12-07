@@ -6,6 +6,7 @@ import object.OBJ_Heart;
 import object.OBJ_Mana;
 
 import java.awt.*;
+import java.awt.event.ItemEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -107,6 +108,10 @@ public class UI {
         //TRADE STATE
         if(gp.gameState == gp.tradeState){
             drawTradeScreen();
+        }
+        //SLEEP STATE
+        if(gp.gameState == gp.sleepsState){
+            drawSleepScreen();
         }
     }
     public void drawPlayerLife(){
@@ -419,6 +424,26 @@ public class UI {
                 g2.fillRoundRect(slotX, slotY, gp.tileSize, gp.tileSize, 10, 10);
             }
             g2.drawImage(entity.inventory.get(i).down1,slotX,slotY,null);
+
+            //DISPLAY AMOUNT
+            if(entity == gp.player && entity.inventory.get(i).amount > 1){
+                g2.setFont(g2.getFont().deriveFont(32F));
+                int amountX;
+                int amountY;
+
+                String s = "" + entity.inventory.get(i).amount;
+                amountX = getAlignToRightText(s, slotX + 44);
+                amountY = slotY - 8 + gp.tileSize;
+
+                //SHADOW FOR NUMBER
+                g2.setColor(new Color(60,60,60));
+                g2.drawString(s,amountX,amountY);
+
+                //NUMBER
+                g2.setColor(Color.white);
+                g2.drawString(s,amountX-3,amountY-3);
+
+            }
             slotX += slotSize;
             if(i == 4 || i == 9 || i == 11){
                 slotX = slotXStart + 32;
@@ -719,7 +744,7 @@ public class UI {
 
         if(counter == 80
 
-        ){
+            ){
             counter = 0;
             gp.gameState = gp.playState;
             gp.currentMap = gp.eHandler.tempMap;
@@ -820,15 +845,15 @@ public class UI {
                     currentDialogue = "You need more coins to buy this item.";
                     drawDialogueScreen();
                 }
-                else if(gp.player.inventory.size() == gp.player.maxInventorySize){
-                    subState = 0;
-                    gp.gameState = gp.dialogueState;
-                    currentDialogue = "Your Inventory is Full!";
-                    drawDialogueScreen();
-                }
                 else {
-                    gp.player.coins -= npc.inventory.get(itemIndex).price;
-                    gp.player.inventory.add(npc.inventory.get(itemIndex));
+                    if(gp.player.canObtainItem(npc.inventory.get(itemIndex))){
+                        gp.player.coins -= npc.inventory.get(itemIndex).price;
+                    }
+                    else {
+                        subState = 0;
+                        gp.gameState = gp.dialogueState;
+                        currentDialogue = "Your Inventory is Full!";
+                    }
                 }
             }
         }
@@ -873,9 +898,34 @@ public class UI {
                     currentDialogue = "You cannot sell an equipped item!";
                     drawDialogueScreen();
                 } else {
-                    gp.player.inventory.remove(itemIndex);
+                    if(gp.player.inventory.get(itemIndex).amount > 1){
+                        gp.player.inventory.get(itemIndex).amount--;
+                    }
+                    else {
+                        gp.player.inventory.remove(itemIndex);
+                    }
                     gp.player.coins += price;
                 }
+            }
+        }
+    }
+    public void drawSleepScreen(){
+        counter++;
+        if(counter < 120){
+            gp.eManager.lighting.filterAlpha += 0.01f;
+            if(gp.eManager.lighting.filterAlpha > 1f){
+                gp.eManager.lighting.filterAlpha = 1f;
+            }
+        }
+        if(counter >= 120){
+            gp.eManager.lighting.filterAlpha -= 0.01f;
+            if(gp.eManager.lighting.filterAlpha <= 0){
+                gp.eManager.lighting.filterAlpha = 0f;
+                counter = 0;
+                gp.eManager.lighting.dayState = gp.eManager.lighting.day;
+                gp.eManager.lighting.dayCounter = 0;
+                gp.gameState = gp.playState;
+                gp.player.getImage();
             }
         }
     }

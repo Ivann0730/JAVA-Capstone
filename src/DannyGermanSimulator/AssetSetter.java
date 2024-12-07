@@ -3,6 +3,7 @@ package DannyGermanSimulator;
 import Entity.NPC_Merchant;
 import Entity.NPC_radish;
 import monster.MON_Bat;
+import monster.MON_Orc;
 import monster.MON_Slime;
 import object.*;
 import tile_interactive.IT_DryTree;
@@ -54,6 +55,20 @@ public class AssetSetter {
         gp.obj[mapNum][i] = new OBJ_Door(gp);
         gp.obj[mapNum][i].worldX = gp.tileSize * 39;
         gp.obj[mapNum][i].worldY = gp.tileSize * 162;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Chest(gp,new OBJ_Potion_Red(gp));
+        gp.obj[mapNum][i].worldX = gp.tileSize * 48;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 194;
+        i++;
+        gp.obj[mapNum][i] = new OBJ_Potion_Red(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 23;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 230;
+        i++;
+
+
+        gp.obj[mapNum][i] = new OBJ_Lantern(gp);
+        gp.obj[mapNum][i].worldX = gp.tileSize * 25;
+        gp.obj[mapNum][i].worldY = gp.tileSize * 230;
         i++;
     }
     public void setNPC(){
@@ -135,6 +150,10 @@ public class AssetSetter {
 
         mapNum = 3;
         i = 0;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 20;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 230;
+        i++;
         gp.monster[mapNum][i] = new MON_Slime(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize * 28;
         gp.monster[mapNum][i].worldY = gp.tileSize * 230;

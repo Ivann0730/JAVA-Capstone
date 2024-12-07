@@ -18,7 +18,7 @@ public class TileManager {
     public Tile[] tileDungeon;
     public Tile[] tilePathway;
     public int[][][] mapTileNum;
-    boolean drawPath = false;
+    boolean drawPath = true;
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
@@ -204,7 +204,6 @@ public class TileManager {
         setUpSpawn(100,"/Spawn/tr3" , true);
         setUpSpawn(101,"/Spawn/tr4" , true);
     }
-
     public void getTileDungeon() {
         setUpDungeon(0, "/Tiles_Dungeon/Decor-1", true);
         setUpDungeon(1, "/Tiles_Dungeon/Decor-2", true);
@@ -301,7 +300,6 @@ public class TileManager {
         setUpDungeon(92, "/Tiles_Dungeon/Walls-8", true);
         setUpDungeon(93, "/Tiles_Dungeon/Walls-9", true);
     }
-
     public void getTilePathway() {
         setUpPathway(0, "/Tiles_Pathway/001", false);
         setUpPathway(1, "/Tiles_Pathway/002", false);
@@ -502,7 +500,6 @@ public class TileManager {
 
 
     }
-
     public void setUp(int index, String imageName, boolean collision){
 
         UtilityTool uTool = new UtilityTool();
@@ -539,7 +536,6 @@ public class TileManager {
             e.printStackTrace();
         }
     }
-
     public void setUpPathway(int index, String imageName, boolean collision){
 
         UtilityTool uTool = new UtilityTool();
@@ -616,7 +612,7 @@ public class TileManager {
 
                     case 0 ,1: g2.drawImage(tile[tileNum].image, screenX, screenY, null); break;
                     case 2: g2.drawImage(tileSpawn[tileNum].image, screenX, screenY, null); break;
-                    case 3: g2.drawImage(tileDungeon[tileNum].image, screenX, screenY, null);
+                    case 3: g2.drawImage(tileDungeon[tileNum].image, screenX, screenY, null); break;
                     case 4: g2.drawImage(tilePathway[tileNum].image, screenX, screenY, null); break;
 
                 }

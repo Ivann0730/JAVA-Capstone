@@ -6,7 +6,7 @@ import java.sql.SQLOutput;
 
 public class KeyHandler implements KeyListener{
     GamePanel gp;
-    public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, ePressed = false, enterPressed=false, shotKeyPressed;
+    public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, ePressed = false, enterPressed=false, shotKeyPressed, spacePressed;
     public boolean isMountPressed = false;
     boolean showDebugText = false;
 
@@ -160,9 +160,12 @@ public class KeyHandler implements KeyListener{
         if(code == KeyEvent.VK_ESCAPE){
             gp.gameState = gp.optionState;
         }
-        if(code == KeyEvent.VK_M){
-            gp.gameState = gp.mapState;
+        if(code == KeyEvent.VK_SPACE){
+            spacePressed = true;
         }
+//        if(code == KeyEvent.VK_M){
+//            gp.gameState = gp.mapState;
+//        }
 //        if(code == KeyEvent.VK_N){
 //            if(!gp.map.miniMapOn) {
 //                gp.map.miniMapOn = true;
@@ -394,6 +397,12 @@ public class KeyHandler implements KeyListener{
         }
         if(code == KeyEvent.VK_F){
             shotKeyPressed = false;
+        }
+        if(code == KeyEvent.VK_ENTER){
+            enterPressed = false;
+        }
+        if(code == KeyEvent.VK_SPACE){
+            spacePressed = false;
         }
     }
 }

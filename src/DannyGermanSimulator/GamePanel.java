@@ -11,6 +11,7 @@ import Entity.Entity;
 import Entity.Player;
 import ai.PathFinder;
 //import tile.Map;
+import environment.EnvironmentManager;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
 
@@ -33,7 +34,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int worldHeight = tileSize * maxWorldRow;
     public boolean fullScreenOn = false;
     public final int maxMap = 10;
-    public int currentMap = 4;
+    public int currentMap = 3;
 
     // FPS
     int FPS = 60;
@@ -56,6 +57,7 @@ public class GamePanel extends JPanel implements Runnable {
     Config config = new Config(this);
 //    Map map = new Map(this);
     public PathFinder pFinder = new PathFinder(this);
+    EnvironmentManager eManager = new EnvironmentManager(this);
     Thread gameThread;
 
     // Player, Entity, Objects
@@ -80,8 +82,9 @@ public class GamePanel extends JPanel implements Runnable {
     public final int gameOverState = 6;
     public final int transitionState = 7;
     public final int tradeState = 8;
-    public final int mapState = 9;
-    public final int transitionStateExpansion = 10;
+    public final int sleepsState = 9;
+    public final int mapState = 10;
+    public final int transitionStateExpansion = 11;
 
 
     public GamePanel() {
@@ -96,6 +99,8 @@ public class GamePanel extends JPanel implements Runnable {
         aSetter.setNPC();
         aSetter.setMonster();
         aSetter.setInteractiveTile();
+        eManager.setup();
+
         gameState = titleState;
 
         tempScreen = new BufferedImage(screenWidth,screenHeight,BufferedImage.TYPE_INT_ARGB);
@@ -215,6 +220,8 @@ public class GamePanel extends JPanel implements Runnable {
                     iTile[currentMap][i].update();
                 }
             }
+
+            eManager.update();
         }
         if(gameState == pauseState){
             //nothing yet
@@ -231,7 +238,7 @@ public class GamePanel extends JPanel implements Runnable {
         if(gameState == titleState){
             ui.draw(g2);
         }
-        //Map Screen
+//        Map Screen
 //        else if(gameState == mapState){
 //            map.drawFullMapScreen(g2);
 //        }
@@ -300,6 +307,9 @@ public class GamePanel extends JPanel implements Runnable {
 
             //MINIMAP
 //            map.drawMiniMap(g2);
+
+            //ENVIRONMENT
+            eManager.draw(g2);
 
             //UI
             ui.draw(g2);
