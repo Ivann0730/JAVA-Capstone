@@ -4,60 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Object Detection/Loot, Stackable Items, Lighting Item, Day and Night Cycle, Advanced Combat&#10;&#10;-implemented darkness and lighting effects that are provided by torch or lantern so we can create nighttime situations or dark interiors such as dungeons, caves, ruins, etc.&#10;-added a lantern so we can equip/un-equip it and change the lighting situation.&#10;-implemented the day and night cycle. Also, added a tent so we can sleep until the next morning.&#10;&#10;--did not implement map bcuz of memory usage errors&#10;&#10;-need new orc sprites&#10;-need to add objects and chests into maps&#10;-need to remove ui&#10;-need to replace images used to new ones&#10;-need to fix Mini map and map function&#10;-need to fix ui setting for retry&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to set more mobs for dungeons and spawn">
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_attack_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/monster/orc_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/Door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/Emerald.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/chest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/chest_opened.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/lantern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/tent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/blocked.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/parry.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/sleep.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/environment/EnvironmentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/monster/MON_Orc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Gem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Lantern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Tent.java" afterDir="false" />
+    <list default="true" id="a32925c1-4475-423e-9d0a-63cec802cec7" name="Changes" comment="Added Object Detection/Loot, Stackable Items, Lighting Item, Day and Night Cycle, Advanced Combat, Guard and Parry&#10;&#10;-implemented darkness and lighting effects that are provided by torch or lantern so we can create nighttime situations or dark interiors such as dungeons, caves, ruins, etc.&#10;-added a lantern so we can equip/un-equip it and change the lighting situation.&#10;-implemented the day and night cycle. Also, added a tent so we can sleep until the next morning.&#10;-implemented attack AI.&#10;- implement a guard and parry (just guard) system so we can stagger the attacker and give extra damage!&#10;-press space to guard/parry&#10;&#10;--did not implement map bcuz of memory usage errors&#10;&#10;-need to fix combat for orc, also sprite&#10;-need new orc sprites&#10;-need to add objects and chests into maps&#10;-need to remove ui&#10;-need to replace images used to new ones&#10;-need to fix Mini map and map function&#10;-need to fix ui setting for retry&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to set more mobs for dungeons and spawn">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_4_2024_8_01_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_4_2024_8_01_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/Door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/chest_opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/lantern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_attack_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/orc_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]/tent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/Door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/chest_opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/lantern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_attack_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/orc_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM_[Changes]1/tent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_7_2024_6_04_AM__Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/DataStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/SaveLoad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/environment/Lighting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/objects/Door.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/objects/Door.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DannyGermanSimulator/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/NPC_Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/NPC_Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/MON_Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Bat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monster/MON_Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Slime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Axe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Axe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Heart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Mana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Mana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Potion_Red.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MON_Orc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_Orc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Chest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733227430287</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added Object Detection/Loot, Stackable Items, Lighting Item, Day and Night Cycle, Advanced Combat, Guard and Parry&#10;&#10;-implemented darkness and lighting effects that are provided by torch or lantern so we can create nighttime situations or dark interiors such as dungeons, caves, ruins, etc.&#10;-added a lantern so we can equip/un-equip it and change the lighting situation.&#10;-implemented the day and night cycle. Also, added a tent so we can sleep until the next morning.&#10;-implemented attack AI.&#10;- implement a guard and parry (just guard) system so we can stagger the attacker and give extra damage!&#10;-press space to guard/parry&#10;&#10;--did not implement map bcuz of memory usage errors&#10;&#10;-need to fix combat for orc, also sprite&#10;-need new orc sprites&#10;-need to add objects and chests into maps&#10;-need to remove ui&#10;-need to replace images used to new ones&#10;-need to fix Mini map and map function&#10;-need to fix ui setting for retry&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to set more mobs for dungeons and spawn">
+      <option name="closed" value="true" />
+      <created>1733560678455</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733560678455</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music&#10;(note: still needs optimization)" />
     <MESSAGE value="Sounds Implemented &#10;added coin sound effect but cannot be heard well due to bg music. also more items added and added HP and Boots to add speed&#10;(note: still needs optimization)" />
     <MESSAGE value="UI Implemented&#10;-playtime is now shown&#10;-new text appears when object is picked up&#10;-fixed the collision values for player&#10;//to fix object collision values&#10;(note: still needs optimization)" />
     <MESSAGE value="Improved Rendering Performance&#10;-press T to show draw time&#10;(before optimization draw time was 600000 - 800000 or 0.006 - 0.008 seconds, after optimization it is now 0.001 average)&#10;-cleaned up code a little bit&#10;-added utility class for scaling image for better performance" />
@@ -488,7 +506,8 @@
     <MESSAGE value="Added Options Screen and Save Function for Settings (like music and fullscreen)&#10;-press ESC key to open Options Key.&#10;-auto save when change is made in settings&#10;&#10;&#10;-need to optimize game and fix screen scaling" />
     <MESSAGE value="Added Trade System&#10;-implemented a merchant NPC so we can trade(Buy/Sell) items.&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
     <MESSAGE value="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Changed Map keys&#10;-press M for map and N for mini-map&#10;&#10;-need to optimize game and fix screen scaling&#10;-need to implement spawn map and dungeon&#10;-need to set mobs for dungeons and others" />
+    <MESSAGE value="Added Object Detection/Loot, Stackable Items, Lighting Item, Day and Night Cycle, Advanced Combat, Guard and Parry&#10;&#10;-implemented darkness and lighting effects that are provided by torch or lantern so we can create nighttime situations or dark interiors such as dungeons, caves, ruins, etc.&#10;-added a lantern so we can equip/un-equip it and change the lighting situation.&#10;-implemented the day and night cycle. Also, added a tent so we can sleep until the next morning.&#10;-implemented attack AI.&#10;- implement a guard and parry (just guard) system so we can stagger the attacker and give extra damage!&#10;-press space to guard/parry&#10;&#10;--did not implement map bcuz of memory usage errors&#10;&#10;-need to fix combat for orc, also sprite&#10;-need new orc sprites&#10;-need to add objects and chests into maps&#10;-need to remove ui&#10;-need to replace images used to new ones&#10;-need to fix Mini map and map function&#10;-need to fix ui setting for retry&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to set more mobs for dungeons and spawn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Object Detection/Loot, Stackable Items, Lighting Item, Day and Night Cycle, Advanced Combat, Guard and Parry&#10;&#10;-implemented darkness and lighting effects that are provided by torch or lantern so we can create nighttime situations or dark interiors such as dungeons, caves, ruins, etc.&#10;-added a lantern so we can equip/un-equip it and change the lighting situation.&#10;-implemented the day and night cycle. Also, added a tent so we can sleep until the next morning.&#10;-implemented attack AI.&#10;- implement a guard and parry (just guard) system so we can stagger the attacker and give extra damage!&#10;-press space to guard/parry&#10;&#10;--did not implement map bcuz of memory usage errors&#10;&#10;-need to fix combat for orc, also sprite&#10;-need new orc sprites&#10;-need to add objects and chests into maps&#10;-need to remove ui&#10;-need to replace images used to new ones&#10;-need to fix Mini map and map function&#10;-need to fix ui setting for retry&#10;-need to make plans for level progression&#10;-need to optimize game and fix screen scaling&#10;-need to set more mobs for dungeons and spawn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

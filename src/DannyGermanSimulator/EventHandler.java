@@ -107,10 +107,11 @@ public class EventHandler {
     public void healingPool(int gameState){
         if(gp.keyH.ePressed){
             gp.gameState = gameState;
-            gp.ui.currentDialogue = "You drank holy water, life restored";
+            gp.ui.currentDialogue = "You drank holy water, life restored\nProgress has been saved.";
             gp.player.life = gp.player.maxLife;
             gp.player.mana = gp.player.maxMana;
             gp.aSetter.setMonster();
+            gp.saveLoad.save();
         }
         gp.keyH.ePressed  = false;
     }

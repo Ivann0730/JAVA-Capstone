@@ -32,24 +32,8 @@ public class Player extends Entity {
         solidArea.height=48;
 
         setDefaultValues();
-        getImage();
-        getAttackImage();
-        getGuardImage();
-        setItems();
     }
-
     public void setDefaultValues() {
-        //SPAWN
-//        worldX = gp.tileSize * 27;
-//        worldY = gp.tileSize * 123;
-
-//        //DUNGEON
-        worldX = gp.tileSize * 22;
-        worldY = gp.tileSize * 230;
-
-//        worldX = gp.tileSize * 39;
-//        worldY = gp.tileSize * 165;
-
         //TEST MAP
 //        worldX = gp.tileSize * 23;
 //        worldY = gp.tileSize * 21;
@@ -77,21 +61,47 @@ public class Player extends Entity {
         gems = 0;
         currentWeapon = new OBJ_Sword_Normal(gp);
         currentShield = new OBJ_Shield_Wood(gp);
+        currentLight = null;
         projectile = new OBJ_Fireball(gp);
         attack = getAttack();
         defence = getDefence();
+
+        setDefaultPosition();
+        getImage();
+        getAttackImage();
+        getGuardImage();
+        setItems();
     }
     public void setDefaultPosition(){
-
-        worldX = gp.tileSize * 23;
-        worldY = gp.tileSize * 21;
+        switch(gp.currentMap){
+            case 0,1:
+                break;
+            case 2://SPAWN
+                worldX = gp.tileSize * 27;
+                worldY = gp.tileSize * 123;
+                break;
+            case 3:
+                //DUNGEON
+                worldX = gp.tileSize * 22;
+                worldY = gp.tileSize * 230;
+//                worldX = gp.tileSize * 39;
+//                worldY = gp.tileSize * 165;
+                break;
+            case 4:
+                break;
+        }
         direction = "down";
     }
-    public void restoreLifeAndMan(){
+    public void restoreStatus(){
         life = maxLife;
         mana = maxMana;
+        speed = defaultSpeed;
         invincible = false;
         transparent = false;
+        attacking = false;
+        guarding = false;
+        knockBack = false;
+        lightUpdated = true;
     }
     public void setItems(){
 
@@ -109,6 +119,24 @@ public class Player extends Entity {
     }
     public int getDefence(){
         return defence = dexterity * currentShield.defenseValue;
+    }
+    public int getCurrentWeaponSlot(){
+        int currentWeaponSlot = 0;
+        for(int i = 0; i < inventory.size(); i++){
+            if(inventory.get(i) == currentWeapon){
+                currentWeaponSlot = i;
+            }
+        }
+        return currentWeaponSlot;
+    }
+    public int getCurrentShieldSlot(){
+        int currentSheildSlot = 0;
+        for(int i = 0; i < inventory.size(); i++){
+            if(inventory.get(i) == currentShield){
+                currentSheildSlot = i;
+            }
+        }
+        return currentSheildSlot;
     }
     public void getImage() {
         //Diri ibutang nato atoang mga pictures for characters

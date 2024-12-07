@@ -11,6 +11,7 @@ import Entity.Entity;
 import Entity.Player;
 import ai.PathFinder;
 //import tile.Map;
+import data.SaveLoad;
 import environment.EnvironmentManager;
 import tile.TileManager;
 import tile_interactive.InteractiveTile;
@@ -56,6 +57,7 @@ public class GamePanel extends JPanel implements Runnable {
     public EventHandler eHandler = new EventHandler(this);
     Config config = new Config(this);
 //    Map map = new Map(this);
+    SaveLoad saveLoad = new SaveLoad(this);
     public PathFinder pFinder = new PathFinder(this);
     EnvironmentManager eManager = new EnvironmentManager(this);
     Thread gameThread;
@@ -107,19 +109,18 @@ public class GamePanel extends JPanel implements Runnable {
         g2 = (Graphics2D) tempScreen.getGraphics();
         setFullScreen();
     }
-    public void retry(){
+    public void resetGame(boolean restart){
         player.setDefaultPosition();
-        player.restoreLifeAndMan();
+        player.restoreStatus();
         aSetter.setNPC();
         aSetter.setMonster();
-    }
-    public void restart(){
-        player.setDefaultValues();
-        player.setItems();
-        aSetter.setObject();
-        aSetter.setNPC();
-        aSetter.setMonster();
-        aSetter.setInteractiveTile();
+
+        if(restart){
+            player.setDefaultValues();
+            aSetter.setObject();
+            aSetter.setInteractiveTile();
+            eManager.lighting.resetDay();
+        }
     }
     public void setFullScreen(){
         //GET MONITOR ENVIRONMENT

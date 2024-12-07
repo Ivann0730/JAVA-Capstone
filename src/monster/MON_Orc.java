@@ -27,8 +27,8 @@ public class MON_Orc extends Entity {
         solidArea.height = 100;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
-        attackArea.width = 48;
-        attackArea.height = 48;
+        attackArea.width = gp.tileSize;
+        attackArea.height = gp.tileSize;
         motion1_duration = 40;
         motion2_duration = 85;
 

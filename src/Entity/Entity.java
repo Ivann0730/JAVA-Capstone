@@ -2,6 +2,7 @@ package Entity;
 
 import DannyGermanSimulator.GamePanel;
 import DannyGermanSimulator.UtilityTool;
+import object.OBJ_Potion_Red;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -46,6 +47,8 @@ public class Entity {
     public boolean guarding = false;
     public boolean transparent = false;
     public boolean offBalance = false;
+    public Entity loot;
+    public boolean opened = false;
 
     //COUNTER
     public int spriteCounter = 0;
@@ -136,6 +139,9 @@ public class Entity {
     }
     public int getGoalRow(Entity target){
         return (target.worldY + target.solidArea.y) / gp.tileSize;
+    }
+    public void setLoot(Entity loot){
+
     }
     public void setAction(){
     }
@@ -729,16 +735,16 @@ public class Entity {
 
         switch (user.direction){
             case "up":
-                nextWorldY = user.getTopY()-1;
+                nextWorldY = user.getTopY()-gp.player.speed;
                 break;
             case "down":
-                nextWorldY = user.getBottomY()+1;
+                nextWorldY = user.getBottomY()+gp.player.speed;
                 break;
             case "left":
-                nextWorldX = user.getLeftX()-1;
+                nextWorldX = user.getLeftX()-gp.player.speed;
                 break;
             case "right":
-                nextWorldX = user.getRightX()+1;
+                nextWorldX = user.getRightX()+gp.player.speed;
                 break;
         }
         int col = nextWorldX/gp.tileSize;
