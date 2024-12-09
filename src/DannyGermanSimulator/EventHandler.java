@@ -59,16 +59,14 @@ public class EventHandler {
 
         if(canTouchEvent){
             if(hit(2,75,35,"any")) {teleport(4,127,237,gp.outside);}//SPAWN TO PATHWAY
-            if(hit(4,127,237,"any")) {teleport(2,75,35,gp.outside);}//PATHWAY TO SPAWN
-            else if(hit(0,42,1,"any")) {damagePit(gp.dialogueState);}
-            else if(hit(0,13,26,"any")) {healingPool(gp.dialogueState);}
-            else if(hit(0,13,27,"any")) {healingPool(gp.dialogueState);}
-            else if(hit(0,13,28,"any")) {healingPool(gp.dialogueState);}
-            else if(hit(0,13,29,"any")) {healingPool(gp.dialogueState);}
-            else if(hit(0,39,18,"any")) {teleport(1,12,13,gp.outside);}
-            else if(hit(1,12,13,"any")) {teleport(0,39,18,gp.outside);}
-            else if(hit(1,12,9,"up")) {speak(gp.npc[1][0]);}
+            else if(hit(4,127,237,"any")) {teleport(2,75,35,gp.outside);}//PATHWAY TO SPAWN
             else if(hit(2,153,60,"up")) {speak(gp.npc[2][1]);}
+            else if(hit(4,131,64,"up")) {speak(gp.npc[4][0]);}
+//            else if(hit(2,33,103,"up")) {healingPool(3);}
+            else if(hit(4,131,93,"any")) {teleport(4,131,73,gp.outside);}//SPAWN TO DEntrance
+            else if(hit(4,131,73,"any")) {teleport(4,131,93,gp.outside);}//DEntrance TO SPAWN
+            else if(hit(4,131,28,"any")) {teleport(3,21,230,gp.dungeon);}//DEntrance TO D1
+            else if(hit(3,21,230,"any")) {teleport(4,131,28,gp.outside);}//D1 TO DEntrance
             else if(hit(3,39,157,"any")) {teleport(3,79,121,gp.dungeon);}//D1 to D2
             else if(hit(3,79,121,"any")) {teleport(3,39,157,gp.dungeon);}//D2 to D1
             else if(hit(3,127,124,"any")) {teleport(3,48,56,gp.dungeon);}//D2 to D3

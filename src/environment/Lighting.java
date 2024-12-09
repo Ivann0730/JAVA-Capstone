@@ -31,7 +31,7 @@ public class Lighting {
         Area screenArea = new Area(new Rectangle2D.Double(0,0,gp.screenWidth, gp.screenHeight));
 
         if(gp.player.currentLight == null){
-            g2.setColor(new     Color(0,0,0.1f,0.97f));
+            g2.setColor(new Color(0,0,0.1f,0.97f));
             g2.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
             //DRAW THE SCREEN RECTANGLE WITHOUT THE LIGHT CIRCLE AREA
             g2.fill(screenArea); //don't need this bit smoother when this is on so yeah leave it on

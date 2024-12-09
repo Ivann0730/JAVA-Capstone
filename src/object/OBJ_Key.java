@@ -16,6 +16,7 @@ public class OBJ_Key extends Entity {
         description = "[" + name + "]\nA key to open a room in GLE 999.";
         price = 100;
         stackable = true;
+        setDialogue();
     }
     public void setDialogue(){
         dialogues[0][0] = "You used the " + name + " to open the door.";

@@ -76,11 +76,14 @@ public class KeyHandler implements KeyListener{
             if(code == KeyEvent.VK_ENTER){
                 //NEW GAME
                 if(gp.ui.commandNum == 0){
-                    gp.ui.titleScreenState = 1;
+                    gp.gameState = gp.playState;
+                    gp.playMusic(11);
+//                    gp.ui.titleScreenState = 1;
                 }
                 //LOAD GAME
                 if(gp.ui.commandNum == 1){
                     gp.saveLoad.load();
+                    gp.playMusic(11);
                     gp.gameState = gp.playState;
                 }
                 //QUIT

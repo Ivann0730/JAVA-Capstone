@@ -16,6 +16,7 @@ public class OBJ_Potion_Red extends Entity {
         description = "[" + name + "]\nA potion that restores " + value + " health\nusing codechum juice.";
         price = 25;
         stackable = true;
+        setDialogue();
     }
     public void setDialogue(){
         dialogues[0][0] = "You drank the " + name + "!\n" + "Your life has been restored by " + value + ".";
