@@ -5,12 +5,13 @@ import Entity.Entity;
 
 public class OBJ_Chest extends Entity {
     GamePanel gp;
+    public static final String objName = "Chest";
     public OBJ_Chest(GamePanel gp){
         super(gp);
         this.gp = gp;
 
         type = type_obstacle;
-        name = "Chest";
+        name = objName;
         image = setUp("/objects/chest",gp.tileSize,gp.tileSize);
         image2 = setUp("/objects/chest_opened",gp.tileSize,gp.tileSize);
         down1 = image;
@@ -25,25 +26,27 @@ public class OBJ_Chest extends Entity {
     }
     public void setLoot(Entity loot){
         this.loot = loot;
+        setDialogue();
+    }
+    public void setDialogue(){
+        dialogues[0][0] = "You opened the chest and found a " + loot.name + "!\n...But you don't have enough inventory space.";
+        dialogues[1][0] = "You opened the chest and found a " + loot.name + "!\nYou Obtained the " + loot.name + "!";
+        dialogues[2][0] = "It's Empty.";
     }
     public void interact(){
-        gp.gameState = gp.dialogueState;
         if(!opened){
             gp.playSE(0);
-            StringBuilder sb = new StringBuilder();
-            sb.append("You opened the chest and found a " + loot.name + "!");
 
         if(!gp.player.canObtainItem(loot)){
-                sb.append("\n...But you don't have enough inventory space.");
+                startDialogue(this,0);
             } else {
-                sb.append("\nYou Obtained the " + loot.name + "!");
+                startDialogue(this,1);
                 down1 = image2;
                 opened = true;
             }
-            gp.ui.currentDialogue = sb.toString();
         }
         else {
-            gp.ui.currentDialogue = "It's Empty.";
+            startDialogue(this,2);
         }
     }
 }

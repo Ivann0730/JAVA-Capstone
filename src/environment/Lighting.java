@@ -31,7 +31,7 @@ public class Lighting {
         Area screenArea = new Area(new Rectangle2D.Double(0,0,gp.screenWidth, gp.screenHeight));
 
         if(gp.player.currentLight == null){
-            g2.setColor(new Color(0,0,0.1f,0.98f));
+            g2.setColor(new     Color(0,0,0.1f,0.97f));
             g2.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
             //DRAW THE SCREEN RECTANGLE WITHOUT THE LIGHT CIRCLE AREA
             g2.fill(screenArea); //don't need this bit smoother when this is on so yeah leave it on
@@ -68,9 +68,9 @@ public class Lighting {
             color[6] = new Color(0,0,0.1f,0.82f);
             color[7] = new Color(0,0,0.1f,0.87f);
             color[8] = new Color(0,0,0.1f,0.91f);
-            color[9] = new Color(0,0,0.1f,0.94f);
-            color[10] = new Color(0,0,0.1f,0.96f);
-            color[11] = new Color(0,0,0.1f,0.98f);
+            color[9] = new Color(0,0,0.1f,0.92f);
+            color[10] = new Color(0,0,0.1f,0.93f);
+            color[11] = new Color(0,0,0.1f,0.94f);
 
             fraction[0] = 0f;
             fraction[1] = 0.4f;
@@ -108,13 +108,13 @@ public class Lighting {
         if(dayState == day){
             dayCounter++;
 
-            if(dayCounter > 3600){ // 600 frames of 6 secs 3600 is 1 min
+            if(dayCounter > 3600*3){ // 600 frames of 6 secs 3600 is 1 min
                 dayState = dusk;
                 dayCounter = 0;
             }
         }
         if(dayState == dusk){
-            filterAlpha += 0.001f;
+            filterAlpha += 0.01f;
             if(filterAlpha > 1f){
                 filterAlpha = 1f;
                 dayState = night;
@@ -128,7 +128,7 @@ public class Lighting {
             }
         }
         if(dayState == dawn){
-            filterAlpha -= 0.001f;
+            filterAlpha -= 0.01f;
             if(filterAlpha < 0f){
                 filterAlpha = 0;
                 dayState = day;
@@ -136,8 +136,12 @@ public class Lighting {
         }
     }
     public void draw(Graphics2D g2){
-        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, filterAlpha));
-        g2.drawImage(darknessFilter,0,0,null);
+        if(gp.currentArea == gp.outside){
+            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, filterAlpha));
+        }
+        if(gp.currentArea == gp.outside || gp.currentArea == gp.dungeon){
+            g2.drawImage(darknessFilter,0,0,null);
+        }
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 
         //DEBUG

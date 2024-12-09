@@ -15,6 +15,8 @@ public class NPC_radish extends Entity{
         direction = "down";
         speed = 5;
 
+        dialogueSet = -1;
+
         getImage();
         setDialogue();
     }
@@ -50,12 +52,20 @@ public class NPC_radish extends Entity{
         }
     }
     public void setDialogue(){
-        int i = 0;
-        dialogues[i] = "Hi I'm Gyatdish, nice to meet you 00-0000-001!"; i++;
-        dialogues[i] = "Small but my GYATT is unbeatable!"; i++;
-        dialogues[i] = "Yoooo, check out my GYATT!"; i++;
-        dialogues[i] = "I know I know, im GYATTIFULL"; i++;
-        dialogues[i] = "BOMBOGYATTT"; i++;
+        dialogues[0][0] = "Hi I'm Gyatdish, nice to meet you 00-0000-001!";
+        dialogues[0][1] = "Small but my GYATT is unbeatable!";
+        dialogues[0][2] = "Yoooo, check out my GYATT!";
+        dialogues[0][3] = "I know I know, im GYATTIFULL";
+        dialogues[0][4] = "BOMBOGYATTT";
+
+        dialogues[1][0] = "Take care out there!";
+        dialogues[1][1] = "NEBA GIB UP!";
+        dialogues[1][2] = "It's nice to be important, \nbut it's more important to be nice.!";
+        dialogues[1][3] = "Stop counting the days and \nstart making the days count";
+        dialogues[1][4] = "You wouldn't know pleasure if there wasn't pain,\nYou wouldn't know happiness if there wasn't sadness,\nYou wouldn't know what you have if you knew there \ncould be less";
+
+        dialogues[2][0] = "But... why?!";
+        dialogues[2][1] = "!@)(#(%!)@%!))!_@!$$$!";
     }
 
     // can only use two sprite IDK why
@@ -82,8 +92,18 @@ public class NPC_radish extends Entity{
         right4 = setUp("/NPC/radish/running radish-11.png",gp.tileSize,gp.tileSize);
     }
     public void speak(){
-        super.speak();
+        facePlayer();
+        startDialogue(this, dialogueSet);
+        dialogueSet++;
+        if(dialogues[dialogueSet][0] == null){
+            dialogueSet = 0;
+            //to set the last dialogue set
+//            dialogueSet--;
+        }
+//        if(gp.player.life < gp.player.maxLife/3){
+//            dialogueSet = 1;
+//        }
 //        onPath = true;
-        gp.eHandler.teleportExpansion(2,186,190);
+//        gp.eHandler.teleportExpansion(2,186,190);
     }
 }

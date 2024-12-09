@@ -7,9 +7,10 @@ import object.*;
 import java.util.Random;
 
 public class MON_Orc extends Entity {
+    GamePanel gp;
     public MON_Orc(GamePanel gp) {
         super(gp);
-
+        this.gp = gp;
         type = type_monster;
         name = "Orc";
         defaultSpeed = 3;
@@ -17,7 +18,7 @@ public class MON_Orc extends Entity {
         maxLife = 20;
         life = maxLife;
         attack  = 8;
-        defence = 10;
+        defence = 5;
         exp = 30;
         knockBackPower = 5;
 
@@ -27,8 +28,8 @@ public class MON_Orc extends Entity {
         solidArea.height = 100;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
-        attackArea.width = gp.tileSize;
-        attackArea.height = gp.tileSize;
+        attackArea.width = 100;
+        attackArea.height = 100;
         motion1_duration = 40;
         motion2_duration = 85;
 
@@ -46,14 +47,14 @@ public class MON_Orc extends Entity {
         right2 = setUp("/monster/orc_right_2",gp.tileSize,gp.tileSize);
     }
     public void getAttackImage(){
-        attackUp1 = setUp("/monster/orc_attack_up_1",gp.tileSize,gp.tileSize+64);
-        attackUp2 = setUp("/monster/orc_attack_up_2",gp.tileSize,gp.tileSize+64);
-        attackDown1 = setUp("/monster/orc_attack_down_1",gp.tileSize,gp.tileSize+64);
-        attackDown2 = setUp("/monster/orc_attack_down_2",gp.tileSize,gp.tileSize+64);
-        attackLeft1 = setUp("/monster/orc_attack_left_1",gp.tileSize+64,gp.tileSize);
-        attackLeft2 = setUp("/monster/orc_attack_left_2",gp.tileSize+64,gp.tileSize);
-        attackRight1 = setUp("/monster/orc_attack_right_1",gp.tileSize+64,gp.tileSize);
-        attackRight2 = setUp("/monster/orc_attack_right_2",gp.tileSize+64,gp.tileSize);
+        attackUp1 = setUp("/monster/orc_attack_up_1",gp.tileSize,gp.tileSize*2);
+        attackUp2 = setUp("/monster/orc_attack_up_2",gp.tileSize,gp.tileSize*2);
+        attackDown1 = setUp("/monster/orc_attack_down_1",gp.tileSize,gp.tileSize*2);
+        attackDown2 = setUp("/monster/orc_attack_down_2",gp.tileSize,gp.tileSize*2);
+        attackLeft1 = setUp("/monster/orc_attack_left_1",gp.tileSize*2,gp.tileSize);
+        attackLeft2 = setUp("/monster/orc_attack_left_2",gp.tileSize*2,gp.tileSize);
+        attackRight1 = setUp("/monster/orc_attack_right_1",gp.tileSize*2,gp.tileSize);
+        attackRight2 = setUp("/monster/orc_attack_right_2",gp.tileSize*2,gp.tileSize);
     }
     public void setAction(){
         if(onPath){
@@ -63,13 +64,13 @@ public class MON_Orc extends Entity {
             searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
         } else{
             //check if starts chasing
-            checkStartChasingOrNot(gp.player,3,100);
+            checkStartChasingOrNot(gp.player,5,100);
             // get a random direction
-            getRandomDirection();
+            getRandomDirection(120);
         }
         //check if it attacks
         if(!attacking){
-            checkAttackOrNot(25, gp.tileSize*4,gp.tileSize);
+            checkAttackOrNot(25, gp.tileSize*2,gp.tileSize);
         }
     }
     public void damageReaction() {

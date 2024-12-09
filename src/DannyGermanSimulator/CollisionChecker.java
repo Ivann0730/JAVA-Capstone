@@ -130,8 +130,7 @@ public class CollisionChecker {
                             entityRightCol = (entityRightWorldX + entity.speed) / gp.tileSize;
                             tileNum1 = gp.tileM.mapTileNum[gp.currentMap][entityRightCol][entityTopRow];
                             tileNum2 = gp.tileM.mapTileNum[gp.currentMap][entityRightCol][entityBottomRow];
-                            if (gp.tileM.tileDungeon
-                                    [tileNum1].collision || gp.tileM.tileDungeon[tileNum2].collision) {
+                            if (gp.tileM.tileDungeon[tileNum1].collision || gp.tileM.tileDungeon[tileNum2].collision) {
                                 entity.collisionOn = true;
                             }
                             break;
@@ -166,8 +165,7 @@ public class CollisionChecker {
                             entityRightCol = (entityRightWorldX + entity.speed) / gp.tileSize;
                             tileNum1 = gp.tileM.mapTileNum[gp.currentMap][entityRightCol][entityTopRow];
                             tileNum2 = gp.tileM.mapTileNum[gp.currentMap][entityRightCol][entityBottomRow];
-                            if (gp.tileM.tilePathway
-                                    [tileNum1].collision || gp.tileM.tilePathway[tileNum2].collision) {
+                            if (gp.tileM.tilePathway[tileNum1].collision || gp.tileM.tilePathway[tileNum2].collision) {
                                 entity.collisionOn = true;
                             }
                             break;
@@ -182,6 +180,10 @@ public class CollisionChecker {
     }
     public int checkObject(Entity entity, boolean player){
         int index = 999;
+        String direction = entity.direction;
+        if(entity.knockBack){
+            direction = entity.knockBackDirection;
+        }
         for (int i = 0; i < gp.obj[1].length; i++){
             if(gp.obj[gp.currentMap][i] != null){
                 //Get entity's solid are position
@@ -191,7 +193,7 @@ public class CollisionChecker {
                 gp.obj[gp.currentMap][i].solidArea.x = gp.obj[gp.currentMap][i].worldX + gp.obj[gp.currentMap][i].solidArea.x;
                 gp.obj[gp.currentMap][i].solidArea.y = gp.obj[gp.currentMap][i].worldY + gp.obj[gp.currentMap][i].solidArea.y;
 
-                switch (entity.direction){
+                switch (direction){
                     case "up":
                         entity.solidArea.y -= entity.speed;
                         break;

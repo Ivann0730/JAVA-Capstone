@@ -4,6 +4,8 @@ import DannyGermanSimulator.GamePanel;
 import object.*;
 
 public class NPC_Merchant extends Entity{
+
+    public static final String npcName = "Merchant";
     public NPC_Merchant(GamePanel gp) {
         super(gp);
         this.solidAreaDefaultX = 32;
@@ -12,19 +14,26 @@ public class NPC_Merchant extends Entity{
         this.solidArea.height = 64;
         direction = "down";
         speed = 3;
-
+        name = npcName;
         getImage();
         setDialogue();
         setItems();
     }
 
     public void setDialogue(){
-        int i = 0;
-        dialogues[i] = "Hello I am Noob Master"; i++;
-        dialogues[i] = "Check out what I have in Store"; i++;
-        dialogues[i] = "I have Jude Maranga's keyboard"; i++;
-        dialogues[i] = "I am from Codechumus!"; i++;
-        dialogues[i] = "Niggas in Paris!"; i++;
+        dialogues[0][0] = "Hello I am Noob Master";
+        dialogues[0][1] = "Check out what I have in Store";
+        dialogues[0][2] = "I have Jude Maranga's keyboard!";
+        dialogues[0][3] = "I am from Codechumus!";
+        dialogues[0][4] = "Niggas in Paris!";
+
+        dialogues[1][0] = "Come again hehe";
+
+        dialogues[2][0] = "You need more coins to buy this item.";
+
+        dialogues[3][0] = "Your Inventory is Full!";
+
+        dialogues[4][0] = "You cannot sell an equipped item!";
     }
 
     // can only use two sprite IDK why
@@ -45,11 +54,10 @@ public class NPC_Merchant extends Entity{
         inventory.add(new OBJ_Potion_Red(gp));
         inventory.add(new OBJ_Key(gp));
         inventory.add(new OBJ_Shield_Blue(gp));
-        inventory.add(new OBJ_Boots(gp));
         inventory.add(new OBJ_Tent(gp));
     }
     public void speak(){
-        super.speak();
+        facePlayer();
         gp.gameState = gp.tradeState;
         gp.ui.npc = this;
     }
