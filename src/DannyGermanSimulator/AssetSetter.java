@@ -180,8 +180,32 @@ public class AssetSetter {
         mapNum = 3;
         i = 0;
         gp.monster[mapNum][i] = new MON_Orc(gp);
-        gp.monster[mapNum][i].worldX = gp.tileSize * 20;
-        gp.monster[mapNum][i].worldY = gp.tileSize * 230;
+        gp.monster[mapNum][i].worldX = gp.tileSize * 158;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 76;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 178;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 99;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 158;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 76;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 184;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 103;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 190;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 97;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 214;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 77;
+        i++;
+        gp.monster[mapNum][i] = new MON_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize * 217;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 74;
         i++;
 
         if(!Progress.skeletonLordDefeated){

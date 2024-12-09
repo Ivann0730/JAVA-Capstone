@@ -46,8 +46,8 @@ public class InteractiveTile extends Entity {
             worldY - gp.tileSize < gp.player.worldY + gp.player.screenY) {
                 g2.drawImage(down1, screenX, screenY,null);
         }
-        //to see collision hit box
-        g2.setColor(Color.green);
-        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
+        //debug to see collision hit box
+//        g2.setColor(Color.green);
+//        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
     }
 }
