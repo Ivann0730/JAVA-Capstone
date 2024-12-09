@@ -8,7 +8,8 @@ public class KeyHandler implements KeyListener{
     GamePanel gp;
     public boolean upPressed, downPressed, leftPressed, rightPressed, mountPressed, ePressed = false, enterPressed=false, shotKeyPressed, spacePressed;
     public boolean isMountPressed = false;
-    boolean showDebugText = false;
+    public boolean showDebugText = false;
+    public boolean godModeOn = false;
 
     public KeyHandler(GamePanel gp){
         this.gp = gp;
@@ -33,7 +34,7 @@ public class KeyHandler implements KeyListener{
             pauseState(code);
         }
         //DIALOGUE STATE
-        else if(gp.gameState == gp.dialogueState){
+        else if(gp.gameState == gp.dialogueState || gp.gameState == gp.cutSceneState){
             dialogueState(code);
         }
         //CHARACTER STATE
@@ -76,13 +77,11 @@ public class KeyHandler implements KeyListener{
                 //NEW GAME
                 if(gp.ui.commandNum == 0){
                     gp.ui.titleScreenState = 1;
-                    gp.playMusic(11);
                 }
                 //LOAD GAME
                 if(gp.ui.commandNum == 1){
                     gp.saveLoad.load();
                     gp.gameState = gp.playState;
-                    gp.playMusic(11);
                 }
                 //QUIT
                 if(gp.ui.commandNum == 2){
@@ -110,17 +109,15 @@ public class KeyHandler implements KeyListener{
                 if(gp.ui.commandNum == 0){
                     System.out.println("Warrior");
                     gp.gameState = gp.playState;
-//                        gp.playMusic(3);
+                    gp.playMusic(11);
                 }
                 if(gp.ui.commandNum == 1){
                     System.out.println("Mage");
                     gp.gameState = gp.playState;
-//                    gp.playMusic(1);
                 }
                 if(gp.ui.commandNum == 2){
                     System.out.println("Tank");
                     gp.gameState = gp.playState;
-//                    gp.playMusic(1);
                 }
                 if(gp.ui.commandNum == 3){
                     gp.ui.titleScreenState = 0;
@@ -183,6 +180,13 @@ public class KeyHandler implements KeyListener{
                 showDebugText = false;
             }
         }
+        if(code == KeyEvent.VK_G){
+            if(!godModeOn){
+                godModeOn = true;
+            } else if(godModeOn){
+                godModeOn = false;
+            }
+        }
         if(code == KeyEvent.VK_M){
             switch (gp.currentMap){
                 case 0: gp.tileM.loadMap("/maps/testmap.txt",0); break;
@@ -201,7 +205,7 @@ public class KeyHandler implements KeyListener{
     }
     public void dialogueState(int code){
         if(code == KeyEvent.VK_ENTER){
-            gp.gameState = gp.playState;
+            enterPressed = true;
         }
     }
     public void characterState(int code){

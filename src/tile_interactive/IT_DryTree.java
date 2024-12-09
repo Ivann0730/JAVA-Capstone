@@ -19,7 +19,7 @@ public class IT_DryTree extends InteractiveTile{
         this.solidAreaDefaultY = 0;
         down1 = setUp("/tiles_interactive/drytree", gp.tileSize, gp.tileSize);
         destructible = true;
-        life = 3;
+        life = 1;
     }
     public boolean isCorrectItem(Entity entity){
         return entity.currentWeapon.type == type_axe;

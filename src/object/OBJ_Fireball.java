@@ -7,6 +7,7 @@ import java.awt.*;
 
 public class OBJ_Fireball extends Projectile {
     GamePanel gp;
+    public static final String objName = "Fireball";
     public OBJ_Fireball(GamePanel gp) {
         super(gp);
         this.gp = gp;
@@ -15,11 +16,11 @@ public class OBJ_Fireball extends Projectile {
         this.solidArea.width = 48;
         this.solidArea.height = 48;
 
-        name = "Fireball";
+        name = objName;
         speed = 20;
         maxLife = 100;
         life = maxLife;
-        attack = 2;
+        attack = 1;
         useCost = 1;
         alive = false;
 

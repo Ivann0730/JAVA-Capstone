@@ -33,6 +33,8 @@ public class UI {
     int subState = 0;
     int counter = 0;
     public Entity npc;
+    int charIndex = 0;
+    String combinedText = "";
 
     public UI(GamePanel gp){
         this.gp = gp;
@@ -73,6 +75,7 @@ public class UI {
         if(gp.gameState == gp.playState){
             //do pLay state stuff
             drawPlayerLife();
+            drawMonsterLife();
             drawMessage();
         }
         //PAUSE STATE
@@ -118,12 +121,20 @@ public class UI {
 //        gp.player.life = 3;
         int x = gp.tileSize/2;
         int y = gp.tileSize/2;
+        int iconSize = 100;
         int i = 0;
+        int manaStartX = (gp.tileSize/2)-5;
+        int manaStartY = 0;
         //draw max heart
         while(i < gp.player.maxLife/2){
-            g2.drawImage(heart_blank, x, y, null);
+            g2.drawImage(heart_blank, x, y,iconSize,iconSize, null);
             i++;
-            x += gp.tileSize;
+            x += iconSize;
+            manaStartY = y + 100;
+            if(i % 8 == 0){
+                x = gp.tileSize/2;
+                y += iconSize;
+            }
         }
         //reset
         x = gp.tileSize/2;
@@ -131,33 +142,90 @@ public class UI {
         i = 0;
         //draw current heart
         while(i < gp.player.life){
-            g2.drawImage(heart_half, x, y, null);
+            g2.drawImage(heart_half, x, y,iconSize,iconSize, null);
             i++;
             if(i < gp.player.life){
-                g2.drawImage(heart_full, x, y, null);
+                g2.drawImage(heart_full, x, y,iconSize,iconSize, null);
             }
             i++;
-            x += gp.tileSize;
+            x += iconSize;
+            if(i % 16 == 0){
+                x = gp.tileSize/2;
+                y += iconSize;
+            }
         }
 
         //draw Max Mana
-        x = gp.tileSize/2;
-        y = gp.tileSize+64;
+        x = manaStartX;
+        y = manaStartY;
         i = 0;
         while(i < gp.player.maxMana){
-            g2.drawImage(crystal_blank, x, y, null);
+            g2.drawImage(crystal_blank, x, y,iconSize,iconSize, null);
             i++;
-            x += gp.tileSize-32;
+            x += 45;
+
+            if(i % 10 == 0){
+                x = manaStartX;
+                y += iconSize;
+            }
         }
 
         //draw mana
-        x = gp.tileSize/2;
-        y = gp.tileSize+64;
+        x = manaStartX;
+        y = manaStartY;
         i = 0;
         while(i < gp.player.mana){
-            g2.drawImage(crystal_full, x, y, null);
+            g2.drawImage(crystal_full, x, y,iconSize,iconSize, null);
             i++;
-            x += gp.tileSize-32;
+            x += 45;
+
+            if(i % 10 == 0){
+                x = manaStartX;
+                y += iconSize;
+            }
+        }
+    }
+    public void drawMonsterLife(){
+        //MONSTER HP BAR
+        for(int i = 0; i < gp.monster[1].length; i++){
+            Entity monster = gp.monster[gp.currentMap][i];
+            if(monster!=null && monster.inCamera()){
+
+                if(monster.hpBarOn && !monster.boss){
+                    double oneScale = (double) gp.tileSize / monster.maxLife;
+                    double hpBarValue = oneScale*monster.life;
+                    //outline
+                    g2.setColor(new Color(35,35,35));
+                    g2.fillRect(monster.getScreenX()-1,monster.getScreenY()-16,gp.tileSize+2,12);
+
+                    g2.setColor(new Color(255,0,30));
+                    g2.fillRect(monster.getScreenX(),monster.getScreenY()-15,(int) hpBarValue, 10);
+
+                    monster.hpBarCounter++;
+
+                    if(monster.hpBarCounter > 600){
+                        monster.hpBarCounter = 0;
+                        monster.hpBarOn = false;
+                    }
+                }
+                else if(monster.boss){
+                    double oneScale = (double) gp.tileSize*8 / monster.maxLife;
+                    double hpBarValue = oneScale*monster.life;
+
+                    int x = gp.screenWidth/2 - gp.tileSize*4;
+                    int y = gp.tileSize*10;
+                    //outline
+                    g2.setColor(new Color(35,35,35));
+                    g2.fillRect(x-1,y-1,gp.tileSize*8+2,12);
+
+                    g2.setColor(new Color(255,0,30));
+                    g2.fillRect(x,y,(int)hpBarValue,20);
+
+                    g2.setFont(g2.getFont().deriveFont(Font.BOLD,24F));
+                    g2.setColor(Color.white);
+                    g2.drawString(monster.name, x+4,y-10);
+                }
+            }
         }
     }
     public void drawMessage(){
@@ -289,6 +357,37 @@ public class UI {
         x += gp.tileSize;
         y += gp.tileSize;
 
+        if(npc.dialogues[npc.dialogueSet][npc.dialogueIndex] != null){
+//            currentDialogue = npc.dialogues[npc.dialogueSet][npc.dialogueIndex];
+
+            char characters[] = npc.dialogues[npc.dialogueSet][npc.dialogueIndex].toCharArray();
+
+            if(charIndex < characters.length){
+                gp.playSE(17);
+                String s = String.valueOf(characters[charIndex]);
+                combinedText = combinedText+s;
+                currentDialogue = combinedText;
+                charIndex++;
+            }
+
+            if(gp.keyH.enterPressed){
+                charIndex = 0;
+                combinedText = "";
+                if(gp.gameState == gp.dialogueState || gp.gameState == gp.cutSceneState){
+                    npc.dialogueIndex++;
+                    gp.keyH.enterPressed = false;
+                }
+            }
+        } else {//nothing for now;
+            npc.dialogueIndex = 0;
+            if (gp.gameState == gp.dialogueState) {
+                gp.gameState = gp.playState;
+            }
+            if(gp.gameState == gp.cutSceneState){
+                gp.csManager.scenePhase++;
+            }
+        }
+
         for(String line : currentDialogue.split("\n")){
             g2.drawString(line,x-32,y-32);
             y+=48;
@@ -419,7 +518,7 @@ public class UI {
         //DRAW PLAYER ITEMS
         for(int i = 0; i < entity.inventory.size(); i++){
             //EQUIP CURSOR
-            if(entity.inventory.get(i) == entity.currentWeapon || entity.inventory.get(i) == entity.currentShield){
+            if(entity.inventory.get(i) == entity.currentWeapon || entity.inventory.get(i) == entity.currentShield || entity.inventory.get(i) == entity.currentLight){
                 g2.setColor(new Color(240,190,90));
                 g2.fillRoundRect(slotX, slotY, gp.tileSize, gp.tileSize, 10, 10);
             }
@@ -734,6 +833,7 @@ public class UI {
             gp.player.worldY = gp.tileSize * gp.eHandler.tempRow;
             gp.eHandler.previousEventX = gp.player.worldX;
             gp.eHandler.previousEventY = gp.player.worldY;
+            gp.changeArea();
         }
     }
     public void drawTransitionExpansion(){
@@ -765,6 +865,7 @@ public class UI {
     }
     public void trade_select(){
 
+        npc.dialogueSet = 0;
         drawDialogueScreen();
 
         //Draw Window
@@ -798,8 +899,7 @@ public class UI {
             g2.drawString(">", x-64, y);
             if(gp.keyH.enterPressed){
                 commandNum = 0;
-                gp.gameState = gp.dialogueState;
-                currentDialogue = "Come again hehe";
+                npc.startDialogue(npc,1);
             }
         }
     }
@@ -843,8 +943,7 @@ public class UI {
                 if(npc.inventory.get(itemIndex).price > gp.player.coins){
                     subState = 0;
                     gp.gameState = gp.dialogueState;
-                    currentDialogue = "You need more coins to buy this item.";
-                    drawDialogueScreen();
+                    npc.startDialogue(npc,2);
                 }
                 else {
                     if(gp.player.canObtainItem(npc.inventory.get(itemIndex))){
@@ -852,8 +951,7 @@ public class UI {
                     }
                     else {
                         subState = 0;
-                        gp.gameState = gp.dialogueState;
-                        currentDialogue = "Your Inventory is Full!";
+                        npc.startDialogue(npc,3);
                     }
                 }
             }
@@ -896,8 +994,7 @@ public class UI {
                     commandNum = 0;
                     subState = 0;
                     gp.gameState = gp.dialogueState;
-                    currentDialogue = "You cannot sell an equipped item!";
-                    drawDialogueScreen();
+                    npc.startDialogue(npc,4);
                 } else {
                     if(gp.player.inventory.get(itemIndex).amount > 1){
                         gp.player.inventory.get(itemIndex).amount--;

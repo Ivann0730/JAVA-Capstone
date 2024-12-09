@@ -52,7 +52,7 @@ public class MON_Slime extends Entity {
             //check if starts chasing
             checkStartChasingOrNot(gp.player,5,100);
             // get a random direction
-            getRandomDirection();
+            getRandomDirection(120);
         }
     }
     public void damageReaction() {

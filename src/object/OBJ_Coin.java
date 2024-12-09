@@ -4,13 +4,14 @@ import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
 
 public class OBJ_Coin extends Entity {
+    public static final String objName = "Bronze Coin";
     GamePanel gp;
     public OBJ_Coin(GamePanel gp){
         super(gp);
         this.gp = gp;
 
         type = type_pickupOnly;
-        name = "Bronze Coin";
+        name = objName;
         value = 1;
         down1 = setUp("/objects/coin_bronze",gp.tileSize,gp.tileSize);
         description = "[" + name + "]\nA coin to use in Jude Maranga's \npiso net in CIT-U Universe.";

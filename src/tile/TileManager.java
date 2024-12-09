@@ -221,7 +221,7 @@ public class TileManager {
         setUpDungeon(13, "/Tiles_Dungeon/FS-3", false);
         setUpDungeon(14, "/Tiles_Dungeon/FS-4", false);
         setUpDungeon(15, "/Tiles_Dungeon/FS-5", false);
-        setUpDungeon(16, "/Tiles_Dungeon/Stairs-1", false);
+        setUpDungeon(16, "/Tiles_Dungeon/Stairs-1",false);
         setUpDungeon(17, "/Tiles_Dungeon/Stairs-2", false);
         setUpDungeon(18, "/Tiles_Dungeon/tr-1", false);
         setUpDungeon(19, "/Tiles_Dungeon/Walls-1", true);

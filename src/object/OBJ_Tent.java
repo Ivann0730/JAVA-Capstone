@@ -4,11 +4,12 @@ import DannyGermanSimulator.GamePanel;
 import Entity.Entity;
 
 public class OBJ_Tent extends Entity {
+    public static final String objName = "Tent";
     public  OBJ_Tent(GamePanel gp){
         super(gp);
 
         type = type_consumable;
-        name = "Tent";
+        name = objName;
         down1 = setUp("/objects/tent",gp.tileSize,gp.tileSize);
         description = "[" + name + "]\nYou can sleep inside this.";
         price = 300;
@@ -20,6 +21,7 @@ public class OBJ_Tent extends Entity {
         gp.player.life = gp.player.maxLife;
         gp.player.mana = gp.player.maxMana;
         gp.player.getSleepingImage(down1);
+        gp.saveLoad.save();
         return true;
     }
 }

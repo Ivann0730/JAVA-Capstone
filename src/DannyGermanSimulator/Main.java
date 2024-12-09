@@ -13,7 +13,8 @@ public class Main {
         window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false); // Allow the window to be resized
-        window.setTitle("DannyGerman Simulator: Da hood but medieval");
+        window.setTitle("DannyGerman Simulator: The Bugged World");
+        new Main().setIcon();
 
         // Create the GamePanel and add it to the window
         GamePanel gamePanel = new GamePanel();
@@ -31,5 +32,9 @@ public class Main {
 
         gamePanel.setGameObjects();
         gamePanel.startGameThread();
+    }
+    public void setIcon(){
+        ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("player/atk1.png"));
+        window.setIconImage(icon.getImage());
     }
 }

@@ -11,49 +11,49 @@ public class MON_Bat extends Entity {
         super(gp);
 
         type = type_monster;
-        name = "Eye Bat";
-        defaultSpeed = 3;
+        name = "Bat";
+        defaultSpeed = 7;
         speed = defaultSpeed;
-        maxLife = 10;
+        maxLife = 3;
         life = maxLife;
-        attack  = 5;
-        defence = 2;
-        exp = 5;
+        attack  = 1;
+        defence = 0;
+        exp = 2;
         projectile = new OBJ_Fireball(gp);
 
-        solidArea.x = 34;
-        solidArea.y = 48;
-        solidArea.width = 44;
-        solidArea.height = 48;
+        solidArea.x = 38;
+        solidArea.y = 40;
+        solidArea.width = 52;
+        solidArea.height = 42;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
 
         getImage();
     }
     public void getImage(){
-        up1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
-        up2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
-        down1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
-        down2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
-        left1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
-        left2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
-        right1 = setUp("/monster/New Piskel-1.png (1)",gp.tileSize,gp.tileSize);
-        right2 = setUp("/monster/New Piskel-2.png (1)",gp.tileSize,gp.tileSize);
+        up1 = setUp("/monster/bat_down_1",gp.tileSize,gp.tileSize);
+        up2 = setUp("/monster/bat_down_2",gp.tileSize,gp.tileSize);
+        down1 = setUp("/monster/bat_down_1",gp.tileSize,gp.tileSize);
+        down2 = setUp("/monster/bat_down_2",gp.tileSize,gp.tileSize);
+        left1 = setUp("/monster/bat_down_1",gp.tileSize,gp.tileSize);
+        left2 = setUp("/monster/bat_down_2",gp.tileSize,gp.tileSize);
+        right1 = setUp("/monster/bat_down_1",gp.tileSize,gp.tileSize);
+        right2 = setUp("/monster/bat_down_2",gp.tileSize,gp.tileSize);
     }
 
     public void setAction(){
         if(onPath){
             //CHECK IF IT STOPS CHASING
-            checkStopChasingOrNot(gp.player, 10, 100);
-            //follow player or search direction to go
-            searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
-            //Check if it shoots a projectile
-            checkShootOrNot(200, 30);
+//            checkStopChasingOrNot(gp.player, 10, 100);
+//            //follow player or search direction to go
+//            searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
+//            //Check if it shoots a projectile
+//            checkShootOrNot(200, 30);
         } else{
             //check if starts chasing
-            checkStartChasingOrNot(gp.player,5,100);
+//            checkStartChasingOrNot(gp.player,5,100);
             // get a random direction
-            getRandomDirection();
+            getRandomDirection(10);
         }
     }
     public void damageReaction() {
@@ -62,7 +62,7 @@ public class MON_Bat extends Entity {
         actionLockCounter = 0;
 //        direction = gp.player.direction;
         //new agro behavior
-        onPath = true;
+        onPath = false;
     }
     public void checkDrop(){
         //CAST A DIE
