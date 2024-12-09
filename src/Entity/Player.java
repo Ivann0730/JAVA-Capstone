@@ -49,7 +49,7 @@ public class Player extends Entity {
         level = 1;
         maxLife = 6;
         life = maxLife;
-        maxMana = 8;
+        maxMana = 3;
         mana = maxMana;
         //more damage
         strength = 1;
@@ -57,7 +57,7 @@ public class Player extends Entity {
         dexterity = 1;
         exp = 0;
         nextLevelExp = 5;
-        coins = 500;
+        coins = 5000;
         gems = 0;
         currentWeapon = new OBJ_Sword_Normal(gp);
         currentShield = new OBJ_Shield_Wood(gp);
@@ -85,16 +85,18 @@ public class Player extends Entity {
                 break;
             case 3:
 //                //DUNGEON
-//                worldX = gp.tileSize * 22;
-//                worldY = gp.tileSize * 230;
+                worldX = gp.tileSize * 22;
+                worldY = gp.tileSize * 230;
                 //D1
 //                worldX = gp.tileSize * 39;
 //                worldY = gp.tileSize * 165;
                 //boss area_
-                worldX = gp.tileSize * 149;
-                worldY = gp.tileSize * 208;
+//                worldX = gp.tileSize * 149;
+//                worldY = gp.tileSize * 208;
                 break;
             case 4:
+                worldX = gp.tileSize * 127;
+                worldY = gp.tileSize * 236;
                 break;
         }
         direction = "down";
@@ -119,9 +121,10 @@ public class Player extends Entity {
         inventory.add(currentWeapon);
         inventory.add(currentShield);
         inventory.add(new OBJ_Key(gp));
-        inventory.add(new OBJ_Tent(gp));
-        inventory.add(new OBJ_Lantern(gp));
-        inventory.add(new OBJ_Pickaxe(gp));
+//        inventory.add(new OBJ_Tent(gp));
+//        inventory.add(new OBJ_Lantern(gp));
+//        inventory.add(new OBJ_Pickaxe(gp));
+        inventory.add(new OBJ_Axe(gp));
     }
     public int getAttack(){
         attackArea =currentWeapon.attackArea;

@@ -252,6 +252,7 @@ public class UI {
         }
     }
     public void drawTitleScreen(){
+        BufferedImage image;
         if(titleScreenState == 0){
             g2.setColor(new Color(165,42,42));
             g2.fillRect(0,0, gp.screenWidth, gp.screenHeight);
