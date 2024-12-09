@@ -91,8 +91,8 @@ public class Player extends Entity {
 //                worldX = gp.tileSize * 39;
 //                worldY = gp.tileSize * 165;
                 //boss area_
-                worldX = gp.tileSize * 149;
-                worldY = gp.tileSize * 208;
+                worldX = gp.tileSize * 22;
+                worldY = gp.tileSize * 230;
                 break;
             case 4:
                 break;
