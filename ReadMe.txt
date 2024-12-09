@@ -12,6 +12,14 @@ powerful mobs, challenging puzzles, and rare items waiting to be discovered. Pla
 armor, and potions they've collected throughout the game to overcome the dungeon’s dangers and reach their ultimate
 goal.
 
+DannyGerman: The Bugged world (Road Map)
+1. Create Monsters 
+2. Create Battle System
+3. Create NPCS
+4. Create inventory
+5. Create events
+6. Complete the game
+
 Why and How
 
 We are a group of four students who loves playing RPG games. We’ve always enjoyed pixel-art games like Soul Knight
