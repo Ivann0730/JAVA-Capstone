@@ -1,5 +1,5 @@
 #DannyGerman: The Bugged World
- is an engaging 2D pixel-art RPG developed in Java. The game immerses players
+is an engaging 2D pixel-art RPG developed in Java. The game immerses players
 in a journey that begins in a  mysterious forest. As the protagonist, the player explores a beautifully crafted
 pixelated world, filled with diverse environments, challenging enemies, and hidden treasures.
 
