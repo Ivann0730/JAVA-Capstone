@@ -57,7 +57,7 @@ public class MON_SkeletonLord extends Entity {
         }
         if(inRage){
             up1 = setUp("/monster/skeletonlord_phase2_up-1",gp.tileSize*i,gp.tileSize*i);
-            up2 = setUp("/monster/skeletonlord_phase2_up-",gp.tileSize*i,gp.tileSize*i);
+            up2 = setUp("/monster/skeletonlord_phase2_up-2",gp.tileSize*i,gp.tileSize*i);
             down1 = setUp("/monster/skeletonlord_phase2_down-1",gp.tileSize*i,gp.tileSize*i);
             down2 = setUp("/monster/skeletonlord_phase2_down-2",gp.tileSize*i,gp.tileSize*i);
             left1 = setUp("/monster/skeletonlord_phase2_left-1",gp.tileSize*i,gp.tileSize*i);

@@ -120,11 +120,11 @@ public class Player extends Entity {
         inventory.clear();
         inventory.add(currentWeapon);
         inventory.add(currentShield);
-        inventory.add(new OBJ_Key(gp));
+//        inventory.add(new OBJ_Key(gp));
 //        inventory.add(new OBJ_Tent(gp));
 //        inventory.add(new OBJ_Lantern(gp));
 //        inventory.add(new OBJ_Pickaxe(gp));
-        inventory.add(new OBJ_Axe(gp));
+//        inventory.add(new OBJ_Axe(gp));
     }
     public int getAttack(){
         attackArea =currentWeapon.attackArea;
@@ -417,7 +417,7 @@ public class Player extends Entity {
             if(mana == 0){
                 mana = 10;
             }
-//            attack = 1000;
+            attack = 40;
             projectile.attack = 50;
         }
         if(!gp.keyH.godModeOn){
@@ -540,6 +540,7 @@ public class Player extends Entity {
                 level++;
                 nextLevelExp = (int) (nextLevelExp * 1.5);
                 maxLife += 2;
+                maxMana += 1;
                 strength++;
                 dexterity++;
                 attack = getAttack();
@@ -726,9 +727,9 @@ public class Player extends Entity {
         //reset
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1F));
 
-        //to see collision box or hit box
-        g2.setColor(Color.red);
-        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
+        //debug to see collision box or hit box
+//        g2.setColor(Color.red);
+//        g2.drawRect(screenX + solidArea.x, screenY + solidArea.y, solidArea.width, solidArea.height);
 
         //debug
 //        g2.setFont(new Font("Arial", Font.PLAIN, 26));
@@ -737,16 +738,16 @@ public class Player extends Entity {
 
         // DEBUG FOR ATTACK
         // AttackArea
-        tempScreenX = screenX + solidArea.x;
-        tempScreenY = screenY + solidArea.y;
-        switch(direction) {
-            case "up": tempScreenY = screenY - attackArea.height; break;
-            case "down": tempScreenY = screenY + gp.tileSize; break;
-            case "left": tempScreenX = screenX - attackArea.width; break;
-            case "right": tempScreenX = screenX + gp.tileSize; break;
-        }
-        g2.setColor(Color.blue);
-        g2.setStroke(new BasicStroke(1));
-        g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);
+//        tempScreenX = screenX + solidArea.x;
+//        tempScreenY = screenY + solidArea.y;
+//        switch(direction) {
+//            case "up": tempScreenY = screenY - attackArea.height; break;
+//            case "down": tempScreenY = screenY + gp.tileSize; break;
+//            case "left": tempScreenX = screenX - attackArea.width; break;
+//            case "right": tempScreenX = screenX + gp.tileSize; break;
+//        }
+//        g2.setColor(Color.blue);
+//        g2.setStroke(new BasicStroke(1));
+//        g2.drawRect(tempScreenX, tempScreenY, attackArea.width, attackArea.height);
     }
 }

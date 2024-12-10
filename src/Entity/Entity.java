@@ -657,8 +657,8 @@ public class Entity {
             changeAlpha(g2,1F);
 
             //debug to see collision hit box
-            g2.setColor(Color.green);
-            g2.drawRect(getScreenX() + solidArea.x, getScreenY() + solidArea.y, solidArea.width, solidArea.height);
+//            g2.setColor(Color.green);
+//            g2.drawRect(getScreenX() + solidArea.x, getScreenY() + solidArea.y, solidArea.width, solidArea.height);
         }
     }
     public void dyingAnimation(Graphics2D g2){
