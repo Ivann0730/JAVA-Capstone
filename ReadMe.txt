@@ -1,5 +1,5 @@
-
-DannyGerman: The Bugged World is an engaging 2D pixel-art RPG developed in Java. The game immerses players
+#DannyGerman: The Bugged World
+ is an engaging 2D pixel-art RPG developed in Java. The game immerses players
 in a journey that begins in a  mysterious forest. As the protagonist, the player explores a beautifully crafted
 pixelated world, filled with diverse environments, challenging enemies, and hidden treasures.
 
@@ -12,7 +12,7 @@ powerful mobs, challenging puzzles, and rare items waiting to be discovered. Pla
 armor, and potions they've collected throughout the game to overcome the dungeon’s dangers and reach their ultimate
 goal.
 
-DannyGerman: The Bugged world (Road Map)
+#DannyGerman: The Bugged world (Road Map)
 1. Create Monsters
 2. Create Battle System
 3. Create NPCS
@@ -20,7 +20,7 @@ DannyGerman: The Bugged world (Road Map)
 5. Create events
 6. Complete the game
 
-Why and How
+#Why and How
 
 We are a group of four students who loves playing RPG games. We’ve always enjoyed pixel-art games like Soul Knight
 because of their exciting action, colorful designs, and fun gameplay. This was the bases of our game.
@@ -31,7 +31,7 @@ That’s how DannyGerman: The Bugged World. It’s our version of a 2D pixel RPG
 battles, and a great story. We used the skills we’ve been learning as students to make it. Our goal was to create a
 game that’s easy to play, feels nostalgic, and is fun for everyone who loves pixel RPGs as much as we do.
 
-Story Line
+#Story Line
 The game begins with the protagonist, Dannygerman, awakening in the middle of a mysterious and glitch-riddled forest. The vibrant world around him seems
 off—trees flicker between reality and code, and the air hums with an odd digital energy. By his side is his quirky and loyal companion,
 Radley the Radish Together, they must uncover the secrets of this broken world.
