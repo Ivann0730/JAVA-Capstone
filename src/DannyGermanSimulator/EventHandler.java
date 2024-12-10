@@ -62,6 +62,7 @@ public class EventHandler {
             else if(hit(4,127,237,"any")) {teleport(2,75,35,gp.outside);}//PATHWAY TO SPAWN
             else if(hit(2,153,60,"up")) {speak(gp.npc[2][1]);}
             else if(hit(4,131,64,"up")) {speak(gp.npc[4][0]);}
+            else if(hit(3,48,229,"up")) {speak(gp.npc[3][0]);}
 //            else if(hit(2,33,103,"up")) {healingPool(3);}
             else if(hit(4,131,93,"any")) {teleport(4,131,73,gp.outside);}//SPAWN TO DEntrance
             else if(hit(4,131,73,"any")) {teleport(4,131,93,gp.outside);}//DEntrance TO SPAWN

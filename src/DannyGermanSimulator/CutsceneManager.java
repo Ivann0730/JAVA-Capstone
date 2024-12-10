@@ -27,12 +27,12 @@ public class CutsceneManager {
         this.gp = gp;
         endCredit = "Program/Music/Arts\n"
                 + "Tolentino,Olimba,Paradero,Alaman"
-                + "\n\n\n\n\n\n\n\n\n"
+                + "\n\n\n\n\n\n"
                 + "Special Thanks To:\n"
+                + "Mama ni Jayz\n"
                 + "Someone\n"
-                + "Someone\n"
-                + "Someone\n"
-                + "Someone\n\n\n\n\n\n"
+                + "Someonep\n"
+                + "Someone\n\n\n"
                 + "Thank you for playing!";
     }
     public void draw(Graphics2D g2){

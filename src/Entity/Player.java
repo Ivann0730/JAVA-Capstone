@@ -120,11 +120,11 @@ public class Player extends Entity {
         inventory.clear();
         inventory.add(currentWeapon);
         inventory.add(currentShield);
-        inventory.add(new OBJ_Key(gp));
+//        inventory.add(new OBJ_Key(gp));
 //        inventory.add(new OBJ_Tent(gp));
 //        inventory.add(new OBJ_Lantern(gp));
 //        inventory.add(new OBJ_Pickaxe(gp));
-        inventory.add(new OBJ_Axe(gp));
+//        inventory.add(new OBJ_Axe(gp));
     }
     public int getAttack(){
         attackArea =currentWeapon.attackArea;
@@ -417,7 +417,7 @@ public class Player extends Entity {
             if(mana == 0){
                 mana = 10;
             }
-//            attack = 1000;
+            attack = 40;
             projectile.attack = 50;
         }
         if(!gp.keyH.godModeOn){
